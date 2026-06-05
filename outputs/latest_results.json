@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "version": "ddv-radar-mundial-v004-catalogo-verificado",
+  "generated_at_utc": null,
+  "countries_configured": 0,
+  "hits_total": 0,
+  "review_total": 0,
+  "hits": [],
+  "review_hits": [],
+  "note": "Placeholder inicial. GitHub Actions lo reemplaza automáticamente en cada corrida."
+}

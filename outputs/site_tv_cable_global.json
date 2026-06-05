@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "version": "ddv-radar-mundial-v004-web-json-publico",
+  "generated_at_utc": null,
+  "regions_order": ["Estados Unidos", "Norteamérica", "Latinoamérica", "Europa", "Resto del mundo", "Sin país específico"],
+  "hits_total": 0,
+  "review_total": 0,
+  "summary_by_region": [],
+  "hits": [],
+  "review_hits": [],
+  "note": "Placeholder inicial. GitHub Actions lo reemplaza automáticamente en cada corrida."
+}

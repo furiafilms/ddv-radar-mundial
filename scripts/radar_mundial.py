@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DDV Radar Mundial — v003
+DDV Radar Mundial — v004
 Crawler experimental de EPG abiertas.
 
-Cambios v003:
+Cambios v004:
 - Amplía países por regiones: Estados Unidos, Norteamérica, Latinoamérica, Europa y resto del mundo.
 - Mantiene filtros estrictos de v002 para evitar falsos positivos.
-- Agrega resumen por región/país y payload pensado para futura integración web.
-- Sigue sin tocar Neolo ni FTP.
+- Agrega catálogo de alias verificados y controlados por idioma.
+- Publica JSON estable para lectura directa desde la web DDV si el repositorio es público.
 """
 from __future__ import annotations
 import datetime as dt
@@ -31,7 +31,7 @@ SOURCES_PATH = ROOT / "data" / "sources.json"
 OUTPUTS_DIR = ROOT / "outputs"
 OUTPUTS_DIR.mkdir(exist_ok=True)
 
-USER_AGENT = "DDV-Radar-Mundial/0.3 (+https://danieldelavega.com.ar)"
+USER_AGENT = "DDV-Radar-Mundial/0.4 (+https://danieldelavega.com.ar)"
 ISSUE_LABEL = "radar-tv-hit"
 REVIEW_LABEL = "radar-tv-review"
 
@@ -401,7 +401,7 @@ def build_web_payload(hits: list[dict], review_hits: list[dict], sources: dict) 
     safe_review = sort_records(review_hits)[:100]
     return {
         "ok": True,
-        "version": "ddv-radar-mundial-v003-web-ready",
+        "version": "ddv-radar-mundial-v004-web-json-publico",
         "generated_at_utc": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "regions_order": sources.get("region_order", []),
         "hits_total": len(safe_hits),
@@ -428,7 +428,7 @@ def main() -> int:
     all_review_hits = sort_records(all_review_hits)
     out = {
         "ok": True,
-        "version": "ddv-radar-mundial-v003-cobertura-ampliada",
+        "version": "ddv-radar-mundial-v004-catalogo-verificado",
         "generated_at_utc": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "countries_configured": len(sources.get("countries", [])),
         "regions_order": sources.get("region_order", []),

@@ -2,218 +2,454 @@
   {
     "slug": "hermanos-de-sangre",
     "title": "Hermanos de Sangre",
+    "type": "feature",
+    "year": 2012,
     "aliases": [
       {
         "name": "Hermanos de Sangre",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Blood Brothers",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": true,
+        "verified": true,
+        "note": "título inglés usado por bases internacionales; riesgoso por homónimos"
       }
     ]
   },
   {
     "slug": "punto-muerto",
     "title": "Punto Muerto",
+    "type": "feature",
+    "year": 2018,
     "aliases": [
       {
         "name": "Punto Muerto",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Dead End",
+        "lang": "en",
         "mode": "exact_title_movie",
-        "generic": true
+        "generic": true,
+        "verified": true,
+        "note": "título inglés confirmado; alias genérico, solo título exacto + contexto película"
       }
     ]
   },
   {
     "slug": "necrofobia",
     "title": "Necrofobia",
+    "type": "feature",
+    "year": 2014,
     "aliases": [
       {
         "name": "Necrofobia",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Necrofobia 3D",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Necrophobia",
+        "lang": "en",
         "mode": "exact_title_movie",
-        "generic": false
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "ataud-blanco",
     "title": "Ataúd Blanco",
+    "type": "feature",
+    "year": 2016,
     "aliases": [
       {
         "name": "Ataúd Blanco",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Ataud Blanco",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Ataúd Blanco: El Juego Diabólico",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Ataud Blanco: El Juego Diabolico",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
       },
       {
         "name": "White Coffin",
+        "lang": "en",
         "mode": "exact_title_movie",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "La bara bianca",
+        "lang": "it",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Beyaz Tabut",
+        "lang": "tr",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "soy-toxico",
     "title": "Soy Tóxico",
+    "type": "feature",
+    "year": 2018,
     "aliases": [
       {
         "name": "Soy Tóxico",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Soy Toxico",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "I Am Toxic",
+        "lang": "en",
         "mode": "exact_title_movie",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Toxic",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": true,
+        "verified": true,
+        "note": "alias confirmado pero muy genérico; solo título exacto + contexto película"
+      },
+      {
+        "name": "Toxic - I Am Toxic",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "death-knows-your-name",
     "title": "Death Knows Your Name",
+    "type": "feature",
+    "year": 2007,
     "aliases": [
       {
         "name": "Death Knows Your Name",
+        "lang": "en",
         "mode": "exact_title",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "La muerte conoce tu nombre",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Death knows your Name - Der Tod lebt in dir",
+        "lang": "de",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "jennifers-shadow",
     "title": "Jennifer's Shadow",
+    "type": "feature",
+    "year": 2004,
     "aliases": [
       {
         "name": "Jennifer's Shadow",
+        "lang": "en",
         "mode": "exact_title",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Jennifer’s Shadow",
+        "lang": "en",
         "mode": "exact_title",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Chronicle of the Raven",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Devorador de sueños",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Devorador de Sueños",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Jennifer's Shadow - Tödlicher Fluch",
+        "lang": "de",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "al-3er-dia",
     "title": "Al 3er Día",
+    "type": "feature",
+    "year": 2021,
     "aliases": [
       {
         "name": "Al 3er Día",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Al 3er Dia",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Al Tercer Día",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Al Tercer Dia",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "On the 3rd Day",
+        "lang": "en",
         "mode": "exact_title_movie",
-        "generic": true
+        "generic": true,
+        "verified": true,
+        "note": "alias confirmado pero riesgoso por frases deportivas/noticias; solo título exacto + contexto película"
+      },
+      {
+        "name": "On The Third Day",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": true,
+        "verified": true
       }
     ]
   },
   {
     "slug": "el-ultimo-hereje",
     "title": "El Último Hereje",
+    "type": "feature",
+    "year": 2022,
     "aliases": [
       {
         "name": "El Último Hereje",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "El Ultimo Hereje",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "The Last Heretic",
+        "lang": "en",
         "mode": "exact_title_movie",
-        "generic": false
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "los-ojos-del-abismo",
     "title": "Los Ojos del Abismo",
+    "type": "feature",
+    "year": 2025,
     "aliases": [
       {
         "name": "Los Ojos del Abismo",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Eyes of the Abyss",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": false,
+        "verified": true
       }
     ]
   },
   {
     "slug": "sueno-profundo",
     "title": "Sueño Profundo",
+    "type": "short",
+    "year": 1997,
     "aliases": [
       {
         "name": "Sueño Profundo",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "Sueno Profundo",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Deep Dream",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": true,
+        "verified": true,
+        "note": "alias biográfico detectado; riesgoso por uso genérico"
       }
     ]
   },
   {
     "slug": "la-ultima-cena",
     "title": "La Última Cena",
+    "type": "short",
+    "year": 1999,
     "aliases": [
       {
         "name": "La Última Cena",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
       },
       {
         "name": "La Ultima Cena",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "Last Dinner",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": true,
+        "verified": true,
+        "note": "alias biográfico detectado; riesgoso por genérico"
       }
     ]
   },
   {
     "slug": "el-martillo",
     "title": "El Martillo",
+    "type": "short",
+    "year": 2003,
     "aliases": [
       {
         "name": "El Martillo",
+        "lang": "es",
         "mode": "exact_or_subtitle",
-        "generic": false
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "El Martillo: Crónica de un mito",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "El Martillo: Cronica de un mito",
+        "lang": "es",
+        "mode": "exact_or_subtitle",
+        "generic": false,
+        "verified": true
+      },
+      {
+        "name": "The Hammer",
+        "lang": "en",
+        "mode": "exact_title_movie",
+        "generic": true,
+        "verified": true,
+        "note": "alias confirmado; riesgoso por Hammer Films/otros homónimos"
       }
     ]
   }
