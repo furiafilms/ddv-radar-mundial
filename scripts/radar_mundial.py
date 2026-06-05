@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DDV Radar Mundial — v002
+DDV Radar Mundial — v003
 Crawler experimental de EPG abiertas.
 
-Cambios v002:
-- Deja de buscar dentro de descripciones largas: allí aparecían falsos positivos.
-- Separa coincidencias confiables de coincidencias para revisión.
-- Alias genéricos como "Dead End" u "On the 3rd Day" exigen título exacto y contexto de película.
-- No crea Issues por coincidencias débiles.
+Cambios v003:
+- Amplía países por regiones: Estados Unidos, Norteamérica, Latinoamérica, Europa y resto del mundo.
+- Mantiene filtros estrictos de v002 para evitar falsos positivos.
+- Agrega resumen por región/país y payload pensado para futura integración web.
+- Sigue sin tocar Neolo ni FTP.
 """
 from __future__ import annotations
 import datetime as dt
@@ -31,7 +31,7 @@ SOURCES_PATH = ROOT / "data" / "sources.json"
 OUTPUTS_DIR = ROOT / "outputs"
 OUTPUTS_DIR.mkdir(exist_ok=True)
 
-USER_AGENT = "DDV-Radar-Mundial/0.2 (+https://danieldelavega.com.ar)"
+USER_AGENT = "DDV-Radar-Mundial/0.3 (+https://danieldelavega.com.ar)"
 ISSUE_LABEL = "radar-tv-hit"
 REVIEW_LABEL = "radar-tv-review"
 
@@ -372,6 +372,46 @@ def create_issue_for_hits(token: str, hits: list[dict], *, label: str, issue_tit
     print(f"[issue] creado {label}")
 
 
+
+def sort_records(records: list[dict]) -> list[dict]:
+    return sorted(records, key=lambda r: (r.get("start", ""), r.get("country_name", ""), r.get("channel", "")), reverse=True)
+
+
+def summarize_by_region(records: list[dict], sources: dict) -> list[dict]:
+    order = sources.get("region_order") or []
+    region_index = {name: i for i, name in enumerate(order)}
+    grouped: dict[str, dict] = {}
+    for r in records:
+        region = r.get("region") or "Sin país específico"
+        country_key = f"{r.get('country_name','')} ({r.get('country_code','')})"
+        if region not in grouped:
+            grouped[region] = {"region": region, "hits_total": 0, "countries": {}}
+        grouped[region]["hits_total"] += 1
+        grouped[region]["countries"].setdefault(country_key, 0)
+        grouped[region]["countries"][country_key] += 1
+    out = []
+    for region, data in grouped.items():
+        data["countries"] = [{"country": k, "hits_total": v} for k, v in sorted(data["countries"].items())]
+        out.append(data)
+    return sorted(out, key=lambda x: region_index.get(x["region"], 999))
+
+
+def build_web_payload(hits: list[dict], review_hits: list[dict], sources: dict) -> dict:
+    safe_hits = sort_records(hits)
+    safe_review = sort_records(review_hits)[:100]
+    return {
+        "ok": True,
+        "version": "ddv-radar-mundial-v003-web-ready",
+        "generated_at_utc": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "regions_order": sources.get("region_order", []),
+        "hits_total": len(safe_hits),
+        "review_total": len(review_hits),
+        "summary_by_region": summarize_by_region(safe_hits, sources),
+        "hits": safe_hits,
+        "review_hits": safe_review,
+        "note": "Payload preparado para futura lectura por la web DDV. Solo hits confiables deben mostrarse como emisiones verificadas."
+    }
+
 def main() -> int:
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     sources = json.loads(SOURCES_PATH.read_text(encoding="utf-8"))
@@ -384,16 +424,23 @@ def main() -> int:
         all_review_hits.extend(review)
         time.sleep(0.5)
 
+    all_hits = sort_records(all_hits)
+    all_review_hits = sort_records(all_review_hits)
     out = {
         "ok": True,
-        "version": "ddv-radar-mundial-v002-filtros",
+        "version": "ddv-radar-mundial-v003-cobertura-ampliada",
         "generated_at_utc": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "countries_configured": len(sources.get("countries", [])),
+        "regions_order": sources.get("region_order", []),
         "hits_total": len(all_hits),
         "review_total": len(all_review_hits),
+        "summary_by_region": summarize_by_region(all_hits, sources),
         "hits": all_hits,
         "review_hits": all_review_hits[:100],
+        "web_payload": build_web_payload(all_hits, all_review_hits, sources),
     }
     (OUTPUTS_DIR / "latest_results.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    (OUTPUTS_DIR / "site_tv_cable_global.json").write_text(json.dumps(out["web_payload"], ensure_ascii=False, indent=2), encoding="utf-8")
 
     token = os.environ.get("GITHUB_TOKEN", "")
     if token:

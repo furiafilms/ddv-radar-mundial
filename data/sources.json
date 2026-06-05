@@ -1,19 +1,208 @@
 {
   "countries": [
-    {"code":"US","name":"Estados Unidos","region":"Estados Unidos"},
-    {"code":"CA","name":"Canadá","region":"Norteamérica"},
-    {"code":"MX","name":"México","region":"Latinoamérica"},
-    {"code":"AR","name":"Argentina","region":"Latinoamérica"},
-    {"code":"UY","name":"Uruguay","region":"Latinoamérica"},
-    {"code":"CL","name":"Chile","region":"Latinoamérica"},
-    {"code":"CO","name":"Colombia","region":"Latinoamérica"},
-    {"code":"PE","name":"Perú","region":"Latinoamérica"},
-    {"code":"BR","name":"Brasil","region":"Latinoamérica"},
-    {"code":"ES","name":"España","region":"Europa"},
-    {"code":"GB","name":"Reino Unido","region":"Europa"},
-    {"code":"FR","name":"Francia","region":"Europa"},
-    {"code":"DE","name":"Alemania","region":"Europa"},
-    {"code":"IT","name":"Italia","region":"Europa"}
+    {
+      "code": "US",
+      "name": "Estados Unidos",
+      "region": "Estados Unidos"
+    },
+    {
+      "code": "CA",
+      "name": "Canadá",
+      "region": "Norteamérica"
+    },
+    {
+      "code": "MX",
+      "name": "México",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "PE",
+      "name": "Perú",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "BR",
+      "name": "Brasil",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "PY",
+      "name": "Paraguay",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "PA",
+      "name": "Panamá",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "DO",
+      "name": "República Dominicana",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "HN",
+      "name": "Honduras",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua",
+      "region": "Latinoamérica"
+    },
+    {
+      "code": "ES",
+      "name": "España",
+      "region": "Europa"
+    },
+    {
+      "code": "GB",
+      "name": "Reino Unido",
+      "region": "Europa"
+    },
+    {
+      "code": "FR",
+      "name": "Francia",
+      "region": "Europa"
+    },
+    {
+      "code": "DE",
+      "name": "Alemania",
+      "region": "Europa"
+    },
+    {
+      "code": "IT",
+      "name": "Italia",
+      "region": "Europa"
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "region": "Europa"
+    },
+    {
+      "code": "NL",
+      "name": "Países Bajos",
+      "region": "Europa"
+    },
+    {
+      "code": "BE",
+      "name": "Bélgica",
+      "region": "Europa"
+    },
+    {
+      "code": "CH",
+      "name": "Suiza",
+      "region": "Europa"
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "region": "Europa"
+    },
+    {
+      "code": "IE",
+      "name": "Irlanda",
+      "region": "Europa"
+    },
+    {
+      "code": "PL",
+      "name": "Polonia",
+      "region": "Europa"
+    },
+    {
+      "code": "SE",
+      "name": "Suecia",
+      "region": "Europa"
+    },
+    {
+      "code": "NO",
+      "name": "Noruega",
+      "region": "Europa"
+    },
+    {
+      "code": "DK",
+      "name": "Dinamarca",
+      "region": "Europa"
+    },
+    {
+      "code": "FI",
+      "name": "Finlandia",
+      "region": "Europa"
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "region": "Resto del mundo"
+    },
+    {
+      "code": "NZ",
+      "name": "Nueva Zelanda",
+      "region": "Resto del mundo"
+    },
+    {
+      "code": "ZA",
+      "name": "Sudáfrica",
+      "region": "Resto del mundo"
+    }
+  ],
+  "region_order": [
+    "Estados Unidos",
+    "Norteamérica",
+    "Latinoamérica",
+    "Europa",
+    "Resto del mundo",
+    "Sin país específico"
   ],
   "sources": {
     "epg_pw_country_gz": "https://epg.pw/xmltv/epg_{code}.xml.gz"
