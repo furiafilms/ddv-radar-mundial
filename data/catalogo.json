@@ -1,15 +1,108 @@
 [
-  {"slug":"hermanos-de-sangre","title":"Hermanos de Sangre","aliases":["Hermanos de Sangre"]},
-  {"slug":"punto-muerto","title":"Punto Muerto","aliases":["Punto Muerto","Dead End"]},
-  {"slug":"necrofobia","title":"Necrofobia","aliases":["Necrofobia","Necrophobia"]},
-  {"slug":"ataud-blanco","title":"Ataúd Blanco","aliases":["Ataúd Blanco","Ataud Blanco","White Coffin"]},
-  {"slug":"soy-toxico","title":"Soy Tóxico","aliases":["Soy Tóxico","Soy Toxico","I Am Toxic"]},
-  {"slug":"death-knows-your-name","title":"Death Knows Your Name","aliases":["Death Knows Your Name"]},
-  {"slug":"jennifers-shadow","title":"Jennifer's Shadow","aliases":["Jennifer's Shadow","Jennifer’s Shadow"]},
-  {"slug":"al-3er-dia","title":"Al 3er Día","aliases":["Al 3er Día","Al 3er Dia","Al Tercer Día","Al Tercer Dia","On the 3rd Day"]},
-  {"slug":"el-ultimo-hereje","title":"El Último Hereje","aliases":["El Último Hereje","El Ultimo Hereje","The Last Heretic"]},
-  {"slug":"los-ojos-del-abismo","title":"Los Ojos del Abismo","aliases":["Los Ojos del Abismo"]},
-  {"slug":"sueno-profundo","title":"Sueño Profundo","aliases":["Sueño Profundo","Sueno Profundo"]},
-  {"slug":"la-ultima-cena","title":"La Última Cena","aliases":["La Última Cena","La Ultima Cena"]},
-  {"slug":"el-martillo","title":"El Martillo","aliases":["El Martillo"]}
+  {
+    "slug": "hermanos-de-sangre",
+    "title": "Hermanos de Sangre",
+    "aliases": [
+      {"name": "Hermanos de Sangre", "mode": "exact_or_subtitle", "generic": false}
+    ]
+  },
+  {
+    "slug": "punto-muerto",
+    "title": "Punto Muerto",
+    "aliases": [
+      {"name": "Punto Muerto", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Dead End", "mode": "exact_title_movie", "generic": true}
+    ]
+  },
+  {
+    "slug": "necrofobia",
+    "title": "Necrofobia",
+    "aliases": [
+      {"name": "Necrofobia", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Necrophobia", "mode": "exact_title_movie", "generic": false}
+    ]
+  },
+  {
+    "slug": "ataud-blanco",
+    "title": "Ataúd Blanco",
+    "aliases": [
+      {"name": "Ataúd Blanco", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Ataud Blanco", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "White Coffin", "mode": "exact_title_movie", "generic": false}
+    ]
+  },
+  {
+    "slug": "soy-toxico",
+    "title": "Soy Tóxico",
+    "aliases": [
+      {"name": "Soy Tóxico", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Soy Toxico", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "I Am Toxic", "mode": "exact_title_movie", "generic": false}
+    ]
+  },
+  {
+    "slug": "death-knows-your-name",
+    "title": "Death Knows Your Name",
+    "aliases": [
+      {"name": "Death Knows Your Name", "mode": "exact_title", "generic": false}
+    ]
+  },
+  {
+    "slug": "jennifers-shadow",
+    "title": "Jennifer's Shadow",
+    "aliases": [
+      {"name": "Jennifer's Shadow", "mode": "exact_title", "generic": false},
+      {"name": "Jennifer’s Shadow", "mode": "exact_title", "generic": false}
+    ]
+  },
+  {
+    "slug": "al-3er-dia",
+    "title": "Al 3er Día",
+    "aliases": [
+      {"name": "Al 3er Día", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Al 3er Dia", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Al Tercer Día", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Al Tercer Dia", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "On the 3rd Day", "mode": "exact_title_movie", "generic": true}
+    ]
+  },
+  {
+    "slug": "el-ultimo-hereje",
+    "title": "El Último Hereje",
+    "aliases": [
+      {"name": "El Último Hereje", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "El Ultimo Hereje", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "The Last Heretic", "mode": "exact_title_movie", "generic": false}
+    ]
+  },
+  {
+    "slug": "los-ojos-del-abismo",
+    "title": "Los Ojos del Abismo",
+    "aliases": [
+      {"name": "Los Ojos del Abismo", "mode": "exact_or_subtitle", "generic": false}
+    ]
+  },
+  {
+    "slug": "sueno-profundo",
+    "title": "Sueño Profundo",
+    "aliases": [
+      {"name": "Sueño Profundo", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "Sueno Profundo", "mode": "exact_or_subtitle", "generic": false}
+    ]
+  },
+  {
+    "slug": "la-ultima-cena",
+    "title": "La Última Cena",
+    "aliases": [
+      {"name": "La Última Cena", "mode": "exact_or_subtitle", "generic": false},
+      {"name": "La Ultima Cena", "mode": "exact_or_subtitle", "generic": false}
+    ]
+  },
+  {
+    "slug": "el-martillo",
+    "title": "El Martillo",
+    "aliases": [
+      {"name": "El Martillo", "mode": "exact_or_subtitle", "generic": false}
+    ]
+  }
 ]
