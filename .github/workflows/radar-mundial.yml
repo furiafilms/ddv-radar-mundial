@@ -1,0 +1,35 @@
+name: DDV Radar Mundial
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 12,21 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ejecutar radar mundial
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+        run: |
+          python scripts/radar_mundial.py
+
+      - name: Guardar resultado como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddv-radar-results
+          path: outputs/latest_results.json
