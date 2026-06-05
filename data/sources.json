@@ -1,0 +1,21 @@
+{
+  "countries": [
+    {"code":"US","name":"Estados Unidos","region":"Estados Unidos"},
+    {"code":"CA","name":"Canadá","region":"Norteamérica"},
+    {"code":"MX","name":"México","region":"Latinoamérica"},
+    {"code":"AR","name":"Argentina","region":"Latinoamérica"},
+    {"code":"UY","name":"Uruguay","region":"Latinoamérica"},
+    {"code":"CL","name":"Chile","region":"Latinoamérica"},
+    {"code":"CO","name":"Colombia","region":"Latinoamérica"},
+    {"code":"PE","name":"Perú","region":"Latinoamérica"},
+    {"code":"BR","name":"Brasil","region":"Latinoamérica"},
+    {"code":"ES","name":"España","region":"Europa"},
+    {"code":"GB","name":"Reino Unido","region":"Europa"},
+    {"code":"FR","name":"Francia","region":"Europa"},
+    {"code":"DE","name":"Alemania","region":"Europa"},
+    {"code":"IT","name":"Italia","region":"Europa"}
+  ],
+  "sources": {
+    "epg_pw_country_gz": "https://epg.pw/xmltv/epg_{code}.xml.gz"
+  }
+}
