@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "version": "v205-tv-cable-epgpw-official-sources",
-  "generated_at_utc": "2026-06-06T03:32:19Z",
+  "version": "v206-tv-cable-epgpw-official-sources",
+  "generated_at_utc": "2026-06-06T04:08:45Z",
   "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
   "hits_total": 2,
   "review_total": 0,
@@ -29,7 +29,7 @@
       ],
       "work_slug": "necrofobia",
       "work_title": "Necrofobia",
-      "detected_at": "2026-06-06T03:31:52Z",
+      "detected_at": "2026-06-06T04:08:16Z",
       "fingerprint": "403043e411d665cf62a4a12077989a4678f6c8f7"
     },
     {
@@ -54,7 +54,7 @@
       ],
       "work_slug": "hermanos-de-sangre",
       "work_title": "Hermanos de Sangre",
-      "detected_at": "2026-06-06T03:31:52Z",
+      "detected_at": "2026-06-06T04:08:16Z",
       "fingerprint": "acb7dc63fcf991113c6afb5119fcc113fef84212"
     }
   ],
@@ -117,8 +117,8 @@
       "hits": 0,
       "review": 0,
       "channels": 332,
-      "programmes_parsed": 26269,
-      "bytes": 713388,
+      "programmes_parsed": 22004,
+      "bytes": 619011,
       "window_days": {
         "past": 1,
         "future": 14
@@ -192,5 +192,5 @@
   "note": "Radar de indicios TV/Cable. Las alertas se emiten solo para coincidencias filtradas; las dudosas quedan en revisión.",
   "rejected_by_v205": [],
   "version_filter": "v205-tv-short-max-20-generic-title-filter",
-  "filtered_at": "2026-06-06T03:32:19Z"
+  "filtered_at": "2026-06-06T04:08:45Z"
 }

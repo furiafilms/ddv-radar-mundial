@@ -1,8 +1,36 @@
 {
   "ok": true,
-  "version": "v205-radar-platforms-daily",
-  "generated_at": "2026-06-06T03:31:52Z",
-  "source": "TMDb Watch Providers",
+  "version": "v206-radar-platforms-tmdb-watchmode-daily",
+  "generated_at": "2026-06-06T04:08:16Z",
+  "source": "TMDb Watch Providers + Watchmode",
+  "sources": {
+    "tmdb": {
+      "configured": true,
+      "items_count": 261
+    },
+    "watchmode": {
+      "configured": false,
+      "items_count": 0,
+      "regions": [
+        "AR",
+        "AU",
+        "BR",
+        "CA",
+        "CL",
+        "CO",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "MX",
+        "PE",
+        "PT",
+        "US",
+        "UY"
+      ]
+    }
+  },
   "by_slug": {
     "hermanos-de-sangre": {
       "slug": "hermanos-de-sangre",
@@ -11,13 +39,45 @@
       "type": "feature",
       "current": [],
       "current_status": "no_sources",
-      "message": "Sin proveedores actuales registrados en TMDb.",
+      "message": "Sin proveedores actuales registrados en TMDb/Watchmode.",
       "tmdb_id": 1402000,
       "tmdb_title": {
         "name": "Blade II: Blood Brothers",
         "release_date": "2012-07-10"
       },
-      "updated_at": "2026-06-06T03:31:47Z"
+      "updated_at": "2026-06-06T04:08:09Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "no_sources",
+          "items": 0,
+          "tmdb_id": 1402000
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "punto-muerto": {
       "slug": "punto-muerto",
@@ -26,13 +86,45 @@
       "type": "feature",
       "current": [],
       "current_status": "no_sources",
-      "message": "Sin proveedores actuales registrados en TMDb.",
+      "message": "Sin proveedores actuales registrados en TMDb/Watchmode.",
       "tmdb_id": 539736,
       "tmdb_title": {
         "name": "Montréal Dead End",
         "release_date": "2018-07-31"
       },
-      "updated_at": "2026-06-06T03:31:48Z"
+      "updated_at": "2026-06-06T04:08:10Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "no_sources",
+          "items": 0,
+          "tmdb_id": 539736
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "necrofobia": {
       "slug": "necrofobia",
@@ -52,8 +144,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:48Z",
-          "fingerprint": "331c90ea4b2640545d82d4e1dc4fa96860916920"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "331c90ea4b2640545d82d4e1dc4fa96860916920",
+          "identity_fingerprint": "52d0fa1360ecbc5d422e645aebcf6ae7f145a51d"
         },
         {
           "slug": "necrofobia",
@@ -67,8 +160,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:48Z",
-          "fingerprint": "18c94db38b3f79a00777b24a671a8f7d431fd7ea"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "18c94db38b3f79a00777b24a671a8f7d431fd7ea",
+          "identity_fingerprint": "f30c1304eca5123cdde02e50fa79ee187548fcaa"
         },
         {
           "slug": "necrofobia",
@@ -82,8 +176,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:48Z",
-          "fingerprint": "9baff008ceeee8dab75eeb57de88ca24e23b6720"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "9baff008ceeee8dab75eeb57de88ca24e23b6720",
+          "identity_fingerprint": "1ab61a4b6b71527fec72c8db41e446a4a9ddecfc"
         },
         {
           "slug": "necrofobia",
@@ -97,8 +192,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:48Z",
-          "fingerprint": "b83eda89d41c71704175dd6198b8af76a8c8ba42"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "b83eda89d41c71704175dd6198b8af76a8c8ba42",
+          "identity_fingerprint": "991f7b1492545839ed20c297b3964b89c11c966f"
         },
         {
           "slug": "necrofobia",
@@ -112,8 +208,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=SM",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:48Z",
-          "fingerprint": "1089f6f2bd6c36ec24c460626faeeae36454bacf"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "1089f6f2bd6c36ec24c460626faeeae36454bacf",
+          "identity_fingerprint": "7cfeaa7566df86db1616271284e7f225f7619f54"
         },
         {
           "slug": "necrofobia",
@@ -127,8 +224,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=VA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:48Z",
-          "fingerprint": "0a2030cff1e8d757adebca4c3937110bf54dbebd"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "0a2030cff1e8d757adebca4c3937110bf54dbebd",
+          "identity_fingerprint": "4f7b617f433f233a299448482a7eafaaf2c53acf"
         }
       ],
       "current_status": "found",
@@ -138,7 +236,39 @@
         "name": "Necrofobia",
         "release_date": "2014-09-18"
       },
-      "updated_at": "2026-06-06T03:31:48Z"
+      "updated_at": "2026-06-06T04:08:11Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 6,
+          "tmdb_id": 289197
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "ataud-blanco": {
       "slug": "ataud-blanco",
@@ -158,8 +288,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "61600257c56cd4af84fb643405bc3198842be414"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "61600257c56cd4af84fb643405bc3198842be414",
+          "identity_fingerprint": "3b61e76a2231a29f08d7364742167b6473add75a"
         },
         {
           "slug": "ataud-blanco",
@@ -173,8 +304,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "cbbcc4f75d7a2030b7cbdff22ca1b3479d19eca5"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "cbbcc4f75d7a2030b7cbdff22ca1b3479d19eca5",
+          "identity_fingerprint": "ddb2c906ae35f246d9b463271c8f125f9dbfd0a8"
         },
         {
           "slug": "ataud-blanco",
@@ -188,8 +320,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f200dc2ab022c292e1e63cd882e846ea43a7b322"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "f200dc2ab022c292e1e63cd882e846ea43a7b322",
+          "identity_fingerprint": "24b039773ba5cc6eca7ba00121b5eecb320e2a3e"
         },
         {
           "slug": "ataud-blanco",
@@ -203,8 +336,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0d159ec614d010795cce0265c8deb120b0f0af4f"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "0d159ec614d010795cce0265c8deb120b0f0af4f",
+          "identity_fingerprint": "e7de64659761e83bb4cc837a46a044714160d88d"
         },
         {
           "slug": "ataud-blanco",
@@ -218,8 +352,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=SM",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "d2432bc394deed9e65f3d0011019d5a1112d9b99"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "d2432bc394deed9e65f3d0011019d5a1112d9b99",
+          "identity_fingerprint": "0514bd9600a9f89453ebcaca76e0e2ceb9f1fbdb"
         },
         {
           "slug": "ataud-blanco",
@@ -233,8 +368,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=VA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "d8c1bb46edc341caad0997601bd513a23c9434a7"
+          "detected_at": "2026-06-06T04:08:11Z",
+          "fingerprint": "d8c1bb46edc341caad0997601bd513a23c9434a7",
+          "identity_fingerprint": "fc315afa00af02732650c803d96365d9f41eff66"
         }
       ],
       "current_status": "found",
@@ -244,7 +380,39 @@
         "name": "White Coffin",
         "release_date": "2016-07-21"
       },
-      "updated_at": "2026-06-06T03:31:49Z"
+      "updated_at": "2026-06-06T04:08:11Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 6,
+          "tmdb_id": 399615
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "soy-toxico": {
       "slug": "soy-toxico",
@@ -264,8 +432,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0e2c743ee46f10d67a606c751ee873ad1910898a"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0e2c743ee46f10d67a606c751ee873ad1910898a",
+          "identity_fingerprint": "64f4b2799b17e4968f84ccbd313e8e0a037de3c6"
         },
         {
           "slug": "soy-toxico",
@@ -279,8 +448,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "517ae442a86c4d3503e8ad9314ef76c8f3d2f2b9"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "517ae442a86c4d3503e8ad9314ef76c8f3d2f2b9",
+          "identity_fingerprint": "611095613cd2f30186c595dc428c5a2e6c6410be"
         },
         {
           "slug": "soy-toxico",
@@ -294,8 +464,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "75737606c0d6fd2371f318e988954b562746ef15"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "75737606c0d6fd2371f318e988954b562746ef15",
+          "identity_fingerprint": "9029c095159a3cb398b829faa7ad7bbfc4a10fc7"
         },
         {
           "slug": "soy-toxico",
@@ -309,8 +480,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5673579f9b192de1f6c01bae0cb85593a29172e7"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5673579f9b192de1f6c01bae0cb85593a29172e7",
+          "identity_fingerprint": "6b2b9f737f7f0c7aa3509993a3f9b272d19cb3d8"
         },
         {
           "slug": "soy-toxico",
@@ -324,8 +496,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "6ce001319999ec39457f85ac3049eb819b7f972a"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "6ce001319999ec39457f85ac3049eb819b7f972a",
+          "identity_fingerprint": "ee24ce55cd7d031850c89f620e24fa307f5ce6b0"
         },
         {
           "slug": "soy-toxico",
@@ -339,8 +512,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0b584ced1594988e6f4b5c5c29a9139e9aeb4679"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0b584ced1594988e6f4b5c5c29a9139e9aeb4679",
+          "identity_fingerprint": "82f4d04a0632fb0bb2240b64058d4883601b307c"
         },
         {
           "slug": "soy-toxico",
@@ -354,8 +528,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "3298b22cced26f89344e24685d073dc960d62443"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "3298b22cced26f89344e24685d073dc960d62443",
+          "identity_fingerprint": "baeea4390216c9db22fb599c03b22bab79152d9b"
         },
         {
           "slug": "soy-toxico",
@@ -369,8 +544,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0f028b75edd176088e667e25f33c1b468b08acbc"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0f028b75edd176088e667e25f33c1b468b08acbc",
+          "identity_fingerprint": "4ce98ebf92ecc2a88cd4014fc06c9793517876aa"
         },
         {
           "slug": "soy-toxico",
@@ -384,8 +560,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "e45a7083221398ce9f5eb9ae23257cdf7e804db3"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "e45a7083221398ce9f5eb9ae23257cdf7e804db3",
+          "identity_fingerprint": "7e59e0ef9e75d5e3e83a1316709e6adc4d1f38ef"
         },
         {
           "slug": "soy-toxico",
@@ -399,8 +576,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8ade4df5c6e7cec3580c71282018bcbe015f24b5"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8ade4df5c6e7cec3580c71282018bcbe015f24b5",
+          "identity_fingerprint": "5a654714ec2f17036eeb22fafbf3141718251d2a"
         },
         {
           "slug": "soy-toxico",
@@ -414,8 +592,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "075f9bbfce3f7b7a16f9d26c22eb3e9e57dc4fd4"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "075f9bbfce3f7b7a16f9d26c22eb3e9e57dc4fd4",
+          "identity_fingerprint": "eea9cd8b476b04713df07f09ff64ec094519659b"
         },
         {
           "slug": "soy-toxico",
@@ -429,8 +608,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5877f6e77f26170f5e6e8b94bc404f150f588879"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5877f6e77f26170f5e6e8b94bc404f150f588879",
+          "identity_fingerprint": "4af234fe745875dda9946e47522504e54a5ea029"
         },
         {
           "slug": "soy-toxico",
@@ -444,8 +624,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8558cec2e780f36d4c4a4b161ebc4cb9ade8f25e"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8558cec2e780f36d4c4a4b161ebc4cb9ade8f25e",
+          "identity_fingerprint": "3f915052ac1b6b08e05736dfeeb4e2e0c3a18516"
         },
         {
           "slug": "soy-toxico",
@@ -459,8 +640,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "2640839e2b0ff682627c02282da9c808c533b6d5"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "2640839e2b0ff682627c02282da9c808c533b6d5",
+          "identity_fingerprint": "209488a2d1ad7eae5f0ff4c9d546c9f15a7f8392"
         },
         {
           "slug": "soy-toxico",
@@ -474,8 +656,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "7d35fdfa2a05c35a48d0a8288720d2e82e7035be"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "7d35fdfa2a05c35a48d0a8288720d2e82e7035be",
+          "identity_fingerprint": "252aa2012b27f07a7b1f4b8f5b258c210e8a1210"
         },
         {
           "slug": "soy-toxico",
@@ -489,8 +672,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8f187746f6e15a794afc85f18596f26687f622a4"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8f187746f6e15a794afc85f18596f26687f622a4",
+          "identity_fingerprint": "9d956c48f2bc49231124cfab014d37123370b168"
         },
         {
           "slug": "soy-toxico",
@@ -504,8 +688,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "93efbfb46ab242c446a5f29b170334767e1dcdcc"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "93efbfb46ab242c446a5f29b170334767e1dcdcc",
+          "identity_fingerprint": "2a18a038e36a680623bbef25447023fa4d345c51"
         },
         {
           "slug": "soy-toxico",
@@ -519,8 +704,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "c9e596fdd3c2beca6cf16c135e4bcd44bfd7af10"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "c9e596fdd3c2beca6cf16c135e4bcd44bfd7af10",
+          "identity_fingerprint": "3865a4197c698a9f151cd1a52f547b2b8a223080"
         },
         {
           "slug": "soy-toxico",
@@ -534,8 +720,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f2bf21424b785e2e37dc4b95554b3bc2da4713e3"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "f2bf21424b785e2e37dc4b95554b3bc2da4713e3",
+          "identity_fingerprint": "afd17fc7ff8f71cadd3e352e3452f2edf6bfe93e"
         },
         {
           "slug": "soy-toxico",
@@ -549,8 +736,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "c008c10201fbcfaef42dbfb0bb416ddaf96e5cf2"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "c008c10201fbcfaef42dbfb0bb416ddaf96e5cf2",
+          "identity_fingerprint": "8e75755b597887c0116c486d42a985d57a32f1a3"
         },
         {
           "slug": "soy-toxico",
@@ -564,8 +752,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MX",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "a1d9537ef6d53a8227009e428a21b11cc7646e55"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "a1d9537ef6d53a8227009e428a21b11cc7646e55",
+          "identity_fingerprint": "b8f3b3ae4283602769c6c256f188f68510730a26"
         },
         {
           "slug": "soy-toxico",
@@ -579,8 +768,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "b98e346f305042795d6928bb9c6664d7eee57b8a"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "b98e346f305042795d6928bb9c6664d7eee57b8a",
+          "identity_fingerprint": "e0f7dd794c8e722eba5b48ac0f92b0d6aa033c3a"
         },
         {
           "slug": "soy-toxico",
@@ -594,8 +784,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "9dd93ff71cfe9d39823e6b58d6be08ac8ab33d60"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "9dd93ff71cfe9d39823e6b58d6be08ac8ab33d60",
+          "identity_fingerprint": "8bb29b956ab7f83550b24574c4c6c75c3f8cbad6"
         },
         {
           "slug": "soy-toxico",
@@ -609,8 +800,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "28458f061b71fea4a144107963996c6d0afaa268"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "28458f061b71fea4a144107963996c6d0afaa268",
+          "identity_fingerprint": "07434aa87f2a68b51bada5c9ca0034f58f3e1ac9"
         },
         {
           "slug": "soy-toxico",
@@ -624,8 +816,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "87bd41bbb32ab7ee1e8f28c0d144aa7b8c55fed6"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "87bd41bbb32ab7ee1e8f28c0d144aa7b8c55fed6",
+          "identity_fingerprint": "7cb9d0ed92b75b7e68cf270a68981eccec71406e"
         },
         {
           "slug": "soy-toxico",
@@ -639,8 +832,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=PE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "749ed7c8a378964610ffbd97133bd07c95abb4bc"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "749ed7c8a378964610ffbd97133bd07c95abb4bc",
+          "identity_fingerprint": "c4438950f178d39035ac1820361864583c2d59ad"
         },
         {
           "slug": "soy-toxico",
@@ -654,8 +848,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0005a15d0eda74ae4dc3d67903667c76ef2bd31c"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0005a15d0eda74ae4dc3d67903667c76ef2bd31c",
+          "identity_fingerprint": "0cd9e1c9ebb6b9a537cff6d8b16d4f3237b83227"
         },
         {
           "slug": "soy-toxico",
@@ -669,8 +864,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8ff5749e200df7181c4171bc6673fffefd55d96c"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8ff5749e200df7181c4171bc6673fffefd55d96c",
+          "identity_fingerprint": "17c1fdec8e969fb177f6b645145f8be3b8f3d26e"
         },
         {
           "slug": "soy-toxico",
@@ -684,8 +880,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0d39995d2590d759d2b9eaabc8bdd1bd73cc5b97"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0d39995d2590d759d2b9eaabc8bdd1bd73cc5b97",
+          "identity_fingerprint": "b871ac5082fbbb58196fa6f199b6fb8437d2429d"
         },
         {
           "slug": "soy-toxico",
@@ -699,8 +896,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "57c7b33c31ad71d10bc4499204a8049ed64bc86d"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "57c7b33c31ad71d10bc4499204a8049ed64bc86d",
+          "identity_fingerprint": "6edc70814d025503121e73e122fb950a044dbac5"
         },
         {
           "slug": "soy-toxico",
@@ -714,8 +912,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "92bd4277cbd0936e3bad666c18cbdabccfd6bdbd"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "92bd4277cbd0936e3bad666c18cbdabccfd6bdbd",
+          "identity_fingerprint": "36532627772e84e9228915b8dab7dedaa756e7f2"
         },
         {
           "slug": "soy-toxico",
@@ -729,8 +928,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "00919ceef05f6b6215ceac57d4db38095ad0f336"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "00919ceef05f6b6215ceac57d4db38095ad0f336",
+          "identity_fingerprint": "afef1ad78807e96ba5ba79848283c5268d506901"
         },
         {
           "slug": "soy-toxico",
@@ -744,8 +944,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "e53f7e303c82ef2fc70182357d88f48f9b5d14cf"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "e53f7e303c82ef2fc70182357d88f48f9b5d14cf",
+          "identity_fingerprint": "3252ab20befa475c1bb5a6381ac1245fb5b7ac55"
         },
         {
           "slug": "soy-toxico",
@@ -759,8 +960,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "3301080c88f2613c442bdb33f7e7206a8bf49fa7"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "3301080c88f2613c442bdb33f7e7206a8bf49fa7",
+          "identity_fingerprint": "b59d35a5fe5094365562cb0a3e22f78fdeee6f94"
         },
         {
           "slug": "soy-toxico",
@@ -774,8 +976,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "1be600891dee402c3bf05bed076dd9558cc8ca8f"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "1be600891dee402c3bf05bed076dd9558cc8ca8f",
+          "identity_fingerprint": "9eb09fde3a896867b085cfb9957ede472c5837c0"
         },
         {
           "slug": "soy-toxico",
@@ -789,8 +992,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "edcbe55ff2da8e873ab1572f498a0a1169b44c56"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "edcbe55ff2da8e873ab1572f498a0a1169b44c56",
+          "identity_fingerprint": "98105561c70a056508c1d32aa0fd40440621e9d3"
         },
         {
           "slug": "soy-toxico",
@@ -804,8 +1008,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "fc0151b3757b61fbe554c20b41a1125dcf65465f"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "fc0151b3757b61fbe554c20b41a1125dcf65465f",
+          "identity_fingerprint": "7ed0a9a5b9784eb64db38dbe3191d815067c1529"
         },
         {
           "slug": "soy-toxico",
@@ -819,8 +1024,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "3b29a616212ce43854b0dad2f54325cff20b4da9"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "3b29a616212ce43854b0dad2f54325cff20b4da9",
+          "identity_fingerprint": "358f94bed9d560239ce3436abdc0d63c08f025a9"
         },
         {
           "slug": "soy-toxico",
@@ -834,8 +1040,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "575d1da669762769eb4e27081e10adbf5a314a3d"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "575d1da669762769eb4e27081e10adbf5a314a3d",
+          "identity_fingerprint": "0c719d4411380c0e724e1daa04701da08e64e3c0"
         },
         {
           "slug": "soy-toxico",
@@ -849,8 +1056,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "77947a83489013ed6b5f3064e2801e5094c7c056"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "77947a83489013ed6b5f3064e2801e5094c7c056",
+          "identity_fingerprint": "d322e83f3f4259e0e329edab70248dd766f43220"
         },
         {
           "slug": "soy-toxico",
@@ -864,8 +1072,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "3d20430ce197678da4ead4e466b50df5e9a28239"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "3d20430ce197678da4ead4e466b50df5e9a28239",
+          "identity_fingerprint": "957808357029a04f5299fe68668a25b0d1f70da8"
         },
         {
           "slug": "soy-toxico",
@@ -879,8 +1088,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "24743406a7115263cf7d0992a48cf3509f9ab859"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "24743406a7115263cf7d0992a48cf3509f9ab859",
+          "identity_fingerprint": "f10516bf0db6f90f542d300db49e03ac00e636dd"
         },
         {
           "slug": "soy-toxico",
@@ -894,8 +1104,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CH",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "21222cc91e449213ba50e779fa988d69c576a273"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "21222cc91e449213ba50e779fa988d69c576a273",
+          "identity_fingerprint": "26c1f1b2448b363a7a8a9384c66fa405216d160a"
         },
         {
           "slug": "soy-toxico",
@@ -909,8 +1120,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CH",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "570e1b497fae15acb282320b0f3ccb6e4af3d56c"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "570e1b497fae15acb282320b0f3ccb6e4af3d56c",
+          "identity_fingerprint": "a5830abb46c643a693a0acfa37cc4942c01bedae"
         },
         {
           "slug": "soy-toxico",
@@ -924,8 +1136,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CV",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f996e7f163211f73251f458108697fab80e02915"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "f996e7f163211f73251f458108697fab80e02915",
+          "identity_fingerprint": "6d90656e03dd92366fb08a7db174207a53ab5e37"
         },
         {
           "slug": "soy-toxico",
@@ -939,8 +1152,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CV",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f54732be94eacfcb28ae5ee023f217bbdaaef8f6"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "f54732be94eacfcb28ae5ee023f217bbdaaef8f6",
+          "identity_fingerprint": "fcaaba0f4472dd2c49bfb811ccae93bcf0cf3d37"
         },
         {
           "slug": "soy-toxico",
@@ -954,8 +1168,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CY",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "9fad931fecc9693b3f4a85a8d6eafcd866b745ac"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "9fad931fecc9693b3f4a85a8d6eafcd866b745ac",
+          "identity_fingerprint": "fc85a74b2380d9db7a6b083274b140e8e7ea50b0"
         },
         {
           "slug": "soy-toxico",
@@ -969,8 +1184,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CY",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "4ded09dd44268f62bb42df0a788dc6c5a0517098"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "4ded09dd44268f62bb42df0a788dc6c5a0517098",
+          "identity_fingerprint": "47a9bd781a10d6a95a2e492afa20981a6f8997a1"
         },
         {
           "slug": "soy-toxico",
@@ -984,8 +1200,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0c146c5432ffc91630fde84d537dc5a4b817bb91"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0c146c5432ffc91630fde84d537dc5a4b817bb91",
+          "identity_fingerprint": "a8975f65af729497c7c2dc737c269b64f5ce195c"
         },
         {
           "slug": "soy-toxico",
@@ -999,8 +1216,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "4e6fd6a5c1eb4f21d159aca5dc5aa14bd9c4526b"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "4e6fd6a5c1eb4f21d159aca5dc5aa14bd9c4526b",
+          "identity_fingerprint": "f217788d4f98abde56350bc8ff85372d8e0bc20e"
         },
         {
           "slug": "soy-toxico",
@@ -1014,8 +1232,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0f8106df547d14cb8ae6a0ec1a726175f6f3f35d"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0f8106df547d14cb8ae6a0ec1a726175f6f3f35d",
+          "identity_fingerprint": "320d5272fc2cb67399bb930aeb411f6477244e9a"
         },
         {
           "slug": "soy-toxico",
@@ -1029,8 +1248,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0e46d2063e5c5153280bd991a114cc1e6fecba71"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0e46d2063e5c5153280bd991a114cc1e6fecba71",
+          "identity_fingerprint": "89e8a8c4d06f7cb9652fbc28f4cb44d70c5863ad"
         },
         {
           "slug": "soy-toxico",
@@ -1044,8 +1264,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "a0722ca9a140456c5d72dc1fc3309436b25c8afe"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "a0722ca9a140456c5d72dc1fc3309436b25c8afe",
+          "identity_fingerprint": "696914115fdc6294c4ab246c4532f36955700c36"
         },
         {
           "slug": "soy-toxico",
@@ -1059,8 +1280,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "e15aceadf6a0ff8ba92777d83d20d0c4a3a2cd81"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "e15aceadf6a0ff8ba92777d83d20d0c4a3a2cd81",
+          "identity_fingerprint": "4fb50a01a73db75fbed159bd077df06ee0b7f906"
         },
         {
           "slug": "soy-toxico",
@@ -1074,8 +1296,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5b272e774a85c1685246f7a62514a5b24d356a28"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5b272e774a85c1685246f7a62514a5b24d356a28",
+          "identity_fingerprint": "9ea3123ba340e19f020b04ee5854384d5e6abc3b"
         },
         {
           "slug": "soy-toxico",
@@ -1089,8 +1312,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=EE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "ea2612175bd8ae1c8a23a2285a7663928a4cd947"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "ea2612175bd8ae1c8a23a2285a7663928a4cd947",
+          "identity_fingerprint": "34e16dc4c18f55c84ecc7e5870a571755198d46c"
         },
         {
           "slug": "soy-toxico",
@@ -1104,8 +1328,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=EE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "7cf7dc2847d430e707a31cd495df59d0cc4f2205"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "7cf7dc2847d430e707a31cd495df59d0cc4f2205",
+          "identity_fingerprint": "ce71dadc14f78c4b6efe2ac7f58c69bab1ceb0cf"
         },
         {
           "slug": "soy-toxico",
@@ -1119,8 +1344,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "17b27e7f3ff25c7f6a6de814cc33fe4849bcf3ca"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "17b27e7f3ff25c7f6a6de814cc33fe4849bcf3ca",
+          "identity_fingerprint": "1f8d577cf5a14859288612e7800c2c144c456226"
         },
         {
           "slug": "soy-toxico",
@@ -1134,8 +1360,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "19605dccb2d9be39c3efb56dc0f0901bcb636de0"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "19605dccb2d9be39c3efb56dc0f0901bcb636de0",
+          "identity_fingerprint": "7bd1c3e4a55b0bfdaf9f3b4e2bcaf1187cc476e4"
         },
         {
           "slug": "soy-toxico",
@@ -1149,8 +1376,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "2d701804fb578b469954d88714f86589d7ef5543"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "2d701804fb578b469954d88714f86589d7ef5543",
+          "identity_fingerprint": "07330ae6ddc256494559db437bf17308f5f56c10"
         },
         {
           "slug": "soy-toxico",
@@ -1164,8 +1392,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "649f3f3d11ec07e5784a1f361373ae56db997416"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "649f3f3d11ec07e5784a1f361373ae56db997416",
+          "identity_fingerprint": "a9b7b2820cbd138ba0e77256617260e7b31b6028"
         },
         {
           "slug": "soy-toxico",
@@ -1179,8 +1408,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "25fbec24cffee8d4c318fe2ce7d21345efe7dba9"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "25fbec24cffee8d4c318fe2ce7d21345efe7dba9",
+          "identity_fingerprint": "9ba1a7f4d591a2c192b6957365a0351feacff206"
         },
         {
           "slug": "soy-toxico",
@@ -1194,8 +1424,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "a9c66f81ecf8c1170506be432d4566d36e9f78e6"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "a9c66f81ecf8c1170506be432d4566d36e9f78e6",
+          "identity_fingerprint": "c2eb591debf18b99880a3d5fa473974af47f1265"
         },
         {
           "slug": "soy-toxico",
@@ -1209,8 +1440,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "39cfc7fd54e5e3f46df3ba00bb31ee14ce967af5"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "39cfc7fd54e5e3f46df3ba00bb31ee14ce967af5",
+          "identity_fingerprint": "0f03e5bfb0b14b3561a27e2fcf74a98dd28b26bf"
         },
         {
           "slug": "soy-toxico",
@@ -1224,8 +1456,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "97208716f3c5987a217f9905cb5238394d5389dc"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "97208716f3c5987a217f9905cb5238394d5389dc",
+          "identity_fingerprint": "f2b1b245665c41bf20a14e5ef5c348ef1ab9e3f6"
         },
         {
           "slug": "soy-toxico",
@@ -1239,8 +1472,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "7e43af1aa30a785830f70da221daca6021ac4025"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "7e43af1aa30a785830f70da221daca6021ac4025",
+          "identity_fingerprint": "80dfbeb98d67b0a373e4c1b0eafa2dd7d1419fc9"
         },
         {
           "slug": "soy-toxico",
@@ -1254,8 +1488,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "00d81c589a21b343b5d50fd1eef101170f8cf53e"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "00d81c589a21b343b5d50fd1eef101170f8cf53e",
+          "identity_fingerprint": "7ac3e9e1ef961b4f965fcda1709ab65382d58c52"
         },
         {
           "slug": "soy-toxico",
@@ -1269,8 +1504,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "de4361ecb9c2cae94c70e46f90ee7cf9363ff876"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "de4361ecb9c2cae94c70e46f90ee7cf9363ff876",
+          "identity_fingerprint": "192e3a4ab78b4236a4748af97222b2b51d98eda8"
         },
         {
           "slug": "soy-toxico",
@@ -1284,8 +1520,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0c1c5f76e78f5bb4184f94bf33864c9027749e90"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0c1c5f76e78f5bb4184f94bf33864c9027749e90",
+          "identity_fingerprint": "e01bc5866c0296699ab2cbd375ca9ef62fb563b5"
         },
         {
           "slug": "soy-toxico",
@@ -1299,8 +1536,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "a67981bb5edda4f64a508f5d8bbc1d3751918ed8"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "a67981bb5edda4f64a508f5d8bbc1d3751918ed8",
+          "identity_fingerprint": "29744518742187b03f909fd6b11e87b9841e82a0"
         },
         {
           "slug": "soy-toxico",
@@ -1314,8 +1552,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f8c111afbc5c49bad401facf0c51ef49d29d5d1d"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "f8c111afbc5c49bad401facf0c51ef49d29d5d1d",
+          "identity_fingerprint": "6eafff5c36102cdca69260f9f3a3c81d6ce16cf0"
         },
         {
           "slug": "soy-toxico",
@@ -1329,8 +1568,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "c6770f7525fff07518089886ba60c35483a6d53a"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "c6770f7525fff07518089886ba60c35483a6d53a",
+          "identity_fingerprint": "536a2f69fa0a5d6881efbd6825e0f137b003a8cf"
         },
         {
           "slug": "soy-toxico",
@@ -1344,8 +1584,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "4c95419f6c816a5f3788858925be1230996847ef"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "4c95419f6c816a5f3788858925be1230996847ef",
+          "identity_fingerprint": "54ed342573d911bff64efd29cf25dacb42752199"
         },
         {
           "slug": "soy-toxico",
@@ -1359,8 +1600,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "340530a778398a01e060dbb27feb175c03c16a18"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "340530a778398a01e060dbb27feb175c03c16a18",
+          "identity_fingerprint": "4ed98fde09018e6ab14cd8bf27bf49886c7aa97e"
         },
         {
           "slug": "soy-toxico",
@@ -1374,8 +1616,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f58c2fcca1ae2236b0dfe1a1ca4d643cb1559fea"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "f58c2fcca1ae2236b0dfe1a1ca4d643cb1559fea",
+          "identity_fingerprint": "26a527cbe90014e82956d3e463ee46b14c413967"
         },
         {
           "slug": "soy-toxico",
@@ -1389,8 +1632,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "79fa5fd82e24a6300b53dc4fa12ec87eb690ee3c"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "79fa5fd82e24a6300b53dc4fa12ec87eb690ee3c",
+          "identity_fingerprint": "f71f10a655fc6ae2f727685e392b16723347d83b"
         },
         {
           "slug": "soy-toxico",
@@ -1404,8 +1648,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "ec80a725233f84ad0021370a79696793fad9aab2"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "ec80a725233f84ad0021370a79696793fad9aab2",
+          "identity_fingerprint": "80278d990cd9cdca3d8bb502b35f8d5ca7df9d39"
         },
         {
           "slug": "soy-toxico",
@@ -1419,8 +1664,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "1805bd9d0e1577a48ecbb8b3758186e94e88ddf5"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "1805bd9d0e1577a48ecbb8b3758186e94e88ddf5",
+          "identity_fingerprint": "df43b5800a90b8b6065898b8cd267c5999b49144"
         },
         {
           "slug": "soy-toxico",
@@ -1434,8 +1680,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "497bf44ec2eb2a0946485268267ec79c3ed85688"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "497bf44ec2eb2a0946485268267ec79c3ed85688",
+          "identity_fingerprint": "ee8df50bc3dbc11d3016fd04b0c1b5e0f20147c9"
         },
         {
           "slug": "soy-toxico",
@@ -1449,8 +1696,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "d78b76b892395e70ad9c22f6f0818d05d6379d32"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "d78b76b892395e70ad9c22f6f0818d05d6379d32",
+          "identity_fingerprint": "16f1aab9b245ef2f3c0407673c5c343c2b539765"
         },
         {
           "slug": "soy-toxico",
@@ -1464,8 +1712,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LV",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5a00f96ad6c6e1e2dcda9bf29c5e130d5513bade"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5a00f96ad6c6e1e2dcda9bf29c5e130d5513bade",
+          "identity_fingerprint": "09a0abd49aa11fc6e70b5954b667510554c74609"
         },
         {
           "slug": "soy-toxico",
@@ -1479,8 +1728,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LV",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "6b6b2d782221e2b75023706edf7b7eaadb84aa61"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "6b6b2d782221e2b75023706edf7b7eaadb84aa61",
+          "identity_fingerprint": "7026c85459cf3daf97fc36669a4b67dcd98f7d72"
         },
         {
           "slug": "soy-toxico",
@@ -1494,8 +1744,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "dc9874fee792c3382cdaae72c2a0c31151c24f0e"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "dc9874fee792c3382cdaae72c2a0c31151c24f0e",
+          "identity_fingerprint": "8e5dee04503233bf9b3b7f3d85756d8b8b16dafc"
         },
         {
           "slug": "soy-toxico",
@@ -1509,8 +1760,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "c9fdd06cd76669fc531fc16987ef91ed4990ceb4"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "c9fdd06cd76669fc531fc16987ef91ed4990ceb4",
+          "identity_fingerprint": "45c698fb76b4928453a07e84bda0bd109ad13045"
         },
         {
           "slug": "soy-toxico",
@@ -1524,8 +1776,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "3fb3661b51ede3610d6d0484df1af47bf5a64575"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "3fb3661b51ede3610d6d0484df1af47bf5a64575",
+          "identity_fingerprint": "cd489a4a4332ee140029245113d131daddc98632"
         },
         {
           "slug": "soy-toxico",
@@ -1539,8 +1792,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8df1a4df0b39578761c64a1eb7abe56eeb1590da"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8df1a4df0b39578761c64a1eb7abe56eeb1590da",
+          "identity_fingerprint": "57c7d1c0dc441212d2afb42d70e1cbbf05801733"
         },
         {
           "slug": "soy-toxico",
@@ -1554,8 +1808,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5f8bd59f70daf7378f4e7cee9431a85c7c8def22"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5f8bd59f70daf7378f4e7cee9431a85c7c8def22",
+          "identity_fingerprint": "4895715f726afc1121703280a38a9209e42c1676"
         },
         {
           "slug": "soy-toxico",
@@ -1569,8 +1824,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "c43edfb7a24a5087eb2b9c19f725d6a5b120d163"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "c43edfb7a24a5087eb2b9c19f725d6a5b120d163",
+          "identity_fingerprint": "769d048d397f5243d5eaace5637c77848739976d"
         },
         {
           "slug": "soy-toxico",
@@ -1584,8 +1840,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "bca42fc779350d99a7b769438c7a4cbd086bb9ea"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "bca42fc779350d99a7b769438c7a4cbd086bb9ea",
+          "identity_fingerprint": "fb297e264e6dbc69408c7dd6cdcafd2d7276feff"
         },
         {
           "slug": "soy-toxico",
@@ -1599,8 +1856,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "6d72c476e91e2abda118332c057ae7197cdec311"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "6d72c476e91e2abda118332c057ae7197cdec311",
+          "identity_fingerprint": "6b4d83424b132707341198da8f8f317171880081"
         },
         {
           "slug": "soy-toxico",
@@ -1614,8 +1872,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "bcdb755ac52616c5974bf6763887a117b6c021fc"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "bcdb755ac52616c5974bf6763887a117b6c021fc",
+          "identity_fingerprint": "d69211d77276badde1ced8e7aee829ca7d01c32d"
         },
         {
           "slug": "soy-toxico",
@@ -1629,8 +1888,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "b91b44bd1bbce98b0affe94256f9b6160dfafcdd"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "b91b44bd1bbce98b0affe94256f9b6160dfafcdd",
+          "identity_fingerprint": "284da70db9f8a2c82edd25822213fc587e6fd7fe"
         },
         {
           "slug": "soy-toxico",
@@ -1644,8 +1904,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "e8008c440eb352d3d5a6283d900e4a4fbdd562de"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "e8008c440eb352d3d5a6283d900e4a4fbdd562de",
+          "identity_fingerprint": "aa9e2b4c0d2d9eaf4fef6933ab0fd6445619bf22"
         },
         {
           "slug": "soy-toxico",
@@ -1659,8 +1920,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8db1fd7df98cbf0ffcba5d65437859b129af8b63"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8db1fd7df98cbf0ffcba5d65437859b129af8b63",
+          "identity_fingerprint": "7e72324bc2c6f46eb8a4c7e188fcab0b72b75276"
         },
         {
           "slug": "soy-toxico",
@@ -1674,8 +1936,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "a12610d41e7aa527cfc6d9df8214ad63611ca428"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "a12610d41e7aa527cfc6d9df8214ad63611ca428",
+          "identity_fingerprint": "3efa00341c7b6adaea1583ea636a6d2f7ff1243b"
         },
         {
           "slug": "soy-toxico",
@@ -1689,8 +1952,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "2abe0eb2d218e9d01a2ccda29fd2ee7007c7b965"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "2abe0eb2d218e9d01a2ccda29fd2ee7007c7b965",
+          "identity_fingerprint": "644510f9543726b4014fce527003ac82f2b582ae"
         },
         {
           "slug": "soy-toxico",
@@ -1704,8 +1968,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "38023b8e4378543b06a7679394d875f9c8a84f4a"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "38023b8e4378543b06a7679394d875f9c8a84f4a",
+          "identity_fingerprint": "a2562cee0dd0c98454546ac9367c490dd75d7072"
         },
         {
           "slug": "soy-toxico",
@@ -1719,8 +1984,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "f0b777a4282700d4e6320232477b2f78b909cd29"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "f0b777a4282700d4e6320232477b2f78b909cd29",
+          "identity_fingerprint": "d76ef6b55bba56e6feec7da547ff2b4647ad8151"
         },
         {
           "slug": "soy-toxico",
@@ -1734,8 +2000,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=PH",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5d70ae19c78f414025af4192e2628c79ba1d30d6"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5d70ae19c78f414025af4192e2628c79ba1d30d6",
+          "identity_fingerprint": "412b4f45aef19aa64cf42535b9fd4e360daf30ba"
         },
         {
           "slug": "soy-toxico",
@@ -1749,8 +2016,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=PH",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "ce8f35ba9a3cd37616b33845a1e41f263e18d4be"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "ce8f35ba9a3cd37616b33845a1e41f263e18d4be",
+          "identity_fingerprint": "143fc1a9a0f5431c9a343c68c2b2ba2ccc42a7cd"
         },
         {
           "slug": "soy-toxico",
@@ -1764,8 +2032,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "68adcd414aa641bd1307f6d74e188b3f062f03e2"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "68adcd414aa641bd1307f6d74e188b3f062f03e2",
+          "identity_fingerprint": "7689d8a5984607f3dd0f370fcde396ba9ae12bba"
         },
         {
           "slug": "soy-toxico",
@@ -1779,8 +2048,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "a4b40f38f5bcbc4b126c5e351247d8afdfd6bb46"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "a4b40f38f5bcbc4b126c5e351247d8afdfd6bb46",
+          "identity_fingerprint": "cde41ce008fd58cab1551a1e6e6cb4812c819cd6"
         },
         {
           "slug": "soy-toxico",
@@ -1794,8 +2064,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "924271d8b5ee5d4b81ca7cbc8f330cfad02daa24"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "924271d8b5ee5d4b81ca7cbc8f330cfad02daa24",
+          "identity_fingerprint": "f79d845b76dea02afb9e6f4d24fd925bd76389d7"
         },
         {
           "slug": "soy-toxico",
@@ -1809,8 +2080,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "b2b24e937ce7dcaf007e3bf5c8321afd6f96eb07"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "b2b24e937ce7dcaf007e3bf5c8321afd6f96eb07",
+          "identity_fingerprint": "2282cbb24e41aa19c9e6229903837c1a7d443347"
         },
         {
           "slug": "soy-toxico",
@@ -1824,8 +2096,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "d429051687caba53ab2c49d9fd7a1cbbf8941026"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "d429051687caba53ab2c49d9fd7a1cbbf8941026",
+          "identity_fingerprint": "99adfd50a4249ba537121dd1e78c95b5e9836cea"
         },
         {
           "slug": "soy-toxico",
@@ -1839,8 +2112,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "2ea1b18e90f74580b92b8daf251bf34c11ae7cbd"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "2ea1b18e90f74580b92b8daf251bf34c11ae7cbd",
+          "identity_fingerprint": "675b3edbb79fdd8d7ae7cbf9c5048a3a67584018"
         },
         {
           "slug": "soy-toxico",
@@ -1854,8 +2128,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "afaca33260b3248f2563de63870eb256b8b3ba6c"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "afaca33260b3248f2563de63870eb256b8b3ba6c",
+          "identity_fingerprint": "1be73afc9c136d28ddeaa76dac67f261e6a84e6d"
         },
         {
           "slug": "soy-toxico",
@@ -1869,8 +2144,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "2906b48d6af89a8eeae7b07b8bd164179e222745"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "2906b48d6af89a8eeae7b07b8bd164179e222745",
+          "identity_fingerprint": "35a4f953bf13c12341ef39f205251af505850525"
         },
         {
           "slug": "soy-toxico",
@@ -1884,8 +2160,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "9d1ff8a1cf69ce808a2484a297473ecc029c5295"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "9d1ff8a1cf69ce808a2484a297473ecc029c5295",
+          "identity_fingerprint": "c3fc596d7facfff1ee742bf50bb77bd8fb208edc"
         },
         {
           "slug": "soy-toxico",
@@ -1899,8 +2176,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SM",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "6040b1064487eaa40eb5a5b47c11d1b715c4dcbb"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "6040b1064487eaa40eb5a5b47c11d1b715c4dcbb",
+          "identity_fingerprint": "a887cb257a9719cfd7d7908832a2df43eafb0810"
         },
         {
           "slug": "soy-toxico",
@@ -1914,8 +2192,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=TW",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "5af3f1942f80a76df243b88f6dda89806a63302b"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "5af3f1942f80a76df243b88f6dda89806a63302b",
+          "identity_fingerprint": "ad10269ed996ef0b71ce1723347005a599e9eef0"
         },
         {
           "slug": "soy-toxico",
@@ -1929,8 +2208,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=TW",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "2b7dd3c7801b12e7f261b2bca3db05b4f56f72ed"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "2b7dd3c7801b12e7f261b2bca3db05b4f56f72ed",
+          "identity_fingerprint": "c4aa531cec2620969dcea545c79893cc8a433369"
         },
         {
           "slug": "soy-toxico",
@@ -1944,8 +2224,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=UG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "8beba2a8e125e96be86c74c1187a0fde6b1afba3"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "8beba2a8e125e96be86c74c1187a0fde6b1afba3",
+          "identity_fingerprint": "749e35cb33c4ac479167b76bf1777fddb7994c69"
         },
         {
           "slug": "soy-toxico",
@@ -1959,8 +2240,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=UG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "7454ad0dee59cf018ee8859b26db3425a9c49ada"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "7454ad0dee59cf018ee8859b26db3425a9c49ada",
+          "identity_fingerprint": "49e72ce4ed9bbd83f8018cfa3fb96c0e32bf3d0d"
         },
         {
           "slug": "soy-toxico",
@@ -1974,8 +2256,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=VA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "3fac9682180881d159d6f367ef93585ed76d14d8"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "3fac9682180881d159d6f367ef93585ed76d14d8",
+          "identity_fingerprint": "bd5ecf8122593928d00554b50476b322d2e0d72a"
         },
         {
           "slug": "soy-toxico",
@@ -1989,8 +2272,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=ZA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "284cb91624eba769bfb283a3752126833f3404a3"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "284cb91624eba769bfb283a3752126833f3404a3",
+          "identity_fingerprint": "f0092009bccb3c58e19d561078672591d9c086ed"
         },
         {
           "slug": "soy-toxico",
@@ -2004,8 +2288,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=ZA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:49Z",
-          "fingerprint": "0a65445ab8fbaf61d7e20d0d4487ce77dcfa3f74"
+          "detected_at": "2026-06-06T04:08:12Z",
+          "fingerprint": "0a65445ab8fbaf61d7e20d0d4487ce77dcfa3f74",
+          "identity_fingerprint": "519165fcfef279084e9e18b72fb2e23db62242cf"
         }
       ],
       "current_status": "found",
@@ -2015,7 +2300,39 @@
         "name": "I Am Toxic",
         "release_date": "2018-11-14"
       },
-      "updated_at": "2026-06-06T03:31:49Z"
+      "updated_at": "2026-06-06T04:08:11Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 117,
+          "tmdb_id": 567691
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "death-knows-your-name": {
       "slug": "death-knows-your-name",
@@ -2024,13 +2341,45 @@
       "type": "feature",
       "current": [],
       "current_status": "no_sources",
-      "message": "Sin proveedores actuales registrados en TMDb.",
+      "message": "Sin proveedores actuales registrados en TMDb/Watchmode.",
       "tmdb_id": 104184,
       "tmdb_title": {
         "name": "Death Knows Your Name",
         "release_date": "2007-10-06"
       },
-      "updated_at": "2026-06-06T03:31:49Z"
+      "updated_at": "2026-06-06T04:08:12Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "no_sources",
+          "items": 0,
+          "tmdb_id": 104184
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "jennifers-shadow": {
       "slug": "jennifers-shadow",
@@ -2050,8 +2399,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "e300a49f6209b839a1261a6308ba6285701d9693"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "e300a49f6209b839a1261a6308ba6285701d9693",
+          "identity_fingerprint": "55009954f49c6b482d7fc23fcae4ea8c0fd5229b"
         },
         {
           "slug": "jennifers-shadow",
@@ -2065,8 +2415,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "ff27d00c18a16708749f017a7896db50950a1d5e"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "ff27d00c18a16708749f017a7896db50950a1d5e",
+          "identity_fingerprint": "78c2a29a44059059a3989233db8a6c87d5a045e7"
         },
         {
           "slug": "jennifers-shadow",
@@ -2080,8 +2431,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "0f27558e4aa6e8e8a8cbac18568b6fda9d5cd989"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "0f27558e4aa6e8e8a8cbac18568b6fda9d5cd989",
+          "identity_fingerprint": "9bfa5a769fc58e44ddaeb30c31505b55a9a0c96b"
         },
         {
           "slug": "jennifers-shadow",
@@ -2095,8 +2447,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "62dfdb0b33bfe4af7cf4bcef319df7b00e472fb1"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "62dfdb0b33bfe4af7cf4bcef319df7b00e472fb1",
+          "identity_fingerprint": "96c4dae626a5834ceaf32ae2ddffdb75559e64aa"
         },
         {
           "slug": "jennifers-shadow",
@@ -2110,8 +2463,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "19770af9b483fe66771ea5c8f350cba622a2d822"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "19770af9b483fe66771ea5c8f350cba622a2d822",
+          "identity_fingerprint": "60c633ec0ee49b59573c012bb7b8ae7ad7488406"
         },
         {
           "slug": "jennifers-shadow",
@@ -2125,8 +2479,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=BG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "701aa9aa83c1a1ceb0b5518e9a4548a8fde63131"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "701aa9aa83c1a1ceb0b5518e9a4548a8fde63131",
+          "identity_fingerprint": "f0905adfd0adc3ca21522b5b1209ff5d3b1fad88"
         },
         {
           "slug": "jennifers-shadow",
@@ -2140,8 +2495,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=BG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "8568056eedaf5d6fcb57f603f0a5a573fcf2d8cf"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "8568056eedaf5d6fcb57f603f0a5a573fcf2d8cf",
+          "identity_fingerprint": "3edd3c9d68cfb5adc3617327a8cb9af490452be7"
         },
         {
           "slug": "jennifers-shadow",
@@ -2155,8 +2511,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CY",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "87aefaad5bed7547eeaac12748691824090a65c3"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "87aefaad5bed7547eeaac12748691824090a65c3",
+          "identity_fingerprint": "2997c33ed0a974c220a16e4acf2d6f6d3b6fe3e5"
         },
         {
           "slug": "jennifers-shadow",
@@ -2170,8 +2527,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CY",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "068a912a8bfd30ef96478f87bce45b10cd1f63ca"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "068a912a8bfd30ef96478f87bce45b10cd1f63ca",
+          "identity_fingerprint": "efebc43c168d8c8f3877b7f45e5f5000d62f7c66"
         },
         {
           "slug": "jennifers-shadow",
@@ -2185,8 +2543,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "738108f3ab2b4bd44afeeaf2b2b06f5948ca080b"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "738108f3ab2b4bd44afeeaf2b2b06f5948ca080b",
+          "identity_fingerprint": "36de06e448b3dcff399ceab38065f0090c0c2aeb"
         },
         {
           "slug": "jennifers-shadow",
@@ -2200,8 +2559,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CZ",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "3fbe3f40ce8b36a4bc7a5e12ef993e6c6d9356c3"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "3fbe3f40ce8b36a4bc7a5e12ef993e6c6d9356c3",
+          "identity_fingerprint": "c9e182f69724300c34ed25117a12f5064299c54e"
         },
         {
           "slug": "jennifers-shadow",
@@ -2215,8 +2575,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "e800019d6cc3c67a14f265c0f48460c6aa56f337"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "e800019d6cc3c67a14f265c0f48460c6aa56f337",
+          "identity_fingerprint": "7ef2385af5956bebca4b74dd20b9d1ab47f8eca4"
         },
         {
           "slug": "jennifers-shadow",
@@ -2230,8 +2591,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "f044f71b9402d1a96708446a352ba31bb15c0248"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "f044f71b9402d1a96708446a352ba31bb15c0248",
+          "identity_fingerprint": "f2e76146178f4bc19fbd4f71e7fa8ec60ae15d04"
         },
         {
           "slug": "jennifers-shadow",
@@ -2245,8 +2607,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "d8d30f2ba59d9d4dbc9fd2fcb5221f0c20105104"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "d8d30f2ba59d9d4dbc9fd2fcb5221f0c20105104",
+          "identity_fingerprint": "a980dcb5d55ae3d94a1576da8b210d58c5d63e12"
         },
         {
           "slug": "jennifers-shadow",
@@ -2260,8 +2623,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "16ef1d29107eb2f1fd0ba5b131257887370e11db"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "16ef1d29107eb2f1fd0ba5b131257887370e11db",
+          "identity_fingerprint": "724a4335900128b82927a501c01c7257d0a8f082"
         },
         {
           "slug": "jennifers-shadow",
@@ -2275,8 +2639,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "d3d21f847b51cf72d26b65ee3f54e0cbb7051995"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "d3d21f847b51cf72d26b65ee3f54e0cbb7051995",
+          "identity_fingerprint": "a599d280a598cc56fd0a15eb364f6c152f2569ca"
         },
         {
           "slug": "jennifers-shadow",
@@ -2290,8 +2655,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "573325c2b00fef4b713b01bc975697b225289bc9"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "573325c2b00fef4b713b01bc975697b225289bc9",
+          "identity_fingerprint": "e3848cbc336e0f70b70df1c0d7296cd02e108587"
         },
         {
           "slug": "jennifers-shadow",
@@ -2305,8 +2671,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "c08c79351f5fc61b496318ceb9e27a856674319c"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "c08c79351f5fc61b496318ceb9e27a856674319c",
+          "identity_fingerprint": "8743e554250f44f215d255a2963fd94198e557e5"
         },
         {
           "slug": "jennifers-shadow",
@@ -2320,8 +2687,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "2bff9f90f135cafdb8646accbc23f18f0e9b0cb9"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "2bff9f90f135cafdb8646accbc23f18f0e9b0cb9",
+          "identity_fingerprint": "7fd365c718f478b399ca590f7f8ab20bc91ac93c"
         },
         {
           "slug": "jennifers-shadow",
@@ -2335,8 +2703,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "a23265d90ea2a6ea4727144129d51b49f7daf406"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "a23265d90ea2a6ea4727144129d51b49f7daf406",
+          "identity_fingerprint": "81c407aeb71b510fcd496ba8480932325ae7184e"
         },
         {
           "slug": "jennifers-shadow",
@@ -2350,8 +2719,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "99044e71ba731c4c785ca42cd6273607a8d4fed6"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "99044e71ba731c4c785ca42cd6273607a8d4fed6",
+          "identity_fingerprint": "68a29373011db86e6ce1218c259c6ce76dae37ec"
         },
         {
           "slug": "jennifers-shadow",
@@ -2365,8 +2735,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "4edec82613cd57e6c0673a5e13e84a6a3791cd3d"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "4edec82613cd57e6c0673a5e13e84a6a3791cd3d",
+          "identity_fingerprint": "26317a476f420244dfa23a6a268d2fe8114d4ba7"
         },
         {
           "slug": "jennifers-shadow",
@@ -2380,8 +2751,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=NL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "822f4a41c6cd29b2bd93328c6676f03c8c16da9c"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "822f4a41c6cd29b2bd93328c6676f03c8c16da9c",
+          "identity_fingerprint": "223e558b4ee785d4b18c8590c055c53569615836"
         },
         {
           "slug": "jennifers-shadow",
@@ -2395,8 +2767,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=NL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "18c9586cf4245249a6bc8c8203f1c5d0a1a647d3"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "18c9586cf4245249a6bc8c8203f1c5d0a1a647d3",
+          "identity_fingerprint": "92cfbf15f7a9311c4b52438fd8904ff60ce4363b"
         },
         {
           "slug": "jennifers-shadow",
@@ -2410,8 +2783,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "74827251aa85486b757aaca1f2be2caafa12ee70"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "74827251aa85486b757aaca1f2be2caafa12ee70",
+          "identity_fingerprint": "84e0efa6f53e9415774e6d3636571b98335be4b3"
         },
         {
           "slug": "jennifers-shadow",
@@ -2425,8 +2799,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "c6c3fbfeb51d467fdfbc09c62013dfabe29fc3a1"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "c6c3fbfeb51d467fdfbc09c62013dfabe29fc3a1",
+          "identity_fingerprint": "31e6ca1836110be34b5407f1042ebf80b8e77407"
         },
         {
           "slug": "jennifers-shadow",
@@ -2440,8 +2815,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PH",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "cdb9cb80dcc23fb3d0d80a69d262fb85862d5e69"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "cdb9cb80dcc23fb3d0d80a69d262fb85862d5e69",
+          "identity_fingerprint": "98e59eb8476f58afdcadfa0dd25ca7e795f90ce4"
         },
         {
           "slug": "jennifers-shadow",
@@ -2455,8 +2831,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PH",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "509ce1e156de74ff568206b90f4ecd3bf17b6123"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "509ce1e156de74ff568206b90f4ecd3bf17b6123",
+          "identity_fingerprint": "f97ed12577e3818596f36ea0ce7f184cdc7c6c17"
         },
         {
           "slug": "jennifers-shadow",
@@ -2470,8 +2847,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "3aecc9f82b3ac6726fa0749658d62291e54acecc"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "3aecc9f82b3ac6726fa0749658d62291e54acecc",
+          "identity_fingerprint": "03ace5871aef345c2acb2c5083e7574a05f1ec26"
         },
         {
           "slug": "jennifers-shadow",
@@ -2485,8 +2863,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "b9aecb8669505ee9859b7361966db1bf9c6e1040"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "b9aecb8669505ee9859b7361966db1bf9c6e1040",
+          "identity_fingerprint": "af7985bcf573b595d3e01331f9c36a19e335f5b7"
         },
         {
           "slug": "jennifers-shadow",
@@ -2500,8 +2879,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "0fa2e5be427f3fa8c459b805de4eed9aad4bbb7d"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "0fa2e5be427f3fa8c459b805de4eed9aad4bbb7d",
+          "identity_fingerprint": "e99547b840e2882e7dc3e841ed3dacf44a10dfc2"
         },
         {
           "slug": "jennifers-shadow",
@@ -2515,8 +2895,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "6e2754ea512ef5315a996c1a0b95c44f28927f23"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "6e2754ea512ef5315a996c1a0b95c44f28927f23",
+          "identity_fingerprint": "70a72604b9623a1460d7867ef918380804c9e386"
         },
         {
           "slug": "jennifers-shadow",
@@ -2530,8 +2911,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "a62c1facdfc2143986796e6b7d5769102987b0cf"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "a62c1facdfc2143986796e6b7d5769102987b0cf",
+          "identity_fingerprint": "3b3e12df61c74173acd443eb452523622bf11120"
         },
         {
           "slug": "jennifers-shadow",
@@ -2545,8 +2927,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "c3a3ecfb16b59430c7785164b56d3fdb0479bf35"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "c3a3ecfb16b59430c7785164b56d3fdb0479bf35",
+          "identity_fingerprint": "44e05afb98d2bf1f02f208aa56d0c708e9b4d60f"
         },
         {
           "slug": "jennifers-shadow",
@@ -2560,8 +2943,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "eb22441f976c9e4730f5b06f9783769b24979efc"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "eb22441f976c9e4730f5b06f9783769b24979efc",
+          "identity_fingerprint": "f2311e2b7168adfa6d7daeff4622cd36ea3e031b"
         },
         {
           "slug": "jennifers-shadow",
@@ -2575,8 +2959,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "d2c3f27ec10a1eb3cbcb1e92ecc9ddc0a5e8c0ac"
+          "detected_at": "2026-06-06T04:08:13Z",
+          "fingerprint": "d2c3f27ec10a1eb3cbcb1e92ecc9ddc0a5e8c0ac",
+          "identity_fingerprint": "744f5b75619d3bee04ff36284e4f9093eefc3745"
         }
       ],
       "current_status": "found",
@@ -2586,7 +2971,39 @@
         "name": "Jennifer's Shadow",
         "release_date": "2004-10-01"
       },
-      "updated_at": "2026-06-06T03:31:50Z"
+      "updated_at": "2026-06-06T04:08:13Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 36,
+          "tmdb_id": 35949
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "al-3er-dia": {
       "slug": "al-3er-dia",
@@ -2594,11 +3011,43 @@
       "year": 2021,
       "type": "feature",
       "current": [],
-      "current_status": "not_found",
-      "message": "No se pudo verificar TMDb ID por título/año. Completar tmdb_id en data/catalog.json si corresponde.",
+      "current_status": "no_sources",
+      "message": "Sin proveedores actuales registrados en TMDb/Watchmode.",
       "tmdb_id": null,
       "tmdb_title": null,
-      "updated_at": "2026-06-06T03:31:50Z"
+      "updated_at": "2026-06-06T04:08:13Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "not_found",
+          "items": 0,
+          "tmdb_id": null
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "el-ultimo-hereje": {
       "slug": "el-ultimo-hereje",
@@ -2618,8 +3067,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "fc0ee10a573c40cc68b3ab2e371cf7aff72c61b7"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "fc0ee10a573c40cc68b3ab2e371cf7aff72c61b7",
+          "identity_fingerprint": "865ac20a5905d4ca1db28eda50f81ecf718e5cca"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2633,8 +3083,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "e50d7d65b3cf5af7ed5526291dea6f86a7f8980d"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "e50d7d65b3cf5af7ed5526291dea6f86a7f8980d",
+          "identity_fingerprint": "de6639d894a353d8c4c50f9a8db3783abfb77b83"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2648,8 +3099,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "31f0e695d83a8be4f80d50cc04ab1532ee605f6a"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "31f0e695d83a8be4f80d50cc04ab1532ee605f6a",
+          "identity_fingerprint": "bea02c09db9c519592fd607a2895ebf0cb453e70"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2663,8 +3115,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "7f2909b0f033efaa652cb85962f7ad287e09c577"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "7f2909b0f033efaa652cb85962f7ad287e09c577",
+          "identity_fingerprint": "47a07f56bc025d474f391c1c096977a413ecb6fc"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2678,8 +3131,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "b357842b7123a05828ece7b50ea10f9d5ea7576d"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b357842b7123a05828ece7b50ea10f9d5ea7576d",
+          "identity_fingerprint": "fe7ae1b8201149715ada769c13d009ccad7ad08c"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2693,8 +3147,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "0bdd6ea4a0d671744fb0f21788fe4fda32531c6d"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "0bdd6ea4a0d671744fb0f21788fe4fda32531c6d",
+          "identity_fingerprint": "2b4229a7a1f34be588665f2c203c7ef682a3b1cc"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2708,8 +3163,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "20d434b00f250a6165329f946cc4a76f1daf5c04"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "20d434b00f250a6165329f946cc4a76f1daf5c04",
+          "identity_fingerprint": "3be2c16480a3ac8e733f7be8201ec3eb782a3e45"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2723,8 +3179,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "8a08708aa1bb51a9c6e15323fa7466fc7eb23ee0"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "8a08708aa1bb51a9c6e15323fa7466fc7eb23ee0",
+          "identity_fingerprint": "0a2638cd8f86a8acd4f2c5a0013b5f82f962df78"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2738,8 +3195,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "e602df7e49aafcefd42dd26a2617653862d2ecc2"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "e602df7e49aafcefd42dd26a2617653862d2ecc2",
+          "identity_fingerprint": "6b9becf79d134aa107952ce3b7939d1217a0a784"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2753,8 +3211,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "da521690eea4b22bb824ec7a5eec65115c8353e9"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "da521690eea4b22bb824ec7a5eec65115c8353e9",
+          "identity_fingerprint": "b6250a67ab872c80a2f491c8134dcffd55186696"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2768,8 +3227,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "47fae02517e86d9dd8064698f0d3880617e07777"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "47fae02517e86d9dd8064698f0d3880617e07777",
+          "identity_fingerprint": "faa2ad26cfb74bfe563a89d128f904d9748b173c"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2783,8 +3243,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "f2a1bba8d4f5716eefc273ed6334cc707eec8844"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "f2a1bba8d4f5716eefc273ed6334cc707eec8844",
+          "identity_fingerprint": "8e6708cb27f9e1bf2bb18fb076f93b1549111458"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2798,8 +3259,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "3fe20c1d3c66035f29523f65a9b17499f7e25284"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "3fe20c1d3c66035f29523f65a9b17499f7e25284",
+          "identity_fingerprint": "fdb7118f3c224e173dfddbf36068c48df57a8279"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2813,8 +3275,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "9b0fee4595a723cc149b2720b4beaa6bb0920301"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "9b0fee4595a723cc149b2720b4beaa6bb0920301",
+          "identity_fingerprint": "efa8af73dad8a2bce5f0e0a4080493542ae1e998"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2828,8 +3291,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "f71f05c149bdb019dc02eec192f6a6a8e8bcce35"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "f71f05c149bdb019dc02eec192f6a6a8e8bcce35",
+          "identity_fingerprint": "cdcc94ddca4d6e9b9344769b47e522efb92d8e31"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2843,8 +3307,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "f9ed76e587608b5e21f606604991f74ab4db1d9c"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "f9ed76e587608b5e21f606604991f74ab4db1d9c",
+          "identity_fingerprint": "a80a1b73f4a12bf0d9046bded4f140e8ced1130c"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2858,8 +3323,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "0a17cf50fedb0318bc9ee2e077f3ac946b169f61"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "0a17cf50fedb0318bc9ee2e077f3ac946b169f61",
+          "identity_fingerprint": "fb80c0f30db4fdd0e529df7b560e4628c3634eb5"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2873,8 +3339,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "1a139c56c6fba2c8391b946436f194bf2745d925"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "1a139c56c6fba2c8391b946436f194bf2745d925",
+          "identity_fingerprint": "c44b7b68f8607c51dc283829ba591c48713b1e4c"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2888,8 +3355,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "880bf3eb808a98c61930d4118844ab6929b43395"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "880bf3eb808a98c61930d4118844ab6929b43395",
+          "identity_fingerprint": "a2c80ed63b03bcf7a54b16136f6165ef8920d75f"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2903,8 +3371,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "266b2debf731af63096a73e9a175ec76a7813e8b"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "266b2debf731af63096a73e9a175ec76a7813e8b",
+          "identity_fingerprint": "834233ecdff1d85b67b392fa6b4bc8edf4a95c55"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2918,8 +3387,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "aaf2fc1237ed423c62c5cf478a596080d3468582"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "aaf2fc1237ed423c62c5cf478a596080d3468582",
+          "identity_fingerprint": "78bcdc35319ee0ad5158283e5325cbe02bac9a30"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2933,8 +3403,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "2d904a628b3a2870f3c6034125c0acdb8d7ee0aa"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "2d904a628b3a2870f3c6034125c0acdb8d7ee0aa",
+          "identity_fingerprint": "76de0b791fd7ee9bf2d984669d8d09669d0136bf"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2948,8 +3419,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "723f017676d059e0dfdd20435b975347b3c57fca"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "723f017676d059e0dfdd20435b975347b3c57fca",
+          "identity_fingerprint": "e3fe48268f8127fb0fd666315b53f0d506d6684f"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2963,8 +3435,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "041b3d8e980f902e0fcb9b553f383aefd2c3bffa"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "041b3d8e980f902e0fcb9b553f383aefd2c3bffa",
+          "identity_fingerprint": "350935cc00ccf1697126cc551d35a3399650b830"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2978,8 +3451,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "f825c2b71c59afe0705549b50fcc54fa97f5b568"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "f825c2b71c59afe0705549b50fcc54fa97f5b568",
+          "identity_fingerprint": "d5620105a52d8ea94139be2de7b6a927f5d069ea"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -2993,8 +3467,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "c536c2404294fb8fa362748d944ccfb767c4bb6e"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c536c2404294fb8fa362748d944ccfb767c4bb6e",
+          "identity_fingerprint": "4482e707f96e447c6af07edb6d8d857731449e08"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3008,8 +3483,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "59a122cd6e5763d425cdb893849caf3320b91748"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "59a122cd6e5763d425cdb893849caf3320b91748",
+          "identity_fingerprint": "d6b004903691c5bbd32499c31843187188587bec"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3023,8 +3499,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "3108c395d6df7eb5c0776394223390a54359668a"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "3108c395d6df7eb5c0776394223390a54359668a",
+          "identity_fingerprint": "a9428a1452b4602e06beab027e1205823f8c4e3b"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3038,8 +3515,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "71914314b399cba9d43641f459b9dc0f002c94f3"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "71914314b399cba9d43641f459b9dc0f002c94f3",
+          "identity_fingerprint": "a823ea37cb88f476ad384d59a9e92c721101da93"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3053,8 +3531,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "a6d699a5382866c3a0e0032bf2ee05d0c7bad1df"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "a6d699a5382866c3a0e0032bf2ee05d0c7bad1df",
+          "identity_fingerprint": "6ce5f15c19a3eb0b0ba9c866ae62dcb06214b9c3"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3068,8 +3547,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "74bf5219cc26c7d0681ba8c5b3904050c666e0aa"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "74bf5219cc26c7d0681ba8c5b3904050c666e0aa",
+          "identity_fingerprint": "7c49a9774af38f48ba6814df62fa54b176e31003"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3083,8 +3563,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "a060f931cc9bad7f5fbfccba3737c1e794df1d9c"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "a060f931cc9bad7f5fbfccba3737c1e794df1d9c",
+          "identity_fingerprint": "0be44543137f17693d0b2e05a1c83e917170d047"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3098,8 +3579,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "6b52e8b5c763d54c36edcf8ac904b5c7712a75f2"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "6b52e8b5c763d54c36edcf8ac904b5c7712a75f2",
+          "identity_fingerprint": "d88d7642d78196f91824b955fab15b7f404e6411"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3113,8 +3595,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "959150cf5716b147ba5a1ce763160db577367141"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "959150cf5716b147ba5a1ce763160db577367141",
+          "identity_fingerprint": "07256df3c140769467968444f9cfb94d56f68edf"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3128,8 +3611,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "b538301b08835ccf069616e920f608207deff914"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b538301b08835ccf069616e920f608207deff914",
+          "identity_fingerprint": "84806b39364a10ccd0f2db4ff848bee418e4b7a3"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3143,8 +3627,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "27076c5d0ca1c1c23a99d879730365cd077136b2"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "27076c5d0ca1c1c23a99d879730365cd077136b2",
+          "identity_fingerprint": "19679fde13b9eeaf262a79e3454cd0c4c5938553"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3158,8 +3643,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "afed34ef4d15bcf9ce41168f519af1e178096932"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "afed34ef4d15bcf9ce41168f519af1e178096932",
+          "identity_fingerprint": "197e7d39711c52ec023a08725ff87db549294ade"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3173,8 +3659,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "6abf04abf12320581cf39f58cd8d63cece9cd68b"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "6abf04abf12320581cf39f58cd8d63cece9cd68b",
+          "identity_fingerprint": "9e3e4e0d37439e178bf438291501a3aa8bd16e01"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3188,8 +3675,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "694fbb8a9ee71eaaaeeda240397ce3f3425260b8"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "694fbb8a9ee71eaaaeeda240397ce3f3425260b8",
+          "identity_fingerprint": "0efeae8bd28389297dc587f03bd42adaa2ca63a1"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3203,8 +3691,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=EC",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "b486da567a34f5cd21879572397e02825cd71dfd"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b486da567a34f5cd21879572397e02825cd71dfd",
+          "identity_fingerprint": "36028b7f21b27710941aa2dd7045121fad971e28"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3218,8 +3707,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=EC",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "b55972a6916f9084ea5e4430e5bdc2b5eb9872d9"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b55972a6916f9084ea5e4430e5bdc2b5eb9872d9",
+          "identity_fingerprint": "f15f2ad3f57d2c9baf9446bd2f9d575cc41bf5fb"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3233,8 +3723,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=GT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "6a23596006d7bb17b9384e72b8b2d226675355d3"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "6a23596006d7bb17b9384e72b8b2d226675355d3",
+          "identity_fingerprint": "53d55c6246d44d83882f78b82136c8c2d1b27b4b"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3248,8 +3739,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=GT",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "f88b9f83f9c9de53a50a3061444f213bddd1ea73"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "f88b9f83f9c9de53a50a3061444f213bddd1ea73",
+          "identity_fingerprint": "d3563324cc8bb586039f8dc0b7b03c0e46958d81"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3263,8 +3755,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=HN",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "c3455763bcb23030327a1d91e2247dcbbfd97a29"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c3455763bcb23030327a1d91e2247dcbbfd97a29",
+          "identity_fingerprint": "27b58b7d09dbd9a75e1da109e8a9553571f0e49c"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3278,8 +3771,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=HN",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "03ffc379e679fe05da4f5242afaf51fcd18f6021"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "03ffc379e679fe05da4f5242afaf51fcd18f6021",
+          "identity_fingerprint": "bac934ccd05e4daafd2a4354eea59e2012adbb73"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3293,8 +3787,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PY",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "b7d77d137f69411e908d89ac41b652e7549a5cc0"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b7d77d137f69411e908d89ac41b652e7549a5cc0",
+          "identity_fingerprint": "2a860c902f6daf26fbb13ac771ada800478abf11"
         },
         {
           "slug": "el-ultimo-hereje",
@@ -3308,8 +3803,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PY",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:50Z",
-          "fingerprint": "3aab3d8d9b9ec226667799289264320131e58816"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "3aab3d8d9b9ec226667799289264320131e58816",
+          "identity_fingerprint": "2c530648c0097cfa0f7a245e22dbe0e0a173b894"
         }
       ],
       "current_status": "found",
@@ -3319,7 +3815,39 @@
         "name": "The Last Heretic",
         "release_date": "2022-11-09"
       },
-      "updated_at": "2026-06-06T03:31:50Z"
+      "updated_at": "2026-06-06T04:08:13Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 47,
+          "tmdb_id": 790409
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "los-ojos-del-abismo": {
       "slug": "los-ojos-del-abismo",
@@ -3339,8 +3867,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "24d170a7f16c27a4163b6dc368ce6c76722aa0ce"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "24d170a7f16c27a4163b6dc368ce6c76722aa0ce",
+          "identity_fingerprint": "cf712cc275e287548497f4db9d6ff092174eaf7c"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3354,8 +3883,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "76c5d3a033670b5e836335b71dc052bc3b680021"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "76c5d3a033670b5e836335b71dc052bc3b680021",
+          "identity_fingerprint": "455e39426cb1e0cb6ec483e3604b2364f8e12c27"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3369,8 +3899,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "ed96665327ed78d2bf89cf069400d463350b2b04"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "ed96665327ed78d2bf89cf069400d463350b2b04",
+          "identity_fingerprint": "f6e82fa2e4fc2c816f4a594486f2614e33af5e93"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3384,8 +3915,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "1c2ad64784d2a615bd6bcc36e5ab5ca1be8d9425"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "1c2ad64784d2a615bd6bcc36e5ab5ca1be8d9425",
+          "identity_fingerprint": "ad1fe38fe6bfe28847e86e145cf2f454711ccf5d"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3399,8 +3931,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "9d328e790ecf4361fbcd2217c008c4683086d255"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "9d328e790ecf4361fbcd2217c008c4683086d255",
+          "identity_fingerprint": "695d5e690aa5d32b3f80b001b8e1e3a26b590ea1"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3414,8 +3947,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "abb2cc235bdeb2f1436f127c86fbb068b6e0d786"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "abb2cc235bdeb2f1436f127c86fbb068b6e0d786",
+          "identity_fingerprint": "a072f4a096225f25141fff56e9e64bf6e7f0f3e7"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3429,8 +3963,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "0d391d305fc449c5e2f89306e1a36473a47b7b9f"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "0d391d305fc449c5e2f89306e1a36473a47b7b9f",
+          "identity_fingerprint": "bf7ef1a246c0dc2ff578bcf2044654141ed3442f"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3444,8 +3979,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "94ffe3e7662c6fd216722c73fc9a40cb36e718b3"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "94ffe3e7662c6fd216722c73fc9a40cb36e718b3",
+          "identity_fingerprint": "e212f3457ace826cbb5315b8a9f16ff3098da35f"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3459,8 +3995,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "dbb1c0248a61e3eb3edccd3291ce9d43de61b8c3"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "dbb1c0248a61e3eb3edccd3291ce9d43de61b8c3",
+          "identity_fingerprint": "d86b831051f62e7447f3b464d659026cb7bc6825"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3474,8 +4011,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "34bee2abc83fa0ce20d6d0504e95cde156f7670a"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "34bee2abc83fa0ce20d6d0504e95cde156f7670a",
+          "identity_fingerprint": "97ff90aa448e44f7bdfe8acafc799e10eb1761bd"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3489,8 +4027,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "84d599592444a971ca7b4dab39c4fb6bece3b8ad"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "84d599592444a971ca7b4dab39c4fb6bece3b8ad",
+          "identity_fingerprint": "3d71056760060a8b2c7e7e5fb540eeacd30a3ea8"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3504,8 +4043,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "d0f4bf0377b35e9ecccc0b32d0d05341e99075bd"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "d0f4bf0377b35e9ecccc0b32d0d05341e99075bd",
+          "identity_fingerprint": "87263a5465d6ae2dd27f55c8e5817887cc02a395"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3519,8 +4059,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "b26828fb465d131097ea0cc229e34632359dd619"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b26828fb465d131097ea0cc229e34632359dd619",
+          "identity_fingerprint": "3d78a26c01eb936c10e777e44525b3b16734e071"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3534,8 +4075,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "986b43d05e9955482381bfd4ad63cf76444285d2"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "986b43d05e9955482381bfd4ad63cf76444285d2",
+          "identity_fingerprint": "c1a93f7ac581cf11e36ae79f134b2d68a34aa914"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3549,8 +4091,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "c2517ba730b1985c3005de59d706504ce6f88d97"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c2517ba730b1985c3005de59d706504ce6f88d97",
+          "identity_fingerprint": "58abafa03a653c736a40dcf813c851ae9734e81a"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3564,8 +4107,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "90f8f27e277eebbbf7a619d0a0ebee38a81663d3"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "90f8f27e277eebbbf7a619d0a0ebee38a81663d3",
+          "identity_fingerprint": "d05f6ec923b07d8fab997556bc16db69bdf9180f"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3579,8 +4123,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "a8e5a5ad33a749a03c76a4b692a4a5a85a2251aa"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "a8e5a5ad33a749a03c76a4b692a4a5a85a2251aa",
+          "identity_fingerprint": "962d59370868ccf5d64110fbbe5b19d1aea40a64"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3594,8 +4139,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "c0169c58c32dafa124dc7d628652087ef91caca9"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c0169c58c32dafa124dc7d628652087ef91caca9",
+          "identity_fingerprint": "aa62adb4ca502e8cf98db00b0d8422ed046e8893"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3609,8 +4155,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "913054cdb426c4368404b933865caab0c7d89f68"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "913054cdb426c4368404b933865caab0c7d89f68",
+          "identity_fingerprint": "9ce3e20eeec875c0f729c3d7c4eb88ec15f4b1f0"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3624,8 +4171,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "bcb3b63459a22efe806c9875128bddd17f8f9f82"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "bcb3b63459a22efe806c9875128bddd17f8f9f82",
+          "identity_fingerprint": "ee2bf43a3e53d06ebbc066ff7194032d0db4b97d"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3639,8 +4187,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "c018f3fcd28a4c81f20041f3ea23091250ce0ff4"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c018f3fcd28a4c81f20041f3ea23091250ce0ff4",
+          "identity_fingerprint": "a8c145bcb42b3448d4de3ac7508065eef0871319"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3654,8 +4203,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "c1cd3b1830d5c6dab13035c539f2d4986f68c5b2"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c1cd3b1830d5c6dab13035c539f2d4986f68c5b2",
+          "identity_fingerprint": "842bfc16416f2e1a9ab16ab2eb524775bb9a056a"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3669,8 +4219,9 @@
           "raw_type": "ads",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "03018166608107d0d5d21d512e1ce220d49497c1"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "03018166608107d0d5d21d512e1ce220d49497c1",
+          "identity_fingerprint": "f4d2541b5f3e7faae0f2a1284cd6c89e0a7d3e52"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3684,8 +4235,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "47b3f2caa8a4654fa304d42c8e771d8035218542"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "47b3f2caa8a4654fa304d42c8e771d8035218542",
+          "identity_fingerprint": "db87e58de58bb9cb5b25103987aa57b3a4dd8365"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3699,8 +4251,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "f5ec45d268684a29b0aa1b6f8b9e7006c1957ffb"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "f5ec45d268684a29b0aa1b6f8b9e7006c1957ffb",
+          "identity_fingerprint": "ad895184b26e517ea1884d3d602eb8c758eae345"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3714,8 +4267,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "bb94a3288eebad9ace6e1a899e67f4e5dfd0762a"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "bb94a3288eebad9ace6e1a899e67f4e5dfd0762a",
+          "identity_fingerprint": "73b331cfe384c8af5cbf73049cd0cee56c3ac921"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3729,8 +4283,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "a68be84f76ab10069d34ce4b15f5a44de8889391"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "a68be84f76ab10069d34ce4b15f5a44de8889391",
+          "identity_fingerprint": "926347ec218d659c3a20e02384eee6d17dc5dfd2"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3744,8 +4299,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "9ad63695395d2cf257e64cfaf6f4a0ab769bbf50"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "9ad63695395d2cf257e64cfaf6f4a0ab769bbf50",
+          "identity_fingerprint": "4d5f143fb26fbbdd2147a342cd853583316c2fff"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3759,8 +4315,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "b3bcf2bef37faa98b9e08c4f8759caf2d910e20a"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "b3bcf2bef37faa98b9e08c4f8759caf2d910e20a",
+          "identity_fingerprint": "672b5049f54b8e120f23647440916e58d7082b35"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3774,8 +4331,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "c114d471fad835caaa689504d0c4630adedd4957"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c114d471fad835caaa689504d0c4630adedd4957",
+          "identity_fingerprint": "62e3d893f473591876b9552c3c60ca3f326588d1"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3789,8 +4347,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "58af1649302c790c114932aa53b352e9e258bef9"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "58af1649302c790c114932aa53b352e9e258bef9",
+          "identity_fingerprint": "af7e764dc8b490fad106936e53c0e9ca45742097"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3804,8 +4363,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "e765052560e99a209e4894d5c5340538195e75af"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "e765052560e99a209e4894d5c5340538195e75af",
+          "identity_fingerprint": "0684449f92210bef2d18e0c273de1611412028d0"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3819,8 +4379,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=FI",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "3bb4016761309db6260b95e2100d56f453c7bc8a"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "3bb4016761309db6260b95e2100d56f453c7bc8a",
+          "identity_fingerprint": "dc44c03d2340c1ef53ac028cc7a1cdab30129610"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3834,8 +4395,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "6a4bbb41ce298dd90866c84604672f9c124516eb"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "6a4bbb41ce298dd90866c84604672f9c124516eb",
+          "identity_fingerprint": "afb62bf5806d2cf4dbe0c6629d599e0667e9e5f9"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3849,8 +4411,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GG",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "595448a853fe58a94d3828c2d39412e1dafc9bd9"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "595448a853fe58a94d3828c2d39412e1dafc9bd9",
+          "identity_fingerprint": "ae3b62241561db6f63bee521d6fae654503d2435"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3864,8 +4427,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "d078c9ea41d925bf532d6db2f96699d0d2a466c8"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "d078c9ea41d925bf532d6db2f96699d0d2a466c8",
+          "identity_fingerprint": "0c9ef84d9f2845d31302c1f5a9aa42260811ad77"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3879,8 +4443,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=IE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "d09cbd463c24e3936d42f19ba5500bb1228c163c"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "d09cbd463c24e3936d42f19ba5500bb1228c163c",
+          "identity_fingerprint": "3ad468aef7cf9ffd787c01f72e6f79c1c8e0f8bf"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3894,8 +4459,9 @@
           "raw_type": "flatrate",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=KR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "65ba56cedee395496c5baef6ec093a9c9269706e"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "65ba56cedee395496c5baef6ec093a9c9269706e",
+          "identity_fingerprint": "a6c2443c0dba2731e7f5663b4e122481f37f0315"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3909,8 +4475,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "bcf56f94c77153ed3f910b768f5ea85fcfd9671f"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "bcf56f94c77153ed3f910b768f5ea85fcfd9671f",
+          "identity_fingerprint": "0e23eccbce2d8d82e3af77e31d8411d62bd2e9da"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3924,8 +4491,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "46c909e52705c2a8b3b82120603c15e90d96ddfd"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "46c909e52705c2a8b3b82120603c15e90d96ddfd",
+          "identity_fingerprint": "6d10a72d6daecd46e02c05c4f936be9d917a7204"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3939,8 +4507,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "1dd4d0b9998fdc1928cb7bbfba030ac80ad5cb8e"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "1dd4d0b9998fdc1928cb7bbfba030ac80ad5cb8e",
+          "identity_fingerprint": "53f0ae9105b204976b6d41edeeb17af373f7b83a"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3954,8 +4523,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "134da73bb2ce49a502af48ee48319853fd883dda"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "134da73bb2ce49a502af48ee48319853fd883dda",
+          "identity_fingerprint": "0e935e713c3a113fcf8da7ef2f43d19106265515"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3969,8 +4539,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "09175d863de1c7121fd5befa6ab9e6bb92952020"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "09175d863de1c7121fd5befa6ab9e6bb92952020",
+          "identity_fingerprint": "9c5423ca2a25e4292d6b2de60e6a24bd41d63909"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3984,8 +4555,9 @@
           "raw_type": "rent",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "6f460d7d5536a94024f2c4db3bc4f4e9a18ccd48"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "6f460d7d5536a94024f2c4db3bc4f4e9a18ccd48",
+          "identity_fingerprint": "a0613062ac83cb9bffda9271393d652b2c0128ac"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -3999,8 +4571,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "c93ed6dfca7dce04a2ee08e60f957580f3c623b7"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "c93ed6dfca7dce04a2ee08e60f957580f3c623b7",
+          "identity_fingerprint": "ac2f26ae784d98ceae147e66e60388ac92933bd4"
         },
         {
           "slug": "los-ojos-del-abismo",
@@ -4014,8 +4587,9 @@
           "raw_type": "buy",
           "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "fd56b5dad5ccf03dcac36ac74f9e4c277434e050"
+          "detected_at": "2026-06-06T04:08:14Z",
+          "fingerprint": "fd56b5dad5ccf03dcac36ac74f9e4c277434e050",
+          "identity_fingerprint": "aa18bdd50f48dd6bebae4d336440f24c4f8eed6e"
         }
       ],
       "current_status": "found",
@@ -4025,7 +4599,39 @@
         "name": "Eyes of the Abyss",
         "release_date": "2025-12-11"
       },
-      "updated_at": "2026-06-06T03:31:51Z"
+      "updated_at": "2026-06-06T04:08:14Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 46,
+          "tmdb_id": 1288316
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "sueno-profundo": {
       "slug": "sueno-profundo",
@@ -4045,8 +4651,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/1301090-sueno-profundo/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "9a527df12a13c83b5a9e38baa35a579bb66837f1"
+          "detected_at": "2026-06-06T04:08:15Z",
+          "fingerprint": "9a527df12a13c83b5a9e38baa35a579bb66837f1",
+          "identity_fingerprint": "a4b2c204f40d620e0cac0c4643527fd22662feed"
         }
       ],
       "current_status": "found",
@@ -4056,7 +4663,39 @@
         "name": "Deep Dream",
         "release_date": "1997-01-01"
       },
-      "updated_at": "2026-06-06T03:31:51Z"
+      "updated_at": "2026-06-06T04:08:14Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 1,
+          "tmdb_id": 1301090
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "la-ultima-cena": {
       "slug": "la-ultima-cena",
@@ -4076,8 +4715,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/642397-la-ultima-cena/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:51Z",
-          "fingerprint": "414c73f1216e07da7249bf53a5d2507c8e6ae82c"
+          "detected_at": "2026-06-06T04:08:15Z",
+          "fingerprint": "414c73f1216e07da7249bf53a5d2507c8e6ae82c",
+          "identity_fingerprint": "edc5a8c58ce85497483f3569388292e3fd8823f7"
         }
       ],
       "current_status": "found",
@@ -4087,7 +4727,39 @@
         "name": "La última cena",
         "release_date": "1999-01-01"
       },
-      "updated_at": "2026-06-06T03:31:51Z"
+      "updated_at": "2026-06-06T04:08:15Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 1,
+          "tmdb_id": 642397
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     },
     "el-martillo": {
       "slug": "el-martillo",
@@ -4107,8 +4779,9 @@
           "raw_type": "free",
           "url": "https://www.themoviedb.org/movie/1207904-el-martillo-cronica-de-un-mito/watch?locale=AR",
           "source": "TMDb Watch Providers",
-          "detected_at": "2026-06-06T03:31:52Z",
-          "fingerprint": "e74a3d226826b207410d59b2993b6bc2e9cfe7ca"
+          "detected_at": "2026-06-06T04:08:16Z",
+          "fingerprint": "e74a3d226826b207410d59b2993b6bc2e9cfe7ca",
+          "identity_fingerprint": "b5371326f2ab1d974d97bfacf8a72cf00e6e0500"
         }
       ],
       "current_status": "found",
@@ -4118,9 +4791,41 @@
         "name": "El martillo: Crónica de un mito",
         "release_date": "2003-01-01"
       },
-      "updated_at": "2026-06-06T03:31:52Z"
+      "updated_at": "2026-06-06T04:08:15Z",
+      "source_status": {
+        "tmdb": {
+          "configured": true,
+          "status": "found",
+          "items": 1,
+          "tmdb_id": 1207904
+        },
+        "watchmode": {
+          "configured": false,
+          "status": "not_configured",
+          "items": 0,
+          "watchmode_id": null,
+          "regions": [
+            "AR",
+            "AU",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "DE",
+            "ES",
+            "FR",
+            "GB",
+            "IT",
+            "MX",
+            "PE",
+            "PT",
+            "US",
+            "UY"
+          ]
+        }
+      }
     }
   },
   "items_count": 261,
-  "note": "Disponibilidad sujeta a variación por territorio y fecha. Verificar antes de difundir."
+  "note": "Disponibilidad sujeta a variación por territorio y fecha. Verificar antes de difundir. Watchmode se usa como segunda fuente gratuita/práctica cuando el secret está configurado."
 }
