@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DDV Radar de Cambios v198
+DDV Radar de Cambios v200
 - Plataformas: consulta TMDb Watch Providers y genera outputs/site_platforms_global.json.
 - TV/Cable: lee outputs/site_tv_cable_global.json si existe y detecta novedades contra estado previo.
 - Alertas: crea Issues de GitHub cuando aparecen fingerprints nuevos.
@@ -33,6 +33,8 @@ PLATFORMS_STATE = OUTPUTS_DIR / "state_platforms_seen.json"
 TV_OUT = OUTPUTS_DIR / "site_tv_cable_global.json"
 TV_STATE = OUTPUTS_DIR / "state_tv_seen.json"
 CHANGE_LOG = OUTPUTS_DIR / "radar_change_log.json"
+TV_FILTERED_OUT = OUTPUTS_DIR / "site_tv_cable_global_filtered.json"
+TV_REJECTED_OUT = OUTPUTS_DIR / "site_tv_cable_rejected.json"
 
 TMDB_BEARER_TOKEN = os.environ.get("TMDB_BEARER_TOKEN", "").strip()
 TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "").strip()
@@ -86,7 +88,7 @@ def http_json(url: str, headers: Optional[Dict[str, str]] = None, timeout: int =
 
 
 def tmdb_headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/198"}
+    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/200"}
     if TMDB_BEARER_TOKEN:
         headers["Authorization"] = f"Bearer {TMDB_BEARER_TOKEN}"
     return headers
@@ -258,6 +260,95 @@ def tv_fingerprint(item: Dict[str, Any]) -> str:
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 
+def norm_text(value: Any) -> str:
+    return str(value or "").strip().lower()
+
+
+def duration_from_hit(item: Dict[str, Any]) -> Optional[int]:
+    raw = item.get("duration_minutes")
+    try:
+        if raw is not None and str(raw).strip() != "":
+            return int(round(float(raw)))
+    except Exception:
+        pass
+    # Si no viene duration_minutes, intentamos calcular con start/stop ISO simple.
+    start = str(item.get("start") or item.get("start_iso") or "").replace("Z", "+00:00")
+    stop = str(item.get("stop") or item.get("end_iso") or "").replace("Z", "+00:00")
+    try:
+        if start and stop:
+            a = datetime.fromisoformat(start)
+            b = datetime.fromisoformat(stop)
+            mins = int(round((b - a).total_seconds() / 60))
+            return mins if mins > 0 else None
+    except Exception:
+        return None
+    return None
+
+
+def catalog_map(works: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+    return {str(w.get("slug")): w for w in works if isinstance(w, dict) and w.get("slug")}
+
+
+def classify_tv_hit(item: Dict[str, Any], work: Optional[Dict[str, Any]]) -> Tuple[bool, str]:
+    """Devuelve (alertable, motivo).
+
+    Regla v200: los cortos solo generan alertas automáticas si la grilla permite
+    verificar que la duración no supera el máximo del catálogo. Para Sueño
+    Profundo, La Última Cena y El Martillo el máximo es 20 minutos.
+    """
+    if not isinstance(item, dict):
+        return False, "item inválido"
+    if not work:
+        return True, "sin regla específica de catálogo"
+
+    slug = str(work.get("slug") or item.get("slug") or "")
+    work_type = str(work.get("type") or "").lower()
+    dur = duration_from_hit(item)
+    alias = norm_text(item.get("matched_alias") or item.get("alias") or "")
+    title = norm_text(item.get("programme_title") or item.get("program") or item.get("title") or "")
+    channel = norm_text(item.get("channel") or "")
+    country = norm_text(item.get("country_code") or item.get("country_name") or item.get("country") or "")
+
+    blocked_patterns = [norm_text(x) for x in work.get("blocked_tv_title_patterns") or [] if norm_text(x)]
+    for pattern in blocked_patterns:
+        if pattern and pattern in title:
+            return False, f"patrón bloqueado para {slug}: {pattern}"
+
+    manual_aliases = {norm_text(x) for x in work.get("manual_only_aliases") or [] if norm_text(x)}
+    if alias in manual_aliases or title in manual_aliases:
+        return False, f"alias de revisión manual para {slug}: {item.get('matched_alias') or item.get('programme_title')}"
+
+    if work_type == "short":
+        max_minutes = int(work.get("tv_max_duration_minutes") or 20)
+        if dur is None:
+            return False, f"cortometraje sin duración verificable; requiere revisión manual <= {max_minutes} min"
+        if dur > max_minutes:
+            return False, f"cortometraje con duración de grilla incompatible: {dur} min > {max_minutes} min"
+
+    # Bloqueo puntual defensivo por el falso positivo ya detectado.
+    if slug == "el-martillo" and "hammer" in title and dur is not None and dur > 20:
+        return False, f"falso positivo probable: El Martillo no coincide con emisión The Hammer de {dur} min ({channel}/{country})"
+
+    return True, "alertable"
+
+
+def filter_tv_hits_for_alerts(tv_hits: List[Dict[str, Any]], works_by_slug: Dict[str, Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    accepted: List[Dict[str, Any]] = []
+    rejected: List[Dict[str, Any]] = []
+    for hit in tv_hits:
+        slug = str(hit.get("slug") or hit.get("work_slug") or "")
+        ok, reason = classify_tv_hit(hit, works_by_slug.get(slug))
+        if ok:
+            accepted.append(hit)
+        else:
+            copy = dict(hit)
+            copy["rejected_by_v199"] = True
+            copy["rejection_reason"] = reason
+            copy["rejected_at"] = now_iso()
+            rejected.append(copy)
+    return accepted, rejected
+
+
 def load_state(path: Path) -> Tuple[set, bool]:
     data = read_json(path, {})
     if isinstance(data, dict) and isinstance(data.get("seen"), list):
@@ -283,7 +374,7 @@ def github_issue(title: str, body: str) -> bool:
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {GITHUB_TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "DDV-Radar-Cambios/198",
+            "User-Agent": "DDV-Radar-Cambios/200",
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
@@ -347,7 +438,8 @@ def main() -> int:
 
     platform_seen, platform_bootstrap = load_state(PLATFORMS_STATE)
     tv_seen, tv_bootstrap = load_state(TV_STATE)
-    changes = {"generated_at": now_iso(), "platforms": [], "tv_cable": [], "bootstrap": {"platforms": platform_bootstrap, "tv_cable": tv_bootstrap}}
+    changes = {"generated_at": now_iso(), "platforms": [], "tv_cable": [], "tv_rejected": [], "bootstrap": {"platforms": platform_bootstrap, "tv_cable": tv_bootstrap}}
+    works_by_slug = catalog_map(works)
 
     by_slug: Dict[str, Any] = {}
     all_platform_items: List[Dict[str, Any]] = []
@@ -374,7 +466,7 @@ def main() -> int:
 
     write_json(PLATFORMS_OUT, {
         "ok": True,
-        "version": "v198-radar-platforms-daily",
+        "version": "v200-radar-platforms-daily",
         "generated_at": now_iso(),
         "source": "TMDb Watch Providers",
         "by_slug": by_slug,
@@ -383,7 +475,32 @@ def main() -> int:
     })
 
     tv_payload = read_json(TV_OUT, {})
-    tv_hits = extract_tv_hits(tv_payload)
+    tv_hits_raw = extract_tv_hits(tv_payload)
+    tv_hits, tv_rejected = filter_tv_hits_for_alerts(tv_hits_raw, works_by_slug)
+    changes["tv_rejected"] = tv_rejected
+
+    if tv_payload:
+        filtered_payload = dict(tv_payload) if isinstance(tv_payload, dict) else {"ok": True}
+        # Actualizamos siempre el nivel principal para que no queden hits viejos visibles.
+        filtered_payload["hits"] = tv_hits
+        filtered_payload["hits_total"] = len(tv_hits)
+        filtered_payload["rejected_by_v199"] = tv_rejected
+        if isinstance(filtered_payload.get("web_payload"), dict):
+            filtered_payload["web_payload"] = dict(filtered_payload["web_payload"])
+            filtered_payload["web_payload"]["hits"] = tv_hits
+            filtered_payload["web_payload"]["hits_total"] = len(tv_hits)
+            filtered_payload["web_payload"]["rejected_by_v199"] = tv_rejected
+        filtered_payload["version_filter"] = "v200-tv-short-max-20-filter"
+        filtered_payload["filtered_at"] = now_iso()
+        write_json(TV_FILTERED_OUT, filtered_payload)
+    write_json(TV_REJECTED_OUT, {
+        "ok": True,
+        "version": "v200-tv-rejected",
+        "generated_at": now_iso(),
+        "items": tv_rejected,
+        "items_count": len(tv_rejected),
+    })
+
     new_tv = []
     current_tv_fps = set()
     for hit in tv_hits:
@@ -407,7 +524,9 @@ def main() -> int:
         "ok": True,
         "platform_items": len(all_platform_items),
         "platform_changes": len(changes["platforms"]),
-        "tv_items": len(tv_hits),
+        "tv_items_raw": len(tv_hits_raw),
+        "tv_items_alertable": len(tv_hits),
+        "tv_items_rejected": len(tv_rejected),
         "tv_changes": len(changes["tv_cable"]),
         "tmdb_configured": tmdb_ready(),
     }, ensure_ascii=False, indent=2))
