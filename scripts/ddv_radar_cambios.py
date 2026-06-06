@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-DDV Radar de Cambios v205
-- Plataformas: consulta TMDb Watch Providers y genera outputs/site_platforms_global.json.
+DDV Radar de Cambios v206
+- Plataformas: consulta TMDb Watch Providers + Watchmode y genera outputs/site_platforms_global.json.
 - TV/Cable: lee outputs/site_tv_cable_global.json si existe y detecta novedades contra estado previo.
 - Alertas: crea Issues de GitHub cuando aparecen fingerprints nuevos.
 
@@ -41,11 +41,14 @@ TV_FILTERED_OUT = OUTPUTS_DIR / "site_tv_cable_global_filtered.json"
 TV_REJECTED_OUT = OUTPUTS_DIR / "site_tv_cable_rejected.json"
 TV_REVIEW_OUT = OUTPUTS_DIR / "site_tv_cable_review.json"
 TV_EPG_BOOTSTRAP_STATE = OUTPUTS_DIR / "state_tv_epg_bootstrap_v205.json"
+PLATFORMS_WATCHMODE_BOOTSTRAP_STATE = OUTPUTS_DIR / "state_platforms_watchmode_bootstrap_v206.json"
 TV_SOURCES_FILE = DATA_DIR / "tv_sources.json"
 TV_VERIFIED_FILE = DATA_DIR / "tv_verified_records.json"
 
 TMDB_BEARER_TOKEN = os.environ.get("TMDB_BEARER_TOKEN", "").strip()
 TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "").strip()
+WATCHMODE_API_KEY = os.environ.get("WATCHMODE_API_KEY", "").strip()
+WATCHMODE_REGIONS = os.environ.get("WATCHMODE_REGIONS", "AR,US,ES,MX,BR,CL,CO,UY,PE,GB,CA,FR,DE,IT,PT,AU").strip()
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
 GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "").strip()
 CREATE_ISSUES = os.environ.get("CREATE_ISSUES", "1").strip() not in {"0", "false", "FALSE", "no"}
@@ -96,7 +99,7 @@ def http_json(url: str, headers: Optional[Dict[str, str]] = None, timeout: int =
 
 
 def tmdb_headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/205"}
+    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"}
     if TMDB_BEARER_TOKEN:
         headers["Authorization"] = f"Bearer {TMDB_BEARER_TOKEN}"
     return headers
@@ -243,6 +246,209 @@ def fetch_platforms_for_work(work: Dict[str, Any]) -> Dict[str, Any]:
     return base
 
 
+
+
+def watchmode_ready() -> bool:
+    return bool(WATCHMODE_API_KEY)
+
+
+def watchmode_url(path: str, params: Optional[Dict[str, Any]] = None) -> str:
+    params = dict(params or {})
+    params["apiKey"] = WATCHMODE_API_KEY
+    return "https://api.watchmode.com/v1" + path + "?" + urllib.parse.urlencode(params)
+
+
+def watchmode_allowed_regions() -> set:
+    return {x.strip().upper() for x in WATCHMODE_REGIONS.split(",") if x.strip()}
+
+
+def pick_best_watchmode_title(results: Any, expected_year: Optional[int]) -> Optional[Dict[str, Any]]:
+    if not isinstance(results, dict):
+        return None
+    items = results.get("title_results") or results.get("results") or []
+    if not isinstance(items, list):
+        return None
+    fallback = None
+    for item in items:
+        if not isinstance(item, dict) or not item.get("id"):
+            continue
+        typ = str(item.get("type") or item.get("result_type") or "").lower()
+        if typ and "movie" not in typ and typ not in {"film"}:
+            continue
+        year = item.get("year")
+        try:
+            year_int = int(year) if year is not None and str(year).strip() else None
+        except Exception:
+            year_int = None
+        if expected_year and year_int == int(expected_year):
+            return item
+        if fallback is None:
+            fallback = item
+    # Para títulos genéricos, igual que TMDb: sin año exacto preferimos no adivinar.
+    return fallback if expected_year is None else None
+
+
+def watchmode_type(raw_type: Any) -> Tuple[str, str]:
+    raw = str(raw_type or "").strip().lower()
+    mapping = {
+        "sub": ("flatrate", "suscripción"),
+        "subscription": ("flatrate", "suscripción"),
+        "free": ("free", "gratis"),
+        "rent": ("rent", "alquiler"),
+        "buy": ("buy", "compra"),
+        "tve": ("tve", "TV Everywhere"),
+        "ads": ("ads", "gratis con publicidad"),
+        "addon": ("addon", "addon"),
+    }
+    return mapping.get(raw, (raw or "unknown", TYPE_LABELS.get(raw, raw or "desconocido")))
+
+
+def platform_identity_fingerprint(slug: str, item: Dict[str, Any]) -> str:
+    """Identidad lógica sin fuente, para evitar duplicar alertas TMDb/Watchmode."""
+    raw_type = str(item.get("raw_type") or item.get("type") or "").strip().lower()
+    region = str(item.get("region_code") or item.get("country") or item.get("region") or "").strip().upper()
+    name = norm_match(item.get("name"))
+    raw = "|".join([slug, name, region, raw_type])
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+
+def normalize_watchmode_sources(work: Dict[str, Any], sources: Any, watchmode_id: Optional[int]) -> List[Dict[str, Any]]:
+    if not isinstance(sources, list):
+        return []
+    allowed = watchmode_allowed_regions()
+    out: List[Dict[str, Any]] = []
+    seen = set()
+    detected_at = now_iso()
+    for source in sources:
+        if not isinstance(source, dict):
+            continue
+        region = str(source.get("region") or source.get("country") or "").upper().strip()
+        if allowed and region and region not in allowed:
+            continue
+        name = str(source.get("name") or source.get("source_name") or source.get("provider_name") or "").strip()
+        if not name or name.lower() == "eventive":
+            continue
+        raw_type, label = watchmode_type(source.get("type") or source.get("monetization_type"))
+        url = str(source.get("web_url") or source.get("url") or "").strip()
+        key = (region, name.lower(), raw_type, url)
+        if key in seen:
+            continue
+        seen.add(key)
+        item = {
+            "slug": work["slug"],
+            "work_title": work["title"],
+            "name": name,
+            "provider_id": source.get("source_id") or source.get("id"),
+            "watchmode_id": watchmode_id,
+            "region": region,
+            "region_code": region,
+            "country": region,
+            "type": label,
+            "raw_type": raw_type,
+            "url": url,
+            "source": "Watchmode",
+            "detected_at": detected_at,
+        }
+        item["fingerprint"] = platform_fingerprint(work["slug"], item)
+        item["identity_fingerprint"] = platform_identity_fingerprint(work["slug"], item)
+        out.append(item)
+    return out
+
+
+def fetch_watchmode_for_work(work: Dict[str, Any]) -> Dict[str, Any]:
+    base = {
+        "slug": work.get("slug"),
+        "title": work.get("title"),
+        "year": work.get("year"),
+        "current": [],
+        "current_status": "not_configured" if not watchmode_ready() else "not_found",
+        "message": None,
+        "watchmode_id": work.get("watchmode_id"),
+        "updated_at": now_iso(),
+    }
+    if not watchmode_ready():
+        base["message"] = "Watchmode no configurado. Cargar WATCHMODE_API_KEY como GitHub Secret si se desea usar esta segunda fuente."
+        return base
+
+    watchmode_id = work.get("watchmode_id")
+    if not watchmode_id:
+        query = work.get("watchmode_search") or work.get("platform_search") or work.get("title")
+        search = http_json(watchmode_url("/search/", {"search_field": "name", "search_value": query}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"})
+        picked = pick_best_watchmode_title(search or {}, work.get("year"))
+        if picked:
+            watchmode_id = picked.get("id")
+
+    if not watchmode_id:
+        base["current_status"] = "not_found"
+        base["message"] = "No se pudo verificar Watchmode ID por título/año. Completar watchmode_id en data/catalog.json si corresponde."
+        return base
+
+    sources = http_json(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"})
+    # http_json espera dict; algunas respuestas de sources pueden ser lista. Reintento liviano para listas.
+    if sources is None:
+        req = urllib.request.Request(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), headers={"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                raw = resp.read().decode("utf-8", errors="replace")
+                parsed = json.loads(raw)
+        except Exception as exc:
+            print(f"ERROR Watchmode sources {work.get('slug')}: {exc}", file=sys.stderr)
+            parsed = None
+    else:
+        parsed = sources
+
+    current = normalize_watchmode_sources(work, parsed, int(watchmode_id))
+    base["watchmode_id"] = int(watchmode_id)
+    base["current"] = current
+    base["current_status"] = "found" if current else "no_sources"
+    base["message"] = None if current else "Sin proveedores actuales registrados en Watchmode para las regiones monitoreadas."
+    return base
+
+
+def merge_platform_results(tmdb_result: Dict[str, Any], watchmode_result: Dict[str, Any]) -> Dict[str, Any]:
+    """Combina fuentes sin perder detalle. Mantiene items por fuente, deduplica por identidad lógica."""
+    combined: List[Dict[str, Any]] = []
+    seen_identity = set()
+    for item in (tmdb_result.get("current") or []):
+        copy = dict(item)
+        copy.setdefault("identity_fingerprint", platform_identity_fingerprint(str(copy.get("slug") or tmdb_result.get("slug") or ""), copy))
+        ident = copy["identity_fingerprint"]
+        seen_identity.add(ident)
+        combined.append(copy)
+    for item in (watchmode_result.get("current") or []):
+        copy = dict(item)
+        copy.setdefault("identity_fingerprint", platform_identity_fingerprint(str(copy.get("slug") or watchmode_result.get("slug") or ""), copy))
+        # Si TMDb ya tenía el mismo proveedor/territorio/tipo, no duplicamos en current,
+        # pero dejamos a Watchmode en source_status para trazabilidad.
+        if copy["identity_fingerprint"] in seen_identity:
+            continue
+        seen_identity.add(copy["identity_fingerprint"])
+        combined.append(copy)
+
+    result = dict(tmdb_result)
+    result["current"] = combined
+    result["current_status"] = "found" if combined else "no_sources"
+    result["source_status"] = {
+        "tmdb": {
+            "configured": tmdb_ready(),
+            "status": tmdb_result.get("current_status"),
+            "items": len(tmdb_result.get("current") or []),
+            "tmdb_id": tmdb_result.get("tmdb_id"),
+        },
+        "watchmode": {
+            "configured": watchmode_ready(),
+            "status": watchmode_result.get("current_status"),
+            "items": len(watchmode_result.get("current") or []),
+            "watchmode_id": watchmode_result.get("watchmode_id"),
+            "regions": sorted(watchmode_allowed_regions()),
+        },
+    }
+    if not combined:
+        result["message"] = "Sin proveedores actuales registrados en TMDb/Watchmode."
+    else:
+        result["message"] = None
+    return result
+
 def extract_tv_hits(payload: Any) -> List[Dict[str, Any]]:
     if not isinstance(payload, dict):
         return []
@@ -332,7 +538,7 @@ def xml_text_first(elem: Any, tag: str) -> str:
 
 
 def http_bytes(url: str, timeout: int = 45, max_bytes: int = 35000000) -> Optional[bytes]:
-    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/205"})
+    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/206"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             raw = resp.read(max_bytes + 1)
@@ -664,7 +870,7 @@ def github_issue(title: str, body: str) -> bool:
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {GITHUB_TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "DDV-Radar-Cambios/205",
+            "User-Agent": "DDV-Radar-Cambios/206",
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
@@ -733,35 +939,59 @@ def main() -> int:
 
     by_slug: Dict[str, Any] = {}
     all_platform_items: List[Dict[str, Any]] = []
+    watchmode_bootstrap = watchmode_ready() and not PLATFORMS_WATCHMODE_BOOTSTRAP_STATE.is_file()
+    watchmode_items_count = 0
+    tmdb_items_count = 0
+
     for work in works:
         if not isinstance(work, dict) or not work.get("slug"):
             continue
-        result = fetch_platforms_for_work(work)
+        tmdb_result = fetch_platforms_for_work(work)
+        watchmode_result = fetch_watchmode_for_work(work)
+        result = merge_platform_results(tmdb_result, watchmode_result)
         by_slug[result["slug"]] = result
-        all_platform_items.extend(result.get("current") or [])
+        current_items = result.get("current") or []
+        all_platform_items.extend(current_items)
+        tmdb_items_count += len(tmdb_result.get("current") or [])
+        watchmode_items_count += len(watchmode_result.get("current") or [])
         time.sleep(0.25)
 
-    current_platform_fps = {str(item.get("fingerprint") or platform_fingerprint(str(item.get("slug") or ""), item)) for item in all_platform_items}
-    new_platform_items = [item for item in all_platform_items if str(item.get("fingerprint") or "") not in platform_seen]
+    current_platform_fps = set()
+    for item in all_platform_items:
+        slug_for_fp = str(item.get("slug") or "")
+        current_platform_fps.add(str(item.get("fingerprint") or platform_fingerprint(slug_for_fp, item)))
+        current_platform_fps.add(str(item.get("identity_fingerprint") or platform_identity_fingerprint(slug_for_fp, item)))
+
+    new_platform_items = []
+    for item in all_platform_items:
+        fp = str(item.get("fingerprint") or platform_fingerprint(str(item.get("slug") or ""), item))
+        ident = str(item.get("identity_fingerprint") or platform_identity_fingerprint(str(item.get("slug") or ""), item))
+        if fp not in platform_seen and ident not in platform_seen:
+            new_platform_items.append(item)
 
     if not platform_bootstrap:
         for item in new_platform_items:
             changes["platforms"].append(item)
             issue_platform(item)
     elif new_platform_items:
-        print(f"Bootstrap plataformas: se registran {len(new_platform_items)} detecciones existentes sin crear Issues.")
+        print(f"Bootstrap plataformas Watchmode v206: se registran {len(new_platform_items)} detecciones existentes sin crear Issues.")
+        write_json(PLATFORMS_WATCHMODE_BOOTSTRAP_STATE, {"bootstrapped_at": now_iso(), "items_registered": len(new_platform_items)})
 
     platform_seen.update(current_platform_fps)
     save_state(PLATFORMS_STATE, platform_seen)
 
     write_json(PLATFORMS_OUT, {
         "ok": True,
-        "version": "v205-radar-platforms-daily",
+        "version": "v206-radar-platforms-tmdb-watchmode-daily",
         "generated_at": now_iso(),
-        "source": "TMDb Watch Providers",
+        "source": "TMDb Watch Providers + Watchmode",
+        "sources": {
+            "tmdb": {"configured": tmdb_ready(), "items_count": tmdb_items_count},
+            "watchmode": {"configured": watchmode_ready(), "items_count": watchmode_items_count, "regions": sorted(watchmode_allowed_regions())},
+        },
         "by_slug": by_slug,
         "items_count": len(all_platform_items),
-        "note": "Disponibilidad sujeta a variación por territorio y fecha. Verificar antes de difundir.",
+        "note": "Disponibilidad sujeta a variación por territorio y fecha. Verificar antes de difundir. Watchmode se usa como segunda fuente gratuita/práctica cuando el secret está configurado.",
     })
 
     tv_payload = read_json(TV_OUT, {})
@@ -775,7 +1005,7 @@ def main() -> int:
 
     generated_tv_payload = {
         "ok": True,
-        "version": "v205-tv-cable-epgpw-official-sources",
+        "version": "v206-tv-cable-epgpw-official-sources",
         "generated_at_utc": now_iso(),
         "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
         "hits_total": len(tv_hits_raw),
@@ -797,14 +1027,14 @@ def main() -> int:
 
     write_json(TV_REJECTED_OUT, {
         "ok": True,
-        "version": "v205-tv-rejected",
+        "version": "v206-tv-rejected",
         "generated_at": now_iso(),
         "items": tv_rejected,
         "items_count": len(tv_rejected),
     })
     write_json(TV_REVIEW_OUT, {
         "ok": True,
-        "version": "v205-tv-review",
+        "version": "v206-tv-review",
         "generated_at": now_iso(),
         "items": tv_review,
         "items_count": len(tv_review),
@@ -840,6 +1070,8 @@ def main() -> int:
         "tv_items_rejected": len(tv_rejected),
         "tv_changes": len(changes["tv_cable"]),
         "tmdb_configured": tmdb_ready(),
+        "watchmode_configured": watchmode_ready(),
+        "watchmode_items": watchmode_items_count,
         "tv_source_reports": len(tv_source_reports),
         "tv_review": len(tv_review),
     }, ensure_ascii=False, indent=2))
