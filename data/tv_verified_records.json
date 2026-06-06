@@ -1,0 +1,45 @@
+{
+  "version": "v205-tv-verified-records",
+  "note": "Registros TV/Cable verificados manualmente/oficiales que deben mantenerse en la web aunque el radar mundial cambie.",
+  "items": [
+    {
+      "slug": "necrofobia",
+      "title": "Necrofobia",
+      "programme_title": "Necrofobia",
+      "matched_term": "Necrofobia",
+      "channel": "CINE.AR",
+      "channel_number": "TeleRed 219 · CINE.AR TV: TDA 22.4 · Flow/Cablevisión 60, 300 y 640 HD · DirecTV 512 · Telecentro 33, 400 y 1049 HD",
+      "country": "AR",
+      "country_code": "AR",
+      "country_name": "Argentina",
+      "date_iso": "2026-06-03",
+      "start_time": "00:00",
+      "end_time": "02:00",
+      "duration_minutes": 120,
+      "source": "TeleRed / grilla de programación",
+      "source_url": "https://www.telered.com.ar/buscador-grilla",
+      "detection_type": "registro verificado por radar DDV",
+      "confidence": "high",
+      "source_labels": ["TeleRed / grilla de programación"]
+    },
+    {
+      "slug": "hermanos-de-sangre",
+      "title": "Hermanos de Sangre",
+      "programme_title": "FICCIONARTE - Película: HERMANOS DE SANGRE",
+      "matched_term": "Hermanos de Sangre",
+      "channel": "Canal á",
+      "channel_number": "Canal á · señal según operador",
+      "country": "AR",
+      "country_code": "AR",
+      "country_name": "Argentina",
+      "date_iso": "2026-06-16",
+      "start_time": "04:00",
+      "end_time": "",
+      "source": "Artear / grilla comercial Canal A",
+      "source_url": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-2026-25-01.html",
+      "detection_type": "registro verificado por fuente Artear",
+      "confidence": "high",
+      "source_labels": ["Artear / grilla comercial Canal A"]
+    }
+  ]
+}

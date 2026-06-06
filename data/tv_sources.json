@@ -1,0 +1,87 @@
+{
+  "version": "v205-tv-sources",
+  "note": "Fuentes TV/Cable controladas. EPG.PW es radar de indicios, no confirmación editorial. Las fuentes oficiales verificadas viven en data/tv_verified_records.json.",
+  "xmltv_sources": [
+    {
+      "id": "epg_pw_US",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "US",
+      "country_name": "Estados Unidos",
+      "url": "https://epg.pw/xmltv/epg_US.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_GB",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "GB",
+      "country_name": "Reino Unido",
+      "url": "https://epg.pw/xmltv/epg_GB.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_CA",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "CA",
+      "country_name": "Canadá",
+      "url": "https://epg.pw/xmltv/epg_CA.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_BR",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "BR",
+      "country_name": "Brasil",
+      "url": "https://epg.pw/xmltv/epg_BR.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_DE",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "DE",
+      "country_name": "Alemania",
+      "url": "https://epg.pw/xmltv/epg_DE.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_FR",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "FR",
+      "country_name": "Francia",
+      "url": "https://epg.pw/xmltv/epg_FR.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_AU",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "AU",
+      "country_name": "Australia",
+      "url": "https://epg.pw/xmltv/epg_AU.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1
+    },
+    {
+      "id": "epg_pw_ZA",
+      "provider": "EPG.PW XMLTV",
+      "country_code": "ZA",
+      "country_name": "Sudáfrica",
+      "url": "https://epg.pw/xmltv/epg_ZA.xml.gz",
+      "enabled": true,
+      "future_days": 14,
+      "past_days": 1,
+      "note": "País donde apareció el falso positivo The Hammer; queda activo pero protegido por filtros de alias/duración."
+    }
+  ]
+}

@@ -21,7 +21,10 @@
         "Punto Muerto",
         "Dead End"
       ],
-      "risk_note": "Título genérico: conviene completar tmdb_id cuando esté verificado."
+      "risk_note": "Título inglés genérico: Dead End no debe generar alerta TV/Cable automática; queda para revisión manual.",
+      "manual_only_aliases": [
+        "Dead End"
+      ]
     },
     {
       "slug": "necrofobia",
@@ -92,7 +95,10 @@
         "Al tercer día",
         "On the 3rd Day"
       ],
-      "risk_note": "Título genérico: no tomar coincidencias en descripciones, deportes ni episodios."
+      "risk_note": "Título inglés genérico: On the 3rd Day no debe generar alerta TV/Cable automática; queda para revisión manual.",
+      "manual_only_aliases": [
+        "On the 3rd Day"
+      ]
     },
     {
       "slug": "el-ultimo-hereje",

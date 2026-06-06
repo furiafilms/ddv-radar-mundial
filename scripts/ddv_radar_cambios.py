@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DDV Radar de Cambios v200
+DDV Radar de Cambios v205
 - Plataformas: consulta TMDb Watch Providers y genera outputs/site_platforms_global.json.
 - TV/Cable: lee outputs/site_tv_cable_global.json si existe y detecta novedades contra estado previo.
 - Alertas: crea Issues de GitHub cuando aparecen fingerprints nuevos.
@@ -12,15 +12,19 @@ No contiene claves. Usa secretos de GitHub:
 
 from __future__ import annotations
 
+import gzip
 import hashlib
+import io
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -35,6 +39,10 @@ TV_STATE = OUTPUTS_DIR / "state_tv_seen.json"
 CHANGE_LOG = OUTPUTS_DIR / "radar_change_log.json"
 TV_FILTERED_OUT = OUTPUTS_DIR / "site_tv_cable_global_filtered.json"
 TV_REJECTED_OUT = OUTPUTS_DIR / "site_tv_cable_rejected.json"
+TV_REVIEW_OUT = OUTPUTS_DIR / "site_tv_cable_review.json"
+TV_EPG_BOOTSTRAP_STATE = OUTPUTS_DIR / "state_tv_epg_bootstrap_v205.json"
+TV_SOURCES_FILE = DATA_DIR / "tv_sources.json"
+TV_VERIFIED_FILE = DATA_DIR / "tv_verified_records.json"
 
 TMDB_BEARER_TOKEN = os.environ.get("TMDB_BEARER_TOKEN", "").strip()
 TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "").strip()
@@ -88,7 +96,7 @@ def http_json(url: str, headers: Optional[Dict[str, str]] = None, timeout: int =
 
 
 def tmdb_headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/200"}
+    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/205"}
     if TMDB_BEARER_TOKEN:
         headers["Authorization"] = f"Bearer {TMDB_BEARER_TOKEN}"
     return headers
@@ -264,6 +272,288 @@ def norm_text(value: Any) -> str:
     return str(value or "").strip().lower()
 
 
+def strip_accents_basic(s: str) -> str:
+    table = str.maketrans({
+        "á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u", "ü": "u", "ñ": "n",
+        "Á": "a", "É": "e", "Í": "i", "Ó": "o", "Ú": "u", "Ü": "u", "Ñ": "n",
+        "’": "'", "‘": "'", "´": "'", "`": "'",
+    })
+    return s.translate(table)
+
+
+def norm_match(value: Any) -> str:
+    s = strip_accents_basic(str(value or "").lower())
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def build_alias_index(works: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+    index: Dict[str, List[Dict[str, Any]]] = {}
+    for work in works:
+        if not isinstance(work, dict) or not work.get("slug"):
+            continue
+        aliases = [work.get("title"), work.get("platform_search")] + list(work.get("aliases") or [])
+        for alias in aliases:
+            n = norm_match(alias)
+            if not n or len(n) < 3:
+                continue
+            entry = {"slug": work.get("slug"), "alias": str(alias), "work": work}
+            index.setdefault(n, []).append(entry)
+    return index
+
+
+def parse_xmltv_datetime(value: Any) -> Optional[datetime]:
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    m = re.match(r"^(\d{14})(?:\s*([+-]\d{4}))?", raw)
+    if not m:
+        return None
+    base, off = m.group(1), m.group(2)
+    try:
+        dt = datetime.strptime(base, "%Y%m%d%H%M%S")
+        if off:
+            sign = 1 if off[0] == "+" else -1
+            hh = int(off[1:3])
+            mm = int(off[3:5])
+            tz = timezone(sign * timedelta(hours=hh, minutes=mm))
+            return dt.replace(tzinfo=tz).astimezone(timezone.utc)
+        return dt.replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+
+def xml_text_first(elem: Any, tag: str) -> str:
+    try:
+        child = elem.find(tag)
+        return "" if child is None or child.text is None else str(child.text).strip()
+    except Exception:
+        return ""
+
+
+def http_bytes(url: str, timeout: int = 45, max_bytes: int = 35000000) -> Optional[bytes]:
+    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/205"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            raw = resp.read(max_bytes + 1)
+            if len(raw) > max_bytes:
+                print(f"TV source skipped, too large > {max_bytes} bytes: {url}", file=sys.stderr)
+                return None
+            return raw
+    except Exception as exc:
+        print(f"TV source error {url}: {exc}", file=sys.stderr)
+        return None
+
+
+def maybe_decompress(raw: bytes, url: str) -> bytes:
+    if url.endswith(".gz") or raw[:2] == b"\x1f\x8b":
+        return gzip.decompress(raw)
+    return raw
+
+
+def safe_int(value: Any, default: int) -> int:
+    try:
+        return int(str(value).strip())
+    except Exception:
+        return default
+
+
+def epg_hit_fingerprint(item: Dict[str, Any]) -> str:
+    raw = "|".join([
+        str(item.get("slug") or ""),
+        str(item.get("programme_title") or item.get("title") or "").lower(),
+        str(item.get("channel") or "").lower(),
+        str(item.get("country_code") or item.get("country") or "").upper(),
+        str(item.get("start") or item.get("start_iso") or item.get("date_iso") or ""),
+        str(item.get("start_time") or ""),
+        str(item.get("source") or "").lower(),
+    ])
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+
+def source_country_name(code: str) -> str:
+    names = {
+        "AR": "Argentina", "US": "Estados Unidos", "CA": "Canadá", "GB": "Reino Unido",
+        "BR": "Brasil", "DE": "Alemania", "FR": "Francia", "AU": "Australia", "ZA": "Sudáfrica",
+        "ES": "España", "MX": "México", "CL": "Chile", "CO": "Colombia", "UY": "Uruguay", "PE": "Perú",
+        "IT": "Italia", "PT": "Portugal",
+    }
+    return names.get(str(code or "").upper(), str(code or "").upper())
+
+
+def scan_xmltv_source(source: Dict[str, Any], works: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], Dict[str, Any]]:
+    """Escanea una fuente XMLTV con coincidencia conservadora: título exacto normalizado."""
+    url = str(source.get("url") or "").strip()
+    provider = str(source.get("provider") or source.get("id") or "XMLTV").strip()
+    country_code = str(source.get("country_code") or "").upper()
+    max_bytes = safe_int(source.get("max_bytes"), safe_int(os.environ.get("DDV_TV_SOURCE_MAX_BYTES"), 35000000))
+    if not url:
+        return [], [], {"id": source.get("id"), "ok": False, "reason": "sin url"}
+
+    raw = http_bytes(url, timeout=safe_int(source.get("timeout"), 45), max_bytes=max_bytes)
+    if raw is None:
+        return [], [], {"id": source.get("id"), "ok": False, "reason": "no se pudo descargar"}
+    try:
+        xml = maybe_decompress(raw, url)
+    except Exception as exc:
+        return [], [], {"id": source.get("id"), "ok": False, "reason": f"no se pudo descomprimir: {exc}"}
+
+    alias_index = build_alias_index(works)
+    now = datetime.now(timezone.utc)
+    past_days = safe_int(source.get("past_days"), safe_int(os.environ.get("DDV_TV_EPG_PAST_DAYS"), 1))
+    future_days = safe_int(source.get("future_days"), safe_int(os.environ.get("DDV_TV_EPG_FUTURE_DAYS"), 14))
+    window_start = now - timedelta(days=past_days)
+    window_end = now + timedelta(days=future_days)
+    channels: Dict[str, str] = {}
+    hits: List[Dict[str, Any]] = []
+    review: List[Dict[str, Any]] = []
+    parsed_programmes = 0
+
+    try:
+        context = ET.iterparse(io.BytesIO(xml), events=("end",))
+        for _event, elem in context:
+            tag = elem.tag.split("}")[-1]
+            if tag == "channel":
+                cid = str(elem.attrib.get("id") or "").strip()
+                name = xml_text_first(elem, "display-name")
+                if cid:
+                    channels[cid] = name or cid
+                elem.clear()
+                continue
+            if tag != "programme":
+                elem.clear()
+                continue
+            parsed_programmes += 1
+            start = parse_xmltv_datetime(elem.attrib.get("start"))
+            stop = parse_xmltv_datetime(elem.attrib.get("stop"))
+            if start and (start < window_start or start > window_end):
+                elem.clear()
+                continue
+            title = xml_text_first(elem, "title")
+            title_norm = norm_match(title)
+            if not title_norm or title_norm not in alias_index:
+                elem.clear()
+                continue
+            duration = None
+            if start and stop:
+                duration = int(round((stop - start).total_seconds() / 60))
+            channel_id = str(elem.attrib.get("channel") or "").strip()
+            channel_name = channels.get(channel_id, channel_id)
+            desc = xml_text_first(elem, "desc")
+            for match in alias_index[title_norm]:
+                work = match["work"]
+                item = {
+                    "slug": work.get("slug"),
+                    "work_slug": work.get("slug"),
+                    "work_title": work.get("title"),
+                    "title": work.get("title"),
+                    "programme_title": title,
+                    "matched_term": match.get("alias"),
+                    "matched_alias": match.get("alias"),
+                    "channel": channel_name,
+                    "channel_id": channel_id,
+                    "channel_number": channel_name,
+                    "country": country_code,
+                    "country_code": country_code,
+                    "country_name": str(source.get("country_name") or source_country_name(country_code)),
+                    "start": start.isoformat().replace("+00:00", "Z") if start else "",
+                    "start_iso": start.isoformat().replace("+00:00", "Z") if start else "",
+                    "stop": stop.isoformat().replace("+00:00", "Z") if stop else "",
+                    "end_iso": stop.isoformat().replace("+00:00", "Z") if stop else "",
+                    "date_iso": start.date().isoformat() if start else "",
+                    "start_time": start.strftime("%H:%M") if start else "",
+                    "end_time": stop.strftime("%H:%M") if stop else "",
+                    "duration_minutes": duration,
+                    "description_sample": desc[:240] if desc else "",
+                    "source": provider,
+                    "source_url": url,
+                    "detection_type": "xmltv_exact_title",
+                    "confidence": "medium",
+                    "detected_at": now_iso(),
+                }
+                item["fingerprint"] = epg_hit_fingerprint(item)
+                ok, reason = classify_tv_hit(item, work)
+                if ok:
+                    hits.append(item)
+                else:
+                    item["review_required"] = True
+                    item["review_reason"] = reason
+                    review.append(item)
+            elem.clear()
+    except Exception as exc:
+        return hits, review, {"id": source.get("id"), "ok": False, "reason": f"xml parse error: {exc}", "bytes": len(raw)}
+
+    return hits, review, {
+        "id": source.get("id"), "ok": True, "provider": provider, "country_code": country_code,
+        "url": url, "hits": len(hits), "review": len(review), "channels": len(channels),
+        "programmes_parsed": parsed_programmes, "bytes": len(raw), "window_days": {"past": past_days, "future": future_days},
+    }
+
+
+def load_verified_tv_records(works_by_slug: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    data = read_json(TV_VERIFIED_FILE, {"items": []})
+    items = data.get("items") if isinstance(data, dict) else []
+    out: List[Dict[str, Any]] = []
+    if not isinstance(items, list):
+        return out
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        slug = str(item.get("slug") or item.get("work_slug") or "")
+        work = works_by_slug.get(slug, {})
+        copy = dict(item)
+        copy.setdefault("work_slug", slug)
+        copy.setdefault("work_title", work.get("title") or item.get("title"))
+        copy.setdefault("title", work.get("title") or item.get("title"))
+        copy.setdefault("source", "Registro verificado DDV")
+        copy.setdefault("detected_at", now_iso())
+        copy.setdefault("confidence", "high")
+        copy.setdefault("fingerprint", tv_fingerprint(copy))
+        out.append(copy)
+    return out
+
+
+def scan_tv_sources(works: List[Dict[str, Any]], works_by_slug: Dict[str, Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
+    sources_config = read_json(TV_SOURCES_FILE, {"xmltv_sources": []})
+    source_reports: List[Dict[str, Any]] = []
+    hits: List[Dict[str, Any]] = []
+    review: List[Dict[str, Any]] = []
+
+    hits.extend(load_verified_tv_records(works_by_slug))
+
+    xml_sources = []
+    if isinstance(sources_config, dict) and isinstance(sources_config.get("xmltv_sources"), list):
+        xml_sources = sources_config["xmltv_sources"]
+    enabled_sources = [s for s in xml_sources if isinstance(s, dict) and s.get("enabled", True)]
+
+    countries_env = os.environ.get("DDV_TV_EPG_COUNTRIES", "").strip()
+    if countries_env:
+        allowed = {x.strip().upper() for x in countries_env.split(",") if x.strip()}
+        enabled_sources = [s for s in enabled_sources if str(s.get("country_code") or "").upper() in allowed]
+
+    for src in enabled_sources:
+        src_hits, src_review, report = scan_xmltv_source(src, works)
+        hits.extend(src_hits)
+        review.extend(src_review)
+        source_reports.append(report)
+        time.sleep(float(os.environ.get("DDV_TV_SOURCE_SLEEP", "0.25")))
+    return hits, review, source_reports
+
+
+def dedupe_tv_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    seen = set()
+    out = []
+    for item in items:
+        fp = tv_fingerprint(item)
+        if fp in seen:
+            continue
+        seen.add(fp)
+        copy = dict(item)
+        copy.setdefault("fingerprint", fp)
+        out.append(copy)
+    return out
+
+
 def duration_from_hit(item: Dict[str, Any]) -> Optional[int]:
     raw = item.get("duration_minutes")
     try:
@@ -374,7 +664,7 @@ def github_issue(title: str, body: str) -> bool:
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {GITHUB_TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "DDV-Radar-Cambios/200",
+            "User-Agent": "DDV-Radar-Cambios/205",
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
@@ -466,7 +756,7 @@ def main() -> int:
 
     write_json(PLATFORMS_OUT, {
         "ok": True,
-        "version": "v200-radar-platforms-daily",
+        "version": "v205-radar-platforms-daily",
         "generated_at": now_iso(),
         "source": "TMDb Watch Providers",
         "by_slug": by_slug,
@@ -475,30 +765,49 @@ def main() -> int:
     })
 
     tv_payload = read_json(TV_OUT, {})
-    tv_hits_raw = extract_tv_hits(tv_payload)
+    tv_hits_existing = extract_tv_hits(tv_payload)
+    tv_source_hits, tv_source_review, tv_source_reports = scan_tv_sources(works, works_by_slug)
+    tv_hits_raw = dedupe_tv_items(tv_hits_existing + tv_source_hits)
     tv_hits, tv_rejected = filter_tv_hits_for_alerts(tv_hits_raw, works_by_slug)
+    tv_review = dedupe_tv_items(tv_source_review)
     changes["tv_rejected"] = tv_rejected
+    changes["tv_review"] = tv_review
 
-    if tv_payload:
-        filtered_payload = dict(tv_payload) if isinstance(tv_payload, dict) else {"ok": True}
-        # Actualizamos siempre el nivel principal para que no queden hits viejos visibles.
-        filtered_payload["hits"] = tv_hits
-        filtered_payload["hits_total"] = len(tv_hits)
-        filtered_payload["rejected_by_v199"] = tv_rejected
-        if isinstance(filtered_payload.get("web_payload"), dict):
-            filtered_payload["web_payload"] = dict(filtered_payload["web_payload"])
-            filtered_payload["web_payload"]["hits"] = tv_hits
-            filtered_payload["web_payload"]["hits_total"] = len(tv_hits)
-            filtered_payload["web_payload"]["rejected_by_v199"] = tv_rejected
-        filtered_payload["version_filter"] = "v200-tv-short-max-20-filter"
-        filtered_payload["filtered_at"] = now_iso()
-        write_json(TV_FILTERED_OUT, filtered_payload)
+    generated_tv_payload = {
+        "ok": True,
+        "version": "v205-tv-cable-epgpw-official-sources",
+        "generated_at_utc": now_iso(),
+        "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
+        "hits_total": len(tv_hits_raw),
+        "review_total": len(tv_review),
+        "hits": tv_hits_raw,
+        "review_hits": tv_review,
+        "source_reports": tv_source_reports,
+        "note": "Radar de indicios TV/Cable. Las alertas se emiten solo para coincidencias filtradas; las dudosas quedan en revisión.",
+    }
+    write_json(TV_OUT, generated_tv_payload)
+
+    filtered_payload = dict(generated_tv_payload)
+    filtered_payload["hits"] = tv_hits
+    filtered_payload["hits_total"] = len(tv_hits)
+    filtered_payload["rejected_by_v205"] = tv_rejected
+    filtered_payload["version_filter"] = "v205-tv-short-max-20-generic-title-filter"
+    filtered_payload["filtered_at"] = now_iso()
+    write_json(TV_FILTERED_OUT, filtered_payload)
+
     write_json(TV_REJECTED_OUT, {
         "ok": True,
-        "version": "v200-tv-rejected",
+        "version": "v205-tv-rejected",
         "generated_at": now_iso(),
         "items": tv_rejected,
         "items_count": len(tv_rejected),
+    })
+    write_json(TV_REVIEW_OUT, {
+        "ok": True,
+        "version": "v205-tv-review",
+        "generated_at": now_iso(),
+        "items": tv_review,
+        "items_count": len(tv_review),
     })
 
     new_tv = []
@@ -509,12 +818,14 @@ def main() -> int:
         if fp not in tv_seen:
             new_tv.append((hit, fp))
 
-    if not tv_bootstrap:
+    epg_bootstrap = not TV_EPG_BOOTSTRAP_STATE.is_file()
+    if not tv_bootstrap and not epg_bootstrap:
         for hit, fp in new_tv:
             changes["tv_cable"].append({"fingerprint": fp, "item": hit})
             issue_tv(hit, fp)
     elif new_tv:
-        print(f"Bootstrap TV/Cable: se registran {len(new_tv)} detecciones existentes sin crear Issues.")
+        print(f"Bootstrap TV/Cable v205: se registran {len(new_tv)} detecciones existentes sin crear Issues.")
+        write_json(TV_EPG_BOOTSTRAP_STATE, {"bootstrapped_at": now_iso(), "items_registered": len(new_tv)})
 
     tv_seen.update(current_tv_fps)
     save_state(TV_STATE, tv_seen)
@@ -529,6 +840,8 @@ def main() -> int:
         "tv_items_rejected": len(tv_rejected),
         "tv_changes": len(changes["tv_cable"]),
         "tmdb_configured": tmdb_ready(),
+        "tv_source_reports": len(tv_source_reports),
+        "tv_review": len(tv_review),
     }, ensure_ascii=False, indent=2))
     return 0
 
