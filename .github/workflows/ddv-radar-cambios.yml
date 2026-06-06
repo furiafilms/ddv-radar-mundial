@@ -1,0 +1,44 @@
+name: DDV Radar Cambios
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 11 * * *'
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  radar-cambios:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ejecutar radar de cambios
+        env:
+          TMDB_BEARER_TOKEN: ${{ secrets.TMDB_BEARER_TOKEN }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          CREATE_ISSUES: '1'
+        run: python scripts/ddv_radar_cambios.py
+
+      - name: Guardar resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/site_platforms_global.json outputs/state_platforms_seen.json outputs/state_tv_seen.json outputs/radar_change_log.json outputs/site_tv_cable_global_filtered.json outputs/site_tv_cable_rejected.json || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios para commitear."
+          else
+            git commit -m "Actualizar radar DDV plataformas TV y filtros v200"
+            git push
+          fi
