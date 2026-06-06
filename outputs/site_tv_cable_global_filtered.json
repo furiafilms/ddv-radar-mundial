@@ -1,22 +1,196 @@
 {
   "ok": true,
-  "version": "ddv-radar-mundial-v004-web-json-publico",
-  "generated_at_utc": null,
-  "regions_order": [
-    "Estados Unidos",
-    "Norteamérica",
-    "Latinoamérica",
-    "Europa",
-    "Resto del mundo",
-    "Sin país específico"
-  ],
-  "hits_total": 0,
+  "version": "v205-tv-cable-epgpw-official-sources",
+  "generated_at_utc": "2026-06-06T03:32:19Z",
+  "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
+  "hits_total": 2,
   "review_total": 0,
-  "summary_by_region": [],
-  "hits": [],
+  "hits": [
+    {
+      "slug": "necrofobia",
+      "title": "Necrofobia",
+      "programme_title": "Necrofobia",
+      "matched_term": "Necrofobia",
+      "channel": "CINE.AR",
+      "channel_number": "TeleRed 219 · CINE.AR TV: TDA 22.4 · Flow/Cablevisión 60, 300 y 640 HD · DirecTV 512 · Telecentro 33, 400 y 1049 HD",
+      "country": "AR",
+      "country_code": "AR",
+      "country_name": "Argentina",
+      "date_iso": "2026-06-03",
+      "start_time": "00:00",
+      "end_time": "02:00",
+      "duration_minutes": 120,
+      "source": "TeleRed / grilla de programación",
+      "source_url": "https://www.telered.com.ar/buscador-grilla",
+      "detection_type": "registro verificado por radar DDV",
+      "confidence": "high",
+      "source_labels": [
+        "TeleRed / grilla de programación"
+      ],
+      "work_slug": "necrofobia",
+      "work_title": "Necrofobia",
+      "detected_at": "2026-06-06T03:31:52Z",
+      "fingerprint": "403043e411d665cf62a4a12077989a4678f6c8f7"
+    },
+    {
+      "slug": "hermanos-de-sangre",
+      "title": "Hermanos de Sangre",
+      "programme_title": "FICCIONARTE - Película: HERMANOS DE SANGRE",
+      "matched_term": "Hermanos de Sangre",
+      "channel": "Canal á",
+      "channel_number": "Canal á · señal según operador",
+      "country": "AR",
+      "country_code": "AR",
+      "country_name": "Argentina",
+      "date_iso": "2026-06-16",
+      "start_time": "04:00",
+      "end_time": "",
+      "source": "Artear / grilla comercial Canal A",
+      "source_url": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-2026-25-01.html",
+      "detection_type": "registro verificado por fuente Artear",
+      "confidence": "high",
+      "source_labels": [
+        "Artear / grilla comercial Canal A"
+      ],
+      "work_slug": "hermanos-de-sangre",
+      "work_title": "Hermanos de Sangre",
+      "detected_at": "2026-06-06T03:31:52Z",
+      "fingerprint": "acb7dc63fcf991113c6afb5119fcc113fef84212"
+    }
+  ],
   "review_hits": [],
-  "note": "Placeholder inicial. GitHub Actions lo reemplaza automáticamente en cada corrida.",
-  "rejected_by_v199": [],
-  "version_filter": "v200-tv-short-max-20-filter",
-  "filtered_at": "2026-06-06T01:38:52Z"
+  "source_reports": [
+    {
+      "id": "epg_pw_US",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "US",
+      "url": "https://epg.pw/xmltv/epg_US.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 5456,
+      "programmes_parsed": 541620,
+      "bytes": 30860665,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_GB",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "GB",
+      "url": "https://epg.pw/xmltv/epg_GB.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 763,
+      "programmes_parsed": 51836,
+      "bytes": 2530013,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_CA",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "CA",
+      "url": "https://epg.pw/xmltv/epg_CA.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 696,
+      "programmes_parsed": 49798,
+      "bytes": 2590545,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_BR",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "BR",
+      "url": "https://epg.pw/xmltv/epg_BR.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 332,
+      "programmes_parsed": 26269,
+      "bytes": 713388,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_DE",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "DE",
+      "url": "https://epg.pw/xmltv/epg_DE.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 250,
+      "programmes_parsed": 23409,
+      "bytes": 1828773,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_FR",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "FR",
+      "url": "https://epg.pw/xmltv/epg_FR.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 520,
+      "programmes_parsed": 41994,
+      "bytes": 2066744,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_AU",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "AU",
+      "url": "https://epg.pw/xmltv/epg_AU.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 218,
+      "programmes_parsed": 23735,
+      "bytes": 778762,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    },
+    {
+      "id": "epg_pw_ZA",
+      "ok": true,
+      "provider": "EPG.PW XMLTV",
+      "country_code": "ZA",
+      "url": "https://epg.pw/xmltv/epg_ZA.xml.gz",
+      "hits": 0,
+      "review": 0,
+      "channels": 275,
+      "programmes_parsed": 22070,
+      "bytes": 711606,
+      "window_days": {
+        "past": 1,
+        "future": 14
+      }
+    }
+  ],
+  "note": "Radar de indicios TV/Cable. Las alertas se emiten solo para coincidencias filtradas; las dudosas quedan en revisión.",
+  "rejected_by_v205": [],
+  "version_filter": "v205-tv-short-max-20-generic-title-filter",
+  "filtered_at": "2026-06-06T03:32:19Z"
 }

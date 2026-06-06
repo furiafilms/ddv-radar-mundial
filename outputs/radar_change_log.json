@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-06-06T01:38:46Z",
+  "generated_at": "2026-06-06T03:31:47Z",
   "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
-    "platforms": true,
-    "tv_cable": true
-  }
+    "platforms": false,
+    "tv_cable": false
+  },
+  "tv_review": []
 }
