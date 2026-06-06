@@ -1,0 +1,110 @@
+{
+  "works": [
+    {
+      "slug": "hermanos-de-sangre",
+      "type": "feature",
+      "title": "Hermanos de Sangre",
+      "year": 2012,
+      "platform_search": "Blood Brothers",
+      "aliases": ["Hermanos de Sangre", "Blood Brothers"]
+    },
+    {
+      "slug": "punto-muerto",
+      "type": "feature",
+      "title": "Punto Muerto",
+      "year": 2018,
+      "platform_search": "Dead End",
+      "aliases": ["Punto Muerto", "Dead End"],
+      "risk_note": "Título genérico: conviene completar tmdb_id cuando esté verificado."
+    },
+    {
+      "slug": "necrofobia",
+      "type": "feature",
+      "title": "Necrofobia",
+      "year": 2014,
+      "platform_search": "Necrophobia 3D",
+      "aliases": ["Necrofobia", "Necrophobia", "Necrophobia 3D"]
+    },
+    {
+      "slug": "ataud-blanco",
+      "type": "feature",
+      "title": "Ataúd Blanco",
+      "year": 2016,
+      "platform_search": "White Coffin",
+      "aliases": ["Ataúd Blanco", "White Coffin"]
+    },
+    {
+      "slug": "soy-toxico",
+      "type": "feature",
+      "title": "Soy Tóxico",
+      "year": 2018,
+      "platform_search": "I Am Toxic",
+      "aliases": ["Soy Tóxico", "I Am Toxic"]
+    },
+    {
+      "slug": "death-knows-your-name",
+      "type": "feature",
+      "title": "La Muerte Conoce tu Nombre",
+      "year": 2007,
+      "platform_search": "Death Knows Your Name",
+      "aliases": ["La Muerte Conoce tu Nombre", "Death Knows Your Name"]
+    },
+    {
+      "slug": "jennifers-shadow",
+      "type": "feature",
+      "title": "Jennifer’s Shadow",
+      "year": 2004,
+      "platform_search": "Jennifer's Shadow",
+      "aliases": ["Jennifer's Shadow", "Jennifer’s Shadow", "Chronicle of the Raven", "Devorador de sueños"]
+    },
+    {
+      "slug": "al-3er-dia",
+      "type": "feature",
+      "title": "Al 3er Día",
+      "year": 2021,
+      "platform_search": "On the 3rd Day",
+      "aliases": ["Al 3er Día", "Al tercer día", "On the 3rd Day"],
+      "risk_note": "Título genérico: no tomar coincidencias en descripciones, deportes ni episodios."
+    },
+    {
+      "slug": "el-ultimo-hereje",
+      "type": "feature",
+      "title": "El Último Hereje",
+      "year": 2022,
+      "platform_search": "The Last Heretic",
+      "aliases": ["El Último Hereje", "El ultimo hereje", "The Last Heretic"]
+    },
+    {
+      "slug": "los-ojos-del-abismo",
+      "type": "feature",
+      "title": "Los Ojos del Abismo",
+      "year": 2025,
+      "platform_search": "Eyes of the Abyss",
+      "aliases": ["Los Ojos del Abismo", "Eyes of the Abyss"]
+    },
+    {
+      "slug": "sueno-profundo",
+      "type": "short",
+      "title": "Sueño Profundo",
+      "year": 1997,
+      "platform_search": "Sueño profundo",
+      "aliases": ["Sueño Profundo", "Sueño profundo"]
+    },
+    {
+      "slug": "la-ultima-cena",
+      "type": "short",
+      "title": "La Última Cena",
+      "year": 1999,
+      "platform_search": "La última cena",
+      "aliases": ["La Última Cena", "La ultima cena"]
+    },
+    {
+      "slug": "el-martillo",
+      "type": "short",
+      "title": "El Martillo",
+      "year": 2003,
+      "platform_search": "El martillo",
+      "aliases": ["El Martillo", "El martillo"]
+    }
+  ]
+}
