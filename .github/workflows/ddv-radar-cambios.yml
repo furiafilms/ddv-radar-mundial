@@ -3,6 +3,7 @@ name: DDV Radar Cambios
 on:
   workflow_dispatch:
   schedule:
+    # 08:10 de Argentina (UTC-3)
     - cron: '10 11 * * *'
 
 permissions:
@@ -12,10 +13,11 @@ permissions:
 jobs:
   radar-cambios:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Preparar Python
         uses: actions/setup-python@v5
@@ -29,16 +31,44 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           CREATE_ISSUES: '1'
+          DDV_TV_EPG_PAST_DAYS: '1'
+          DDV_TV_EPG_FUTURE_DAYS: '14'
+          WATCHMODE_API_KEY: ${{ secrets.WATCHMODE_API_KEY }}
+          WATCHMODE_REGIONS: 'AR,US,ES,MX,BR,CL,CO,UY,PE,GB,CA,FR,DE,IT,PT,AU'
         run: python scripts/ddv_radar_cambios.py
 
-      - name: Guardar resultados
+      - name: Guardar resultados con sincronizacion segura
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outputs/site_platforms_global.json outputs/state_platforms_seen.json outputs/state_tv_seen.json outputs/radar_change_log.json outputs/site_tv_cable_global_filtered.json outputs/site_tv_cable_rejected.json || true
+
+          mkdir -p /tmp/ddv_radar_outputs
+          cp outputs/*.json /tmp/ddv_radar_outputs/ 2>/dev/null || true
+
+          # Evita fallos de push por commits hechos manualmente mientras corría el workflow.
+          git fetch origin main
+          git reset --hard origin/main
+
+          mkdir -p outputs
+          cp /tmp/ddv_radar_outputs/*.json outputs/ 2>/dev/null || true
+
+          git add \
+            outputs/site_platforms_global.json \
+            outputs/state_platforms_seen.json \
+            outputs/state_platforms_watchmode_bootstrap_v206.json \
+            outputs/state_tv_seen.json \
+            outputs/state_tv_epg_bootstrap_v205.json \
+            outputs/radar_change_log.json \
+            outputs/site_tv_cable_global.json \
+            outputs/site_tv_cable_global_filtered.json \
+            outputs/site_tv_cable_rejected.json \
+            outputs/site_tv_cable_review.json \
+            2>/dev/null || true
+
           if git diff --cached --quiet; then
             echo "Sin cambios para commitear."
           else
-            git commit -m "Actualizar radar DDV plataformas TV y filtros v200"
-            git push
+            git commit -m "Actualizar radar DDV outputs v210"
+            git push origin HEAD:main
           fi
