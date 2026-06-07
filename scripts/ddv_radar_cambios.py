@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DDV Radar de Cambios v209
+DDV Radar de Cambios v211
 - Plataformas: consulta TMDb Watch Providers + Watchmode y genera outputs/site_platforms_global.json.
 - TV/Cable: lee outputs/site_tv_cable_global.json si existe y detecta novedades contra estado previo.
 - Alertas: crea Issues de GitHub cuando aparecen fingerprints nuevos.
@@ -99,7 +99,7 @@ def http_json(url: str, headers: Optional[Dict[str, str]] = None, timeout: int =
 
 
 def tmdb_headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"}
+    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/211"}
     if TMDB_BEARER_TOKEN:
         headers["Authorization"] = f"Bearer {TMDB_BEARER_TOKEN}"
     return headers
@@ -373,7 +373,7 @@ def fetch_watchmode_for_work(work: Dict[str, Any]) -> Dict[str, Any]:
     watchmode_id = work.get("watchmode_id")
     if not watchmode_id:
         query = work.get("watchmode_search") or work.get("platform_search") or work.get("title")
-        search = http_json(watchmode_url("/search/", {"search_field": "name", "search_value": query}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"})
+        search = http_json(watchmode_url("/search/", {"search_field": "name", "search_value": query}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/211"})
         picked = pick_best_watchmode_title(search or {}, work.get("year"))
         if picked:
             watchmode_id = picked.get("id")
@@ -383,10 +383,10 @@ def fetch_watchmode_for_work(work: Dict[str, Any]) -> Dict[str, Any]:
         base["message"] = "No se pudo verificar Watchmode ID por título/año. Completar watchmode_id en data/catalog.json si corresponde."
         return base
 
-    sources = http_json(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"})
+    sources = http_json(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/211"})
     # http_json espera dict; algunas respuestas de sources pueden ser lista. Reintento liviano para listas.
     if sources is None:
-        req = urllib.request.Request(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), headers={"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"})
+        req = urllib.request.Request(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), headers={"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/211"})
         try:
             with urllib.request.urlopen(req, timeout=20) as resp:
                 raw = resp.read().decode("utf-8", errors="replace")
@@ -538,7 +538,7 @@ def xml_text_first(elem: Any, tag: str) -> str:
 
 
 def http_bytes(url: str, timeout: int = 45, max_bytes: int = 35000000) -> Optional[bytes]:
-    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/209"})
+    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/211"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             raw = resp.read(max_bytes + 1)
@@ -873,7 +873,7 @@ def github_issue(title: str, body: str) -> bool:
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {GITHUB_TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "DDV-Radar-Cambios/209",
+            "User-Agent": "DDV-Radar-Cambios/211",
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
@@ -972,20 +972,29 @@ def main() -> int:
         if fp not in platform_seen and ident not in platform_seen:
             new_platform_items.append(item)
 
-    if not platform_bootstrap:
+    # v211: si se acaba de sumar Watchmode sobre un estado existente de TMDb,
+    # NO se deben crear Issues por todo el catálogo ya disponible.
+    # Se registra como baseline y recién las corridas futuras alertan diferencias reales.
+    if platform_bootstrap or watchmode_bootstrap:
+        if new_platform_items:
+            print(f"Bootstrap plataformas v211: se registran {len(new_platform_items)} detecciones existentes sin crear Issues.")
+        if watchmode_ready():
+            write_json(PLATFORMS_WATCHMODE_BOOTSTRAP_STATE, {
+                "bootstrapped_at": now_iso(),
+                "items_registered": len(new_platform_items),
+                "reason": "Watchmode agregado como segunda fuente; baseline inicial sin alertas masivas"
+            })
+    else:
         for item in new_platform_items:
             changes["platforms"].append(item)
             issue_platform(item)
-    elif new_platform_items:
-        print(f"Bootstrap plataformas Watchmode v206: se registran {len(new_platform_items)} detecciones existentes sin crear Issues.")
-        write_json(PLATFORMS_WATCHMODE_BOOTSTRAP_STATE, {"bootstrapped_at": now_iso(), "items_registered": len(new_platform_items)})
 
     platform_seen.update(current_platform_fps)
     save_state(PLATFORMS_STATE, platform_seen)
 
     write_json(PLATFORMS_OUT, {
         "ok": True,
-        "version": "v209-radar-platforms-tmdb-watchmode-daily",
+        "version": "v211-radar-platforms-tmdb-watchmode-daily-baseline",
         "generated_at": now_iso(),
         "source": "TMDb Watch Providers + Watchmode",
         "sources": {
@@ -1008,7 +1017,7 @@ def main() -> int:
 
     generated_tv_payload = {
         "ok": True,
-        "version": "v209-tv-cable-epgpw-official-sources",
+        "version": "v211-tv-cable-epgpw-official-sources",
         "generated_at_utc": now_iso(),
         "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
         "hits_total": len(tv_hits_raw),
@@ -1030,14 +1039,14 @@ def main() -> int:
 
     write_json(TV_REJECTED_OUT, {
         "ok": True,
-        "version": "v209-tv-rejected",
+        "version": "v211-tv-rejected",
         "generated_at": now_iso(),
         "items": tv_rejected,
         "items_count": len(tv_rejected),
     })
     write_json(TV_REVIEW_OUT, {
         "ok": True,
-        "version": "v209-tv-review",
+        "version": "v211-tv-review",
         "generated_at": now_iso(),
         "items": tv_review,
         "items_count": len(tv_review),
