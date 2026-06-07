@@ -58,7 +58,14 @@
       "aliases": [
         "Soy Tóxico",
         "I Am Toxic"
-      ]
+      ],
+      "manual_only_aliases": [
+        "Toxic"
+      ],
+      "blocked_tv_title_patterns": [
+        "Toxic"
+      ],
+      "risk_note": "Título inglés genérico: Toxic no debe generar alerta TV/Cable automática; queda bloqueado/revisión manual para evitar falsos positivos de programas homónimos."
     },
     {
       "slug": "death-knows-your-name",

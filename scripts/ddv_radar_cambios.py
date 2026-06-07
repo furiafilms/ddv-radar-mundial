@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DDV Radar de Cambios v206
+DDV Radar de Cambios v209
 - Plataformas: consulta TMDb Watch Providers + Watchmode y genera outputs/site_platforms_global.json.
 - TV/Cable: lee outputs/site_tv_cable_global.json si existe y detecta novedades contra estado previo.
 - Alertas: crea Issues de GitHub cuando aparecen fingerprints nuevos.
@@ -99,7 +99,7 @@ def http_json(url: str, headers: Optional[Dict[str, str]] = None, timeout: int =
 
 
 def tmdb_headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"}
+    headers = {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"}
     if TMDB_BEARER_TOKEN:
         headers["Authorization"] = f"Bearer {TMDB_BEARER_TOKEN}"
     return headers
@@ -373,7 +373,7 @@ def fetch_watchmode_for_work(work: Dict[str, Any]) -> Dict[str, Any]:
     watchmode_id = work.get("watchmode_id")
     if not watchmode_id:
         query = work.get("watchmode_search") or work.get("platform_search") or work.get("title")
-        search = http_json(watchmode_url("/search/", {"search_field": "name", "search_value": query}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"})
+        search = http_json(watchmode_url("/search/", {"search_field": "name", "search_value": query}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"})
         picked = pick_best_watchmode_title(search or {}, work.get("year"))
         if picked:
             watchmode_id = picked.get("id")
@@ -383,10 +383,10 @@ def fetch_watchmode_for_work(work: Dict[str, Any]) -> Dict[str, Any]:
         base["message"] = "No se pudo verificar Watchmode ID por título/año. Completar watchmode_id en data/catalog.json si corresponde."
         return base
 
-    sources = http_json(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"})
+    sources = http_json(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), {"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"})
     # http_json espera dict; algunas respuestas de sources pueden ser lista. Reintento liviano para listas.
     if sources is None:
-        req = urllib.request.Request(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), headers={"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/206"})
+        req = urllib.request.Request(watchmode_url(f"/title/{int(watchmode_id)}/sources/", {}), headers={"Accept": "application/json", "User-Agent": "DDV-Radar-Cambios/209"})
         try:
             with urllib.request.urlopen(req, timeout=20) as resp:
                 raw = resp.read().decode("utf-8", errors="replace")
@@ -538,7 +538,7 @@ def xml_text_first(elem: Any, tag: str) -> str:
 
 
 def http_bytes(url: str, timeout: int = 45, max_bytes: int = 35000000) -> Optional[bytes]:
-    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/206"})
+    req = urllib.request.Request(url, headers={"User-Agent": "DDV-Radar-Cambios/209"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             raw = resp.read(max_bytes + 1)
@@ -821,9 +821,12 @@ def classify_tv_hit(item: Dict[str, Any], work: Optional[Dict[str, Any]]) -> Tup
         if dur > max_minutes:
             return False, f"cortometraje con duración de grilla incompatible: {dur} min > {max_minutes} min"
 
-    # Bloqueo puntual defensivo por el falso positivo ya detectado.
+    # Bloqueos puntuales defensivos por falsos positivos ya detectados.
     if slug == "el-martillo" and "hammer" in title and dur is not None and dur > 20:
         return False, f"falso positivo probable: El Martillo no coincide con emisión The Hammer de {dur} min ({channel}/{country})"
+
+    if slug == "soy-toxico" and norm_match(title) == "toxic":
+        return False, f"falso positivo probable: Soy Tóxico no debe alertar por programa genérico titulado Toxic ({channel}/{country})"
 
     return True, "alertable"
 
@@ -870,7 +873,7 @@ def github_issue(title: str, body: str) -> bool:
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {GITHUB_TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "DDV-Radar-Cambios/206",
+            "User-Agent": "DDV-Radar-Cambios/209",
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
@@ -896,7 +899,7 @@ def issue_platform(item: Dict[str, Any]) -> None:
         f"- Detectado: {item.get('detected_at') or now_iso()}",
         f"- Fingerprint: `{item.get('fingerprint')}`",
         "",
-        "Revisar manualmente antes de difundir comercialmente. TMDb puede variar por país y fecha.",
+        "Revisar manualmente antes de difundir comercialmente. TMDb/Watchmode pueden variar por país y fecha.",
     ])
     github_issue(title, body)
 
@@ -982,7 +985,7 @@ def main() -> int:
 
     write_json(PLATFORMS_OUT, {
         "ok": True,
-        "version": "v206-radar-platforms-tmdb-watchmode-daily",
+        "version": "v209-radar-platforms-tmdb-watchmode-daily",
         "generated_at": now_iso(),
         "source": "TMDb Watch Providers + Watchmode",
         "sources": {
@@ -1005,7 +1008,7 @@ def main() -> int:
 
     generated_tv_payload = {
         "ok": True,
-        "version": "v206-tv-cable-epgpw-official-sources",
+        "version": "v209-tv-cable-epgpw-official-sources",
         "generated_at_utc": now_iso(),
         "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
         "hits_total": len(tv_hits_raw),
@@ -1027,14 +1030,14 @@ def main() -> int:
 
     write_json(TV_REJECTED_OUT, {
         "ok": True,
-        "version": "v206-tv-rejected",
+        "version": "v209-tv-rejected",
         "generated_at": now_iso(),
         "items": tv_rejected,
         "items_count": len(tv_rejected),
     })
     write_json(TV_REVIEW_OUT, {
         "ok": True,
-        "version": "v206-tv-review",
+        "version": "v209-tv-review",
         "generated_at": now_iso(),
         "items": tv_review,
         "items_count": len(tv_review),
