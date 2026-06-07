@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "v206-tv-cable-epgpw-official-sources",
-  "generated_at_utc": "2026-06-06T12:14:40Z",
+  "generated_at_utc": "2026-06-07T12:48:53Z",
   "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
   "hits_total": 2,
   "review_total": 0,
@@ -29,7 +29,7 @@
       ],
       "work_slug": "necrofobia",
       "work_title": "Necrofobia",
-      "detected_at": "2026-06-06T12:14:12Z",
+      "detected_at": "2026-06-07T12:48:26Z",
       "fingerprint": "403043e411d665cf62a4a12077989a4678f6c8f7"
     },
     {
@@ -54,7 +54,7 @@
       ],
       "work_slug": "hermanos-de-sangre",
       "work_title": "Hermanos de Sangre",
-      "detected_at": "2026-06-06T12:14:12Z",
+      "detected_at": "2026-06-07T12:48:26Z",
       "fingerprint": "acb7dc63fcf991113c6afb5119fcc113fef84212"
     }
   ],
@@ -69,8 +69,8 @@
       "hits": 0,
       "review": 0,
       "channels": 5456,
-      "programmes_parsed": 541620,
-      "bytes": 30860665,
+      "programmes_parsed": 535945,
+      "bytes": 29260081,
       "window_days": {
         "past": 1,
         "future": 14
@@ -85,8 +85,8 @@
       "hits": 0,
       "review": 0,
       "channels": 763,
-      "programmes_parsed": 51836,
-      "bytes": 2530013,
+      "programmes_parsed": 52089,
+      "bytes": 2593845,
       "window_days": {
         "past": 1,
         "future": 14
@@ -100,9 +100,9 @@
       "url": "https://epg.pw/xmltv/epg_CA.xml.gz",
       "hits": 0,
       "review": 0,
-      "channels": 696,
-      "programmes_parsed": 49798,
-      "bytes": 2590545,
+      "channels": 695,
+      "programmes_parsed": 48539,
+      "bytes": 2545551,
       "window_days": {
         "past": 1,
         "future": 14
@@ -117,8 +117,8 @@
       "hits": 0,
       "review": 0,
       "channels": 332,
-      "programmes_parsed": 22004,
-      "bytes": 619011,
+      "programmes_parsed": 20301,
+      "bytes": 528911,
       "window_days": {
         "past": 1,
         "future": 14
@@ -133,8 +133,8 @@
       "hits": 0,
       "review": 0,
       "channels": 250,
-      "programmes_parsed": 23409,
-      "bytes": 1828773,
+      "programmes_parsed": 23309,
+      "bytes": 1759481,
       "window_days": {
         "past": 1,
         "future": 14
@@ -149,8 +149,8 @@
       "hits": 0,
       "review": 0,
       "channels": 520,
-      "programmes_parsed": 41994,
-      "bytes": 2066744,
+      "programmes_parsed": 41717,
+      "bytes": 1991925,
       "window_days": {
         "past": 1,
         "future": 14
@@ -165,8 +165,8 @@
       "hits": 0,
       "review": 0,
       "channels": 218,
-      "programmes_parsed": 23735,
-      "bytes": 778762,
+      "programmes_parsed": 23965,
+      "bytes": 795479,
       "window_days": {
         "past": 1,
         "future": 14
@@ -181,8 +181,8 @@
       "hits": 0,
       "review": 0,
       "channels": 275,
-      "programmes_parsed": 22070,
-      "bytes": 711606,
+      "programmes_parsed": 22532,
+      "bytes": 727790,
       "window_days": {
         "past": 1,
         "future": 14
@@ -192,5 +192,5 @@
   "note": "Radar de indicios TV/Cable. Las alertas se emiten solo para coincidencias filtradas; las dudosas quedan en revisión.",
   "rejected_by_v205": [],
   "version_filter": "v205-tv-short-max-20-generic-title-filter",
-  "filtered_at": "2026-06-06T12:14:40Z"
+  "filtered_at": "2026-06-07T12:48:53Z"
 }
