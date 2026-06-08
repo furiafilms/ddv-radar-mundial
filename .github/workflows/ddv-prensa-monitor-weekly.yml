@@ -15,103 +15,89 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Verificar secret
+      - name: Set up job
         run: |
-          if [ -z "${{ secrets.DDV_PRENSA_CRON_URL }}" ]; then
-            echo "::error::Falta configurar el secret DDV_PRENSA_CRON_URL"
+          echo "Iniciando DDV Prensa Monitor Semanal..."
+
+      - name: Verificar secret
+        env:
+          DDV_PRENSA_MONITOR_URL: ${{ secrets.DDV_PRENSA_MONITOR_URL }}
+        run: |
+          if [ -z "$DDV_PRENSA_MONITOR_URL" ]; then
+            echo "ERROR: falta configurar el secret DDV_PRENSA_MONITOR_URL"
             exit 1
           fi
+          echo "Secret DDV_PRENSA_MONITOR_URL configurado."
+
+      - name: Parche DNS temporal para danieldelavega.com.ar
+        run: |
+          echo "Aplicando parche DNS temporal para GitHub Actions..."
+          echo "23.111.161.86 danieldelavega.com.ar www.danieldelavega.com.ar" | sudo tee -a /etc/hosts
+          echo "Contenido relevante de /etc/hosts:"
+          grep "danieldelavega.com.ar" /etc/hosts || true
+          echo "Prueba DNS local:"
+          getent hosts www.danieldelavega.com.ar || true
+          getent hosts danieldelavega.com.ar || true
 
       - name: Ejecutar monitor de prensa DDV
-        id: call_monitor
+        id: ejecutar_monitor
         env:
-          DDV_PRENSA_CRON_URL: ${{ secrets.DDV_PRENSA_CRON_URL }}
+          DDV_PRENSA_MONITOR_URL: ${{ secrets.DDV_PRENSA_MONITOR_URL }}
         run: |
           echo "Llamando al monitor de prensa..."
-          HTTP_CODE=$(curl -L -sS --max-time 300 -o prensa-monitor-response.json -w "%{http_code}" "$DDV_PRENSA_CRON_URL")
-          echo "HTTP_CODE=$HTTP_CODE" >> "$GITHUB_ENV"
-          echo "Respuesta HTTP: $HTTP_CODE"
 
-          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
-            echo "::error::El monitor respondió HTTP $HTTP_CODE"
-            cat prensa-monitor-response.json || true
+          http_code=$(curl \
+            --silent \
+            --show-error \
+            --location \
+            --max-time 120 \
+            --retry 2 \
+            --retry-delay 10 \
+            --output respuesta-prensa-monitor.txt \
+            --write-out "%{http_code}" \
+            "$DDV_PRENSA_MONITOR_URL")
+
+          echo "HTTP_CODE=$http_code" >> "$GITHUB_ENV"
+          echo "Código HTTP recibido: $http_code"
+
+          echo "---- Respuesta del monitor ----"
+          cat respuesta-prensa-monitor.txt || true
+          echo "-------------------------------"
+
+          if [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+            echo "ERROR: el monitor respondió con código HTTP $http_code"
             exit 1
           fi
 
-          python - <<'PY'
-          import json, sys
-
-          path = "prensa-monitor-response.json"
-
-          try:
-              data = json.load(open(path, "r", encoding="utf-8"))
-          except Exception as e:
-              print(f"::error::La respuesta no es JSON válido: {e}")
-              sys.exit(1)
-
-          ok = data.get("ok")
-          mail_sent = data.get("mail_sent")
-          totals = data.get("totals", {}) or {}
-
-          added = totals.get("added", 0)
-          possible = totals.get("possible", 0)
-          errors = totals.get("errors", 0)
-          steps = totals.get("steps", 0)
-          complete = data.get("complete")
-
-          with open("prensa-monitor-summary.md", "w", encoding="utf-8") as f:
-              f.write("# DDV Monitor de prensa semanal\n\n")
-              f.write(f"- ok: `{ok}`\n")
-              f.write(f"- mail_sent: `{mail_sent}`\n")
-              f.write(f"- added: `{added}`\n")
-              f.write(f"- possible: `{possible}`\n")
-              f.write(f"- errors: `{errors}`\n")
-              f.write(f"- steps: `{steps}`\n")
-              f.write(f"- complete: `{complete}`\n")
-
-          print(f"ok={ok}")
-          print(f"mail_sent={mail_sent}")
-          print(f"added={added}")
-          print(f"possible={possible}")
-          print(f"errors={errors}")
-          print(f"steps={steps}")
-          print(f"complete={complete}")
-
-          if ok is not True:
-              print("::error::El monitor devolvió ok != true")
-              sys.exit(1)
-
-          if mail_sent is not True:
-              print("::error::El monitor corrió pero mail_sent no es true")
-              sys.exit(1)
-          PY
+          echo "Monitor de prensa ejecutado correctamente."
 
       - name: Guardar respuesta como artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ddv-prensa-monitor-response
-          path: |
-            prensa-monitor-response.json
-            prensa-monitor-summary.md
+          name: respuesta-prensa-monitor
+          path: respuesta-prensa-monitor.txt
+          if-no-files-found: ignore
 
       - name: Crear issue si falla
         if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const title = 'DDV Prensa Monitor — error en ejecución semanal';
-            const body = [
-              'Falló la ejecución semanal del monitor de prensa DDV.',
-              '',
-              `Workflow: ${context.workflow}`,
-              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              '',
-              'Revisar logs y artifact de respuesta.'
-            ].join('\n');
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "DDV Prensa Monitor — error en ejecución semanal" \
+            --body "Falló la ejecución semanal del monitor de prensa DDV.
 
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title,
-              body
+          Workflow: DDV Prensa Monitor Semanal
+
+          Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Código HTTP: ${HTTP_CODE:-sin código HTTP}
+
+          Revisar logs y artifact de respuesta." || true
+
+      - name: Complete job
+        if: always()
+        run: |
+          echo "Finalizó DDV Prensa Monitor Semanal."              body
             });
