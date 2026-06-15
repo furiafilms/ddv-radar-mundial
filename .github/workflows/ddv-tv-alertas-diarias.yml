@@ -1,0 +1,68 @@
+name: DDV TV Alertas Diarias
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 00:15 de Argentina (UTC-3): aviso del mismo día antes de emisiones de madrugada.
+    - cron: '15 3 * * *'
+    # 08:10 de Argentina (UTC-3): segundo control del día.
+    - cron: '10 11 * * *'
+    # 20:10 de Argentina (UTC-3): control final por emisiones agregadas durante el día.
+    - cron: '10 23 * * *'
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  tv-alertas-diarias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ejecutar alerta diaria de TV/Cable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          CREATE_ISSUES: '1'
+
+          DDV_ALERT_SMTP_HOST: ${{ secrets.DDV_ALERT_SMTP_HOST }}
+          DDV_ALERT_SMTP_PORT: ${{ secrets.DDV_ALERT_SMTP_PORT }}
+          DDV_ALERT_SMTP_USER: ${{ secrets.DDV_ALERT_SMTP_USER }}
+          DDV_ALERT_SMTP_PASS: ${{ secrets.DDV_ALERT_SMTP_PASS }}
+          DDV_ALERT_MAIL_FROM: ${{ secrets.DDV_ALERT_MAIL_FROM }}
+          DDV_ALERT_MAIL_TO: ${{ secrets.DDV_ALERT_MAIL_TO }}
+
+          DDV_TV_ALERT_DAYS_AHEAD: '0'
+          DDV_TV_ALERT_TIMEZONE: 'America/Argentina/Buenos_Aires'
+        run: python scripts/ddv_tv_alertas_diarias.py
+
+      - name: Guardar estado de alertas
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/state_tv_daily_alerts_sent.json outputs/tv_daily_alert_last_run.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios de estado para commitear."
+          else
+            git commit -m "Actualizar estado alertas diarias TV"
+            git push origin HEAD:main
+          fi
+
+      - name: Guardar resumen como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddv-tv-alertas-diarias
+          path: |
+            outputs/tv_daily_alert_last_run.json
+          if-no-files-found: ignore
