@@ -3,16 +3,13 @@ name: DDV TV Alertas Diarias
 on:
   workflow_dispatch:
   schedule:
-    # 00:15 de Argentina (UTC-3): captura emisiones de madrugada del día.
-    - cron: '15 3 * * *'
-    # 08:10 de Argentina (UTC-3): control de la mañana.
+    # 08:10 de Argentina (UTC-3): aviso de mañana / próximas emisiones.
     - cron: '10 11 * * *'
-    # 20:10 de Argentina (UTC-3): aviso previo de emisiones de madrugada/día siguiente.
+    # 20:10 de Argentina (UTC-3): aviso de víspera y madrugada siguiente.
     - cron: '10 23 * * *'
 
 permissions:
   contents: write
-  issues: write
 
 jobs:
   tv-alertas-diarias:
@@ -28,23 +25,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Ejecutar alerta diaria de TV/Cable
+      - name: Ejecutar alerta diaria de TV/Cable por mail del sitio
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          CREATE_ISSUES: '1'
-
-          # Opcional. Si no están cargados, NO falla: crea issue en GitHub como respaldo.
-          DDV_ALERT_SMTP_HOST: ${{ secrets.DDV_ALERT_SMTP_HOST }}
-          DDV_ALERT_SMTP_PORT: ${{ secrets.DDV_ALERT_SMTP_PORT }}
-          DDV_ALERT_SMTP_USER: ${{ secrets.DDV_ALERT_SMTP_USER }}
-          DDV_ALERT_SMTP_PASS: ${{ secrets.DDV_ALERT_SMTP_PASS }}
-          DDV_ALERT_MAIL_FROM: ${{ secrets.DDV_ALERT_MAIL_FROM }}
-          DDV_ALERT_MAIL_TO: ${{ secrets.DDV_ALERT_MAIL_TO }}
-
+          DDV_TV_ALERT_MAIL_URL: ${{ secrets.DDV_TV_ALERT_MAIL_URL }}
           DDV_TV_ALERT_TIMEZONE: 'America/Argentina/Buenos_Aires'
-          # Regla correcta: avisar emisiones futuras desde ahora hasta 36 horas adelante.
-          # No revive emisiones ya pasadas.
           DDV_TV_ALERT_LOOKAHEAD_HOURS: '36'
           DDV_TV_ALERT_PAST_GRACE_MINUTES: '30'
         run: python scripts/ddv_tv_alertas_diarias.py

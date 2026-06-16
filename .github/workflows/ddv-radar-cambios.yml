@@ -37,22 +37,23 @@ jobs:
           WATCHMODE_REGIONS: 'AR,US,ES,MX,BR,CL,CO,UY,PE,GB,CA,FR,DE,IT,PT,AU'
         run: python scripts/ddv_radar_cambios.py
 
+      - name: Avisar cambios por mail del sitio
+        env:
+          DDV_TV_ALERT_MAIL_URL: ${{ secrets.DDV_TV_ALERT_MAIL_URL }}
+        run: python scripts/ddv_tv_alertas_cambios_site.py
+
       - name: Guardar resultados con sincronizacion segura
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           mkdir -p /tmp/ddv_radar_outputs
           cp outputs/*.json /tmp/ddv_radar_outputs/ 2>/dev/null || true
-
           # Evita fallos de push por commits hechos manualmente mientras corría el workflow.
           git fetch origin main
           git reset --hard origin/main
-
           mkdir -p outputs
           cp /tmp/ddv_radar_outputs/*.json outputs/ 2>/dev/null || true
-
           git add \
             outputs/site_platforms_global.json \
             outputs/state_platforms_seen.json \
@@ -64,11 +65,11 @@ jobs:
             outputs/site_tv_cable_global_filtered.json \
             outputs/site_tv_cable_rejected.json \
             outputs/site_tv_cable_review.json \
+            outputs/tv_platform_change_mail_last_run.json \
             2>/dev/null || true
-
           if git diff --cached --quiet; then
             echo "Sin cambios para commitear."
           else
-            git commit -m "Actualizar radar DDV outputs v210"
+            git commit -m "Actualizar radar DDV outputs v211"
             git push origin HEAD:main
           fi
