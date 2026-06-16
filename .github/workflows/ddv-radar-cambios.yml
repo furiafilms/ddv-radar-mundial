@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
 
 jobs:
   radar-cambios:
@@ -30,7 +29,7 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          CREATE_ISSUES: '1'
+          CREATE_ISSUES: '0'
           DDV_TV_EPG_PAST_DAYS: '1'
           DDV_TV_EPG_FUTURE_DAYS: '14'
           WATCHMODE_API_KEY: ${{ secrets.WATCHMODE_API_KEY }}

@@ -2,6 +2,11 @@ name: DDV TV Alertas Diarias
 
 on:
   workflow_dispatch:
+    inputs:
+      force_test_mail:
+        description: 'Enviar una prueba final de mail desde GitHub hacia el sitio'
+        required: false
+        default: 'false'
   schedule:
     # 08:10 de Argentina (UTC-3): aviso de mañana / próximas emisiones.
     - cron: '10 11 * * *'
@@ -31,6 +36,7 @@ jobs:
           DDV_TV_ALERT_TIMEZONE: 'America/Argentina/Buenos_Aires'
           DDV_TV_ALERT_LOOKAHEAD_HOURS: '36'
           DDV_TV_ALERT_PAST_GRACE_MINUTES: '30'
+          DDV_TV_ALERT_FORCE_TEST: ${{ github.event.inputs.force_test_mail == 'true' && '1' || '0' }}
         run: python scripts/ddv_tv_alertas_diarias.py
 
       - name: Guardar estado de alertas
