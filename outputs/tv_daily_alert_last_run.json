@@ -1,0 +1,32 @@
+{
+  "events_due": 1,
+  "events_total": 3,
+  "events_unsent": 1,
+  "input_files_loaded": [
+    "outputs/site_tv_cable_global.json",
+    "outputs/site_tv_cable_global_filtered.json"
+  ],
+  "issue_created": true,
+  "lookahead_hours": 36,
+  "mail_sent": false,
+  "past_grace_minutes": 30,
+  "ran_at": "2026-06-15T21:10:21.740865-03:00",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "unsent": [
+    {
+      "channel": "Canal á",
+      "country": "AR",
+      "date": "2026-06-16",
+      "input_file": "outputs/site_tv_cable_global_filtered.json",
+      "key": "acb7dc63fcf991113c6afb5119fcc113fef84212",
+      "movie": "Hermanos de Sangre",
+      "raw_title": "Hermanos de Sangre",
+      "source": "Artear / grilla comercial Canal A",
+      "time": "04:00",
+      "url": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-2026-25-01.html"
+    }
+  ],
+  "version": "DDV_TV_ALERTAS_DIARIAS_V3_LOOKAHEAD_HOURS_NO_PAST",
+  "window_end": "2026-06-17T09:10:21.740865-03:00",
+  "window_start": "2026-06-15T20:40:21.740865-03:00"
+}
