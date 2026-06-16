@@ -200,13 +200,24 @@ def main() -> int:
     due = [e for e in events if window_start <= e.local_datetime(tz) <= window_end]
     unsent = [e for e in due if e.key not in sent]
     run_info = {
-        "version": "DDV_TV_ALERTAS_DIARIAS_V5_MAIL_DESDE_SITIO",
+        "version": "DDV_TV_ALERTAS_DIARIAS_V6_MAIL_DESDE_SITIO_FINAL",
         "ran_at": now.isoformat(), "timezone": tz_name,
         "window_start": window_start.isoformat(), "window_end": window_end.isoformat(),
         "lookahead_hours": lookahead_hours, "past_grace_minutes": grace_minutes,
         "input_files_loaded": loaded_files, "events_total": len(events), "events_due": len(due), "events_unsent": len(unsent),
         "mail_sent": False, "unsent": [asdict(e) for e in unsent],
     }
+    if os.getenv("DDV_TV_ALERT_FORCE_TEST", "").strip() == "1":
+        body = (
+            "Prueba final desde GitHub hacia el endpoint de mail del sitio.\n\n"
+            "Si recibiste este mail, quedó conectado:\n"
+            "GitHub Actions → danieldelavega.com.ar → mail a furiafilms@gmail.com.\n"
+        )
+        ok = post_site_mail("DDV TV/Cable — prueba final desde GitHub", body, [], "github_final_connection_test")
+        run_info["mode"] = "force_test_mail"
+        run_info["mail_sent"] = ok
+        save_json(last_run_path, run_info)
+        return 0 if ok else 1
     if not unsent:
         print("Sin emisiones futuras nuevas para avisar en la ventana configurada.")
         save_json(last_run_path, run_info)
