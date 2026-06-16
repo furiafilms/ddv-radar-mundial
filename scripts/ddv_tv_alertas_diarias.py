@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-# DDV TV Alertas Diarias v1
-# Lee outputs/site_tv_cable_global_filtered.json y avisa por mail las emisiones del día.
-# Si faltan secrets SMTP, crea issue en GitHub como respaldo.
+# DDV TV Alertas Diarias v3
+# Regla: avisar emisiones FUTURAS desde ahora hasta X horas adelante.
+# No avisa emisiones ya pasadas, salvo pequeña gracia configurable.
+# Lee varios JSON de outputs/ para no depender de un solo archivo filtrado.
 
 from __future__ import annotations
 
@@ -10,11 +11,10 @@ import os
 import re
 import smtplib
 import ssl
-import sys
 import hashlib
 import urllib.request
 from dataclasses import dataclass, asdict
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, time, timedelta
 from email.message import EmailMessage
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -45,10 +45,15 @@ MOVIES = {
 }
 
 DATE_PATTERNS = [
-    re.compile(r"\b(?P<d>\d{1,2})/(?P<m>\d{1,2})/(?P<y>\d{4})\b"),
     re.compile(r"\b(?P<y>\d{4})-(?P<m>\d{1,2})-(?P<d>\d{1,2})\b"),
+    re.compile(r"\b(?P<d>\d{1,2})/(?P<m>\d{1,2})/(?P<y>\d{4})\b"),
 ]
 TIME_RE = re.compile(r"\b(?P<h>\d{1,2}):(?P<mi>\d{2})\b")
+INPUT_FILES = [
+    Path("outputs/site_tv_cable_global.json"),
+    Path("outputs/site_tv_cable_global_filtered.json"),
+    Path("outputs/site_tv_cable_review.json"),
+]
 
 
 def norm(s: object) -> str:
@@ -80,6 +85,7 @@ def walk_dicts(obj):
 
 def flat_text(d: dict) -> str:
     parts = []
+
     def walk(x):
         if isinstance(x, dict):
             for v in x.values():
@@ -89,6 +95,7 @@ def flat_text(d: dict) -> str:
                 walk(v)
         elif x is not None:
             parts.append(str(x))
+
     walk(d)
     return " | ".join(parts)
 
@@ -145,16 +152,22 @@ class Event:
     url: str
     raw_title: str
     key: str
+    input_file: str
+
+    def local_datetime(self, tz: ZoneInfo) -> datetime:
+        d = date.fromisoformat(self.date)
+        hh, mm = [int(x) for x in self.time.split(":")]
+        return datetime.combine(d, time(hh, mm), tzinfo=tz)
 
 
-def event_from_dict(d: dict) -> Event | None:
+def event_from_dict(d: dict, input_file: str) -> Event | None:
     text = flat_text(d)
     movie = find_movie(text)
     if not movie:
         return None
 
     dt = None
-    for k in ["date", "fecha", "air_date", "start_date", "datetime", "start", "starts_at", "program_date"]:
+    for k in ["date_iso", "date", "fecha", "air_date", "start_date", "datetime", "start", "starts_at", "program_date"]:
         if k in d:
             dt = parse_date(d.get(k))
             if dt:
@@ -165,7 +178,7 @@ def event_from_dict(d: dict) -> Event | None:
         return None
 
     hhmm = None
-    for k in ["time", "hora", "air_time", "start_time", "datetime", "start", "starts_at"]:
+    for k in ["start_time", "time", "hora", "air_time", "datetime", "start", "starts_at"]:
         if k in d:
             hhmm = parse_time(d.get(k))
             if hhmm:
@@ -174,33 +187,43 @@ def event_from_dict(d: dict) -> Event | None:
         hhmm = parse_time(text) or "00:00"
 
     channel = first_key(d, ["channel", "canal", "network", "provider", "source_name"]) or ""
-    country = first_key(d, ["country", "pais", "país", "region"]) or ""
-    source = first_key(d, ["source", "fuente", "source_label", "origin"]) or ""
-    url = first_key(d, ["url", "source_url", "link", "href"]) or ""
-    raw_title = first_key(d, ["title", "titulo", "título", "name", "program"]) or movie
+    country = first_key(d, ["country_name", "country", "pais", "país", "region", "country_code"]) or ""
+    source = first_key(d, ["source", "fuente", "source_label", "origin", "detection_type"]) or ""
+    url = first_key(d, ["source_url", "url", "link", "href"]) or ""
+    raw_title = first_key(d, ["programme_title", "title", "titulo", "título", "name", "program"]) or movie
 
     if not channel:
         n = norm(text)
-        if "canal a" in n:
-            channel = "Canal A"
+        if "canal a" in n or "canal á" in n:
+            channel = "Canal á"
         elif "cine ar" in n or "cine.ar" in n or "cinear" in n:
             channel = "CINE.AR"
         else:
             channel = "TV / Cable"
 
-    key_raw = "|".join([movie, dt.isoformat(), hhmm, str(channel), str(country), str(source), str(url)])
-    key = hashlib.sha1(key_raw.encode("utf-8")).hexdigest()[:20]
+    fingerprint = str(first_key(d, ["fingerprint", "id", "key"]) or "")
+    if fingerprint:
+        key = fingerprint
+    else:
+        key_raw = "|".join([movie, dt.isoformat(), hhmm, str(channel), str(country), str(source), str(url)])
+        key = hashlib.sha1(key_raw.encode("utf-8")).hexdigest()[:20]
 
-    return Event(movie, dt.isoformat(), hhmm, str(channel), str(country), str(source), str(url), str(raw_title), key)
+    return Event(movie, dt.isoformat(), hhmm, str(channel), str(country), str(source), str(url), str(raw_title), key, input_file)
 
 
-def collect_events(data) -> list[Event]:
+def collect_events() -> tuple[list[Event], list[str]]:
     events: dict[str, Event] = {}
-    for d in walk_dicts(data):
-        ev = event_from_dict(d)
-        if ev:
-            events[ev.key] = ev
-    return sorted(events.values(), key=lambda e: (e.date, e.time, e.movie, e.channel))
+    loaded: list[str] = []
+    for path in INPUT_FILES:
+        if not path.exists():
+            continue
+        loaded.append(str(path))
+        data = load_json(path)
+        for d in walk_dicts(data):
+            ev = event_from_dict(d, str(path))
+            if ev:
+                events[ev.key] = ev
+    return sorted(events.values(), key=lambda e: (e.date, e.time, e.movie, e.channel)), loaded
 
 
 def send_mail(subject: str, body: str) -> bool:
@@ -212,7 +235,7 @@ def send_mail(subject: str, body: str) -> bool:
     mail_to = os.getenv("DDV_ALERT_MAIL_TO", "").strip()
 
     if not (host and user and password and mail_from and mail_to):
-        print("MAIL: faltan secrets SMTP; no se envía mail.")
+        print("MAIL: faltan secrets SMTP; no se envía mail. Se intentará crear issue.")
         return False
 
     msg = EmailMessage()
@@ -266,27 +289,34 @@ def main() -> int:
     tz_name = os.getenv("DDV_TV_ALERT_TIMEZONE", "America/Argentina/Buenos_Aires")
     tz = ZoneInfo(tz_name)
     now = datetime.now(tz)
-    today = now.date()
-    days_ahead = int(os.getenv("DDV_TV_ALERT_DAYS_AHEAD", "0") or "0")
-    target_dates = {today + timedelta(days=i) for i in range(days_ahead + 1)}
+    lookahead_hours = int(os.getenv("DDV_TV_ALERT_LOOKAHEAD_HOURS", "36") or "36")
+    grace_minutes = int(os.getenv("DDV_TV_ALERT_PAST_GRACE_MINUTES", "30") or "30")
+    window_start = now - timedelta(minutes=grace_minutes)
+    window_end = now + timedelta(hours=lookahead_hours)
 
-    data_path = Path("outputs/site_tv_cable_global_filtered.json")
     state_path = Path("outputs/state_tv_daily_alerts_sent.json")
     last_run_path = Path("outputs/tv_daily_alert_last_run.json")
 
-    data = load_json(data_path)
     state = load_json(state_path) if state_path.exists() else {"sent": {}}
     sent = state.setdefault("sent", {})
 
-    events = collect_events(data)
-    due = [e for e in events if date.fromisoformat(e.date) in target_dates]
+    events, loaded_files = collect_events()
+    due = []
+    for e in events:
+        local_dt = e.local_datetime(tz)
+        if window_start <= local_dt <= window_end:
+            due.append(e)
     unsent = [e for e in due if e.key not in sent]
 
     run_info = {
-        "version": "DDV_TV_ALERTAS_DIARIAS_V1",
+        "version": "DDV_TV_ALERTAS_DIARIAS_V3_LOOKAHEAD_HOURS_NO_PAST",
         "ran_at": now.isoformat(),
         "timezone": tz_name,
-        "target_dates": sorted(d.isoformat() for d in target_dates),
+        "window_start": window_start.isoformat(),
+        "window_end": window_end.isoformat(),
+        "lookahead_hours": lookahead_hours,
+        "past_grace_minutes": grace_minutes,
+        "input_files_loaded": loaded_files,
         "events_total": len(events),
         "events_due": len(due),
         "events_unsent": len(unsent),
@@ -296,19 +326,20 @@ def main() -> int:
     }
 
     if not unsent:
-        print("Sin emisiones nuevas para avisar hoy.")
+        print("Sin emisiones futuras nuevas para avisar en la ventana configurada.")
         save_json(last_run_path, run_info)
         return 0
 
     lines = [
-        "Alerta diaria DDV — emisiones TV/Cable",
+        "Alerta DDV — próximas emisiones TV/Cable",
         "",
-        f"Fecha de control: {today.strftime('%d/%m/%Y')}",
+        f"Control: {now.strftime('%d/%m/%Y %H:%M')} ({tz_name})",
+        f"Ventana revisada: {window_start.strftime('%d/%m/%Y %H:%M')} a {window_end.strftime('%d/%m/%Y %H:%M')}",
         "",
     ]
     for e in unsent:
-        d = date.fromisoformat(e.date).strftime("%d/%m/%Y")
-        lines.append(f"- {d} {e.time} — {e.movie} — {e.channel}".strip())
+        local_dt = e.local_datetime(tz)
+        lines.append(f"- {local_dt.strftime('%d/%m/%Y %H:%M')} — {e.movie} — {e.channel}".strip())
         if e.country:
             lines.append(f"  País/región: {e.country}")
         if e.source:
@@ -317,7 +348,7 @@ def main() -> int:
             lines.append(f"  Link: {e.url}")
         lines.append("")
     body = "\n".join(lines).strip() + "\n"
-    subject = f"DDV TV/Cable — {len(unsent)} emisión(es) para avisar"
+    subject = f"DDV TV/Cable — {len(unsent)} próxima(s) emisión(es)"
 
     mail_ok = send_mail(subject, body)
     issue_ok = False
@@ -325,7 +356,7 @@ def main() -> int:
         issue_ok = create_issue(subject, body)
 
     if not mail_ok and not issue_ok:
-        run_info["error"] = "No se pudo notificar: faltan secrets SMTP y no se creó issue."
+        run_info["error"] = "No se pudo notificar: faltan SMTP y no se creó issue."
         save_json(last_run_path, run_info)
         print(run_info["error"])
         return 1
