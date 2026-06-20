@@ -1,0 +1,9 @@
+# Insertar este paso en .github/workflows/ddv-radar-cambios.yml
+# después de "Ejecutar radar de cambios" y antes de "Guardar resultados".
+
+- name: Enviar mail claro de cambios TV/Cable/Plataformas
+  env:
+    DDV_TV_ALERT_MAIL_URL: ${{ secrets.DDV_TV_ALERT_MAIL_URL }}
+    DDV_TV_ALERT_TIMEZONE: 'America/Argentina/Buenos_Aires'
+    DDV_TV_ALERT_PAST_GRACE_MINUTES: '30'
+  run: python scripts/ddv_tv_alertas_cambios_site.py
