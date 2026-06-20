@@ -1,0 +1,86 @@
+name: DDV TV Alertas Diarias
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_test_mail:
+        description: 'Enviar una prueba final de mail desde GitHub hacia el sitio'
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # 08:10 de Argentina (UTC-3): aviso de mañana / próximas emisiones.
+    - cron: '10 11 * * *'
+    # 20:10 de Argentina (UTC-3): aviso de víspera y madrugada siguiente.
+    - cron: '10 23 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  tv-alertas-diarias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Normalizar modo de prueba
+        id: flags
+        shell: bash
+        env:
+          FORCE_TEST_MAIL_RAW: ${{ github.event.inputs.force_test_mail || 'false' }}
+        run: |
+          raw="$(printf '%s' "$FORCE_TEST_MAIL_RAW" | tr '[:upper:]' '[:lower:]' | xargs)"
+          case "$raw" in
+            true|1|yes|y|si|sí)
+              echo "force_test_mail=true" >> "$GITHUB_OUTPUT"
+              echo "Modo prueba de mail: ACTIVADO"
+              ;;
+            *)
+              echo "force_test_mail=false" >> "$GITHUB_OUTPUT"
+              echo "Modo prueba de mail: desactivado"
+              ;;
+          esac
+
+      - name: Ejecutar alerta diaria de TV/Cable por mail del sitio
+        env:
+          DDV_TV_ALERT_MAIL_URL: ${{ secrets.DDV_TV_ALERT_MAIL_URL }}
+          DDV_TV_ALERT_TIMEZONE: 'America/Argentina/Buenos_Aires'
+          DDV_TV_ALERT_LOOKAHEAD_HOURS: '36'
+          DDV_TV_ALERT_PAST_GRACE_MINUTES: '30'
+          DDV_TV_ALERT_FORCE_TEST: ${{ steps.flags.outputs.force_test_mail == 'true' && '1' || '0' }}
+          FORCE_TEST_MAIL: ${{ steps.flags.outputs.force_test_mail }}
+          INPUT_FORCE_TEST_MAIL: ${{ steps.flags.outputs.force_test_mail }}
+        run: python scripts/ddv_tv_alertas_diarias.py
+
+      # Importante: una prueba manual de mail NO debe pisar/commitear estado real.
+      # Si el mail de prueba llegó, el workflow debe quedar verde sin tocar outputs/state_*.json.
+      - name: Guardar estado de alertas
+        if: ${{ steps.flags.outputs.force_test_mail != 'true' }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/state_tv_daily_alerts_sent.json outputs/tv_daily_alert_last_run.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios de estado para commitear."
+          else
+            git commit -m "Actualizar estado alertas diarias TV"
+            git push origin HEAD:main
+          fi
+
+      - name: Guardar resumen como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddv-tv-alertas-diarias
+          path: |
+            outputs/tv_daily_alert_last_run.json
+          if-no-files-found: ignore
