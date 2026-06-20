@@ -39,7 +39,10 @@ jobs:
           DDV_TV_ALERT_FORCE_TEST: ${{ github.event.inputs.force_test_mail == 'true' && '1' || '0' }}
         run: python scripts/ddv_tv_alertas_diarias.py
 
+      # Importante: una prueba manual de mail NO debe pisar/commitear estado real.
+      # Si el mail de prueba llegó, el workflow debe quedar verde sin tocar outputs/state_*.json.
       - name: Guardar estado de alertas
+        if: ${{ github.event.inputs.force_test_mail != 'true' }}
         run: |
           set -e
           git config user.name "github-actions[bot]"
