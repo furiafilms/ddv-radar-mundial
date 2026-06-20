@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# DDV TV/Plataformas Cambios v6 PLATAFORMAS PRO — mail claro con delta real de plataformas.
+# DDV TV/Plataformas Cambios v7 ULTRA COMPACT — plataformas pro, evita WAF por mail con demasiados links.
 # Compara outputs/site_platforms_global.json actual contra HEAD para distinguir:
 # - nuevas disponibilidades
 # - disponibilidades removidas
@@ -32,8 +32,8 @@ TZ_NAME = os.getenv("DDV_TV_ALERT_TIMEZONE", "America/Argentina/Buenos_Aires")
 TZ = ZoneInfo(TZ_NAME)
 PAST_GRACE_MINUTES = int(os.getenv("DDV_TV_ALERT_PAST_GRACE_MINUTES", "30") or "30")
 MAX_TV_ITEMS = 8
-MAX_PLATFORM_ITEMS = 12
-MAX_PLATFORM_SUMMARY = 10
+MAX_PLATFORM_ITEMS = 10
+MAX_PLATFORM_SUMMARY = 8
 
 REGION_PRIORITY = {
     "AR": 0,
@@ -396,13 +396,12 @@ def format_event(item: dict) -> list[str]:
 
 
 def format_platform_item(item: dict, prefix: str = "-") -> list[str]:
+    """Formato intencionalmente compacto: no incluye links externos por item para evitar WAF/anti-bot."""
     title = platform_title(item)
     provider = platform_provider(item)
     region = platform_region(item)
     typ = platform_type(item)
     source = platform_source(item)
-    url = platform_url(item)
-    vip = item.get("_vip_url") or vip_url(title)
 
     head = f"{prefix} {title} — {provider}"
     details = []
@@ -414,12 +413,7 @@ def format_platform_item(item: dict, prefix: str = "-") -> list[str]:
         details.append(source)
     if details:
         head += " — " + " / ".join(details)
-    lines = [head]
-    if url:
-        lines.append(f"  Fuente: {url}")
-    if vip:
-        lines.append(f"  Ver en VIP: {vip}")
-    return lines
+    return [head]
 
 
 def serialize_platform_item(item: dict) -> dict:
@@ -482,7 +476,7 @@ def build_compact_mail_body(changed: list[str]) -> tuple[str, str, int, dict]:
                 lines.extend(format_platform_item(item, "-") )
         if len(added) > MAX_PLATFORM_ITEMS or len(removed) > MAX_PLATFORM_ITEMS:
             lines.append("")
-            lines.append("Nota: hay más cambios que no se listan en el mail para evitar ruido. Revisar artifact.")
+            lines.append("Nota: hay más cambios que no se listan para evitar ruido y bloqueo anti-bot. Revisar artifact de GitHub.")
     else:
         lines.append("No se detectaron altas o bajas reales de plataformas. Si cambió state_platforms_seen.json, fue actualización técnica/metadatos.")
 
@@ -550,7 +544,7 @@ def build_compact_mail_body(changed: list[str]) -> tuple[str, str, int, dict]:
         "platform_removed_sample": [serialize_platform_item(x) for x in removed[:30]],
         "platform_meta": meta,
         "changed_files": changed,
-        "mail_format": "platforms_pro_v6",
+        "mail_format": "platforms_pro_v7_ultra_compact",
         "tv_meta": tv_meta,
     }
     # count representa hallazgos relevantes, no líneas técnicas.
@@ -592,11 +586,11 @@ def post_site(subject: str, body: str, count: int) -> tuple[bool, dict]:
 
     payload = json.dumps(
         {
-            "mode": "tv_platform_changes_platforms_pro_v6",
+            "mode": "tv_platform_changes_platforms_pro_v7_ultra_compact",
             "subject": subject,
             "body": body,
             "alerts_count": count,
-            "source": "github-actions-ddv-radar-cambios-site-mail-v6-platforms-pro",
+            "source": "github-actions-ddv-radar-cambios-site-mail-v7-ultra-compact",
         },
         ensure_ascii=False,
     ).encode("utf-8")
@@ -609,7 +603,7 @@ def post_site(subject: str, body: str, count: int) -> tuple[bool, dict]:
         headers={
             "Content-Type": "application/json; charset=UTF-8",
             "Accept": "application/json,text/plain,*/*",
-            "User-Agent": "Mozilla/5.0 (compatible; DDV-Radar/6.0; +https://danieldelavega.com.ar)",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DDV-Radar/7.0",
             "X-Requested-With": "XMLHttpRequest",
             "Origin": "https://danieldelavega.com.ar",
             "Referer": "https://danieldelavega.com.ar/",
@@ -632,6 +626,10 @@ def post_site(subject: str, body: str, count: int) -> tuple[bool, dict]:
 
             data = json.loads(raw)
             meta["endpoint_json"] = data
+            message = str(data.get("message") or "")
+            if "imunify360" in message.lower() or "bot-protection" in message.lower() or "access denied" in message.lower():
+                meta["mail_blocked_by_security_challenge"] = True
+                meta["endpoint_error"] = message
             return bool(data.get("mail_sent") is True), meta
     except Exception as exc:
         meta["endpoint_error"] = str(exc)
@@ -639,10 +637,39 @@ def post_site(subject: str, body: str, count: int) -> tuple[bool, dict]:
         return False, meta
 
 
+def build_fallback_mail(subject: str, extra: dict) -> tuple[str, str]:
+    """Mail mínimo para pasar WAF si el cuerpo completo con muchas plataformas queda bloqueado."""
+    added = int(extra.get("platform_added_count") or 0)
+    removed = int(extra.get("platform_removed_count") or 0)
+    future = int(extra.get("future_count") or 0)
+    historic = int(extra.get("historic_count") or 0)
+    added_sample = extra.get("platform_added_sample") or []
+    removed_sample = extra.get("platform_removed_sample") or []
+
+    lines = [
+        "Radar DDV — resumen compacto",
+        "",
+        f"Plataformas: +{added} nueva(s) disponibilidad(es), -{removed} baja(s).",
+        f"TV/Cable: {future} emisión(es) futura(s), {historic} registro(s) histórico(s).",
+        "",
+        "Cambios principales de plataformas:",
+    ]
+    for item in added_sample[:8]:
+        lines.append(f"+ {item.get('title')} — {item.get('provider')} — {item.get('region')} / {item.get('type')}")
+    for item in removed_sample[:4]:
+        lines.append(f"- {item.get('title')} — {item.get('provider')} — {item.get('region')} / {item.get('type')}")
+    lines += [
+        "",
+        "El detalle completo quedó en el artifact de GitHub Actions.",
+        "Este mail evita links externos múltiples para no disparar la protección anti-bot del hosting.",
+    ]
+    return subject + " — resumen compacto", "\n".join(lines).strip() + "\n"
+
+
 def main() -> int:
     changed = changed_files()
     base = {
-        "version": "DDV_TV_CAMBIOS_MAIL_SITE_V6_PLATAFORMAS_PRO",
+        "version": "DDV_TV_CAMBIOS_MAIL_SITE_V7_ULTRA_COMPACT",
         "ran_at": datetime.now(timezone.utc).isoformat(),
         "changes_detected": bool(changed),
     }
@@ -665,6 +692,27 @@ def main() -> int:
     if not ok:
         future_count = int(extra.get("future_count") or 0)
         platform_change_count = int(extra.get("platform_change_count") or 0)
+
+        if endpoint_meta.get("mail_blocked_by_security_challenge") and platform_change_count > 0:
+            print("AVISO: el hosting bloqueó el mail completo por Imunify360/WAF. Intento fallback compacto.")
+            fb_subject, fb_body = build_fallback_mail(subject, extra)
+            fb_ok, fb_meta = post_site(fb_subject, fb_body, min(count, 3))
+            info.update({
+                "fallback_attempted": True,
+                "fallback_mail_sent": fb_ok,
+                "fallback_subject": fb_subject,
+                "fallback_body_length": len(fb_body),
+                "fallback_endpoint_meta": fb_meta,
+            })
+            if fb_ok:
+                info["mail_sent"] = True
+                write_last_run(info)
+                print("Fallback compacto enviado correctamente.")
+                return 0
+            write_last_run(info)
+            print("ERROR: también falló el fallback compacto. Pedir a Neolo whitelist del endpoint /vip/tv-alertas-mail.php para GitHub Actions.")
+            return 1
+
         if endpoint_meta.get("mail_blocked_by_security_challenge") and future_count == 0 and platform_change_count == 0:
             print("AVISO: el hosting bloqueó el POST con verificación anti-bot/WAF, pero no hay emisiones futuras ni cambios reales de plataformas.")
             print("El workflow queda verde para no generar falso rojo por históricos/técnicos. Revisar artifact para detalle.")
