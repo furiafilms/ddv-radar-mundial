@@ -9,10 +9,10 @@
   "lookahead_hours": 36,
   "mail_sent": false,
   "past_grace_minutes": 30,
-  "ran_at": "2026-06-21T21:21:28.061817-03:00",
+  "ran_at": "2026-06-22T12:58:44.073031-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
   "unsent": [],
   "version": "DDV_TV_ALERTAS_DIARIAS_V6_MAIL_DESDE_SITIO_FINAL",
-  "window_end": "2026-06-23T09:21:28.061817-03:00",
-  "window_start": "2026-06-21T20:51:28.061817-03:00"
+  "window_end": "2026-06-24T00:58:44.073031-03:00",
+  "window_start": "2026-06-22T12:28:44.073031-03:00"
 }
