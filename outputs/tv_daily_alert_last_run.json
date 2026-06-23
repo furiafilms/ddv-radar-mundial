@@ -1,18 +1,21 @@
 {
-  "events_due": 0,
-  "events_total": 3,
-  "events_unsent": 0,
+  "version": "DDV_TV_ALERTAS_DIARIAS_V7_NO_EVENTS_OK",
+  "ran_at": "2026-06-23T15:35:19.709578-03:00",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "lookahead_hours": 36,
+  "past_grace_minutes": 30,
+  "window_start": "2026-06-23T15:05:19.709578-03:00",
+  "window_end": "2026-06-25T03:35:19.709578-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json"
   ],
-  "lookahead_hours": 36,
-  "mail_sent": false,
-  "past_grace_minutes": 30,
-  "ran_at": "2026-06-23T10:46:02.135663-03:00",
-  "timezone": "America/Argentina/Buenos_Aires",
+  "events_total": 2,
+  "events_due": 0,
+  "events_unsent": 0,
   "unsent": [],
-  "version": "DDV_TV_ALERTAS_DIARIAS_V6_MAIL_DESDE_SITIO_FINAL",
-  "window_end": "2026-06-24T22:46:02.135663-03:00",
-  "window_start": "2026-06-23T10:16:02.135663-03:00"
+  "mail_sent": false,
+  "mode": "normal",
+  "endpoint_response": "Sin emisiones futuras; no corresponde enviar mail.",
+  "no_events_is_success": true
 }
