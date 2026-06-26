@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# DDV TV/Plataformas Cambios v7 ULTRA COMPACT — plataformas pro, evita WAF por mail con demasiados links.
+# DDV TV/Plataformas Cambios v8 NO REPETIR — estado propio para no reenviar el mismo delta de plataformas.
 # Compara outputs/site_platforms_global.json actual contra HEAD para distinguir:
 # - nuevas disponibilidades
 # - disponibilidades removidas
@@ -28,6 +28,7 @@ WATCH_SITE_FILES = [
 ]
 
 LAST_RUN_PATH = Path("outputs/tv_platform_change_mail_last_run.json")
+PLATFORM_MAIL_STATE_PATH = Path("outputs/state_platforms_mail_seen.json")
 TZ_NAME = os.getenv("DDV_TV_ALERT_TIMEZONE", "America/Argentina/Buenos_Aires")
 TZ = ZoneInfo(TZ_NAME)
 PAST_GRACE_MINUTES = int(os.getenv("DDV_TV_ALERT_PAST_GRACE_MINUTES", "30") or "30")
@@ -319,21 +320,79 @@ def platform_url(item: dict) -> str:
     return first_value(item, ["url", "link", "source_url"], "")
 
 
+def current_platform_mail_state(cur_items: dict[str, dict]) -> dict:
+    """Estado estable de plataformas ya notificadas por mail.
+    Guarda identidades y metadatos mínimos para poder informar futuras bajas.
+    """
+    items = {}
+    for key, item in sorted(cur_items.items(), key=lambda kv: platform_sort_key(kv[1])):
+        items[key] = serialize_platform_item(item)
+    return {
+        "version": "DDV_PLATFORM_MAIL_SEEN_V1",
+        "updated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "items": items,
+        "count": len(items),
+    }
+
+
+def read_platform_mail_state() -> dict | None:
+    data = read_json(str(PLATFORM_MAIL_STATE_PATH))
+    if not isinstance(data, dict):
+        return None
+    items = data.get("items")
+    if isinstance(items, dict):
+        return data
+    # Compatibilidad por si alguna vez se guardó solo lista de identidades.
+    if isinstance(items, list):
+        return {**data, "items": {str(x): {"identity": str(x)} for x in items}}
+    return None
+
+
+def item_from_mail_state(key: str, raw: dict) -> dict:
+    if not isinstance(raw, dict):
+        return {"_work_title": "Título no identificado", "name": key}
+    return {
+        "_work_title": raw.get("title") or raw.get("work_title") or "Título no identificado",
+        "name": raw.get("provider") or raw.get("name") or "Plataforma no identificada",
+        "region_code": raw.get("region") or raw.get("region_code") or "",
+        "type": raw.get("type") or "",
+        "source": raw.get("source") or "",
+        "url": raw.get("url") or "",
+        "_vip_url": raw.get("vip_url") or "",
+    }
+
+
 def collect_platform_delta() -> dict:
+    """Compara disponibilidades actuales contra un estado propio de mail.
+
+    V7 comparaba contra HEAD:outputs/site_platforms_global.json. Si ese archivo no quedaba
+    sincronizado o cambiaba el flujo de GitHub, podía reenviar todos los días el mismo +34/-2.
+    V8 usa outputs/state_platforms_mail_seen.json como memoria explícita de lo ya avisado.
+    """
     current = read_json("outputs/site_platforms_global.json") or {}
-    previous = read_json_from_head("outputs/site_platforms_global.json")
-
     cur_items = platform_items_by_identity(current)
-    old_items = platform_items_by_identity(previous)
+    state = read_platform_mail_state()
 
-    current_loaded = bool(cur_items) or isinstance(current, dict)
-    previous_loaded = bool(old_items) or isinstance(previous, dict)
+    state_missing = state is None
+    old_raw_items = (state or {}).get("items", {}) if isinstance(state, dict) else {}
+    if not isinstance(old_raw_items, dict):
+        old_raw_items = {}
 
-    added_keys = sorted(set(cur_items) - set(old_items), key=lambda k: platform_sort_key(cur_items[k]))
-    removed_keys = sorted(set(old_items) - set(cur_items), key=lambda k: platform_sort_key(old_items[k]))
+    old_keys = set(old_raw_items.keys())
+    cur_keys = set(cur_items.keys())
+
+    if state_missing:
+        # Primer corrida después del parche: inicializa memoria sin volver a mandar todo el acumulado.
+        added_keys = []
+        removed_keys = []
+        bootstrap = True
+    else:
+        added_keys = sorted(cur_keys - old_keys, key=lambda k: platform_sort_key(cur_items[k]))
+        removed_keys = sorted(old_keys - cur_keys, key=lambda k: platform_sort_key(item_from_mail_state(k, old_raw_items.get(k, {}))))
+        bootstrap = False
 
     added = [cur_items[k] for k in added_keys]
-    removed = [old_items[k] for k in removed_keys]
+    removed = [item_from_mail_state(k, old_raw_items.get(k, {})) for k in removed_keys]
 
     by_title: dict[str, dict[str, int]] = {}
     for item in added:
@@ -360,8 +419,10 @@ def collect_platform_delta() -> dict:
         "items_count": current.get("items_count") if isinstance(current, dict) else None,
         "titles_with_current": titles_with_current,
         "titles_without_current": titles_without_current,
-        "previous_loaded": previous_loaded,
-        "current_loaded": current_loaded,
+        "platform_mail_state_loaded": not state_missing,
+        "platform_mail_state_bootstrap": bootstrap,
+        "platform_mail_state_previous_count": len(old_keys),
+        "platform_mail_state_current_count": len(cur_keys),
     }
     return {
         "added": added,
@@ -370,8 +431,14 @@ def collect_platform_delta() -> dict:
         "removed_count": len(removed),
         "by_title": by_title,
         "meta": meta,
+        "platform_mail_state": current_platform_mail_state(cur_items),
+        "bootstrap": bootstrap,
     }
 
+
+def write_platform_mail_state(state: dict) -> None:
+    PLATFORM_MAIL_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PLATFORM_MAIL_STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def format_event(item: dict) -> list[str]:
     title = str(item.get("_title") or item_title(item))
@@ -543,8 +610,10 @@ def build_compact_mail_body(changed: list[str]) -> tuple[str, str, int, dict]:
         "platform_added_sample": [serialize_platform_item(x) for x in added[:30]],
         "platform_removed_sample": [serialize_platform_item(x) for x in removed[:30]],
         "platform_meta": meta,
+        "platform_mail_state_bootstrap": bool(platform_delta.get("bootstrap")),
+        "platform_mail_state": platform_delta.get("platform_mail_state"),
         "changed_files": changed,
-        "mail_format": "platforms_pro_v7_ultra_compact",
+        "mail_format": "platforms_pro_v8_no_repetir",
         "tv_meta": tv_meta,
     }
     # count representa hallazgos relevantes, no líneas técnicas.
@@ -586,11 +655,11 @@ def post_site(subject: str, body: str, count: int) -> tuple[bool, dict]:
 
     payload = json.dumps(
         {
-            "mode": "tv_platform_changes_platforms_pro_v7_ultra_compact",
+            "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
             "subject": subject,
             "body": body,
             "alerts_count": count,
-            "source": "github-actions-ddv-radar-cambios-site-mail-v7-ultra-compact",
+            "source": "github-actions-ddv-radar-cambios-site-mail-v8-no-repetir",
         },
         ensure_ascii=False,
     ).encode("utf-8")
@@ -669,30 +738,62 @@ def build_fallback_mail(subject: str, extra: dict) -> tuple[str, str]:
 def main() -> int:
     changed = changed_files()
     base = {
-        "version": "DDV_TV_CAMBIOS_MAIL_SITE_V7_ULTRA_COMPACT",
+        "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
         "ran_at": datetime.now(timezone.utc).isoformat(),
         "changes_detected": bool(changed),
     }
 
-    if not changed:
+    # Aunque no haya cambios en state_*.json, si el estado propio de mail no existe
+    # conviene inicializarlo para que la próxima corrida no mande todo el acumulado.
+    if not changed and PLATFORM_MAIL_STATE_PATH.exists():
         info = {**base, "mail_sent": False, "reason": "Sin cambios nuevos en archivos de estado monitoreados"}
         write_last_run(info)
         print("Sin cambios nuevos en state_tv_seen/state_platforms_seen. No se manda mail.")
         return 0
 
     subject, body, count, extra = build_compact_mail_body(changed)
+    future_count = int(extra.get("future_count") or 0)
+    platform_change_count = int(extra.get("platform_change_count") or 0)
+    platform_state = extra.get("platform_mail_state")
+    bootstrap = bool(extra.get("platform_mail_state_bootstrap"))
+
+    # Primer corrida V8 o corridas técnicas/históricas: inicializa/actualiza memoria y no molesta por mail.
+    if bootstrap and platform_state and future_count == 0:
+        write_platform_mail_state(platform_state)
+        info = {
+            **base,
+            "mail_sent": False,
+            **extra,
+            "reason": "Bootstrap de estado de plataformas ya avisadas. No se reenvía acumulado.",
+            "no_actionable_changes_is_success": True,
+        }
+        write_last_run(info)
+        print("Estado de mail de plataformas inicializado. No se reenvía el acumulado.")
+        return 0
+
+    if platform_change_count == 0 and future_count == 0:
+        if platform_state:
+            write_platform_mail_state(platform_state)
+        info = {
+            **base,
+            "mail_sent": False,
+            **extra,
+            "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
+            "no_actionable_changes_is_success": True,
+        }
+        write_last_run(info)
+        print("Sin cambios accionables. No se manda mail y el workflow queda verde.")
+        return 0
+
     ok, endpoint_meta = post_site(subject, body, count)
 
     info = {**base, "mail_sent": ok, **extra, **endpoint_meta}
     write_last_run(info)
 
-    print("--- CUERPO DEL MAIL PLATAFORMAS PRO ---")
+    print("--- CUERPO DEL MAIL PLATAFORMAS PRO V8 ---")
     print(body)
 
     if not ok:
-        future_count = int(extra.get("future_count") or 0)
-        platform_change_count = int(extra.get("platform_change_count") or 0)
-
         if endpoint_meta.get("mail_blocked_by_security_challenge") and platform_change_count > 0:
             print("AVISO: el hosting bloqueó el mail completo por Imunify360/WAF. Intento fallback compacto.")
             fb_subject, fb_body = build_fallback_mail(subject, extra)
@@ -706,20 +807,23 @@ def main() -> int:
             })
             if fb_ok:
                 info["mail_sent"] = True
+                if platform_state:
+                    write_platform_mail_state(platform_state)
+                    info["platform_mail_state_written"] = True
                 write_last_run(info)
-                print("Fallback compacto enviado correctamente.")
+                print("Fallback compacto enviado correctamente. Estado de plataformas actualizado.")
                 return 0
             write_last_run(info)
             print("ERROR: también falló el fallback compacto. Pedir a Neolo whitelist del endpoint /vip/tv-alertas-mail.php para GitHub Actions.")
             return 1
 
-        if endpoint_meta.get("mail_blocked_by_security_challenge") and future_count == 0 and platform_change_count == 0:
-            print("AVISO: el hosting bloqueó el POST con verificación anti-bot/WAF, pero no hay emisiones futuras ni cambios reales de plataformas.")
-            print("El workflow queda verde para no generar falso rojo por históricos/técnicos. Revisar artifact para detalle.")
-            return 0
         print("ERROR: el sitio no confirmó mail_sent=true. Si hay futuras o cambios reales de plataformas, falla para no ocultar el problema.")
         return 1
 
+    if platform_state:
+        write_platform_mail_state(platform_state)
+        info["platform_mail_state_written"] = True
+        write_last_run(info)
     return 0
 
 
