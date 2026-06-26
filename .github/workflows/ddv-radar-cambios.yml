@@ -63,6 +63,7 @@ jobs:
           git add \
             outputs/site_platforms_global.json \
             outputs/state_platforms_seen.json \
+            outputs/state_platforms_mail_seen.json \
             outputs/state_platforms_watchmode_bootstrap_v206.json \
             outputs/state_tv_seen.json \
             outputs/state_tv_epg_bootstrap_v205.json \
@@ -77,7 +78,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sin cambios para commitear."
           else
-            git commit -m "Actualizar radar DDV outputs v213"
+            git commit -m "Actualizar radar DDV outputs v214"
             git push origin HEAD:main
           fi
 
@@ -88,6 +89,7 @@ jobs:
           name: ddv-radar-cambios-diagnostico
           path: |
             outputs/tv_platform_change_mail_last_run.json
+            outputs/state_platforms_mail_seen.json
             outputs/radar_change_log.json
             outputs/site_tv_cable_global_filtered.json
             outputs/site_platforms_global.json
