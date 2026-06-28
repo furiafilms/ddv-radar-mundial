@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# DDV TV Alertas Diarias v7 NO_EVENTS_OK — si no hay emisiones futuras, queda verde sin enviar mail.
+# DDV TV Alertas Diarias v8 NO_COMMIT_LASTRUN — no falla por commitear resumen sin alertas.
 # Mantiene envío por endpoint del sitio cuando hay alertas reales o force_test.
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ from datetime import datetime, date, time
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-VERSION = "DDV_TV_ALERTAS_DIARIAS_V7_NO_EVENTS_OK"
+VERSION = "DDV_TV_ALERTAS_DIARIAS_V8_NO_COMMIT_LASTRUN"
 
 TZ_NAME = os.getenv("DDV_TV_ALERT_TIMEZONE", "America/Argentina/Buenos_Aires")
 TZ = ZoneInfo(TZ_NAME)
