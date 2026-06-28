@@ -39,19 +39,28 @@ jobs:
           DDV_TV_ALERT_FORCE_TEST: ${{ github.event.inputs.force_test_mail == 'true' && '1' || '0' }}
         run: python scripts/ddv_tv_alertas_diarias.py
 
-      # Importante: una prueba manual de mail NO debe pisar/commitear estado real.
-      # Si el mail de prueba llegó, el workflow debe quedar verde sin tocar outputs/state_*.json.
-      - name: Guardar estado de alertas
+      # V8: el resumen tv_daily_alert_last_run.json queda como artifact, pero NO se commitea.
+      # Si no hay emisiones futuras, no hay estado real para guardar y el workflow debe quedar verde.
+      # Solo se commitea state_tv_daily_alerts_sent.json cuando hubo mails reales enviados.
+      - name: Guardar estado de alertas enviadas
         if: ${{ github.event.inputs.force_test_mail != 'true' }}
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outputs/state_tv_daily_alerts_sent.json outputs/tv_daily_alert_last_run.json 2>/dev/null || true
+
+          if [ ! -f outputs/state_tv_daily_alerts_sent.json ]; then
+            echo "No existe state_tv_daily_alerts_sent.json. No hubo alertas reales para marcar como enviadas. OK."
+            exit 0
+          fi
+
+          git add outputs/state_tv_daily_alerts_sent.json
+
           if git diff --cached --quiet; then
-            echo "Sin cambios de estado para commitear."
+            echo "Sin cambios de estado real para commitear. OK."
           else
             git commit -m "Actualizar estado alertas diarias TV"
+            git pull --rebase origin main || true
             git push origin HEAD:main
           fi
 
