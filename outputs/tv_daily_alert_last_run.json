@@ -1,11 +1,11 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V8_NO_COMMIT_LASTRUN",
-  "ran_at": "2026-07-04T09:14:12.312350-03:00",
+  "ran_at": "2026-07-04T21:10:05.417600-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
   "lookahead_hours": 36,
   "past_grace_minutes": 30,
-  "window_start": "2026-07-04T08:44:12.312350-03:00",
-  "window_end": "2026-07-05T21:14:12.312350-03:00",
+  "window_start": "2026-07-04T20:40:05.417600-03:00",
+  "window_end": "2026-07-06T09:10:05.417600-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json"
