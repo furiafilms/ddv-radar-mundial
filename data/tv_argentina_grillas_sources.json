@@ -1,0 +1,72 @@
+{
+  "version": "v213-tv-argentina-grillas-activas",
+  "note": "Fuentes vivas para TV/Cable Argentina. No son cargas manuales. Si fallan, el sitio no debe interpretar ausencia como 'sin registros'.",
+  "sources": [
+    {
+      "id": "telered_buscador_grilla",
+      "type": "telered_grid",
+      "provider": "TeleRed / grilla de programación",
+      "url": "https://www.telered.com.ar/buscador-grilla",
+      "enabled": true,
+      "critical": true,
+      "timeout": 60,
+      "retries": 1,
+      "channels": [
+        "CINE.AR",
+        "CANAL A",
+        "VOLVER",
+        "Film & Arts"
+      ]
+    },
+    {
+      "id": "america_tvguide_cinear",
+      "type": "america_tvguide_channel",
+      "provider": "AmericaTVGuide / CINE.AR",
+      "url": "https://americatvguide.com/es/ar/channel/cine_ar",
+      "channel": "CINE.AR",
+      "channel_number": "CINE.AR · TDA/operadores argentinos",
+      "enabled": true,
+      "critical": true,
+      "timeout": 45,
+      "retries": 1
+    },
+    {
+      "id": "america_tvguide_canala",
+      "type": "america_tvguide_channel",
+      "provider": "AmericaTVGuide / Canal á",
+      "url": "https://americatvguide.com/es/ar/channel/canal_a",
+      "channel": "Canal á",
+      "channel_number": "Canal á · señal según operador",
+      "enabled": true,
+      "critical": true,
+      "timeout": 45,
+      "retries": 1
+    },
+    {
+      "id": "america_tvguide_volver",
+      "type": "america_tvguide_channel",
+      "provider": "AmericaTVGuide / Canal Volver",
+      "url": "https://americatvguide.com/es/ar/channel/canal_volver",
+      "channel": "VOLVER",
+      "channel_number": "VOLVER · señal según operador",
+      "enabled": true,
+      "critical": false,
+      "timeout": 45,
+      "retries": 1
+    },
+    {
+      "id": "artear_canala_comercial",
+      "type": "artear_weekly",
+      "provider": "Artear / grilla comercial Canal A",
+      "url_template": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-{year}-{week:02d}-01.html",
+      "channel": "Canal á",
+      "channel_number": "Canal á · Artear comercial",
+      "enabled": true,
+      "critical": false,
+      "past_weeks": 1,
+      "future_weeks": 8,
+      "timeout": 45,
+      "retries": 1
+    }
+  ]
+}
