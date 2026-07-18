@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DDV TV Argentina Grillas v213
+DDV TV Argentina Grillas v214
 
 Objetivo:
 - escanear grillas argentinas vivas, no cargar registros manuales;
@@ -419,12 +419,20 @@ def parse_america_tvguide(src: dict, raw_html: str, aliases: list[dict]) -> Tupl
 
 
 def parse_telered(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[dict], list[dict], int]:
+    """Parseo tolerante de TeleRed.
+
+    V213 dependía de detectar primero el bloque exacto del canal. En la página actual de
+    TeleRed el HTML/texto mezcla canal, número y programas; eso produjo un falso OK con
+    bytes altos pero programmes_parsed=0. V214 escanea todos los renglones con patrón
+    "Título 22:00hs" y, si puede, conserva el canal cercano como contexto. Así evitamos
+    que una fuente crítica parezca escaneada cuando en realidad no se extrajo programación.
+    """
     text = html_to_text(raw_html)
     lines = [compact_spaces(x) for x in text.splitlines() if compact_spaces(x)]
-    joined = "\n".join(lines)
-    # Default de TeleRed: grilla de hoy. Se toma la primera fecha del selector "hoy dd/mm".
+    joined = "
+".join(lines)
     today = None
-    for m in re.finditer(r"\b(?:hoy|domingo|lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado)\s+(\d{1,2}/\d{1,2})\b", joined, flags=re.I):
+    for m in re.finditer(r"(?:hoy|domingo|lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado)\s+(\d{1,2}/\d{1,2})", joined, flags=re.I):
         today = parse_dmy_no_year(m.group(1))
         if today:
             break
@@ -433,43 +441,65 @@ def parse_telered(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[d
 
     hits, review = [], []
     parsed = 0
-    current_channel = ""
+    current_channel = "TeleRed"
     channel_number = ""
-    target_norms = set(TARGET_CHANNEL_ALIASES.keys())
+    target_norms = {norm(x) for x in src.get("channels", [])} | {norm(x) for x in TARGET_CHANNEL_ALIASES.keys()}
 
-    for line in lines:
+    def update_channel_context(line: str) -> None:
+        nonlocal current_channel, channel_number
         n = norm(line)
         if re.fullmatch(r"\d{1,4}", line):
             channel_number = line
-            continue
-        if n in target_norms or any(n == norm(x) for x in src.get("channels", [])):
-            current_channel = TARGET_CHANNEL_ALIASES.get(n, line)
-            continue
-        m = re.match(r"^[*•\-–]?\s*(.+?)\s+([01]?\d|2[0-3]):([0-5]\d)\s*hs\b", line, flags=re.I)
-        if not m or not current_channel:
-            continue
-        title = compact_spaces(m.group(1))
-        hhmm = f"{int(m.group(2)):02d}:{m.group(3)}"
-        if not title or norm(title) == norm(current_channel):
-            continue
-        parsed += 1
-        match, review_match = match_ddv_title(title, aliases, f"TeleRed {current_channel}")
-        if match:
-            hits.append(make_hit(match, title=title, channel=current_channel, channel_number=(f"TeleRed {channel_number}" if channel_number else "TeleRed"), when=today, hhmm=hhmm, source=src.get("provider", "TeleRed / grilla de programación"), source_url=src["url"], detection_type="grilla argentina viva / TeleRed"))
-        elif review_match:
-            review.append({
-                "source": src.get("provider", "TeleRed / grilla de programación"),
-                "source_url": src["url"],
-                "channel": current_channel,
-                "date_iso": today.isoformat(),
-                "start_time": hhmm,
-                "programme_title": title,
-                "matched_term": review_match.get("alias"),
-                "work_slug": review_match.get("slug"),
-                "work_title": review_match.get("work_title"),
-                "reason": review_match.get("reason", "revisión"),
-                "detected_at": now_iso(),
-            })
+            return
+        for raw in src.get("channels", []):
+            rn = norm(raw)
+            if n == rn or (rn and re.search(r"" + re.escape(rn) + r"", n)):
+                current_channel = TARGET_CHANNEL_ALIASES.get(rn, raw)
+                return
+        for key, label in TARGET_CHANNEL_ALIASES.items():
+            kn = norm(key)
+            if n == kn or (kn and re.search(r"" + re.escape(kn) + r"", n)):
+                current_channel = label
+                return
+
+    for line in lines:
+        update_channel_context(line)
+
+        # Formatos observados: "Título 09:45hs", "Título 09:45 hs".
+        # Se permite que haya texto antes/después para no perder filas concatenadas.
+        for m in re.finditer(r"(?P<title>[^
+
+|]{2,160}?)\s+(?P<h>[01]?\d|2[0-3]):(?P<mi>[0-5]\d)\s*hs", line, flags=re.I):
+            title = compact_spaces(m.group('title'))
+            hhmm = f"{int(m.group('h')):02d}:{m.group('mi')}"
+            if not title:
+                continue
+            tn = norm(title)
+            if tn in target_norms or tn in {"ver mas", "ver la grilla completa", "grilla de programacion"}:
+                continue
+            # Evitar capturar etiquetas demasiado genéricas sin valor de programa.
+            if len(tn) < 3 or re.fullmatch(r"\d+", tn):
+                continue
+            parsed += 1
+            channel = current_channel or "TeleRed"
+            chnum = f"TeleRed {channel_number}" if channel_number else "TeleRed"
+            match, review_match = match_ddv_title(title, aliases, f"TeleRed {channel}")
+            if match:
+                hits.append(make_hit(match, title=title, channel=channel, channel_number=chnum, when=today, hhmm=hhmm, source=src.get("provider", "TeleRed / grilla de programación"), source_url=src["url"], detection_type="grilla argentina viva / TeleRed"))
+            elif review_match:
+                review.append({
+                    "source": src.get("provider", "TeleRed / grilla de programación"),
+                    "source_url": src["url"],
+                    "channel": channel,
+                    "date_iso": today.isoformat(),
+                    "start_time": hhmm,
+                    "programme_title": title,
+                    "matched_term": review_match.get("alias"),
+                    "work_slug": review_match.get("slug"),
+                    "work_title": review_match.get("work_title"),
+                    "reason": review_match.get("reason", "revisión"),
+                    "detected_at": now_iso(),
+                })
     return hits, review, parsed
 
 
@@ -523,9 +553,9 @@ def merge_hits(existing_payload: dict, new_hits: list[dict], source_reports: lis
     hits = sorted(by_fp.values(), key=lambda r: (str(r.get("date_iso", "")), str(r.get("start_time", "")), str(r.get("channel", ""))), reverse=True)
     payload = {
         "ok": True,
-        "version": "v213-tv-argentina-grillas-activas",
+        "version": "v214-tv-argentina-parser-estricto",
         "generated_at_utc": now_iso(),
-        "source": "DDV TV Argentina Grillas v213 + outputs previos",
+        "source": "DDV TV Argentina Grillas v214 + outputs previos",
         "hits_total": len(hits),
         "review_total": len(review_hits),
         "hits": hits,
@@ -534,7 +564,7 @@ def merge_hits(existing_payload: dict, new_hits: list[dict], source_reports: lis
         "argentina_sources_ok": all(r.get("ok") for r in source_reports if r.get("critical")),
         "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. Si una fuente crítica falla, no debe mostrarse como ausencia confirmada.",
         "filtered_at": now_iso(),
-        "version_filter": "v213-tv-argentina-active-grid-scanner",
+        "version_filter": "v214-tv-argentina-parser-estricto",
     }
     return payload
 
@@ -557,6 +587,11 @@ def main() -> int:
         urls = []
         if stype == "artear_weekly":
             urls = iso_week_urls(src["url_template"], int(src.get("past_weeks", 1)), int(src.get("future_weeks", 8)))
+            # Algunas grillas de Artear publican programación (PRO) y otras comercial/tarifas (COM).
+            # Si existe fallback_url_template, se escanean ambas familias de URLs.
+            if src.get("fallback_url_template"):
+                urls += iso_week_urls(src["fallback_url_template"], int(src.get("past_weeks", 1)), int(src.get("future_weeks", 8)))
+                urls = list(dict.fromkeys(urls))
         else:
             urls = [src["url"]]
         for url in urls:
@@ -580,13 +615,21 @@ def main() -> int:
                 else:
                     hits, review, parsed = [], [], 0
                     report.error = f"tipo no soportado: {stype}"
-                report.ok = True
                 report.programmes_parsed = parsed
                 report.hits = len(hits)
                 report.review = len(review)
-                all_hits.extend(hits)
-                all_review.extend(review)
-                print(f"[fuente OK] {report.id}: programas={parsed} hits={len(hits)} review={len(review)}")
+                # Una fuente crítica con HTML descargado pero cero programas parseados NO es OK:
+                # eso fue exactamente el falso positivo de V213 con TeleRed.
+                min_programmes = int(src.get("min_programmes", 1 if src.get("critical") else 0))
+                if bool(src.get("critical")) and parsed < min_programmes:
+                    report.ok = False
+                    report.error = f"fuente crítica descargada pero parser extrajo {parsed} programas; revisar parser o fuente"
+                    print(f"[fuente ERROR] {report.id}: {report.error}", file=sys.stderr)
+                else:
+                    report.ok = True
+                    all_hits.extend(hits)
+                    all_review.extend(review)
+                    print(f"[fuente OK] {report.id}: programas={parsed} hits={len(hits)} review={len(review)}")
             except Exception as exc:
                 report.error = f"parse error: {type(exc).__name__}: {exc}"
                 print(f"[fuente ERROR] {report.id}: {report.error}", file=sys.stderr)
@@ -599,10 +642,10 @@ def main() -> int:
     payload = merge_hits(existing, all_hits, reports, all_review[:200])
     write_json(SITE_TV_FILTERED, payload)
     write_json(SITE_TV_GLOBAL, payload)
-    write_json(SITE_TV_REVIEW, {"ok": True, "version": "v213-tv-argentina-review", "generated_at_utc": now_iso(), "review_total": len(all_review), "review_hits": all_review[:500], "source_reports": reports})
+    write_json(SITE_TV_REVIEW, {"ok": True, "version": "v214-tv-argentina-review", "generated_at_utc": now_iso(), "review_total": len(all_review), "review_hits": all_review[:500], "source_reports": reports})
     last = {
         "ok": True,
-        "version": "v213-tv-argentina-grillas-activas",
+        "version": "v214-tv-argentina-parser-estricto",
         "ran_at_utc": now_iso(),
         "ran_at_local": NOW_LOCAL.replace(microsecond=0).isoformat(),
         "timezone": TZ_NAME,
@@ -616,10 +659,12 @@ def main() -> int:
     }
     write_json(LAST_RUN, last)
 
-    # Si todas las fuentes críticas fallan, el workflow debe fallar: mejor mail de error que falso silencio.
-    critical = [r for r in reports if r.get("critical")]
-    if critical and not any(r.get("ok") for r in critical):
-        print("ERROR: todas las fuentes críticas argentinas fallaron. No se puede afirmar 'sin registros'.", file=sys.stderr)
+    # Si falla cualquier fuente crítica, el workflow debe fallar: mejor mail de error que falso silencio.
+    failed_critical = [r for r in reports if r.get("critical") and not r.get("ok")]
+    if failed_critical:
+        print("ERROR: una o más fuentes críticas argentinas fallaron. No se puede afirmar 'sin registros'.", file=sys.stderr)
+        for r in failed_critical[:12]:
+            print(f" - {r.get('provider')} | {r.get('url')} | {r.get('error')}", file=sys.stderr)
         return 2
     print(json.dumps({"new_hits_total": len(all_hits), "review_total": len(all_review), "sources_ok": last["sources_ok"], "sources_total": last["sources_total"]}, ensure_ascii=False))
     return 0
