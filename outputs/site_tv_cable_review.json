@@ -1,63 +1,8 @@
 {
   "ok": true,
-  "version": "v213-tv-argentina-grillas-activas",
+  "version": "v213-tv-argentina-review",
   "generated_at_utc": "2026-07-18T19:16:21Z",
-  "source": "DDV TV Argentina Grillas v213 + outputs previos",
-  "hits_total": 2,
   "review_total": 0,
-  "hits": [
-    {
-      "slug": "hermanos-de-sangre",
-      "title": "Hermanos de Sangre",
-      "programme_title": "FICCIONARTE - Película: HERMANOS DE SANGRE",
-      "matched_term": "Hermanos de Sangre",
-      "channel": "Canal á",
-      "channel_number": "Canal á · señal según operador",
-      "country": "AR",
-      "country_code": "AR",
-      "country_name": "Argentina",
-      "date_iso": "2026-06-16",
-      "start_time": "04:00",
-      "end_time": "",
-      "source": "Artear / grilla comercial Canal A",
-      "source_url": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-2026-25-01.html",
-      "detection_type": "registro verificado por fuente Artear",
-      "confidence": "high",
-      "source_labels": [
-        "Artear / grilla comercial Canal A"
-      ],
-      "work_slug": "hermanos-de-sangre",
-      "work_title": "Hermanos de Sangre",
-      "detected_at": "2026-06-07T12:48:26Z",
-      "fingerprint": "acb7dc63fcf991113c6afb5119fcc113fef84212"
-    },
-    {
-      "slug": "necrofobia",
-      "title": "Necrofobia",
-      "programme_title": "Necrofobia",
-      "matched_term": "Necrofobia",
-      "channel": "CINE.AR",
-      "channel_number": "TeleRed 219 · CINE.AR TV: TDA 22.4 · Flow/Cablevisión 60, 300 y 640 HD · DirecTV 512 · Telecentro 33, 400 y 1049 HD",
-      "country": "AR",
-      "country_code": "AR",
-      "country_name": "Argentina",
-      "date_iso": "2026-06-03",
-      "start_time": "00:00",
-      "end_time": "02:00",
-      "duration_minutes": 120,
-      "source": "TeleRed / grilla de programación",
-      "source_url": "https://www.telered.com.ar/buscador-grilla",
-      "detection_type": "registro verificado por radar DDV",
-      "confidence": "high",
-      "source_labels": [
-        "TeleRed / grilla de programación"
-      ],
-      "work_slug": "necrofobia",
-      "work_title": "Necrofobia",
-      "detected_at": "2026-06-07T12:48:26Z",
-      "fingerprint": "403043e411d665cf62a4a12077989a4678f6c8f7"
-    }
-  ],
   "review_hits": [],
   "source_reports": [
     {
@@ -256,9 +201,5 @@
       "scanned_at": "2026-07-18T19:16:21Z",
       "critical": false
     }
-  ],
-  "argentina_sources_ok": true,
-  "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. Si una fuente crítica falla, no debe mostrarse como ausencia confirmada.",
-  "filtered_at": "2026-07-18T19:16:21Z",
-  "version_filter": "v213-tv-argentina-active-grid-scanner"
+  ]
 }
