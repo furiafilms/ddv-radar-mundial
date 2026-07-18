@@ -429,10 +429,9 @@ def parse_telered(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[d
     """
     text = html_to_text(raw_html)
     lines = [compact_spaces(x) for x in text.splitlines() if compact_spaces(x)]
-    joined = "
-".join(lines)
+    joined = "\n".join(lines)
     today = None
-    for m in re.finditer(r"(?:hoy|domingo|lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado)\s+(\d{1,2}/\d{1,2})", joined, flags=re.I):
+    for m in re.finditer(r"\b(?:hoy|domingo|lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado)\s+(\d{1,2}/\d{1,2})\b", joined, flags=re.I):
         today = parse_dmy_no_year(m.group(1))
         if today:
             break
@@ -453,12 +452,12 @@ def parse_telered(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[d
             return
         for raw in src.get("channels", []):
             rn = norm(raw)
-            if n == rn or (rn and re.search(r"" + re.escape(rn) + r"", n)):
+            if n == rn or (rn and re.search(r"\b" + re.escape(rn) + r"\b", n)):
                 current_channel = TARGET_CHANNEL_ALIASES.get(rn, raw)
                 return
         for key, label in TARGET_CHANNEL_ALIASES.items():
             kn = norm(key)
-            if n == kn or (kn and re.search(r"" + re.escape(kn) + r"", n)):
+            if n == kn or (kn and re.search(r"\b" + re.escape(kn) + r"\b", n)):
                 current_channel = label
                 return
 
@@ -467,9 +466,7 @@ def parse_telered(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[d
 
         # Formatos observados: "Título 09:45hs", "Título 09:45 hs".
         # Se permite que haya texto antes/después para no perder filas concatenadas.
-        for m in re.finditer(r"(?P<title>[^
-
-|]{2,160}?)\s+(?P<h>[01]?\d|2[0-3]):(?P<mi>[0-5]\d)\s*hs", line, flags=re.I):
+        for m in re.finditer(r"(?P<title>[^\n\r|]{2,160}?)\s+(?P<h>[01]?\d|2[0-3]):(?P<mi>[0-5]\d)\s*hs\b", line, flags=re.I):
             title = compact_spaces(m.group('title'))
             hhmm = f"{int(m.group('h')):02d}:{m.group('mi')}"
             if not title:
