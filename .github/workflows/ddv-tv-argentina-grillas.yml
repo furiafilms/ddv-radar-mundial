@@ -1,0 +1,75 @@
+name: DDV TV Argentina Grillas Activas
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Argentina UTC-3: 08:15, 12:15, 16:15 y 20:15.
+    - cron: '15 11,15,19,23 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  tv-argentina-grillas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Escanear grillas argentinas vivas
+        run: python scripts/ddv_tv_argentina_grillas.py
+
+      - name: Avisar por mail si hay emisiones futuras nuevas
+        env:
+          DDV_TV_ALERT_MAIL_URL: ${{ secrets.DDV_TV_ALERT_MAIL_URL }}
+          DDV_TV_ALERT_TIMEZONE: 'America/Argentina/Buenos_Aires'
+          DDV_TV_ALERT_LOOKAHEAD_HOURS: '168'
+          DDV_TV_ALERT_PAST_GRACE_MINUTES: '30'
+          DDV_TV_ALERT_FORCE_TEST: '0'
+        run: python scripts/ddv_tv_alertas_diarias.py
+
+      - name: Guardar outputs y estado
+        if: always()
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p /tmp/ddv_tv_arg_outputs
+          cp outputs/*.json /tmp/ddv_tv_arg_outputs/ 2>/dev/null || true
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p outputs
+          cp /tmp/ddv_tv_arg_outputs/*.json outputs/ 2>/dev/null || true
+          git add \
+            outputs/site_tv_cable_global.json \
+            outputs/site_tv_cable_global_filtered.json \
+            outputs/site_tv_cable_review.json \
+            outputs/tv_argentina_grillas_last_run.json \
+            outputs/state_tv_daily_alerts_sent.json \
+            outputs/tv_daily_alert_last_run.json \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios de grillas argentinas para commitear."
+          else
+            git commit -m "Actualizar radar TV Argentina grillas activas v213"
+            git push origin HEAD:main
+          fi
+
+      - name: Guardar artifact de diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddv-tv-argentina-grillas-v213
+          path: |
+            outputs/tv_argentina_grillas_last_run.json
+            outputs/site_tv_cable_global_filtered.json
+            outputs/site_tv_cable_review.json
+            outputs/tv_daily_alert_last_run.json
+          if-no-files-found: ignore
