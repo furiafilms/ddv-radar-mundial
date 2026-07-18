@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "version": "v213-tv-argentina-grillas-activas",
-  "generated_at_utc": "2026-07-18T19:16:21Z",
-  "source": "DDV TV Argentina Grillas v213 + outputs previos",
+  "version": "v214-tv-argentina-parser-estricto",
+  "generated_at_utc": "2026-07-18T19:33:27Z",
+  "source": "DDV TV Argentina Grillas v214 + outputs previos",
   "hits_total": 2,
   "review_total": 0,
   "hits": [
@@ -62,7 +62,7 @@
   "source_reports": [
     {
       "id": "telered_buscador_grilla",
-      "ok": true,
+      "ok": false,
       "provider": "TeleRed / grilla de programación",
       "url": "https://www.telered.com.ar/buscador-grilla",
       "channel": "",
@@ -70,8 +70,8 @@
       "programmes_parsed": 0,
       "hits": 0,
       "review": 0,
-      "error": "",
-      "scanned_at": "2026-07-18T19:16:21Z",
+      "error": "fuente crítica descargada pero parser extrajo 0 programas; revisar parser o fuente",
+      "scanned_at": "2026-07-18T19:33:27Z",
       "critical": true
     },
     {
@@ -85,7 +85,7 @@
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-18T19:16:21Z",
+      "scanned_at": "2026-07-18T19:33:27Z",
       "critical": true
     },
     {
@@ -99,7 +99,7 @@
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-18T19:16:21Z",
+      "scanned_at": "2026-07-18T19:33:27Z",
       "critical": true
     },
     {
@@ -108,13 +108,153 @@
       "provider": "AmericaTVGuide / Canal Volver",
       "url": "https://americatvguide.com/es/ar/channel/canal_volver",
       "channel": "VOLVER",
-      "bytes": 43646,
+      "bytes": 43647,
       "programmes_parsed": 37,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-18T19:16:21Z",
+      "scanned_at": "2026-07-18T19:33:27Z",
       "critical": false
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-28-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-29-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-30-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-31-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-32-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-33-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-34-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-35-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-36-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
+    },
+    {
+      "id": "artear_canala_comercial",
+      "ok": false,
+      "provider": "Artear / grilla comercial Canal A",
+      "url": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-2026-37-01.html",
+      "channel": "Canal á",
+      "bytes": 0,
+      "programmes_parsed": 0,
+      "hits": 0,
+      "review": 0,
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -127,8 +267,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -141,8 +281,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -155,8 +295,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -169,8 +309,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -183,8 +323,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -197,8 +337,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -211,8 +351,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -225,8 +365,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -239,8 +379,8 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     },
     {
       "id": "artear_canala_comercial",
@@ -253,12 +393,12 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:16:21Z",
-      "critical": false
+      "scanned_at": "2026-07-18T19:33:27Z",
+      "critical": true
     }
   ],
-  "argentina_sources_ok": true,
+  "argentina_sources_ok": false,
   "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. Si una fuente crítica falla, no debe mostrarse como ausencia confirmada.",
-  "filtered_at": "2026-07-18T19:16:21Z",
-  "version_filter": "v213-tv-argentina-active-grid-scanner"
+  "filtered_at": "2026-07-18T19:33:27Z",
+  "version_filter": "v214-tv-argentina-parser-estricto"
 }
