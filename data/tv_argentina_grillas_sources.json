@@ -1,6 +1,6 @@
 {
-  "version": "v213-tv-argentina-grillas-activas",
-  "note": "Fuentes vivas para TV/Cable Argentina. No son cargas manuales. Si fallan, el sitio no debe interpretar ausencia como 'sin registros'.",
+  "version": "v214-tv-argentina-parser-estricto",
+  "note": "Fuentes vivas para TV/Cable Argentina. V214 evita falsos OK: fuente crítica con cero programas parseados falla.",
   "sources": [
     {
       "id": "telered_buscador_grilla",
@@ -16,7 +16,8 @@
         "CANAL A",
         "VOLVER",
         "Film & Arts"
-      ]
+      ],
+      "min_programmes": 50
     },
     {
       "id": "america_tvguide_cinear",
@@ -28,7 +29,8 @@
       "enabled": true,
       "critical": true,
       "timeout": 45,
-      "retries": 1
+      "retries": 1,
+      "min_programmes": 10
     },
     {
       "id": "america_tvguide_canala",
@@ -40,7 +42,8 @@
       "enabled": true,
       "critical": true,
       "timeout": 45,
-      "retries": 1
+      "retries": 1,
+      "min_programmes": 10
     },
     {
       "id": "america_tvguide_volver",
@@ -58,15 +61,17 @@
       "id": "artear_canala_comercial",
       "type": "artear_weekly",
       "provider": "Artear / grilla comercial Canal A",
-      "url_template": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-{year}-{week:02d}-01.html",
+      "url_template": "https://www.canal13.artear.com.ar/mkt/progytarifas/caa/programacion/CAA-PRO-{year}-{week:02d}-01.html",
       "channel": "Canal á",
       "channel_number": "Canal á · Artear comercial",
       "enabled": true,
-      "critical": false,
+      "critical": true,
       "past_weeks": 1,
       "future_weeks": 8,
       "timeout": 45,
-      "retries": 1
+      "retries": 1,
+      "min_programmes": 1,
+      "fallback_url_template": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-{year}-{week:02d}-01.html"
     }
   ]
 }
