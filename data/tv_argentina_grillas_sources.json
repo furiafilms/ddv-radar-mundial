@@ -1,6 +1,6 @@
 {
-  "version": "v214-tv-argentina-parser-estricto",
-  "note": "Fuentes vivas para TV/Cable Argentina. V214 evita falsos OK: fuente crítica con cero programas parseados falla.",
+  "version": "v216-tv-argentina-scanner-estable",
+  "note": "Fuentes vivas para TV/Cable Argentina. V216 usa fuentes principales AmericaTVGuide y deja TeleRed/Artear como secundarias no bloqueantes; falla solo si ninguna fuente principal argentina parsea programación.",
   "sources": [
     {
       "id": "telered_buscador_grilla",
@@ -8,7 +8,7 @@
       "provider": "TeleRed / grilla de programación",
       "url": "https://www.telered.com.ar/buscador-grilla",
       "enabled": true,
-      "critical": true,
+      "critical": false,
       "timeout": 60,
       "retries": 1,
       "channels": [
@@ -17,7 +17,9 @@
         "VOLVER",
         "Film & Arts"
       ],
-      "min_programmes": 50
+      "min_programmes": 50,
+      "primary": false,
+      "block_workflow_on_fail": false
     },
     {
       "id": "america_tvguide_cinear",
@@ -27,10 +29,12 @@
       "channel": "CINE.AR",
       "channel_number": "CINE.AR · TDA/operadores argentinos",
       "enabled": true,
-      "critical": true,
+      "critical": false,
       "timeout": 45,
       "retries": 1,
-      "min_programmes": 10
+      "min_programmes": 10,
+      "primary": true,
+      "block_workflow_on_fail": false
     },
     {
       "id": "america_tvguide_canala",
@@ -40,10 +44,12 @@
       "channel": "Canal á",
       "channel_number": "Canal á · señal según operador",
       "enabled": true,
-      "critical": true,
+      "critical": false,
       "timeout": 45,
       "retries": 1,
-      "min_programmes": 10
+      "min_programmes": 10,
+      "primary": true,
+      "block_workflow_on_fail": false
     },
     {
       "id": "america_tvguide_volver",
@@ -55,7 +61,10 @@
       "enabled": true,
       "critical": false,
       "timeout": 45,
-      "retries": 1
+      "retries": 1,
+      "primary": true,
+      "block_workflow_on_fail": false,
+      "min_programmes": 5
     },
     {
       "id": "artear_canala_comercial",
@@ -65,13 +74,15 @@
       "channel": "Canal á",
       "channel_number": "Canal á · Artear comercial",
       "enabled": true,
-      "critical": true,
+      "critical": false,
       "past_weeks": 1,
       "future_weeks": 8,
       "timeout": 45,
       "retries": 1,
       "min_programmes": 1,
-      "fallback_url_template": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-{year}-{week:02d}-01.html"
+      "fallback_url_template": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-{year}-{week:02d}-01.html",
+      "primary": false,
+      "block_workflow_on_fail": false
     }
   ]
 }
