@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DDV TV Argentina Grillas v216
+DDV TV Argentina Grillas v217
 
 Objetivo:
 - escanear grillas argentinas vivas, no cargar registros manuales;
@@ -46,7 +46,7 @@ TZ = ZoneInfo(TZ_NAME)
 NOW_LOCAL = datetime.now(TZ)
 NOW_UTC = datetime.now(timezone.utc)
 CURRENT_YEAR = NOW_LOCAL.year
-USER_AGENT = "Mozilla/5.0 (compatible; DDV-TV-Argentina-Grillas/216; +https://danieldelavega.com.ar)"
+USER_AGENT = "Mozilla/5.0 (compatible; DDV-TV-Argentina-Grillas/217; +https://danieldelavega.com.ar)"
 
 SPANISH_MONTHS = {
     "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
@@ -371,6 +371,32 @@ def make_hit(match: dict, *, title: str, channel: str, channel_number: str, when
     return rec
 
 
+
+def opaque_block_match(title: str, src: dict) -> Optional[dict]:
+    """Detecta bloques de programación que pueden contener películas DDV pero cuyo
+    proveedor no informa el título puntual. No se convierten en hit confirmado:
+    van a review para mail/diagnóstico.
+    """
+    blocks = src.get("opaque_program_blocks") or []
+    if not isinstance(blocks, list):
+        return None
+    tn = norm(clean_program_title(title))
+    rawn = norm(title)
+    for raw in blocks:
+        if isinstance(raw, str):
+            raw = {"title": raw}
+        if not isinstance(raw, dict):
+            continue
+        name = str(raw.get("title") or raw.get("name") or "").strip()
+        if not name:
+            continue
+        bn = norm(name)
+        if tn == bn or rawn == bn:
+            out = dict(raw)
+            out["title"] = name
+            return out
+    return None
+
 def parse_america_tvguide(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[dict], list[dict], int]:
     text = html_to_text(raw_html)
     lines = [compact_spaces(x) for x in text.splitlines() if compact_spaces(x)]
@@ -416,8 +442,29 @@ def parse_america_tvguide(src: dict, raw_html: str, aliases: list[dict]) -> Tupl
                 "work_slug": review_match.get("slug"),
                 "work_title": review_match.get("work_title"),
                 "reason": review_match.get("reason", "revisión"),
+                "alert_type": "textual_review",
+                "needs_manual_confirmation": True,
                 "detected_at": now_iso(),
             })
+        else:
+            block = opaque_block_match(title, src)
+            if block:
+                review.append({
+                    "source": src.get("provider", "AmericaTVGuide"),
+                    "source_url": src["url"],
+                    "channel": channel,
+                    "date_iso": current_date.isoformat(),
+                    "start_time": hhmm,
+                    "programme_title": title,
+                    "matched_term": block.get("title", title),
+                    "work_slug": "",
+                    "work_title": block.get("work_title", "Bloque de cine con título no informado"),
+                    "reason": block.get("reason", "La grilla informa un bloque de cine pero no identifica la película. Revisar fuente editorial / redes oficiales."),
+                    "alert_type": "opaque_program_block",
+                    "needs_manual_confirmation": True,
+                    "confidence": "unknown",
+                    "detected_at": now_iso(),
+                })
     return hits, review, parsed
 
 
@@ -498,8 +545,29 @@ def parse_telered(src: dict, raw_html: str, aliases: list[dict]) -> Tuple[list[d
                     "work_slug": review_match.get("slug"),
                     "work_title": review_match.get("work_title"),
                     "reason": review_match.get("reason", "revisión"),
+                    "alert_type": "textual_review",
+                    "needs_manual_confirmation": True,
                     "detected_at": now_iso(),
                 })
+            else:
+                block = opaque_block_match(title, src)
+                if block:
+                    review.append({
+                        "source": src.get("provider", "TeleRed / grilla de programación"),
+                        "source_url": src["url"],
+                        "channel": channel,
+                        "date_iso": today.isoformat(),
+                        "start_time": hhmm,
+                        "programme_title": title,
+                        "matched_term": block.get("title", title),
+                        "work_slug": "",
+                        "work_title": block.get("work_title", "Bloque de cine con título no informado"),
+                        "reason": block.get("reason", "La grilla informa un bloque de cine pero no identifica la película. Revisar fuente editorial / redes oficiales."),
+                        "alert_type": "opaque_program_block",
+                        "needs_manual_confirmation": True,
+                        "confidence": "unknown",
+                        "detected_at": now_iso(),
+                    })
     return hits, review, parsed
 
 
@@ -553,19 +621,20 @@ def merge_hits(existing_payload: dict, new_hits: list[dict], source_reports: lis
     hits = sorted(by_fp.values(), key=lambda r: (str(r.get("date_iso", "")), str(r.get("start_time", "")), str(r.get("channel", ""))), reverse=True)
     payload = {
         "ok": True,
-        "version": "v216-tv-argentina-scanner-estable",
+        "version": "v217-tv-argentina-bloques-opacos",
         "generated_at_utc": now_iso(),
-        "source": "DDV TV Argentina Grillas v216 + outputs previos",
+        "source": "DDV TV Argentina Grillas v217 + outputs previos",
         "hits_total": len(hits),
         "review_total": len(review_hits),
+        "opaque_blocks_total": sum(1 for x in review_hits if x.get("alert_type") == "opaque_program_block"),
         "hits": hits,
         "review_hits": review_hits,
         "source_reports": source_reports,
         "argentina_sources_ok": any(r.get("ok") for r in source_reports if r.get("primary")),
         "argentina_primary_sources_ok": any(r.get("ok") for r in source_reports if r.get("primary")),
-        "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. V216 usa fuentes principales vivas y registra fuentes secundarias caídas sin bloquear toda la corrida.",
+        "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. V217 usa fuentes principales vivas, registra fuentes secundarias caídas y además alerta bloques opacos de cine como Ficcionarte cuando la grilla no informa el título de la película.",
         "filtered_at": now_iso(),
-        "version_filter": "v216-tv-argentina-scanner-estable",
+        "version_filter": "v217-tv-argentina-bloques-opacos",
     }
     return payload
 
@@ -625,7 +694,7 @@ def main() -> int:
                 report.hits = len(hits)
                 report.review = len(review)
                 # Una fuente con mínimo de programas no puede figurar como OK si el parser no extrajo nada.
-                # En V216 esto queda registrado pero solo bloquea si no funciona ninguna fuente principal viva.
+                # En V217 esto queda registrado pero solo bloquea si no funciona ninguna fuente principal viva.
                 min_programmes = int(src.get("min_programmes", 0))
                 if min_programmes and parsed < min_programmes:
                     report.ok = False
@@ -650,15 +719,16 @@ def main() -> int:
     payload = merge_hits(existing, all_hits, reports, all_review[:200])
     write_json(SITE_TV_FILTERED, payload)
     write_json(SITE_TV_GLOBAL, payload)
-    write_json(SITE_TV_REVIEW, {"ok": True, "version": "v216-tv-argentina-review", "generated_at_utc": now_iso(), "review_total": len(all_review), "review_hits": all_review[:500], "source_reports": reports})
+    write_json(SITE_TV_REVIEW, {"ok": True, "version": "v217-tv-argentina-review", "generated_at_utc": now_iso(), "review_total": len(all_review), "review_hits": all_review[:500], "source_reports": reports})
     last = {
         "ok": True,
-        "version": "v216-tv-argentina-scanner-estable",
+        "version": "v217-tv-argentina-bloques-opacos",
         "ran_at_utc": now_iso(),
         "ran_at_local": NOW_LOCAL.replace(microsecond=0).isoformat(),
         "timezone": TZ_NAME,
         "new_hits_total": len(all_hits),
         "review_total": len(all_review),
+        "opaque_blocks_total": sum(1 for x in all_review if x.get("alert_type") == "opaque_program_block"),
         "sources_total": len(reports),
         "sources_ok": sum(1 for r in reports if r.get("ok")),
         "primary_sources_ok": [r for r in reports if r.get("primary") and r.get("ok")],
@@ -670,7 +740,7 @@ def main() -> int:
     }
     write_json(LAST_RUN, last)
 
-    # V216: no falla por fuentes secundarias caídas (TeleRed/Artear pueden bloquear GitHub o cambiar HTML).
+    # V217: no falla por fuentes secundarias caídas (TeleRed/Artear pueden bloquear GitHub o cambiar HTML).
     # Falla solo si ninguna fuente principal argentina viva logró parsear programación.
     primary_reports = [r for r in reports if r.get("primary")]
     primary_ok = [r for r in primary_reports if r.get("ok")]
@@ -691,7 +761,7 @@ def main() -> int:
         print("ADVERTENCIA: algunas fuentes secundarias fallaron, pero hay fuentes principales vivas funcionando:", file=sys.stderr)
         for r in non_blocking_failed[:12]:
             print(f" - {r.get('provider')} | {r.get('url')} | {r.get('error')}", file=sys.stderr)
-    print(json.dumps({"new_hits_total": len(all_hits), "review_total": len(all_review), "sources_ok": last["sources_ok"], "sources_total": last["sources_total"], "primary_sources_ok": len(primary_ok)}, ensure_ascii=False))
+    print(json.dumps({"new_hits_total": len(all_hits), "review_total": len(all_review), "opaque_blocks_total": last["opaque_blocks_total"], "sources_ok": last["sources_ok"], "sources_total": last["sources_total"], "primary_sources_ok": len(primary_ok)}, ensure_ascii=False))
     return 0
 
 
