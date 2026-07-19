@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DDV TV Argentina Grillas v214
+DDV TV Argentina Grillas v216
 
 Objetivo:
 - escanear grillas argentinas vivas, no cargar registros manuales;
@@ -46,7 +46,7 @@ TZ = ZoneInfo(TZ_NAME)
 NOW_LOCAL = datetime.now(TZ)
 NOW_UTC = datetime.now(timezone.utc)
 CURRENT_YEAR = NOW_LOCAL.year
-USER_AGENT = "Mozilla/5.0 (compatible; DDV-TV-Argentina-Grillas/213; +https://danieldelavega.com.ar)"
+USER_AGENT = "Mozilla/5.0 (compatible; DDV-TV-Argentina-Grillas/216; +https://danieldelavega.com.ar)"
 
 SPANISH_MONTHS = {
     "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
@@ -337,6 +337,9 @@ class SourceReport:
     review: int = 0
     error: str = ""
     scanned_at: str = ""
+    primary: bool = False
+    critical: bool = False
+    block_workflow_on_fail: bool = False
 
 
 def make_hit(match: dict, *, title: str, channel: str, channel_number: str, when: date, hhmm: str, source: str, source_url: str, detection_type: str) -> dict:
@@ -550,18 +553,19 @@ def merge_hits(existing_payload: dict, new_hits: list[dict], source_reports: lis
     hits = sorted(by_fp.values(), key=lambda r: (str(r.get("date_iso", "")), str(r.get("start_time", "")), str(r.get("channel", ""))), reverse=True)
     payload = {
         "ok": True,
-        "version": "v214-tv-argentina-parser-estricto",
+        "version": "v216-tv-argentina-scanner-estable",
         "generated_at_utc": now_iso(),
-        "source": "DDV TV Argentina Grillas v214 + outputs previos",
+        "source": "DDV TV Argentina Grillas v216 + outputs previos",
         "hits_total": len(hits),
         "review_total": len(review_hits),
         "hits": hits,
         "review_hits": review_hits,
         "source_reports": source_reports,
-        "argentina_sources_ok": all(r.get("ok") for r in source_reports if r.get("critical")),
-        "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. Si una fuente crítica falla, no debe mostrarse como ausencia confirmada.",
+        "argentina_sources_ok": any(r.get("ok") for r in source_reports if r.get("primary")),
+        "argentina_primary_sources_ok": any(r.get("ok") for r in source_reports if r.get("primary")),
+        "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. V216 usa fuentes principales vivas y registra fuentes secundarias caídas sin bloquear toda la corrida.",
         "filtered_at": now_iso(),
-        "version_filter": "v214-tv-argentina-parser-estricto",
+        "version_filter": "v216-tv-argentina-scanner-estable",
     }
     return payload
 
@@ -593,12 +597,17 @@ def main() -> int:
             urls = [src["url"]]
         for url in urls:
             report = SourceReport(id=src.get("id", url), ok=False, provider=src.get("provider", ""), url=url, channel=src.get("channel", ""), scanned_at=now_iso())
+            report.primary = bool(src.get("primary"))
+            report.critical = bool(src.get("critical"))
+            report.block_workflow_on_fail = bool(src.get("block_workflow_on_fail"))
             raw, err, size = http_text(url, timeout=int(src.get("timeout", 45)), retries=int(src.get("retries", 1)))
             report.bytes = size
             if raw is None:
                 report.error = err or "fetch error"
                 d = asdict(report)
                 d["critical"] = bool(src.get("critical"))
+                d["primary"] = bool(src.get("primary"))
+                d["block_workflow_on_fail"] = bool(src.get("block_workflow_on_fail"))
                 reports.append(d)
                 print(f"[fuente ERROR] {report.id}: {report.error}", file=sys.stderr)
                 continue
@@ -615,12 +624,12 @@ def main() -> int:
                 report.programmes_parsed = parsed
                 report.hits = len(hits)
                 report.review = len(review)
-                # Una fuente crítica con HTML descargado pero cero programas parseados NO es OK:
-                # eso fue exactamente el falso positivo de V213 con TeleRed.
-                min_programmes = int(src.get("min_programmes", 1 if src.get("critical") else 0))
-                if bool(src.get("critical")) and parsed < min_programmes:
+                # Una fuente con mínimo de programas no puede figurar como OK si el parser no extrajo nada.
+                # En V216 esto queda registrado pero solo bloquea si no funciona ninguna fuente principal viva.
+                min_programmes = int(src.get("min_programmes", 0))
+                if min_programmes and parsed < min_programmes:
                     report.ok = False
-                    report.error = f"fuente crítica descargada pero parser extrajo {parsed} programas; revisar parser o fuente"
+                    report.error = f"fuente descargada pero parser extrajo {parsed} programas; revisar parser o fuente"
                     print(f"[fuente ERROR] {report.id}: {report.error}", file=sys.stderr)
                 else:
                     report.ok = True
@@ -632,6 +641,8 @@ def main() -> int:
                 print(f"[fuente ERROR] {report.id}: {report.error}", file=sys.stderr)
             d = asdict(report)
             d["critical"] = bool(src.get("critical"))
+            d["primary"] = bool(src.get("primary"))
+            d["block_workflow_on_fail"] = bool(src.get("block_workflow_on_fail"))
             reports.append(d)
             time.sleep(float(src.get("delay_seconds", 0.2)))
 
@@ -639,10 +650,10 @@ def main() -> int:
     payload = merge_hits(existing, all_hits, reports, all_review[:200])
     write_json(SITE_TV_FILTERED, payload)
     write_json(SITE_TV_GLOBAL, payload)
-    write_json(SITE_TV_REVIEW, {"ok": True, "version": "v214-tv-argentina-review", "generated_at_utc": now_iso(), "review_total": len(all_review), "review_hits": all_review[:500], "source_reports": reports})
+    write_json(SITE_TV_REVIEW, {"ok": True, "version": "v216-tv-argentina-review", "generated_at_utc": now_iso(), "review_total": len(all_review), "review_hits": all_review[:500], "source_reports": reports})
     last = {
         "ok": True,
-        "version": "v214-tv-argentina-parser-estricto",
+        "version": "v216-tv-argentina-scanner-estable",
         "ran_at_utc": now_iso(),
         "ran_at_local": NOW_LOCAL.replace(microsecond=0).isoformat(),
         "timezone": TZ_NAME,
@@ -650,20 +661,37 @@ def main() -> int:
         "review_total": len(all_review),
         "sources_total": len(reports),
         "sources_ok": sum(1 for r in reports if r.get("ok")),
+        "primary_sources_ok": [r for r in reports if r.get("primary") and r.get("ok")],
+        "primary_sources_failed": [r for r in reports if r.get("primary") and not r.get("ok")],
         "critical_sources_failed": [r for r in reports if r.get("critical") and not r.get("ok")],
+        "non_blocking_sources_failed": [r for r in reports if (not r.get("ok")) and (not r.get("block_workflow_on_fail"))],
         "hits": all_hits,
         "source_reports": reports,
     }
     write_json(LAST_RUN, last)
 
-    # Si falla cualquier fuente crítica, el workflow debe fallar: mejor mail de error que falso silencio.
-    failed_critical = [r for r in reports if r.get("critical") and not r.get("ok")]
-    if failed_critical:
-        print("ERROR: una o más fuentes críticas argentinas fallaron. No se puede afirmar 'sin registros'.", file=sys.stderr)
-        for r in failed_critical[:12]:
+    # V216: no falla por fuentes secundarias caídas (TeleRed/Artear pueden bloquear GitHub o cambiar HTML).
+    # Falla solo si ninguna fuente principal argentina viva logró parsear programación.
+    primary_reports = [r for r in reports if r.get("primary")]
+    primary_ok = [r for r in primary_reports if r.get("ok")]
+    blocking_failed = [r for r in reports if r.get("block_workflow_on_fail") and not r.get("ok")]
+    if blocking_failed:
+        print("ERROR: una o más fuentes bloqueantes fallaron.", file=sys.stderr)
+        for r in blocking_failed[:12]:
             print(f" - {r.get('provider')} | {r.get('url')} | {r.get('error')}", file=sys.stderr)
         return 2
-    print(json.dumps({"new_hits_total": len(all_hits), "review_total": len(all_review), "sources_ok": last["sources_ok"], "sources_total": last["sources_total"]}, ensure_ascii=False))
+    if primary_reports and not primary_ok:
+        print("ERROR: ninguna fuente principal argentina logró parsear programación. No se puede afirmar 'sin registros'.", file=sys.stderr)
+        for r in primary_reports[:12]:
+            print(f" - {r.get('provider')} | {r.get('url')} | ok={r.get('ok')} | {r.get('error')}", file=sys.stderr)
+        return 2
+
+    non_blocking_failed = [r for r in reports if (not r.get("ok")) and (not r.get("block_workflow_on_fail"))]
+    if non_blocking_failed:
+        print("ADVERTENCIA: algunas fuentes secundarias fallaron, pero hay fuentes principales vivas funcionando:", file=sys.stderr)
+        for r in non_blocking_failed[:12]:
+            print(f" - {r.get('provider')} | {r.get('url')} | {r.get('error')}", file=sys.stderr)
+    print(json.dumps({"new_hits_total": len(all_hits), "review_total": len(all_review), "sources_ok": last["sources_ok"], "sources_total": last["sources_total"], "primary_sources_ok": len(primary_ok)}, ensure_ascii=False))
     return 0
 
 
