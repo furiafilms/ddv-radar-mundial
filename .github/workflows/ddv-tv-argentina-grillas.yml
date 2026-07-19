@@ -33,6 +33,7 @@ jobs:
           DDV_TV_ALERT_LOOKAHEAD_HOURS: '168'
           DDV_TV_ALERT_PAST_GRACE_MINUTES: '30'
           DDV_TV_ALERT_FORCE_TEST: '0'
+          DDV_TV_ALERT_INCLUDE_REVIEW: '1'
         run: python scripts/ddv_tv_alertas_diarias.py
 
       - name: Guardar outputs y estado
@@ -58,7 +59,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sin cambios de grillas argentinas para commitear."
           else
-            git commit -m "Actualizar radar TV Argentina grillas activas v216"
+            git commit -m "Actualizar radar TV Argentina grillas activas v217"
             git push origin HEAD:main
           fi
 
@@ -66,7 +67,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ddv-tv-argentina-grillas-v216
+          name: ddv-tv-argentina-grillas-v217
           path: |
             outputs/tv_argentina_grillas_last_run.json
             outputs/site_tv_cable_global_filtered.json
