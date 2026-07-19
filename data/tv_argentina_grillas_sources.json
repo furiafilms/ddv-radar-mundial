@@ -1,6 +1,6 @@
 {
-  "version": "v216-tv-argentina-scanner-estable",
-  "note": "Fuentes vivas para TV/Cable Argentina. V216 usa fuentes principales AmericaTVGuide y deja TeleRed/Artear como secundarias no bloqueantes; falla solo si ninguna fuente principal argentina parsea programación.",
+  "version": "v217-tv-argentina-bloques-opacos",
+  "note": "Fuentes vivas para TV/Cable Argentina. V217 mantiene AmericaTVGuide como fuente principal y agrega alertas de bloques opacos de cine (Ficcionarte / Ciclo Cine Canal á) cuando la grilla no informa el título puntual de la película.",
   "sources": [
     {
       "id": "telered_buscador_grilla",
@@ -19,7 +19,24 @@
       ],
       "min_programmes": 50,
       "primary": false,
-      "block_workflow_on_fail": false
+      "block_workflow_on_fail": false,
+      "opaque_program_blocks": [
+        {
+          "title": "Ficcionarte",
+          "work_title": "Bloque FiccionArte / Canal á",
+          "reason": "La grilla informa Ficcionarte pero no identifica la película. Puede corresponder a una emisión DDV anunciada por DAC/Canal á; requiere revisar fuente editorial."
+        },
+        {
+          "title": "Ciclo Cine Canal (á)",
+          "work_title": "Ciclo Cine Canal á",
+          "reason": "La grilla informa Ciclo Cine Canal (á) pero no identifica la película. Requiere revisar fuente editorial."
+        },
+        {
+          "title": "Ciclo Cine Canal á",
+          "work_title": "Ciclo Cine Canal á",
+          "reason": "La grilla informa Ciclo Cine Canal á pero no identifica la película. Requiere revisar fuente editorial."
+        }
+      ]
     },
     {
       "id": "america_tvguide_cinear",
@@ -49,7 +66,24 @@
       "retries": 1,
       "min_programmes": 10,
       "primary": true,
-      "block_workflow_on_fail": false
+      "block_workflow_on_fail": false,
+      "opaque_program_blocks": [
+        {
+          "title": "Ficcionarte",
+          "work_title": "Bloque FiccionArte / Canal á",
+          "reason": "La grilla informa Ficcionarte pero no identifica la película. Puede corresponder a una emisión DDV anunciada por DAC/Canal á; requiere revisar fuente editorial."
+        },
+        {
+          "title": "Ciclo Cine Canal (á)",
+          "work_title": "Ciclo Cine Canal á",
+          "reason": "La grilla informa Ciclo Cine Canal (á) pero no identifica la película. Requiere revisar fuente editorial."
+        },
+        {
+          "title": "Ciclo Cine Canal á",
+          "work_title": "Ciclo Cine Canal á",
+          "reason": "La grilla informa Ciclo Cine Canal á pero no identifica la película. Requiere revisar fuente editorial."
+        }
+      ]
     },
     {
       "id": "america_tvguide_volver",
@@ -82,7 +116,24 @@
       "min_programmes": 1,
       "fallback_url_template": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-{year}-{week:02d}-01.html",
       "primary": false,
-      "block_workflow_on_fail": false
+      "block_workflow_on_fail": false,
+      "opaque_program_blocks": [
+        {
+          "title": "Ficcionarte",
+          "work_title": "Bloque FiccionArte / Canal á",
+          "reason": "La grilla informa Ficcionarte pero no identifica la película. Puede corresponder a una emisión DDV anunciada por DAC/Canal á; requiere revisar fuente editorial."
+        },
+        {
+          "title": "Ciclo Cine Canal (á)",
+          "work_title": "Ciclo Cine Canal á",
+          "reason": "La grilla informa Ciclo Cine Canal (á) pero no identifica la película. Requiere revisar fuente editorial."
+        },
+        {
+          "title": "Ciclo Cine Canal á",
+          "work_title": "Ciclo Cine Canal á",
+          "reason": "La grilla informa Ciclo Cine Canal á pero no identifica la película. Requiere revisar fuente editorial."
+        }
+      ]
     }
   ]
 }
