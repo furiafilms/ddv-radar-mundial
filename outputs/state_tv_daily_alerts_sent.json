@@ -1,21 +1,10 @@
 {
-  "sent": {
-    "acb7dc63fcf991113c6afb5119fcc113fef84212": {
-      "event": {
-        "channel": "Canal á",
-        "country": "AR",
-        "date": "2026-06-16",
-        "input_file": "outputs/site_tv_cable_global_filtered.json",
-        "key": "acb7dc63fcf991113c6afb5119fcc113fef84212",
-        "movie": "Hermanos de Sangre",
-        "raw_title": "Hermanos de Sangre",
-        "source": "Artear / grilla comercial Canal A",
-        "time": "04:00",
-        "url": "https://appsprepo.canal13.artear.com.ar/progytarifas/caa/tarifas/CAA-COM-2026-25-01.html"
-      },
-      "issue_created": true,
-      "mail_sent": false,
-      "sent_at": "2026-06-15T21:10:21.740865-03:00"
-    }
-  }
+  "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
+  "updated_at": "2026-07-18T21:51:35.438589-03:00",
+  "sent_keys": [
+    "opaque_program_block|bloque ficcionarte / canal á|bloque ficcionarte / canal á|canal á|2026-07-19T22:00|ficcionarte",
+    "opaque_program_block|ciclo cine canal á|ciclo cine canal á|canal á|2026-07-18T22:00|ciclo cine canal (á), 2017",
+    "opaque_program_block|ciclo cine canal á|ciclo cine canal á|canal á|2026-07-19T01:00|ciclo cine canal (á), 2017",
+    "opaque_program_block|ciclo cine canal á|ciclo cine canal á|canal á|2026-07-19T04:00|ciclo cine canal (á), 2017"
+  ]
 }
