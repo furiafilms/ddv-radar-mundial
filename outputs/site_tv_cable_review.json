@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "v214-tv-argentina-review",
-  "generated_at_utc": "2026-07-18T19:33:27Z",
+  "generated_at_utc": "2026-07-19T00:07:37Z",
   "review_total": 0,
   "review_hits": [],
   "source_reports": [
@@ -11,12 +11,12 @@
       "provider": "TeleRed / grilla de programación",
       "url": "https://www.telered.com.ar/buscador-grilla",
       "channel": "",
-      "bytes": 767916,
+      "bytes": 775646,
       "programmes_parsed": 0,
       "hits": 0,
       "review": 0,
       "error": "fuente crítica descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -30,7 +30,7 @@
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -44,7 +44,7 @@
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -53,12 +53,12 @@
       "provider": "AmericaTVGuide / Canal Volver",
       "url": "https://americatvguide.com/es/ar/channel/canal_volver",
       "channel": "VOLVER",
-      "bytes": 43647,
+      "bytes": 43646,
       "programmes_parsed": 37,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": false
     },
     {
@@ -72,7 +72,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -86,7 +86,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -100,7 +100,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -114,7 +114,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -128,7 +128,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -142,7 +142,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -156,7 +156,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -170,7 +170,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -184,7 +184,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -198,7 +198,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -212,7 +212,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -226,7 +226,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -240,7 +240,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -254,7 +254,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -268,7 +268,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -282,7 +282,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -296,7 +296,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -310,7 +310,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -324,7 +324,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     },
     {
@@ -338,7 +338,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-18T19:33:27Z",
+      "scanned_at": "2026-07-19T00:07:37Z",
       "critical": true
     }
   ]
