@@ -13,6 +13,7 @@ permissions:
 jobs:
   prensa-monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     env:
       DDV_PRENSA_CRON_URL: ${{ secrets.DDV_PRENSA_CRON_URL }}
@@ -41,9 +42,37 @@ jobs:
         shell: bash
         run: |
           echo "Llamando al monitor de prensa..."
-          HTTP_CODE=$(curl -L -sS --max-time 300 -o prensa-monitor-response.json -w "%{http_code}" "$DDV_PRENSA_CRON_URL")
+
+          # El monitor semanal puede superar los cinco minutos. Se conserva un
+          # límite de 15 minutos para evitar procesos indefinidos, sin reintentos
+          # automáticos porque el endpoint envía correo y modifica datos.
+          set +e
+          HTTP_CODE=$(curl -L -sS \
+            --connect-timeout 30 \
+            --max-time 900 \
+            -o prensa-monitor-response.json \
+            -w "%{http_code}" \
+            "$DDV_PRENSA_CRON_URL")
+          CURL_EXIT=$?
+          set -e
+
           echo "HTTP_CODE=$HTTP_CODE" >> "$GITHUB_ENV"
-          echo "Respuesta HTTP: $HTTP_CODE"
+          echo "CURL_EXIT=$CURL_EXIT" >> "$GITHUB_ENV"
+          echo "Respuesta HTTP: ${HTTP_CODE:-sin código}"
+          echo "Código de salida de curl: $CURL_EXIT"
+
+          if [ "$CURL_EXIT" -ne 0 ]; then
+            {
+              echo "# DDV Monitor de prensa semanal"
+              echo
+              echo "- curl_exit: \`$CURL_EXIT\`"
+              echo "- http_code: \`${HTTP_CODE:-sin código}\`"
+              echo "- resultado: \`falló la espera de GitHub antes de validar el JSON\`"
+            } > prensa-monitor-summary.md
+
+            echo "::error::La llamada al monitor terminó con curl exit $CURL_EXIT"
+            exit "$CURL_EXIT"
+          fi
 
           if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
             echo "::error::El monitor respondió HTTP $HTTP_CODE"
@@ -52,14 +81,15 @@ jobs:
           fi
 
           python - <<'PY'
-          import json, sys
+          import json
+          import sys
 
           path = "prensa-monitor-response.json"
-
           try:
-              data = json.load(open(path, "r", encoding="utf-8"))
-          except Exception as e:
-              print(f"::error::La respuesta no es JSON válido: {e}")
+              with open(path, "r", encoding="utf-8") as fh:
+                  data = json.load(fh)
+          except Exception as exc:
+              print(f"::error::La respuesta no es JSON válido: {exc}")
               sys.exit(1)
 
           ok = data.get("ok")
@@ -71,15 +101,15 @@ jobs:
           steps = totals.get("steps", 0)
           complete = data.get("complete")
 
-          with open("prensa-monitor-summary.md", "w", encoding="utf-8") as f:
-              f.write("# DDV Monitor de prensa semanal\n\n")
-              f.write(f"- ok: `{ok}`\n")
-              f.write(f"- mail_sent: `{mail_sent}`\n")
-              f.write(f"- added: `{added}`\n")
-              f.write(f"- possible: `{possible}`\n")
-              f.write(f"- errors: `{errors}`\n")
-              f.write(f"- steps: `{steps}`\n")
-              f.write(f"- complete: `{complete}`\n")
+          with open("prensa-monitor-summary.md", "w", encoding="utf-8") as fh:
+              fh.write("# DDV Monitor de prensa semanal\n\n")
+              fh.write(f"- ok: `{ok}`\n")
+              fh.write(f"- mail_sent: `{mail_sent}`\n")
+              fh.write(f"- added: `{added}`\n")
+              fh.write(f"- possible: `{possible}`\n")
+              fh.write(f"- errors: `{errors}`\n")
+              fh.write(f"- steps: `{steps}`\n")
+              fh.write(f"- complete: `{complete}`\n")
 
           print(f"ok={ok}")
           print(f"mail_sent={mail_sent}")
@@ -92,16 +122,17 @@ jobs:
           if ok is not True:
               print("::error::El monitor devolvió ok != true")
               sys.exit(1)
-
           if mail_sent is not True:
               print("::error::El monitor corrió pero mail_sent no es true")
               sys.exit(1)
           PY
 
       - name: Guardar respuesta como artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ddv-prensa-monitor-response
+          if-no-files-found: warn
           path: |
             prensa-monitor-response.json
             prensa-monitor-summary.md
