@@ -1,14 +1,14 @@
 {
   "ok": true,
   "version": "v217-tv-argentina-bloques-opacos",
-  "ran_at_utc": "2026-07-23T16:43:58Z",
-  "ran_at_local": "2026-07-23T13:43:58-03:00",
+  "ran_at_utc": "2026-07-23T20:18:57Z",
+  "ran_at_local": "2026-07-23T17:18:57-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
   "new_hits_total": 0,
-  "review_total": 0,
-  "opaque_blocks_total": 0,
+  "review_total": 2,
+  "opaque_blocks_total": 2,
   "sources_total": 24,
-  "sources_ok": 2,
+  "sources_ok": 3,
   "primary_sources_ok": [
     {
       "id": "america_tvguide_cinear",
@@ -16,12 +16,28 @@
       "provider": "AmericaTVGuide / CINE.AR",
       "url": "https://americatvguide.com/es/ar/channel/cine_ar",
       "channel": "CINE.AR",
-      "bytes": 37011,
+      "bytes": 37404,
       "programmes_parsed": 26,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
+      "primary": true,
+      "critical": false,
+      "block_workflow_on_fail": false
+    },
+    {
+      "id": "america_tvguide_canala",
+      "ok": true,
+      "provider": "AmericaTVGuide / Canal á",
+      "url": "https://americatvguide.com/es/ar/channel/canal_a",
+      "channel": "Canal á",
+      "bytes": 58072,
+      "programmes_parsed": 83,
+      "hits": 0,
+      "review": 2,
+      "error": "",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
@@ -32,35 +48,18 @@
       "provider": "AmericaTVGuide / Canal Volver",
       "url": "https://americatvguide.com/es/ar/channel/canal_volver",
       "channel": "VOLVER",
-      "bytes": 44237,
+      "bytes": 44543,
       "programmes_parsed": 43,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
     }
   ],
-  "primary_sources_failed": [
-    {
-      "id": "america_tvguide_canala",
-      "ok": false,
-      "provider": "AmericaTVGuide / Canal á",
-      "url": "https://americatvguide.com/es/ar/channel/canal_a",
-      "channel": "Canal á",
-      "bytes": 28512,
-      "programmes_parsed": 0,
-      "hits": 0,
-      "review": 0,
-      "error": "fuente descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-07-23T16:43:58Z",
-      "primary": true,
-      "critical": false,
-      "block_workflow_on_fail": false
-    }
-  ],
+  "primary_sources_failed": [],
   "critical_sources_failed": [],
   "non_blocking_sources_failed": [
     {
@@ -69,29 +68,13 @@
       "provider": "TeleRed / grilla de programación",
       "url": "https://www.telered.com.ar/buscador-grilla",
       "channel": "",
-      "bytes": 780684,
+      "bytes": 797903,
       "programmes_parsed": 0,
       "hits": 0,
       "review": 0,
       "error": "fuente descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
-      "critical": false,
-      "block_workflow_on_fail": false
-    },
-    {
-      "id": "america_tvguide_canala",
-      "ok": false,
-      "provider": "AmericaTVGuide / Canal á",
-      "url": "https://americatvguide.com/es/ar/channel/canal_a",
-      "channel": "Canal á",
-      "bytes": 28512,
-      "programmes_parsed": 0,
-      "hits": 0,
-      "review": 0,
-      "error": "fuente descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-07-23T16:43:58Z",
-      "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
     },
@@ -106,7 +89,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -122,7 +105,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -138,7 +121,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -154,7 +137,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -170,7 +153,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -186,7 +169,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -202,7 +185,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -218,7 +201,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -234,7 +217,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -250,7 +233,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -266,7 +249,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -282,7 +265,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -298,7 +281,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -314,7 +297,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -330,7 +313,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -346,7 +329,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -362,7 +345,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -378,7 +361,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -394,7 +377,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -410,7 +393,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -424,12 +407,12 @@
       "provider": "TeleRed / grilla de programación",
       "url": "https://www.telered.com.ar/buscador-grilla",
       "channel": "",
-      "bytes": 780684,
+      "bytes": 797903,
       "programmes_parsed": 0,
       "hits": 0,
       "review": 0,
       "error": "fuente descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -440,28 +423,28 @@
       "provider": "AmericaTVGuide / CINE.AR",
       "url": "https://americatvguide.com/es/ar/channel/cine_ar",
       "channel": "CINE.AR",
-      "bytes": 37011,
+      "bytes": 37404,
       "programmes_parsed": 26,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
     },
     {
       "id": "america_tvguide_canala",
-      "ok": false,
+      "ok": true,
       "provider": "AmericaTVGuide / Canal á",
       "url": "https://americatvguide.com/es/ar/channel/canal_a",
       "channel": "Canal á",
-      "bytes": 28512,
-      "programmes_parsed": 0,
+      "bytes": 58072,
+      "programmes_parsed": 83,
       "hits": 0,
-      "review": 0,
-      "error": "fuente descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "review": 2,
+      "error": "",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
@@ -472,12 +455,12 @@
       "provider": "AmericaTVGuide / Canal Volver",
       "url": "https://americatvguide.com/es/ar/channel/canal_volver",
       "channel": "VOLVER",
-      "bytes": 44237,
+      "bytes": 44543,
       "programmes_parsed": 43,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
@@ -493,7 +476,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -509,7 +492,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -525,7 +508,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -541,7 +524,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -557,7 +540,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -573,7 +556,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -589,7 +572,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -605,7 +588,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -621,7 +604,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -637,7 +620,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -653,7 +636,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -669,7 +652,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -685,7 +668,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -701,7 +684,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -717,7 +700,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -733,7 +716,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -749,7 +732,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -765,7 +748,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -781,7 +764,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -797,7 +780,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-07-23T16:43:58Z",
+      "scanned_at": "2026-07-23T20:18:57Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
