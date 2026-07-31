@@ -1,0 +1,2610 @@
+{
+  "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
+  "ran_at": "2026-07-31T13:04:27.747380+00:00",
+  "changes_detected": true,
+  "mail_sent": true,
+  "future_count": 1,
+  "historic_count": 2,
+  "platform_added_count": 0,
+  "platform_removed_count": 0,
+  "platform_change_count": 0,
+  "platform_added_sample": [],
+  "platform_removed_sample": [],
+  "platform_meta": {
+    "source": "TMDb Watch Providers + Watchmode",
+    "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
+    "generated_at": "2026-07-31T13:04:02Z",
+    "items_count": 283,
+    "titles_with_current": 10,
+    "titles_without_current": 3,
+    "platform_mail_state_loaded": false,
+    "platform_mail_state_bootstrap": true,
+    "platform_mail_state_previous_count": 0,
+    "platform_mail_state_current_count": 283
+  },
+  "platform_mail_state_bootstrap": true,
+  "platform_mail_state": {
+    "version": "DDV_PLATFORM_MAIL_SEEN_V1",
+    "updated_at_utc": "2026-07-31T13:04:27.751599+00:00",
+    "items": {
+      "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
+        "title": "El Martillo",
+        "provider": "CINE",
+        "region": "AR",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1207904-el-martillo-cronica-de-un-mito/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-martillo"
+      },
+      "de6639d894a353d8c4c50f9a8db3783abfb77b83": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "AR",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "47a07f56bc025d474f391c1c096977a413ecb6fc": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "AR",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "865ac20a5905d4ca1db28eda50f81ecf718e5cca": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "AR",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "bea02c09db9c519592fd607a2895ebf0cb453e70": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "AR",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "edc5a8c58ce85497483f3569388292e3fd8823f7": {
+        "title": "La Última Cena",
+        "provider": "CINE",
+        "region": "AR",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/642397-la-ultima-cena/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=la-ultima-cena"
+      },
+      "64f4b2799b17e4968f84ccbd313e8e0a037de3c6": {
+        "title": "Soy Tóxico",
+        "provider": "CINE",
+        "region": "AR",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a4b2c204f40d620e0cac0c4643527fd22662feed": {
+        "title": "Sueño Profundo",
+        "provider": "CINE",
+        "region": "AR",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1301090-sueno-profundo/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=sueno-profundo"
+      },
+      "e3fe48268f8127fb0fd666315b53f0d506d6684f": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "CL",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "d5620105a52d8ea94139be2de7b6a927f5d069ea": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "CL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "76de0b791fd7ee9bf2d984669d8d09669d0136bf": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "CL",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "350935cc00ccf1697126cc551d35a3399650b830": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "CL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "78bcdc35319ee0ad5158283e5325cbe02bac9a30": {
+        "title": "El Último Hereje",
+        "provider": "Booh Amazon Channel",
+        "region": "CL",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "8bb29b956ab7f83550b24574c4c6c75c3f8cbad6": {
+        "title": "Soy Tóxico",
+        "provider": "Cindie Amazon Channel",
+        "region": "CL",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "e0f7dd794c8e722eba5b48ac0f92b0d6aa033c3a": {
+        "title": "Soy Tóxico",
+        "provider": "MovistarTV",
+        "region": "CL",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "8e6708cb27f9e1bf2bb18fb076f93b1549111458": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "MX",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "efa8af73dad8a2bce5f0e0a4080493542ae1e998": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "MX",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "faa2ad26cfb74bfe563a89d128f904d9748b173c": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "MX",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "fdb7118f3c224e173dfddbf36068c48df57a8279": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "MX",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "b6250a67ab872c80a2f491c8134dcffd55186696": {
+        "title": "El Último Hereje",
+        "provider": "Booh Amazon Channel",
+        "region": "MX",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=MX",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "b8f3b3ae4283602769c6c256f188f68510730a26": {
+        "title": "Soy Tóxico",
+        "provider": "Cindie Amazon Channel",
+        "region": "MX",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MX",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "5856dca92ffa5855c343f1a01d52e7ec243ecfa0": {
+        "title": "Al 3er Día",
+        "provider": "Amazon",
+        "region": "US",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "126c25fdc2c54be8e68eae9da43244360a8dc6e3": {
+        "title": "Al 3er Día",
+        "provider": "Amazon",
+        "region": "US",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "a7d1bba45bd90702965888bb444cec358fc6f3bd": {
+        "title": "Al 3er Día",
+        "provider": "AppleTV",
+        "region": "US",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "1d8f880f92f08ca0054bbd885e5af5118abc168b": {
+        "title": "Al 3er Día",
+        "provider": "AppleTV",
+        "region": "US",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "10a99489990d66e8663d025ec38780a3272ddf1f": {
+        "title": "Al 3er Día",
+        "provider": "Plex",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://watch.plex.tv/movie/on-the-3rd-day-2021",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "794372951312d959a55addbf037f6bf1a753dfae": {
+        "title": "Al 3er Día",
+        "provider": "Prime Video",
+        "region": "US",
+        "type": "suscripción",
+        "source": "Watchmode",
+        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "a5623bf837ca2bd8d310bdd2b43955e5fa7e8908": {
+        "title": "Al 3er Día",
+        "provider": "Shout! Factory TV",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://watch.shout-tv.com/video/814759",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "8dfbbeda45a97d44f081baf002d2707981f829cf": {
+        "title": "Al 3er Día",
+        "provider": "Shout! Factory TV (Via Amazon Prime",
+        "region": "US",
+        "type": "suscripción",
+        "source": "Watchmode",
+        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "a658506381933543c1bb6e9cbeda883c217d1a9c": {
+        "title": "Al 3er Día",
+        "provider": "The Roku Channel",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://therokuchannel.roku.com/watch/f4a8b2fd5a595412a7fbb659d4c59cca?source=google",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+      },
+      "cd86d951bf8f7b2f4e530a1218a6fe8afb8329fd": {
+        "title": "Ataúd Blanco",
+        "provider": "YOW.tv",
+        "region": "US",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "455e39426cb1e0cb6ec483e3604b2364f8e12c27": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "bf7ef1a246c0dc2ff578bcf2044654141ed3442f": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "f6e82fa2e4fc2c816f4a594486f2614e33af5e93": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "e212f3457ace826cbb5315b8a9f16ff3098da35f": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "f72605b5e1b591dea2646018674900fb0d09c850": {
+        "title": "Los Ojos del Abismo",
+        "provider": "AppleTV",
+        "region": "US",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "cbda130da7e99d7c546e20c38aa3ca7e3d7afe3d": {
+        "title": "Los Ojos del Abismo",
+        "provider": "AppleTV",
+        "region": "US",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "a072f4a096225f25141fff56e9e64bf6e7f0f3e7": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Fandango At Home",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "3d71056760060a8b2c7e7e5fb540eeacd30a3ea8": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Fandango At Home",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "ad1fe38fe6bfe28847e86e145cf2f454711ccf5d": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Google Play Movies",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "d86b831051f62e7447f3b464d659026cb7bc6825": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Google Play Movies",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "b8ff0355dc9591b189a2c7f6f3be5914feb02e37": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Tubi TV",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://tubitv.com/movies/100055192",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "cf712cc275e287548497f4db9d6ff092174eaf7c": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Tubi TV",
+        "region": "US",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "695d5e690aa5d32b3f80b001b8e1e3a26b590ea1": {
+        "title": "Los Ojos del Abismo",
+        "provider": "YouTube",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "97ff90aa448e44f7bdfe8acafc799e10eb1761bd": {
+        "title": "Los Ojos del Abismo",
+        "provider": "YouTube",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "9d80b89a5b5f88e26c26ebdc1b1dedf70cf74ef2": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon",
+        "region": "US",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://watch.amazon.com/detail?gti=amzn1.dv.gti.12ba2346-3801-7670-3072-972e1817b581",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7239f572b31b80ae376ee98e266a98a6b8a38d16": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon",
+        "region": "US",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://watch.amazon.com/detail?gti=amzn1.dv.gti.12ba2346-3801-7670-3072-972e1817b581",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3c0a9b664b3f3c86322b87c0b4022f751f7d6564": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Freevee",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://watch.amazon.com/detail?gti=amzn1.dv.gti.12ba2346-3801-7670-3072-972e1817b581",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "611095613cd2f30186c595dc428c5a2e6c6410be": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "US",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7e59e0ef9e75d5e3e83a1316709e6adc4d1f38ef": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video Free with Ads",
+        "region": "US",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "9029c095159a3cb398b829faa7ad7bbfc4a10fc7": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "US",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "eea9cd8b476b04713df07f09ff64ec094519659b": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "9d956c48f2bc49231124cfab014d37123370b168": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "4af234fe745875dda9946e47522504e54a5ea029": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "2a18a038e36a680623bbef25447023fa4d345c51": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "8412700fc3ee1bb43ba8ac725651ae1e2e957f9f": {
+        "title": "Soy Tóxico",
+        "provider": "AppleTV",
+        "region": "US",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/us/movie/i-am-toxic/umc.cmc.4qv7dcl51cidmzsneoxl1pkth?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1534113454",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "81095a7c78eb394882170fd91680c7a31636ea09": {
+        "title": "Soy Tóxico",
+        "provider": "AppleTV",
+        "region": "US",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/us/movie/i-am-toxic/umc.cmc.4qv7dcl51cidmzsneoxl1pkth?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1534113454",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "252aa2012b27f07a7b1f4b8f5b258c210e8a1210": {
+        "title": "Soy Tóxico",
+        "provider": "Fandango At Home",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "8e75755b597887c0116c486d42a985d57a32f1a3": {
+        "title": "Soy Tóxico",
+        "provider": "Fandango At Home",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f8e1212bac5d23636f28655dc7ad77d70f23e723": {
+        "title": "Soy Tóxico",
+        "provider": "Fandango at Home Free",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://athome.fandango.com/content/browse/details/I-Am-Toxic/1514727",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "82f4d04a0632fb0bb2240b64058d4883601b307c": {
+        "title": "Soy Tóxico",
+        "provider": "Fandango at Home Free",
+        "region": "US",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3f915052ac1b6b08e05736dfeeb4e2e0c3a18516": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3865a4197c698a9f151cd1a52f547b2b8a223080": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "6b2b9f737f7f0c7aa3509993a3f9b272d19cb3d8": {
+        "title": "Soy Tóxico",
+        "provider": "Plex",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://watch.plex.tv/movie/i-am-toxic?autoplay=1",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "4ce98ebf92ecc2a88cd4014fc06c9793517876aa": {
+        "title": "Soy Tóxico",
+        "provider": "Plex",
+        "region": "US",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "e15674ffaba12ec3169069983bda1773e7035c61": {
+        "title": "Soy Tóxico",
+        "provider": "Pluto TV",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://pluto.tv/on-demand/movies/i-am-toxic-las-es-2020-1-1",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "baeea4390216c9db22fb599c03b22bab79152d9b": {
+        "title": "Soy Tóxico",
+        "provider": "Pluto TV",
+        "region": "US",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "138b56da1b841bfe5b910cb7c9a2a826272c844d": {
+        "title": "Soy Tóxico",
+        "provider": "Prime Video",
+        "region": "US",
+        "type": "suscripción",
+        "source": "Watchmode",
+        "url": "https://watch.amazon.com/detail?gti=amzn1.dv.gti.12ba2346-3801-7670-3072-972e1817b581",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "16ec22f70565fc7b53e7c376efe499efc206eeab": {
+        "title": "Soy Tóxico",
+        "provider": "Tubi TV",
+        "region": "US",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://tubitv.com/movies/582031",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "5a654714ec2f17036eeb22fafbf3141718251d2a": {
+        "title": "Soy Tóxico",
+        "provider": "Tubi TV",
+        "region": "US",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "209488a2d1ad7eae5f0ff4c9d546c9f15a7f8392": {
+        "title": "Soy Tóxico",
+        "provider": "YouTube",
+        "region": "US",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "afd17fc7ff8f71cadd3e352e3452f2edf6bfe93e": {
+        "title": "Soy Tóxico",
+        "provider": "YouTube",
+        "region": "US",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3be2c16480a3ac8e733f7be8201ec3eb782a3e45": {
+        "title": "El Último Hereje",
+        "provider": "AMC Plus Apple TV Channel",
+        "region": "ES",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "2b4229a7a1f34be588665f2c203c7ef682a3b1cc": {
+        "title": "El Último Hereje",
+        "provider": "AMC+ Amazon Channel",
+        "region": "ES",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "fe7ae1b8201149715ada769c13d009ccad7ad08c": {
+        "title": "El Último Hereje",
+        "provider": "Planet Horror Amazon Channel",
+        "region": "ES",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "6b9becf79d134aa107952ce3b7939d1217a0a784": {
+        "title": "El Último Hereje",
+        "provider": "Rakuten TV",
+        "region": "ES",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "0a2638cd8f86a8acd4f2c5a0013b5f82f962df78": {
+        "title": "El Último Hereje",
+        "provider": "Tivify",
+        "region": "ES",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "c1a93f7ac581cf11e36ae79f134b2d68a34aa914": {
+        "title": "Los Ojos del Abismo",
+        "provider": "AMC Plus Apple TV Channel",
+        "region": "ES",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "3d78a26c01eb936c10e777e44525b3b16734e071": {
+        "title": "Los Ojos del Abismo",
+        "provider": "AMC+ Amazon Channel",
+        "region": "ES",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "87263a5465d6ae2dd27f55c8e5817887cc02a395": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Planet Horror Amazon Channel",
+        "region": "ES",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "58abafa03a653c736a40dcf813c851ae9734e81a": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Tivify",
+        "region": "ES",
+        "type": "gratis",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "c44b7b68f8607c51dc283829ba591c48713b1e4c": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "BR",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "834233ecdff1d85b67b392fa6b4bc8edf4a95c55": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "BR",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "fb80c0f30db4fdd0e529df7b560e4628c3634eb5": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "BR",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "a2c80ed63b03bcf7a54b16136f6165ef8920d75f": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "BR",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "a80a1b73f4a12bf0d9046bded4f140e8ced1130c": {
+        "title": "El Último Hereje",
+        "provider": "Booh Amazon Channel",
+        "region": "BR",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "cdcc94ddca4d6e9b9344769b47e522efb92d8e31": {
+        "title": "El Último Hereje",
+        "provider": "Looke",
+        "region": "BR",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "a9428a1452b4602e06beab027e1205823f8c4e3b": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "CO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "6ce5f15c19a3eb0b0ba9c866ae62dcb06214b9c3": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Video",
+        "region": "CO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "d6b004903691c5bbd32499c31843187188587bec": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "CO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "a823ea37cb88f476ad384d59a9e92c721101da93": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "CO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "4482e707f96e447c6af07edb6d8d857731449e08": {
+        "title": "El Último Hereje",
+        "provider": "Booh Amazon Channel",
+        "region": "CO",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "7cb9d0ed92b75b7e68cf270a68981eccec71406e": {
+        "title": "Soy Tóxico",
+        "provider": "Cindie Amazon Channel",
+        "region": "CO",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "07434aa87f2a68b51bada5c9ca0034f58f3e1ac9": {
+        "title": "Soy Tóxico",
+        "provider": "MovistarTV",
+        "region": "CO",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7c49a9774af38f48ba6814df62fa54b176e31003": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "PE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "0be44543137f17693d0b2e05a1c83e917170d047": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "PE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "c4438950f178d39035ac1820361864583c2d59ad": {
+        "title": "Soy Tóxico",
+        "provider": "MovistarTV",
+        "region": "PE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=PE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "9bfa5a769fc58e44ddaeb30c31505b55a9a0c96b": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Amazon Video",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "78c2a29a44059059a3989233db8a6c87d5a045e7": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "962d59370868ccf5d64110fbbe5b19d1aea40a64": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "GB",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "9ce3e20eeec875c0f729c3d7c4eb88ec15f4b1f0": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "d05f6ec923b07d8fab997556bc16db69bdf9180f": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "GB",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "aa62adb4ca502e8cf98db00b0d8422ed046e8893": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "ec82329166a26400dbdd15bbb182fa91263812ac": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Tubi TV",
+        "region": "GB",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "17c1fdec8e969fb177f6b645145f8be3b8f3d26e": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "GB",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "36532627772e84e9228915b8dab7dedaa756e7f2": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "0cd9e1c9ebb6b9a537cff6d8b16d4f3237b83227": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "GB",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "6edc70814d025503121e73e122fb950a044dbac5": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "b871ac5082fbbb58196fa6f199b6fb8437d2429d": {
+        "title": "Soy Tóxico",
+        "provider": "Sky Store",
+        "region": "GB",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "afef1ad78807e96ba5ba79848283c5268d506901": {
+        "title": "Soy Tóxico",
+        "provider": "Sky Store",
+        "region": "GB",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GB",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3b61e76a2231a29f08d7364742167b6473add75a": {
+        "title": "Ataúd Blanco",
+        "provider": "Amazon Prime Video",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "24b039773ba5cc6eca7ba00121b5eecb320e2a3e": {
+        "title": "Ataúd Blanco",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "e7de64659761e83bb4cc837a46a044714160d88d": {
+        "title": "Ataúd Blanco",
+        "provider": "Amazon Video",
+        "region": "IT",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "2d595c007120e19a332e6566c789b9e0aeeeb2a5": {
+        "title": "Ataúd Blanco",
+        "provider": "Amazon Video",
+        "region": "IT",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "ddb2c906ae35f246d9b463271c8f125f9dbfd0a8": {
+        "title": "Ataúd Blanco",
+        "provider": "MIDNIGHT FACTORY Amazon Channel",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "52d0fa1360ecbc5d422e645aebcf6ae7f145a51d": {
+        "title": "Necrofobia",
+        "provider": "Amazon Prime Video",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=necrofobia"
+      },
+      "f30c1304eca5123cdde02e50fa79ee187548fcaa": {
+        "title": "Necrofobia",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=necrofobia"
+      },
+      "1ab61a4b6b71527fec72c8db41e446a4a9ddecfc": {
+        "title": "Necrofobia",
+        "provider": "Amazon Video",
+        "region": "IT",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=necrofobia"
+      },
+      "991f7b1492545839ed20c297b3964b89c11c966f": {
+        "title": "Necrofobia",
+        "provider": "Amazon Video",
+        "region": "IT",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=necrofobia"
+      },
+      "9eb09fde3a896867b085cfb9957ede472c5837c0": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "98105561c70a056508c1d32aa0fd40440621e9d3": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "IT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a8c145bcb42b3448d4de3ac7508065eef0871319": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "CA",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "842bfc16416f2e1a9ab16ab2eb524775bb9a056a": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "CA",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "ee2bf43a3e53d06ebbc066ff7194032d0db4b97d": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Tubi TV",
+        "region": "CA",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "e78bbac5da48e8d0e76d9698de80a5a8af53c61e": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "CA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "d6433fc7ffa539c0c94dcd2b8b739c961fb65c10": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "CA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3252ab20befa475c1bb5a6381ac1245fb5b7ac55": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CA",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "b59d35a5fe5094365562cb0a3e22f78fdeee6f94": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CA",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "96c4dae626a5834ceaf32ae2ddffdb75559e64aa": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "AU",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "60c633ec0ee49b59573c012bb7b8ae7ad7488406": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "AU",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "ad895184b26e517ea1884d3d602eb8c758eae345": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "AU",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "926347ec218d659c3a20e02384eee6d17dc5dfd2": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "AU",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "db87e58de58bb9cb5b25103987aa57b3a4dd8365": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "AU",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "73b331cfe384c8af5cbf73049cd0cee56c3ac921": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "AU",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "f4d2541b5f3e7faae0f2a1284cd6c89e0a7d3e52": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Tubi TV",
+        "region": "AU",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "674a42cda8d3cf9e1f08a7b5b82a39c97f9f38d3": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "AU",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3a07a73e4c4e4f59f96e6890ef928f2fa5ac1631": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "AU",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7ed0a9a5b9784eb64db38dbe3191d815067c1529": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "AU",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "358f94bed9d560239ce3436abdc0d63c08f025a9": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "AU",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "0514bd9600a9f89453ebcaca76e0e2ceb9f1fbdb": {
+        "title": "Ataúd Blanco",
+        "provider": "Amazon Prime Video",
+        "region": "SM",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=SM",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "fc315afa00af02732650c803d96365d9f41eff66": {
+        "title": "Ataúd Blanco",
+        "provider": "Amazon Prime Video",
+        "region": "VA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=VA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+      },
+      "d88d7642d78196f91824b955fab15b7f404e6411": {
+        "title": "El Último Hereje",
+        "provider": "Amazon Prime Video",
+        "region": "PT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "19679fde13b9eeaf262a79e3454cd0c4c5938553": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "BO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "9e3e4e0d37439e178bf438291501a3aa8bd16e01": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "CR",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "36028b7f21b27710941aa2dd7045121fad971e28": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "EC",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=EC",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "53d55c6246d44d83882f78b82136c8c2d1b27b4b": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "GT",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=GT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "27b58b7d09dbd9a75e1da109e8a9553571f0e49c": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "HN",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=HN",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "2a860c902f6daf26fbb13ac771ada800478abf11": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "PY",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PY",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "197e7d39711c52ec023a08725ff87db549294ade": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "BO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "0efeae8bd28389297dc587f03bd42adaa2ca63a1": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "CR",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=CR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "f15f2ad3f57d2c9baf9446bd2f9d575cc41bf5fb": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "EC",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=EC",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "d3563324cc8bb586039f8dc0b7b03c0e46958d81": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "GT",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=GT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "bac934ccd05e4daafd2a4354eea59e2012adbb73": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "HN",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=HN",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "2c530648c0097cfa0f7a245e22dbe0e0a173b894": {
+        "title": "El Último Hereje",
+        "provider": "Apple TV Store",
+        "region": "PY",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PY",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "07256df3c140769467968444f9cfb94d56f68edf": {
+        "title": "El Último Hereje",
+        "provider": "Filmin",
+        "region": "PT",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "84806b39364a10ccd0f2db4ff848bee418e4b7a3": {
+        "title": "El Último Hereje",
+        "provider": "Rakuten TV",
+        "region": "PT",
+        "type": "gratis con publicidad",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "a599d280a598cc56fd0a15eb364f6c152f2569ca": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Amazon Video",
+        "region": "GG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "2997c33ed0a974c220a16e4acf2d6f6d3b6fe3e5": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "CY",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CY",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "e3848cbc336e0f70b70df1c0d7296cd02e108587": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "GR",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "7fd365c718f478b399ca590f7f8ab20bc91ac93c": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "HK",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "98e59eb8476f58afdcadfa0dd25ca7e795f90ce4": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "PH",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PH",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "3edd3c9d68cfb5adc3617327a8cb9af490452be7": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "BG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=BG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "efebc43c168d8c8f3877b7f45e5f5000d62f7c66": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "CY",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CY",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "c9e182f69724300c34ed25117a12f5064299c54e": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "CZ",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "f2e76146178f4bc19fbd4f71e7fa8ec60ae15d04": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "DK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "724a4335900128b82927a501c01c7257d0a8f082": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "FI",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "8743e554250f44f215d255a2963fd94198e557e5": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "GR",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "81c407aeb71b510fcd496ba8480932325ae7184e": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "HK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "26317a476f420244dfa23a6a268d2fe8114d4ba7": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "HU",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=HU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "92cfbf15f7a9311c4b52438fd8904ff60ce4363b": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "NL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=NL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "31e6ca1836110be34b5407f1042ebf80b8e77407": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "NO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "f97ed12577e3818596f36ea0ce7f184cdc7c6c17": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "PH",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PH",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "af7985bcf573b595d3e01331f9c36a19e335f5b7": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "PL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=PL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "70a72604b9623a1460d7867ef918380804c9e386": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "44e05afb98d2bf1f02f208aa56d0c708e9b4d60f": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "SI",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "744f5b75619d3bee04ff36284e4f9093eefc3745": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Apple TV Store",
+        "region": "SK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
+      "afb62bf5806d2cf4dbe0c6629d599e0667e9e5f9": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "GG",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "ae3b62241561db6f63bee521d6fae654503d2435": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Video",
+        "region": "GG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=GG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "0c9ef84d9f2845d31302c1f5a9aa42260811ad77": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "IE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "3ad468aef7cf9ffd787c01f72e6f79c1c8e0f8bf": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Apple TV Store",
+        "region": "IE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "d84cda0ef8147b0493182010363ecee0d27ff758": {
+        "title": "Los Ojos del Abismo",
+        "provider": "meJane",
+        "region": "NL",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "379539fc95c61f366e1d5cfdaa662b398cf34e97": {
+        "title": "Los Ojos del Abismo",
+        "provider": "meJane",
+        "region": "NL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "4d5f143fb26fbbdd2147a342cd853583316c2fff": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "DK",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "0684449f92210bef2d18e0c273de1611412028d0": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "FI",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "0e23eccbce2d8d82e3af77e31d8411d62bd2e9da": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "NO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "9c5423ca2a25e4292d6b2de60e6a24bd41d63909": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "SE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "62e3d893f473591876b9552c3c60ca3f326588d1": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "DK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "dc44c03d2340c1ef53ac028cc7a1cdab30129610": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "FI",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "53f0ae9105b204976b6d41edeeb17af373f7b83a": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "NO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "ac2f26ae784d98ceae147e66e60388ac92933bd4": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Rakuten TV",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "672b5049f54b8e120f23647440916e58d7082b35": {
+        "title": "Los Ojos del Abismo",
+        "provider": "SF Anytime",
+        "region": "DK",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "6d10a72d6daecd46e02c05c4f936be9d917a7204": {
+        "title": "Los Ojos del Abismo",
+        "provider": "SF Anytime",
+        "region": "NO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "a0613062ac83cb9bffda9271393d652b2c0128ac": {
+        "title": "Los Ojos del Abismo",
+        "provider": "SF Anytime",
+        "region": "SE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "af7e764dc8b490fad106936e53c0e9ca45742097": {
+        "title": "Los Ojos del Abismo",
+        "provider": "SF Anytime",
+        "region": "DK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "0e935e713c3a113fcf8da7ef2f43d19106265515": {
+        "title": "Los Ojos del Abismo",
+        "provider": "SF Anytime",
+        "region": "NO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "aa18bdd50f48dd6bebae4d336440f24c4f8eed6e": {
+        "title": "Los Ojos del Abismo",
+        "provider": "SF Anytime",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "a6c2443c0dba2731e7f5663b4e122481f37f0315": {
+        "title": "Los Ojos del Abismo",
+        "provider": "TVING",
+        "region": "KR",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=KR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "7cfeaa7566df86db1616271284e7f225f7619f54": {
+        "title": "Necrofobia",
+        "provider": "Amazon Prime Video",
+        "region": "SM",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=SM",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=necrofobia"
+      },
+      "4f7b617f433f233a299448482a7eafaaf2c53acf": {
+        "title": "Necrofobia",
+        "provider": "Amazon Prime Video",
+        "region": "VA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/289197-necrofobia/watch?locale=VA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=necrofobia"
+      },
+      "320d5272fc2cb67399bb930aeb411f6477244e9a": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "DK",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "1f8d577cf5a14859288612e7800c2c144c456226": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "FI",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "e01bc5866c0296699ab2cbd375ca9ef62fb563b5": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "IE",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "4895715f726afc1121703280a38a9209e42c1676": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "NG",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "6b4d83424b132707341198da8f8f317171880081": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "NO",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "426eeb5067f8c54ba5dcd372ef1bb4a77d3f4d8e": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "NZ",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7689d8a5984607f3dd0f370fcde396ba9ae12bba": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "SE",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a887cb257a9719cfd7d7908832a2df43eafb0810": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "SM",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SM",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "bd5ecf8122593928d00554b50476b322d2e0d72a": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "VA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=VA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "5a7a561975ac2f543bbe3617eb88c4212cf8dfe4": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Prime Video",
+        "region": "ZA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=ZA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7ac3e9e1ef961b4f965fcda1709ab65382d58c52": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "GG",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "99adfd50a4249ba537121dd1e78c95b5e9836cea": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "SE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "192e3a4ab78b4236a4748af97222b2b51d98eda8": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "GG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=GG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "c3fc596d7facfff1ee742bf50bb77bd8fb208edc": {
+        "title": "Soy Tóxico",
+        "provider": "Amazon Video",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "0c719d4411380c0e724e1daa04701da08e64e3c0": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "BG",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "957808357029a04f5299fe68668a25b0d1f70da8": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "BZ",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "26c1f1b2448b363a7a8a9384c66fa405216d160a": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CH",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CH",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "6d90656e03dd92366fb08a7db174207a53ab5e37": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CV",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CV",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "fc85a74b2380d9db7a6b083274b140e8e7ea50b0": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CY",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CY",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a8975f65af729497c7c2dc737c269b64f5ce195c": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CZ",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "34e16dc4c18f55c84ecc7e5870a571755198d46c": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "EE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=EE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "29744518742187b03f909fd6b11e87b9841e82a0": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "IE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "4ed98fde09018e6ab14cd8bf27bf49886c7aa97e": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "IL",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f71f10a655fc6ae2f727685e392b16723347d83b": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "JP",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "ee8df50bc3dbc11d3016fd04b0c1b5e0f20147c9": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "LT",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "09a0abd49aa11fc6e70b5954b667510554c74609": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "LV",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LV",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "8e5dee04503233bf9b3b7f3d85756d8b8b16dafc": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "MU",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "cd489a4a4332ee140029245113d131daddc98632": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "MZ",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a2562cee0dd0c98454546ac9367c490dd75d7072": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "NZ",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "412b4f45aef19aa64cf42535b9fd4e360daf30ba": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "PH",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=PH",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "ad10269ed996ef0b71ce1723347005a599e9eef0": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "TW",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=TW",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "749e35cb33c4ac479167b76bf1777fddb7994c69": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "UG",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=UG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f0092009bccb3c58e19d561078672591d9c086ed": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "ZA",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=ZA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "d322e83f3f4259e0e329edab70248dd766f43220": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "BG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f10516bf0db6f90f542d300db49e03ac00e636dd": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "BZ",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a5830abb46c643a693a0acfa37cc4942c01bedae": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CH",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CH",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "fcaaba0f4472dd2c49bfb811ccae93bcf0cf3d37": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CV",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CV",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "47a9bd781a10d6a95a2e492afa20981a6f8997a1": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CY",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CY",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f217788d4f98abde56350bc8ff85372d8e0bc20e": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "CZ",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=CZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "ce71dadc14f78c4b6efe2ac7f58c69bab1ceb0cf": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "EE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=EE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "536a2f69fa0a5d6881efbd6825e0f137b003a8cf": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "IE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "26a527cbe90014e82956d3e463ee46b14c413967": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "IL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "df43b5800a90b8b6065898b8cd267c5999b49144": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "JP",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "16f1aab9b245ef2f3c0407673c5c343c2b539765": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "LT",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LT",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7026c85459cf3daf97fc36669a4b67dcd98f7d72": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "LV",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=LV",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "45c698fb76b4928453a07e84bda0bd109ad13045": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "MU",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MU",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "57c7d1c0dc441212d2afb42d70e1cbbf05801733": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "MZ",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "d76ef6b55bba56e6feec7da547ff2b4647ad8151": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "NZ",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "143fc1a9a0f5431c9a343c68c2b2ba2ccc42a7cd": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "PH",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=PH",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "c4aa531cec2620969dcea545c79893cc8a433369": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "TW",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=TW",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "49e72ce4ed9bbd83f8018cfa3fb96c0e32bf3d0d": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "UG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=UG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "519165fcfef279084e9e18b72fb2e23db62242cf": {
+        "title": "Soy Tóxico",
+        "provider": "Apple TV Store",
+        "region": "ZA",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=ZA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "07330ae6ddc256494559db437bf17308f5f56c10": {
+        "title": "Soy Tóxico",
+        "provider": "Blockbuster",
+        "region": "FI",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "284da70db9f8a2c82edd25822213fc587e6fd7fe": {
+        "title": "Soy Tóxico",
+        "provider": "Blockbuster",
+        "region": "NO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f79d845b76dea02afb9e6f4d24fd925bd76389d7": {
+        "title": "Soy Tóxico",
+        "provider": "Blockbuster",
+        "region": "SE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "f2b1b245665c41bf20a14e5ef5c348ef1ab9e3f6": {
+        "title": "Soy Tóxico",
+        "provider": "Blockbuster",
+        "region": "FI",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "3efa00341c7b6adaea1583ea636a6d2f7ff1243b": {
+        "title": "Soy Tóxico",
+        "provider": "Blockbuster",
+        "region": "NO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "1be73afc9c136d28ddeaa76dac67f261e6a84e6d": {
+        "title": "Soy Tóxico",
+        "provider": "Blockbuster",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "9ba1a7f4d591a2c192b6957365a0351feacff206": {
+        "title": "Soy Tóxico",
+        "provider": "Elisa Viihde",
+        "region": "FI",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "be7f3d9246c7cad628b8ab2f2ec42e70bf6e634a": {
+        "title": "Soy Tóxico",
+        "provider": "FEAR Amazon Channel",
+        "region": "BE",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "05e7f8c257202f3054b67c977e5db0b78831a0e1": {
+        "title": "Soy Tóxico",
+        "provider": "FEAR Amazon Channel",
+        "region": "NL",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "9c062fe1af098370362e989a69e59b6bf385ff47": {
+        "title": "Soy Tóxico",
+        "provider": "FEAR Amazon Channel",
+        "region": "SE",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "80278d990cd9cdca3d8bb502b35f8d5ca7df9d39": {
+        "title": "Soy Tóxico",
+        "provider": "FOD",
+        "region": "JP",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "89e8a8c4d06f7cb9652fbc28f4cb44d70c5863ad": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "DK",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7bd1c3e4a55b0bfdaf9f3b4e2bcaf1187cc476e4": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "FI",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "d69211d77276badde1ced8e7aee829ca7d01c32d": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "NO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "cde41ce008fd58cab1551a1e6e6cb4812c819cd6": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "SE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "4fb50a01a73db75fbed159bd077df06ee0b7f906": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "DK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "0f03e5bfb0b14b3561a27e2fcf74a98dd28b26bf": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "FI",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "7e72324bc2c6f46eb8a4c7e188fcab0b72b75276": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "NO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "675b3edbb79fdd8d7ae7cbf9c5048a3a67584018": {
+        "title": "Soy Tóxico",
+        "provider": "Google Play Movies",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "769d048d397f5243d5eaace5637c77848739976d": {
+        "title": "Soy Tóxico",
+        "provider": "meJane",
+        "region": "NL",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "fb297e264e6dbc69408c7dd6cdcafd2d7276feff": {
+        "title": "Soy Tóxico",
+        "provider": "meJane",
+        "region": "NL",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NL",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "696914115fdc6294c4ab246c4532f36955700c36": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "DK",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "a9b7b2820cbd138ba0e77256617260e7b31b6028": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "FI",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "aa9e2b4c0d2d9eaf4fef6933ab0fd6445619bf22": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "NO",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "2282cbb24e41aa19c9e6229903837c1a7d443347": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "SE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "9ea3123ba340e19f020b04ee5854384d5e6abc3b": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "DK",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "80dfbeb98d67b0a373e4c1b0eafa2dd7d1419fc9": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "FI",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "644510f9543726b4014fce527003ac82f2b582ae": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "NO",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "35a4f953bf13c12341ef39f205251af505850525": {
+        "title": "Soy Tóxico",
+        "provider": "SF Anytime",
+        "region": "SE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "6eafff5c36102cdca69260f9f3a3c81d6ce16cf0": {
+        "title": "Soy Tóxico",
+        "provider": "Sky Store",
+        "region": "IE",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "54ed342573d911bff64efd29cf25dacb42752199": {
+        "title": "Soy Tóxico",
+        "provider": "Sky Store",
+        "region": "IE",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IE",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      },
+      "c2eb591debf18b99880a3d5fa473974af47f1265": {
+        "title": "Soy Tóxico",
+        "provider": "Telia Play",
+        "region": "FI",
+        "type": "alquiler",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      }
+    },
+    "count": 283
+  },
+  "changed_files": [
+    "outputs/state_platforms_seen.json",
+    "outputs/state_tv_seen.json"
+  ],
+  "mail_format": "platforms_pro_v8_no_repetir",
+  "tv_meta": {
+    "generated_at_utc": "2026-07-31T13:04:27Z",
+    "hits_total": 3,
+    "review_total": 0,
+    "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
+    "version": "v212-tv-cable-epgpw-official-sources"
+  },
+  "endpoint_configured": true,
+  "subject": "DDV Radar — 1 emisión(es) futura(s) TV/Cable",
+  "body_length": 1909,
+  "endpoint_http_status": 200,
+  "endpoint_content_type": "application/json; charset=UTF-8",
+  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 3,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
+  "endpoint_error": "",
+  "mail_blocked_by_security_challenge": false,
+  "payload_bytes": 2221,
+  "endpoint_json": {
+    "ok": true,
+    "mail_sent": true,
+    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
+    "alerts": 3,
+    "to": "furiafilms@gmail.com",
+    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
+  },
+  "platform_mail_state_written": true
+}

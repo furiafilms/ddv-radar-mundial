@@ -1,0 +1,10 @@
+{
+  "bootstrapped_at": "2026-07-31T13:04:02Z",
+  "items_registered": 34,
+  "reason": "Baseline/failsafe anti-spam: alta cantidad de plataformas nuevas o Watchmode agregado",
+  "platform_bootstrap": false,
+  "watchmode_bootstrap": true,
+  "large_platform_batch": true,
+  "watchmode_new_batch": true,
+  "batch_limit": 5
+}
