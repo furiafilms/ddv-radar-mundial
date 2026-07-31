@@ -1,24 +1,28 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
-  "ran_at": "2026-07-31T10:04:08.402249-03:00",
+  "ran_at": "2026-07-31T10:06:31.316720-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
-  "lookahead_hours": 36,
+  "lookahead_hours": 168,
   "past_grace_minutes": 30,
   "include_review": true,
-  "window_start": "2026-07-31T09:34:08.402249-03:00",
-  "window_end": "2026-08-01T22:04:08.402249-03:00",
+  "window_start": "2026-07-31T09:36:31.316720-03:00",
+  "window_end": "2026-08-07T10:06:31.316720-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json",
     "outputs/site_tv_cable_review.json"
   ],
-  "events_total": 3,
-  "events_due": 0,
-  "confirmed_due": 0,
+  "events_total": 4,
+  "events_due": 1,
+  "confirmed_due": 1,
   "review_due": 0,
   "mail_sent": false,
   "mode": "normal",
-  "endpoint_response": "Sin emisiones futuras ni bloques a revisar; no corresponde enviar mail.",
+  "endpoint_response": {
+    "message": "Access denied by Imunify360 bot-protection. IPs used for automation should be whitelisted"
+  },
   "no_events_is_success": true,
-  "unsent": []
+  "unsent": [
+    "- Al 3er Día — CINE.AR — 01/08/2026 02:00\n Fuente: AmericaTVGuide / CINE.AR — https://americatvguide.com/es/ar/channel/cine_ar\n Ver en VIP: https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+  ]
 }
