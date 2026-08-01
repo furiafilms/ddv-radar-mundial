@@ -1,7 +1,38 @@
 {
-  "generated_at": "2026-07-31T13:03:52Z",
+  "generated_at": "2026-08-01T12:09:25Z",
   "platforms": [],
-  "tv_cable": [],
+  "tv_cable": [
+    {
+      "fingerprint": "b2302f3065bcfb89a7656eb49b2b5c36d9b988ac",
+      "item": {
+        "slug": "al-3er-dia",
+        "title": "Al 3er Día",
+        "programme_title": "Al 3er día",
+        "raw_programme_title": "Al 3er día, 2021",
+        "matched_term": "Al 3er Día",
+        "match_reason": "título exacto en grilla",
+        "channel": "CINE.AR",
+        "channel_number": "CINE.AR · TDA/operadores argentinos",
+        "country": "AR",
+        "country_code": "AR",
+        "country_name": "Argentina",
+        "date_iso": "2026-08-01",
+        "start_time": "02:00",
+        "end_time": "",
+        "source": "AmericaTVGuide / CINE.AR",
+        "source_url": "https://americatvguide.com/es/ar/channel/cine_ar",
+        "detection_type": "grilla argentina viva / AmericaTVGuide",
+        "confidence": "high",
+        "source_labels": [
+          "AmericaTVGuide / CINE.AR"
+        ],
+        "work_slug": "al-3er-dia",
+        "work_title": "Al 3er Día",
+        "detected_at": "2026-08-01T00:10:04Z",
+        "fingerprint": "b2302f3065bcfb89a7656eb49b2b5c36d9b988ac"
+      }
+    }
+  ],
   "tv_rejected": [],
   "bootstrap": {
     "platforms": false,
