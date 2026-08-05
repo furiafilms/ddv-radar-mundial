@@ -1,31 +1,24 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
-  "ran_at": "2026-08-05T10:02:43.747551-03:00",
+  "ran_at": "2026-08-05T13:51:52.923015-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
   "lookahead_hours": 168,
   "past_grace_minutes": 30,
   "include_review": true,
-  "window_start": "2026-08-05T09:32:43.747551-03:00",
-  "window_end": "2026-08-12T10:02:43.747551-03:00",
+  "window_start": "2026-08-05T13:21:52.923015-03:00",
+  "window_end": "2026-08-12T13:51:52.923015-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json",
     "outputs/site_tv_cable_review.json"
   ],
   "events_total": 10,
-  "events_due": 4,
+  "events_due": 0,
   "confirmed_due": 0,
-  "review_due": 4,
-  "mail_sent": true,
+  "review_due": 0,
+  "mail_sent": false,
   "mode": "normal",
-  "endpoint_response": {
-    "ok": true,
-    "mail_sent": true,
-    "mode": "daily_tv_alert_or_review",
-    "alerts": 4,
-    "to": "furiafilms@gmail.com",
-    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
-  },
+  "endpoint_response": "Sin emisiones futuras ni bloques a revisar; no corresponde enviar mail.",
   "no_events_is_success": true,
   "unsent": []
 }
