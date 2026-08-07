@@ -1,6 +1,6 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-08-06T13:02:01.844639+00:00",
+  "ran_at": "2026-08-07T11:54:02.969075+00:00",
   "changes_detected": true,
   "mail_sent": false,
   "future_count": 0,
@@ -13,7 +13,7 @@
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-08-06T13:01:38Z",
+    "generated_at": "2026-08-07T11:53:35Z",
     "items_count": 283,
     "titles_with_current": 10,
     "titles_without_current": 3,
@@ -25,7 +25,7 @@
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-08-06T13:02:01.850259+00:00",
+    "updated_at_utc": "2026-08-07T11:54:02.974353+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -2583,7 +2583,7 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-08-06T13:02:01Z",
+    "generated_at_utc": "2026-08-07T11:54:02Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
