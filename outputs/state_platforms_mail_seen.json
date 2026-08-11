@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-08-09T11:40:07.156658+00:00",
+  "updated_at_utc": "2026-08-11T11:52:54.837419+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -1406,15 +1406,6 @@
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
     },
-    "a599d280a598cc56fd0a15eb364f6c152f2569ca": {
-      "title": "Jennifer’s Shadow",
-      "provider": "Amazon Video",
-      "region": "GG",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GG",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
-    },
     "2997c33ed0a974c220a16e4acf2d6f6d3b6fe3e5": {
       "title": "Jennifer’s Shadow",
       "provider": "Apple TV Store",
@@ -2550,5 +2541,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 283
+  "count": 282
 }
