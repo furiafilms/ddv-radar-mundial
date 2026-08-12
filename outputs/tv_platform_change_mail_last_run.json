@@ -1,41 +1,31 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-08-11T11:52:54.832776+00:00",
+  "ran_at": "2026-08-12T11:56:01.941955+00:00",
   "changes_detected": true,
-  "mail_sent": true,
+  "mail_sent": false,
   "future_count": 0,
   "historic_count": 4,
   "platform_added_count": 0,
-  "platform_removed_count": 1,
-  "platform_change_count": 1,
+  "platform_removed_count": 0,
+  "platform_change_count": 0,
   "platform_added_sample": [],
-  "platform_removed_sample": [
-    {
-      "title": "Jennifer’s Shadow",
-      "provider": "Amazon Video",
-      "region": "GG",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GG",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
-    }
-  ],
+  "platform_removed_sample": [],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-08-11T11:52:32Z",
+    "generated_at": "2026-08-12T11:55:35Z",
     "items_count": 282,
     "titles_with_current": 10,
     "titles_without_current": 3,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
-    "platform_mail_state_previous_count": 283,
+    "platform_mail_state_previous_count": 282,
     "platform_mail_state_current_count": 282
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-08-11T11:52:54.837419+00:00",
+    "updated_at_utc": "2026-08-12T11:56:01.947225+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -2584,28 +2574,12 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-08-11T11:52:54Z",
+    "generated_at_utc": "2026-08-12T11:56:01Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
-  "endpoint_configured": true,
-  "subject": "DDV Radar — Plataformas: +0 / -1 cambios",
-  "body_length": 2124,
-  "endpoint_http_status": 200,
-  "endpoint_content_type": "application/json; charset=UTF-8",
-  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 5,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
-  "endpoint_error": "",
-  "mail_blocked_by_security_challenge": false,
-  "payload_bytes": 2448,
-  "endpoint_json": {
-    "ok": true,
-    "mail_sent": true,
-    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
-    "alerts": 5,
-    "to": "furiafilms@gmail.com",
-    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
-  },
-  "platform_mail_state_written": true
+  "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
+  "no_actionable_changes_is_success": true
 }
