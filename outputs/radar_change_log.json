@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-08-12T11:55:19Z",
-  "platforms": [],
+  "generated_at": "2026-08-13T11:55:30Z",
+  "platforms": [
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "Plex Channel",
+      "provider_id": 2077,
+      "region": "US",
+      "region_code": "US",
+      "country": "US",
+      "type": "gratis con publicidad",
+      "raw_type": "ads",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-08-13T11:55:35Z",
+      "fingerprint": "f0837a427a738e7043b4918c2fd126d36fa77c51",
+      "identity_fingerprint": "6ac7d9fb46e64cdfa65613c7ba27aa5b4f7e940d"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
