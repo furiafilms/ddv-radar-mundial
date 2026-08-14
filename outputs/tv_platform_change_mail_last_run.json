@@ -1,6 +1,6 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-08-13T11:56:10.674174+00:00",
+  "ran_at": "2026-08-14T11:54:30.225960+00:00",
   "changes_detected": true,
   "mail_sent": true,
   "future_count": 0,
@@ -10,32 +10,32 @@
   "platform_change_count": 1,
   "platform_added_sample": [
     {
-      "title": "Soy Tóxico",
-      "provider": "Plex Channel",
-      "region": "US",
-      "type": "gratis con publicidad",
+      "title": "Jennifer’s Shadow",
+      "provider": "Amazon Video",
+      "region": "GG",
+      "type": "compra",
       "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GG",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     }
   ],
   "platform_removed_sample": [],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-08-13T11:55:44Z",
-    "items_count": 283,
+    "generated_at": "2026-08-14T11:54:11Z",
+    "items_count": 284,
     "titles_with_current": 10,
     "titles_without_current": 3,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
-    "platform_mail_state_previous_count": 282,
-    "platform_mail_state_current_count": 283
+    "platform_mail_state_previous_count": 283,
+    "platform_mail_state_current_count": 284
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-08-13T11:56:10.679512+00:00",
+    "updated_at_utc": "2026-08-14T11:54:30.231385+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -1450,6 +1450,15 @@
         "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PT",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
       },
+      "a599d280a598cc56fd0a15eb364f6c152f2569ca": {
+        "title": "Jennifer’s Shadow",
+        "provider": "Amazon Video",
+        "region": "GG",
+        "type": "compra",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=GG",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+      },
       "2997c33ed0a974c220a16e4acf2d6f6d3b6fe3e5": {
         "title": "Jennifer’s Shadow",
         "provider": "Apple TV Store",
@@ -2585,7 +2594,7 @@
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       }
     },
-    "count": 283
+    "count": 284
   },
   "changed_files": [
     "outputs/state_platforms_seen.json",
@@ -2593,7 +2602,7 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-08-13T11:56:10Z",
+    "generated_at_utc": "2026-08-14T11:54:30Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
@@ -2601,13 +2610,13 @@
   },
   "endpoint_configured": true,
   "subject": "DDV Radar — Plataformas: +1 / -0 cambios",
-  "body_length": 2122,
+  "body_length": 2121,
   "endpoint_http_status": 200,
   "endpoint_content_type": "application/json; charset=UTF-8",
   "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 5,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
   "endpoint_error": "",
   "mail_blocked_by_security_challenge": false,
-  "payload_bytes": 2444,
+  "payload_bytes": 2445,
   "endpoint_json": {
     "ok": true,
     "mail_sent": true,
