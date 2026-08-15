@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-08-14T11:53:10Z",
-  "platforms": [],
+  "generated_at": "2026-08-15T11:30:18Z",
+  "platforms": [
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "Xumo Play",
+      "provider_id": 1963,
+      "region": "US",
+      "region_code": "US",
+      "country": "US",
+      "type": "gratis con publicidad",
+      "raw_type": "ads",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-08-15T11:30:25Z",
+      "fingerprint": "859d8e3e73a219f83f00a9aed1aca1b343eec5c4",
+      "identity_fingerprint": "7974d9c98c2219e6bd45db0a641633e956818a2f"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
