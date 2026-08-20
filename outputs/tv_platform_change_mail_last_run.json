@@ -1,6 +1,6 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-08-19T11:35:47.763645+00:00",
+  "ran_at": "2026-08-20T11:37:39.145661+00:00",
   "changes_detected": true,
   "mail_sent": false,
   "future_count": 0,
@@ -13,7 +13,7 @@
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-08-19T11:35:23Z",
+    "generated_at": "2026-08-20T11:37:12Z",
     "items_count": 285,
     "titles_with_current": 10,
     "titles_without_current": 3,
@@ -25,7 +25,7 @@
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-08-19T11:35:47.768374+00:00",
+    "updated_at_utc": "2026-08-20T11:37:39.151002+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -695,7 +695,7 @@
       },
       "3be2c16480a3ac8e733f7be8201ec3eb782a3e45": {
         "title": "El Último Hereje",
-        "provider": "AMC Plus Apple TV Channel",
+        "provider": "AMC Plus Apple TV channel",
         "region": "ES",
         "type": "suscripción",
         "source": "TMDb Watch Providers",
@@ -740,7 +740,7 @@
       },
       "c1a93f7ac581cf11e36ae79f134b2d68a34aa914": {
         "title": "Los Ojos del Abismo",
-        "provider": "AMC Plus Apple TV Channel",
+        "provider": "AMC Plus Apple TV channel",
         "region": "ES",
         "type": "suscripción",
         "source": "TMDb Watch Providers",
@@ -2601,7 +2601,7 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-08-19T11:35:47Z",
+    "generated_at_utc": "2026-08-20T11:37:38Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",

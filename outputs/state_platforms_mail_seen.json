@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-08-19T11:35:47.768374+00:00",
+  "updated_at_utc": "2026-08-20T11:37:39.151002+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -670,7 +670,7 @@
     },
     "3be2c16480a3ac8e733f7be8201ec3eb782a3e45": {
       "title": "El Último Hereje",
-      "provider": "AMC Plus Apple TV Channel",
+      "provider": "AMC Plus Apple TV channel",
       "region": "ES",
       "type": "suscripción",
       "source": "TMDb Watch Providers",
@@ -715,7 +715,7 @@
     },
     "c1a93f7ac581cf11e36ae79f134b2d68a34aa914": {
       "title": "Los Ojos del Abismo",
-      "provider": "AMC Plus Apple TV Channel",
+      "provider": "AMC Plus Apple TV channel",
       "region": "ES",
       "type": "suscripción",
       "source": "TMDb Watch Providers",
