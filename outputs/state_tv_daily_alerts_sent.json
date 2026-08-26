@@ -1,6 +1,6 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
-  "updated_at": "2026-08-19T12:44:49.743153-03:00",
+  "updated_at": "2026-08-26T08:43:10.182491-03:00",
   "sent_keys": [
     "confirmed|al-3er-dia|al 3er día|cine.ar|2026-07-31T22:00|al 3er día",
     "confirmed|al-3er-dia|al 3er día|cine.ar|2026-08-01T02:00|al 3er día",
@@ -25,6 +25,8 @@
     "opaque_program_block|bloque ficcionarte / canal á|bloque ficcionarte / canal á|canal á|2026-08-17T04:00|ficcionarte",
     "opaque_program_block|bloque ficcionarte / canal á|bloque ficcionarte / canal á|canal á|2026-08-20T01:00|ficcionarte",
     "opaque_program_block|bloque ficcionarte / canal á|bloque ficcionarte / canal á|canal á|2026-08-20T04:00|ficcionarte",
+    "opaque_program_block|bloque ficcionarte / canal á|bloque ficcionarte / canal á|canal á|2026-08-27T01:00|ficcionarte",
+    "opaque_program_block|bloque ficcionarte / canal á|bloque ficcionarte / canal á|canal á|2026-08-27T04:00|ficcionarte",
     "opaque_program_block|ciclo cine canal á|ciclo cine canal á|canal á|2026-07-18T22:00|ciclo cine canal (á), 2017",
     "opaque_program_block|ciclo cine canal á|ciclo cine canal á|canal á|2026-07-19T01:00|ciclo cine canal (á), 2017",
     "opaque_program_block|ciclo cine canal á|ciclo cine canal á|canal á|2026-07-19T04:00|ciclo cine canal (á), 2017",
