@@ -1,31 +1,113 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-08-26T11:39:56.438494+00:00",
+  "ran_at": "2026-08-27T21:00:01.938912+00:00",
   "changes_detected": true,
-  "mail_sent": false,
+  "mail_sent": true,
   "future_count": 0,
   "historic_count": 4,
   "platform_added_count": 0,
-  "platform_removed_count": 0,
-  "platform_change_count": 0,
+  "platform_removed_count": 9,
+  "platform_change_count": 9,
   "platform_added_sample": [],
-  "platform_removed_sample": [],
+  "platform_removed_sample": [
+    {
+      "title": "Al 3er Día",
+      "provider": "Amazon",
+      "region": "US",
+      "type": "alquiler",
+      "source": "Watchmode",
+      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "Amazon",
+      "region": "US",
+      "type": "compra",
+      "source": "Watchmode",
+      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "AppleTV",
+      "region": "US",
+      "type": "alquiler",
+      "source": "Watchmode",
+      "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "AppleTV",
+      "region": "US",
+      "type": "compra",
+      "source": "Watchmode",
+      "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "Plex",
+      "region": "US",
+      "type": "gratis",
+      "source": "Watchmode",
+      "url": "https://watch.plex.tv/movie/on-the-3rd-day-2021",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "Prime Video",
+      "region": "US",
+      "type": "suscripción",
+      "source": "Watchmode",
+      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "Shout! Factory TV",
+      "region": "US",
+      "type": "gratis",
+      "source": "Watchmode",
+      "url": "https://watch.shout-tv.com/video/814759",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "Shout! Factory TV (Via Amazon Prime",
+      "region": "US",
+      "type": "suscripción",
+      "source": "Watchmode",
+      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    },
+    {
+      "title": "Al 3er Día",
+      "provider": "The Roku Channel",
+      "region": "US",
+      "type": "gratis",
+      "source": "Watchmode",
+      "url": "https://therokuchannel.roku.com/watch/f4a8b2fd5a595412a7fbb659d4c59cca?source=google",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
+    }
+  ],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-08-26T11:39:30Z",
-    "items_count": 285,
-    "titles_with_current": 10,
-    "titles_without_current": 3,
+    "generated_at": "2026-08-27T20:59:40Z",
+    "items_count": 276,
+    "titles_with_current": 9,
+    "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
     "platform_mail_state_previous_count": 285,
-    "platform_mail_state_current_count": 285
+    "platform_mail_state_current_count": 276
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-08-26T11:39:56.443601+00:00",
+    "updated_at_utc": "2026-08-27T21:00:01.942916+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -215,87 +297,6 @@
         "source": "TMDb Watch Providers",
         "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MX",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-      },
-      "5856dca92ffa5855c343f1a01d52e7ec243ecfa0": {
-        "title": "Al 3er Día",
-        "provider": "Amazon",
-        "region": "US",
-        "type": "alquiler",
-        "source": "Watchmode",
-        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "126c25fdc2c54be8e68eae9da43244360a8dc6e3": {
-        "title": "Al 3er Día",
-        "provider": "Amazon",
-        "region": "US",
-        "type": "compra",
-        "source": "Watchmode",
-        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "a7d1bba45bd90702965888bb444cec358fc6f3bd": {
-        "title": "Al 3er Día",
-        "provider": "AppleTV",
-        "region": "US",
-        "type": "alquiler",
-        "source": "Watchmode",
-        "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "1d8f880f92f08ca0054bbd885e5af5118abc168b": {
-        "title": "Al 3er Día",
-        "provider": "AppleTV",
-        "region": "US",
-        "type": "compra",
-        "source": "Watchmode",
-        "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "10a99489990d66e8663d025ec38780a3272ddf1f": {
-        "title": "Al 3er Día",
-        "provider": "Plex",
-        "region": "US",
-        "type": "gratis",
-        "source": "Watchmode",
-        "url": "https://watch.plex.tv/movie/on-the-3rd-day-2021",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "794372951312d959a55addbf037f6bf1a753dfae": {
-        "title": "Al 3er Día",
-        "provider": "Prime Video",
-        "region": "US",
-        "type": "suscripción",
-        "source": "Watchmode",
-        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "a5623bf837ca2bd8d310bdd2b43955e5fa7e8908": {
-        "title": "Al 3er Día",
-        "provider": "Shout! Factory TV",
-        "region": "US",
-        "type": "gratis",
-        "source": "Watchmode",
-        "url": "https://watch.shout-tv.com/video/814759",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "8dfbbeda45a97d44f081baf002d2707981f829cf": {
-        "title": "Al 3er Día",
-        "provider": "Shout! Factory TV (Via Amazon Prime",
-        "region": "US",
-        "type": "suscripción",
-        "source": "Watchmode",
-        "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-      },
-      "a658506381933543c1bb6e9cbeda883c217d1a9c": {
-        "title": "Al 3er Día",
-        "provider": "The Roku Channel",
-        "region": "US",
-        "type": "gratis",
-        "source": "Watchmode",
-        "url": "https://therokuchannel.roku.com/watch/f4a8b2fd5a595412a7fbb659d4c59cca?source=google",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
       },
       "cd86d951bf8f7b2f4e530a1218a6fe8afb8329fd": {
         "title": "Ataúd Blanco",
@@ -2593,7 +2594,7 @@
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       }
     },
-    "count": 285
+    "count": 276
   },
   "changed_files": [
     "outputs/state_platforms_seen.json",
@@ -2601,12 +2602,28 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-08-26T11:39:56Z",
+    "generated_at_utc": "2026-08-27T21:00:01Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
-  "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
-  "no_actionable_changes_is_success": true
+  "endpoint_configured": true,
+  "subject": "DDV Radar — Plataformas: +0 / -9 cambios",
+  "body_length": 2545,
+  "endpoint_http_status": 200,
+  "endpoint_content_type": "application/json; charset=UTF-8",
+  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 13,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
+  "endpoint_error": "",
+  "mail_blocked_by_security_challenge": false,
+  "payload_bytes": 2918,
+  "endpoint_json": {
+    "ok": true,
+    "mail_sent": true,
+    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
+    "alerts": 13,
+    "to": "furiafilms@gmail.com",
+    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
+  },
+  "platform_mail_state_written": true
 }

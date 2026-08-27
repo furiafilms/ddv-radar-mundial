@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-08-26T11:39:56.443601+00:00",
+  "updated_at_utc": "2026-08-27T21:00:01.942916+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -190,87 +190,6 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=MX",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "5856dca92ffa5855c343f1a01d52e7ec243ecfa0": {
-      "title": "Al 3er Día",
-      "provider": "Amazon",
-      "region": "US",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "126c25fdc2c54be8e68eae9da43244360a8dc6e3": {
-      "title": "Al 3er Día",
-      "provider": "Amazon",
-      "region": "US",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "a7d1bba45bd90702965888bb444cec358fc6f3bd": {
-      "title": "Al 3er Día",
-      "provider": "AppleTV",
-      "region": "US",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "1d8f880f92f08ca0054bbd885e5af5118abc168b": {
-      "title": "Al 3er Día",
-      "provider": "AppleTV",
-      "region": "US",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/us/movie/umc.cmc.2xlb6ftbd2o951ekor1v2he8k?itsct=&itscg=30200&at=1010layx",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "10a99489990d66e8663d025ec38780a3272ddf1f": {
-      "title": "Al 3er Día",
-      "provider": "Plex",
-      "region": "US",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://watch.plex.tv/movie/on-the-3rd-day-2021",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "794372951312d959a55addbf037f6bf1a753dfae": {
-      "title": "Al 3er Día",
-      "provider": "Prime Video",
-      "region": "US",
-      "type": "suscripción",
-      "source": "Watchmode",
-      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "a5623bf837ca2bd8d310bdd2b43955e5fa7e8908": {
-      "title": "Al 3er Día",
-      "provider": "Shout! Factory TV",
-      "region": "US",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://watch.shout-tv.com/video/814759",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "8dfbbeda45a97d44f081baf002d2707981f829cf": {
-      "title": "Al 3er Día",
-      "provider": "Shout! Factory TV (Via Amazon Prime",
-      "region": "US",
-      "type": "suscripción",
-      "source": "Watchmode",
-      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.6b3d7cc9-3b03-405d-b595-ce91086327f7?autoplay=1",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
-    },
-    "a658506381933543c1bb6e9cbeda883c217d1a9c": {
-      "title": "Al 3er Día",
-      "provider": "The Roku Channel",
-      "region": "US",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://therokuchannel.roku.com/watch/f4a8b2fd5a595412a7fbb659d4c59cca?source=google",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=al-3er-dia"
     },
     "cd86d951bf8f7b2f4e530a1218a6fe8afb8329fd": {
       "title": "Ataúd Blanco",
@@ -2568,5 +2487,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 285
+  "count": 276
 }
