@@ -1,23 +1,6 @@
 {
-  "generated_at": "2026-08-28T21:20:42Z",
-  "platforms": [
-    {
-      "slug": "el-ultimo-hereje",
-      "work_title": "El Último Hereje",
-      "name": "Tivify",
-      "provider_id": 1838,
-      "region": "ES",
-      "region_code": "ES",
-      "country": "ES",
-      "type": "suscripción",
-      "raw_type": "flatrate",
-      "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-08-28T21:20:48Z",
-      "fingerprint": "891bc2310e6011e8ef68a6382d98c5f332c908d6",
-      "identity_fingerprint": "1881ebf24d90b4d651c4c4a9dc86a432741448b0"
-    }
-  ],
+  "generated_at": "2026-08-29T15:35:03Z",
+  "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
