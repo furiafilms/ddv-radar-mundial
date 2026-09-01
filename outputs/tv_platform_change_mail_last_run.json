@@ -1,31 +1,41 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-08-31T17:59:25.926924+00:00",
+  "ran_at": "2026-09-01T15:27:34.292130+00:00",
   "changes_detected": true,
-  "mail_sent": false,
+  "mail_sent": true,
   "future_count": 0,
   "historic_count": 4,
   "platform_added_count": 0,
-  "platform_removed_count": 0,
-  "platform_change_count": 0,
+  "platform_removed_count": 1,
+  "platform_change_count": 1,
   "platform_added_sample": [],
-  "platform_removed_sample": [],
+  "platform_removed_sample": [
+    {
+      "title": "Soy Tóxico",
+      "provider": "Xumo Play",
+      "region": "US",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    }
+  ],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-08-31T17:59:02Z",
-    "items_count": 277,
+    "generated_at": "2026-09-01T15:27:10Z",
+    "items_count": 276,
     "titles_with_current": 9,
     "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
     "platform_mail_state_previous_count": 277,
-    "platform_mail_state_current_count": 277
+    "platform_mail_state_current_count": 276
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-08-31T17:59:25.932045+00:00",
+    "updated_at_utc": "2026-09-01T15:27:34.297476+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -579,15 +589,6 @@
       "5a654714ec2f17036eeb22fafbf3141718251d2a": {
         "title": "Soy Tóxico",
         "provider": "Tubi TV",
-        "region": "US",
-        "type": "gratis con publicidad",
-        "source": "TMDb Watch Providers",
-        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-      },
-      "7974d9c98c2219e6bd45db0a641633e956818a2f": {
-        "title": "Soy Tóxico",
-        "provider": "Xumo Play",
         "region": "US",
         "type": "gratis con publicidad",
         "source": "TMDb Watch Providers",
@@ -2521,7 +2522,7 @@
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       }
     },
-    "count": 277
+    "count": 276
   },
   "changed_files": [
     "outputs/state_platforms_seen.json",
@@ -2529,12 +2530,28 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-08-31T17:59:25Z",
+    "generated_at_utc": "2026-09-01T15:27:34Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
-  "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
-  "no_actionable_changes_is_success": true
+  "endpoint_configured": true,
+  "subject": "DDV Radar — Plataformas: +0 / -1 cambios",
+  "body_length": 2121,
+  "endpoint_http_status": 200,
+  "endpoint_content_type": "application/json; charset=UTF-8",
+  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 5,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
+  "endpoint_error": "",
+  "mail_blocked_by_security_challenge": false,
+  "payload_bytes": 2443,
+  "endpoint_json": {
+    "ok": true,
+    "mail_sent": true,
+    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
+    "alerts": 5,
+    "to": "furiafilms@gmail.com",
+    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
+  },
+  "platform_mail_state_written": true
 }
