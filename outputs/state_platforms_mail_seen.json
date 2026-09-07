@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-06T14:08:08.603264+00:00",
+  "updated_at_utc": "2026-09-07T16:25:40.394508+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -610,15 +610,6 @@
       "provider": "Planet Horror Amazon Channel",
       "region": "ES",
       "type": "suscripción",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    "6b9becf79d134aa107952ce3b7939d1217a0a784": {
-      "title": "El Último Hereje",
-      "provider": "Rakuten TV",
-      "region": "ES",
-      "type": "gratis con publicidad",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
@@ -2487,5 +2478,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 276
+  "count": 275
 }
