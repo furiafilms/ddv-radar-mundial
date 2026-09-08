@@ -1,24 +1,26 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
-  "ran_at": "2026-09-08T15:38:10.589780-03:00",
+  "ran_at": "2026-09-08T18:50:01.408759-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
   "lookahead_hours": 168,
   "past_grace_minutes": 30,
   "include_review": true,
-  "window_start": "2026-09-08T15:08:10.589780-03:00",
-  "window_end": "2026-09-15T15:38:10.589780-03:00",
+  "window_start": "2026-09-08T18:20:01.408759-03:00",
+  "window_end": "2026-09-15T18:50:01.408759-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json",
     "outputs/site_tv_cable_review.json"
   ],
-  "events_total": 4,
-  "events_due": 0,
+  "events_total": 5,
+  "events_due": 1,
   "confirmed_due": 0,
-  "review_due": 0,
+  "review_due": 1,
   "mail_sent": false,
   "mode": "normal",
-  "endpoint_response": "Sin emisiones futuras ni bloques a revisar; no corresponde enviar mail.",
+  "endpoint_response": "HTTP Error 403: Forbidden",
   "no_events_is_success": true,
-  "unsent": []
+  "unsent": [
+    "- REVISAR: Ficcionarte — Canal á — 09/09/2026 22:00\n Motivo: La grilla informa Ficcionarte pero no identifica la película. Puede corresponder a una emisión DDV anunciada por DAC/Canal á; requiere revisar fuente editorial.\n Fuente: AmericaTVGuide / Canal á — https://americatvguide.com/es/ar/channel/canal_a"
+  ]
 }
