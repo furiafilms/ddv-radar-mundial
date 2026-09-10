@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-09T15:05:34.551760+00:00",
+  "updated_at_utc": "2026-09-10T14:57:51.576590+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -422,7 +422,7 @@
       "region": "US",
       "type": "alquiler",
       "source": "Watchmode",
-      "url": "https://tv.apple.com/us/movie/i-am-toxic/umc.cmc.4qv7dcl51cidmzsneoxl1pkth?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1534113454",
+      "url": "https://tv.apple.com/us/movie/i-am-toxic/umc.cmc.4qv7dcl51cidmzsneoxl1pkth?at=1000l3V2&ct=app_tv&itscg=30200&playableId=tvs.sbd.9001%3A1534113454",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "81095a7c78eb394882170fd91680c7a31636ea09": {
@@ -431,7 +431,7 @@
       "region": "US",
       "type": "compra",
       "source": "Watchmode",
-      "url": "https://tv.apple.com/us/movie/i-am-toxic/umc.cmc.4qv7dcl51cidmzsneoxl1pkth?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1534113454",
+      "url": "https://tv.apple.com/us/movie/i-am-toxic/umc.cmc.4qv7dcl51cidmzsneoxl1pkth?at=1000l3V2&ct=app_tv&itscg=30200&playableId=tvs.sbd.9001%3A1534113454",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "252aa2012b27f07a7b1f4b8f5b258c210e8a1210": {
@@ -486,15 +486,6 @@
       "type": "compra",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "6b2b9f737f7f0c7aa3509993a3f9b272d19cb3d8": {
-      "title": "Soy Tóxico",
-      "provider": "Plex",
-      "region": "US",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://watch.plex.tv/movie/i-am-toxic?autoplay=1",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "4ce98ebf92ecc2a88cd4014fc06c9793517876aa": {
@@ -558,6 +549,15 @@
       "type": "gratis con publicidad",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    },
+    "e78580cd47d9bc65f3961575332a36dc80e98717": {
+      "title": "Soy Tóxico",
+      "provider": "Xumo Play",
+      "region": "US",
+      "type": "gratis",
+      "source": "Watchmode",
+      "url": "https://play.xumo.com/free-movies/i-am-toxic/XM0NH3WCMFMFBJ",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "7974d9c98c2219e6bd45db0a641633e956818a2f": {
@@ -712,6 +712,15 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=BR",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
+    "0645c886d1c29ececa671c597d05b773e595b2f4": {
+      "title": "Soy Tóxico",
+      "provider": "Cindie Amazon Channel",
+      "region": "BR",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BR",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "a9428a1452b4602e06beab027e1205823f8c4e3b": {
       "title": "El Último Hereje",
@@ -2478,5 +2487,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 275
+  "count": 276
 }

@@ -1,6 +1,40 @@
 {
-  "generated_at": "2026-09-09T15:04:52Z",
-  "platforms": [],
+  "generated_at": "2026-09-10T14:57:13Z",
+  "platforms": [
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "Cindie Amazon Channel",
+      "provider_id": 2167,
+      "region": "BR",
+      "region_code": "BR",
+      "country": "BR",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BR",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-09-10T14:57:19Z",
+      "fingerprint": "6fc5fb34357d6832d58ae3e8115dacedb6597998",
+      "identity_fingerprint": "0645c886d1c29ececa671c597d05b773e595b2f4"
+    },
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "Xumo Play",
+      "provider_id": 472,
+      "watchmode_id": 1523904,
+      "region": "US",
+      "region_code": "US",
+      "country": "US",
+      "type": "gratis",
+      "raw_type": "free",
+      "url": "https://play.xumo.com/free-movies/i-am-toxic/XM0NH3WCMFMFBJ",
+      "source": "Watchmode",
+      "detected_at": "2026-09-10T14:57:20Z",
+      "fingerprint": "b10e4fa94b9a1f4066eddd26c5cff891898b5ba7",
+      "identity_fingerprint": "e78580cd47d9bc65f3961575332a36dc80e98717"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
