@@ -1,60 +1,59 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-09-10T14:57:51.571438+00:00",
+  "ran_at": "2026-09-11T14:58:31.766964+00:00",
   "changes_detected": true,
   "mail_sent": true,
   "future_count": 0,
   "historic_count": 4,
-  "platform_added_count": 2,
-  "platform_removed_count": 1,
+  "platform_added_count": 0,
+  "platform_removed_count": 3,
   "platform_change_count": 3,
-  "platform_added_sample": [
-    {
-      "title": "Soy Tóxico",
-      "provider": "Xumo Play",
-      "region": "US",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://play.xumo.com/free-movies/i-am-toxic/XM0NH3WCMFMFBJ",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Cindie Amazon Channel",
-      "region": "BR",
-      "type": "suscripción",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=BR",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    }
-  ],
+  "platform_added_sample": [],
   "platform_removed_sample": [
     {
-      "title": "Soy Tóxico",
-      "provider": "Plex",
+      "title": "Los Ojos del Abismo",
+      "provider": "AppleTV",
+      "region": "US",
+      "type": "alquiler",
+      "source": "Watchmode",
+      "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
+    {
+      "title": "Los Ojos del Abismo",
+      "provider": "AppleTV",
+      "region": "US",
+      "type": "compra",
+      "source": "Watchmode",
+      "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
+    {
+      "title": "Los Ojos del Abismo",
+      "provider": "Tubi TV",
       "region": "US",
       "type": "gratis",
       "source": "Watchmode",
-      "url": "https://watch.plex.tv/movie/i-am-toxic?autoplay=1",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+      "url": "https://tubitv.com/movies/100055192",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
     }
   ],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-09-10T14:57:28Z",
-    "items_count": 276,
+    "generated_at": "2026-09-11T14:58:04Z",
+    "items_count": 273,
     "titles_with_current": 9,
     "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
-    "platform_mail_state_previous_count": 275,
-    "platform_mail_state_current_count": 276
+    "platform_mail_state_previous_count": 276,
+    "platform_mail_state_current_count": 273
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-09-10T14:57:51.576590+00:00",
+    "updated_at_utc": "2026-09-11T14:58:31.772082+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -290,24 +289,6 @@
         "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
       },
-      "f72605b5e1b591dea2646018674900fb0d09c850": {
-        "title": "Los Ojos del Abismo",
-        "provider": "AppleTV",
-        "region": "US",
-        "type": "alquiler",
-        "source": "Watchmode",
-        "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
-      },
-      "cbda130da7e99d7c546e20c38aa3ca7e3d7afe3d": {
-        "title": "Los Ojos del Abismo",
-        "provider": "AppleTV",
-        "region": "US",
-        "type": "compra",
-        "source": "Watchmode",
-        "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
-      },
       "a072f4a096225f25141fff56e9e64bf6e7f0f3e7": {
         "title": "Los Ojos del Abismo",
         "provider": "Fandango At Home",
@@ -342,15 +323,6 @@
         "type": "compra",
         "source": "TMDb Watch Providers",
         "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
-      },
-      "b8ff0355dc9591b189a2c7f6f3be5914feb02e37": {
-        "title": "Los Ojos del Abismo",
-        "provider": "Tubi TV",
-        "region": "US",
-        "type": "gratis",
-        "source": "Watchmode",
-        "url": "https://tubitv.com/movies/100055192",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
       },
       "cf712cc275e287548497f4db9d6ff092174eaf7c": {
@@ -2541,7 +2513,7 @@
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       }
     },
-    "count": 276
+    "count": 273
   },
   "changed_files": [
     "outputs/state_platforms_seen.json",
@@ -2549,21 +2521,21 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-09-10T14:57:51Z",
+    "generated_at_utc": "2026-09-11T14:58:31Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
   "endpoint_configured": true,
-  "subject": "DDV Radar — Plataformas: +2 / -1 cambios",
-  "body_length": 2245,
+  "subject": "DDV Radar — Plataformas: +0 / -3 cambios",
+  "body_length": 2229,
   "endpoint_http_status": 200,
   "endpoint_content_type": "application/json; charset=UTF-8",
   "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 7,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
   "endpoint_error": "",
   "mail_blocked_by_security_challenge": false,
-  "payload_bytes": 2582,
+  "payload_bytes": 2559,
   "endpoint_json": {
     "ok": true,
     "mail_sent": true,

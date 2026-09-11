@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-10T14:57:51.576590+00:00",
+  "updated_at_utc": "2026-09-11T14:58:31.772082+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -236,24 +236,6 @@
       "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
     },
-    "f72605b5e1b591dea2646018674900fb0d09c850": {
-      "title": "Los Ojos del Abismo",
-      "provider": "AppleTV",
-      "region": "US",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
-    },
-    "cbda130da7e99d7c546e20c38aa3ca7e3d7afe3d": {
-      "title": "Los Ojos del Abismo",
-      "provider": "AppleTV",
-      "region": "US",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/us/movie/umc.cmc.e095hntidbpch0lkqukkcge4?itsct=&itscg=30200&at=1010layx",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
-    },
     "a072f4a096225f25141fff56e9e64bf6e7f0f3e7": {
       "title": "Los Ojos del Abismo",
       "provider": "Fandango At Home",
@@ -288,15 +270,6 @@
       "type": "compra",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
-    },
-    "b8ff0355dc9591b189a2c7f6f3be5914feb02e37": {
-      "title": "Los Ojos del Abismo",
-      "provider": "Tubi TV",
-      "region": "US",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://tubitv.com/movies/100055192",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
     },
     "cf712cc275e287548497f4db9d6ff092174eaf7c": {
@@ -2487,5 +2460,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 276
+  "count": 273
 }
