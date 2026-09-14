@@ -1,31 +1,77 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-09-13T14:54:34.640599+00:00",
+  "ran_at": "2026-09-14T16:56:33.709126+00:00",
   "changes_detected": true,
-  "mail_sent": false,
+  "mail_sent": true,
   "future_count": 0,
   "historic_count": 4,
-  "platform_added_count": 0,
+  "platform_added_count": 5,
   "platform_removed_count": 0,
-  "platform_change_count": 0,
-  "platform_added_sample": [],
+  "platform_change_count": 5,
+  "platform_added_sample": [
+    {
+      "title": "El Último Hereje",
+      "provider": "Amazon",
+      "region": "AR",
+      "type": "alquiler",
+      "source": "Watchmode",
+      "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
+    {
+      "title": "El Último Hereje",
+      "provider": "Amazon",
+      "region": "AR",
+      "type": "compra",
+      "source": "Watchmode",
+      "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
+    {
+      "title": "El Último Hereje",
+      "provider": "AppleTV",
+      "region": "AR",
+      "type": "alquiler",
+      "source": "Watchmode",
+      "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
+    {
+      "title": "El Último Hereje",
+      "provider": "AppleTV",
+      "region": "AR",
+      "type": "compra",
+      "source": "Watchmode",
+      "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
+    {
+      "title": "El Último Hereje",
+      "provider": "Rakuten TV",
+      "region": "ES",
+      "type": "gratis",
+      "source": "Watchmode",
+      "url": "https://www.rakuten.tv/es/movies/el-ultimo-hereje",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    }
+  ],
   "platform_removed_sample": [],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-09-13T14:54:12Z",
-    "items_count": 273,
+    "generated_at": "2026-09-14T16:56:10Z",
+    "items_count": 278,
     "titles_with_current": 9,
     "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
     "platform_mail_state_previous_count": 273,
-    "platform_mail_state_current_count": 273
+    "platform_mail_state_current_count": 278
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-09-13T14:54:34.645840+00:00",
+    "updated_at_utc": "2026-09-14T16:56:33.713767+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -35,6 +81,24 @@
         "source": "TMDb Watch Providers",
         "url": "https://www.themoviedb.org/movie/1207904-el-martillo-cronica-de-un-mito/watch?locale=AR",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-martillo"
+      },
+      "cbd0944451a44cc09ff3c153e891b8c371fcb7a9": {
+        "title": "El Último Hereje",
+        "provider": "Amazon",
+        "region": "AR",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "6e342bf39f9a8674b76268b72dd7a52bb5700014": {
+        "title": "El Último Hereje",
+        "provider": "Amazon",
+        "region": "AR",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
       },
       "de6639d894a353d8c4c50f9a8db3783abfb77b83": {
         "title": "El Último Hereje",
@@ -70,6 +134,24 @@
         "type": "compra",
         "source": "TMDb Watch Providers",
         "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "25eca9c8c939a3f7cef300969b8110963667bf14": {
+        "title": "El Último Hereje",
+        "provider": "AppleTV",
+        "region": "AR",
+        "type": "alquiler",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "856b489760e458ff9218c0f72a3af2b40988cfc5": {
+        "title": "El Último Hereje",
+        "provider": "AppleTV",
+        "region": "AR",
+        "type": "compra",
+        "source": "Watchmode",
+        "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
       },
       "edc5a8c58ce85497483f3569388292e3fd8823f7": {
@@ -610,6 +692,15 @@
         "type": "suscripción",
         "source": "TMDb Watch Providers",
         "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+      },
+      "862cc355d5446ec2ce8ac63cead9fd01fc530ab1": {
+        "title": "El Último Hereje",
+        "provider": "Rakuten TV",
+        "region": "ES",
+        "type": "gratis",
+        "source": "Watchmode",
+        "url": "https://www.rakuten.tv/es/movies/el-ultimo-hereje",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
       },
       "0a2638cd8f86a8acd4f2c5a0013b5f82f962df78": {
@@ -2485,7 +2576,7 @@
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       }
     },
-    "count": 273
+    "count": 278
   },
   "changed_files": [
     "outputs/state_platforms_seen.json",
@@ -2493,12 +2584,28 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-09-13T14:54:34Z",
+    "generated_at_utc": "2026-09-14T16:56:33Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
-  "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
-  "no_actionable_changes_is_success": true
+  "endpoint_configured": true,
+  "subject": "DDV Radar — Plataformas: +5 / -0 cambios",
+  "body_length": 2327,
+  "endpoint_http_status": 200,
+  "endpoint_content_type": "application/json; charset=UTF-8",
+  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 9,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
+  "endpoint_error": "",
+  "mail_blocked_by_security_challenge": false,
+  "payload_bytes": 2673,
+  "endpoint_json": {
+    "ok": true,
+    "mail_sent": true,
+    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
+    "alerts": 9,
+    "to": "furiafilms@gmail.com",
+    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
+  },
+  "platform_mail_state_written": true
 }
