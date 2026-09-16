@@ -1,12 +1,12 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
-  "ran_at": "2026-09-15T22:24:00.725364-03:00",
+  "ran_at": "2026-09-16T12:24:03.427396-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
-  "lookahead_hours": 168,
+  "lookahead_hours": 36,
   "past_grace_minutes": 30,
   "include_review": true,
-  "window_start": "2026-09-15T21:54:00.725364-03:00",
-  "window_end": "2026-09-22T22:24:00.725364-03:00",
+  "window_start": "2026-09-16T11:54:03.427396-03:00",
+  "window_end": "2026-09-18T00:24:03.427396-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json",
