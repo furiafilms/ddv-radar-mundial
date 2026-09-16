@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-14T16:56:33.713767+00:00",
+  "updated_at_utc": "2026-09-16T15:24:57.820540+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -10,24 +10,6 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/1207904-el-martillo-cronica-de-un-mito/watch?locale=AR",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-martillo"
-    },
-    "cbd0944451a44cc09ff3c153e891b8c371fcb7a9": {
-      "title": "El Último Hereje",
-      "provider": "Amazon",
-      "region": "AR",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    "6e342bf39f9a8674b76268b72dd7a52bb5700014": {
-      "title": "El Último Hereje",
-      "provider": "Amazon",
-      "region": "AR",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
     },
     "de6639d894a353d8c4c50f9a8db3783abfb77b83": {
       "title": "El Último Hereje",
@@ -63,24 +45,6 @@
       "type": "compra",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=AR",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    "25eca9c8c939a3f7cef300969b8110963667bf14": {
-      "title": "El Último Hereje",
-      "provider": "AppleTV",
-      "region": "AR",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    "856b489760e458ff9218c0f72a3af2b40988cfc5": {
-      "title": "El Último Hereje",
-      "provider": "AppleTV",
-      "region": "AR",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
     },
     "edc5a8c58ce85497483f3569388292e3fd8823f7": {
@@ -569,15 +533,6 @@
       "url": "https://play.xumo.com/free-movies/i-am-toxic/XM0NH3WCMFMFBJ",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
-    "7974d9c98c2219e6bd45db0a641633e956818a2f": {
-      "title": "Soy Tóxico",
-      "provider": "Xumo Play",
-      "region": "US",
-      "type": "gratis con publicidad",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
     "209488a2d1ad7eae5f0ff4c9d546c9f15a7f8392": {
       "title": "Soy Tóxico",
       "provider": "YouTube",
@@ -621,15 +576,6 @@
       "type": "suscripción",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=ES",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    "862cc355d5446ec2ce8ac63cead9fd01fc530ab1": {
-      "title": "El Último Hereje",
-      "provider": "Rakuten TV",
-      "region": "ES",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://www.rakuten.tv/es/movies/el-ultimo-hereje",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
     },
     "0a2638cd8f86a8acd4f2c5a0013b5f82f962df78": {
@@ -2505,5 +2451,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 278
+  "count": 272
 }
