@@ -1,86 +1,31 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-09-16T15:24:57.815356+00:00",
+  "ran_at": "2026-09-17T15:31:44.210066+00:00",
   "changes_detected": true,
-  "mail_sent": true,
+  "mail_sent": false,
   "future_count": 0,
   "historic_count": 4,
   "platform_added_count": 0,
-  "platform_removed_count": 6,
-  "platform_change_count": 6,
+  "platform_removed_count": 0,
+  "platform_change_count": 0,
   "platform_added_sample": [],
-  "platform_removed_sample": [
-    {
-      "title": "El Último Hereje",
-      "provider": "Amazon",
-      "region": "AR",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    {
-      "title": "El Último Hereje",
-      "provider": "Amazon",
-      "region": "AR",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.244d4eff-1ec2-438b-87b7-f2360ab645e2",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    {
-      "title": "El Último Hereje",
-      "provider": "AppleTV",
-      "region": "AR",
-      "type": "alquiler",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    {
-      "title": "El Último Hereje",
-      "provider": "AppleTV",
-      "region": "AR",
-      "type": "compra",
-      "source": "Watchmode",
-      "url": "https://tv.apple.com/ar/movie/el-ultimo-hereje/umc.cmc.2m3jfh90ctqbkxa9o0gyauitx?at=1000l3V2&ct=app_tv&itscg=30200&itsct=&playableId=tvs.sbd.9001%3A1871480643",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Xumo Play",
-      "region": "US",
-      "type": "gratis con publicidad",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "El Último Hereje",
-      "provider": "Rakuten TV",
-      "region": "ES",
-      "type": "gratis",
-      "source": "Watchmode",
-      "url": "https://www.rakuten.tv/es/movies/el-ultimo-hereje",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
-    }
-  ],
+  "platform_removed_sample": [],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-09-16T15:24:32Z",
+    "generated_at": "2026-09-17T15:31:18Z",
     "items_count": 272,
     "titles_with_current": 9,
     "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
-    "platform_mail_state_previous_count": 278,
+    "platform_mail_state_previous_count": 272,
     "platform_mail_state_current_count": 272
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-09-16T15:24:57.820540+00:00",
+    "updated_at_utc": "2026-09-17T15:31:44.215060+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -2539,28 +2484,12 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-09-16T15:24:57Z",
+    "generated_at_utc": "2026-09-17T15:31:44Z",
     "hits_total": 4,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
-  "endpoint_configured": true,
-  "subject": "DDV Radar — Plataformas: +0 / -6 cambios",
-  "body_length": 2429,
-  "endpoint_http_status": 200,
-  "endpoint_content_type": "application/json; charset=UTF-8",
-  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 10,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
-  "endpoint_error": "",
-  "mail_blocked_by_security_challenge": false,
-  "payload_bytes": 2784,
-  "endpoint_json": {
-    "ok": true,
-    "mail_sent": true,
-    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
-    "alerts": 10,
-    "to": "furiafilms@gmail.com",
-    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
-  },
-  "platform_mail_state_written": true
+  "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
+  "no_actionable_changes_is_success": true
 }
