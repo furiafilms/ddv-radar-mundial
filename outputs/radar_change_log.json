@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-09-22T15:29:27Z",
-  "platforms": [],
+  "generated_at": "2026-09-23T15:25:33Z",
+  "platforms": [
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "Amazon MX Player",
+      "provider_id": 1898,
+      "region": "US",
+      "region_code": "US",
+      "country": "US",
+      "type": "gratis con publicidad",
+      "raw_type": "ads",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-09-23T15:25:37Z",
+      "fingerprint": "43b56c8dfd6f37e6abc45e5f6317fe8137c3a92b",
+      "identity_fingerprint": "c569bbf1ac91b5ba0ffdfbcfea12d0f544751cd2"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {

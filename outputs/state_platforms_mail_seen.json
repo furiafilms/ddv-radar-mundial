@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-22T15:30:01.059586+00:00",
+  "updated_at_utc": "2026-09-23T15:25:58.752720+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -324,6 +324,15 @@
       "type": "gratis",
       "source": "Watchmode",
       "url": "https://watch.amazon.com/detail?gti=amzn1.dv.gti.12ba2346-3801-7670-3072-972e1817b581",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    },
+    "c569bbf1ac91b5ba0ffdfbcfea12d0f544751cd2": {
+      "title": "Soy Tóxico",
+      "provider": "Amazon MX Player",
+      "region": "US",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "611095613cd2f30186c595dc428c5a2e6c6410be": {
@@ -2451,5 +2460,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 272
+  "count": 273
 }
