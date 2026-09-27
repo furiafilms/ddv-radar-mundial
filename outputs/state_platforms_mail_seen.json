@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-26T14:57:46.874610+00:00",
+  "updated_at_utc": "2026-09-27T15:38:01.887525+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -199,6 +199,24 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+    },
+    "b6ee880f27a753fd8196d38d8f7858f11c6ab05a": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Plex",
+      "region": "US",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "e3a403692abc09d333dbb21a509b2c7e31be28fb": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Plex Channel",
+      "region": "US",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     },
     "455e39426cb1e0cb6ec483e3604b2364f8e12c27": {
       "title": "Los Ojos del Abismo",
@@ -1000,6 +1018,15 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IT",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    },
+    "01b2c0a828848d63cc2a366583deec62f213b454": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Plex",
+      "region": "CA",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CA",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     },
     "a8c145bcb42b3448d4de3ac7508065eef0871319": {
       "title": "Los Ojos del Abismo",
@@ -2460,5 +2487,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 273
+  "count": 276
 }
