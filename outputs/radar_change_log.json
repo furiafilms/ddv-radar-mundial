@@ -1,55 +1,6 @@
 {
-  "generated_at": "2026-09-27T15:37:29Z",
-  "platforms": [
-    {
-      "slug": "jennifers-shadow",
-      "work_title": "Jennifer’s Shadow",
-      "name": "Plex",
-      "provider_id": 538,
-      "region": "US",
-      "region_code": "US",
-      "country": "US",
-      "type": "gratis con publicidad",
-      "raw_type": "ads",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-09-27T15:37:36Z",
-      "fingerprint": "5144b41ef42aae86d0d38b51fd424d9dfce137f4",
-      "identity_fingerprint": "b6ee880f27a753fd8196d38d8f7858f11c6ab05a"
-    },
-    {
-      "slug": "jennifers-shadow",
-      "work_title": "Jennifer’s Shadow",
-      "name": "Plex Channel",
-      "provider_id": 2077,
-      "region": "US",
-      "region_code": "US",
-      "country": "US",
-      "type": "gratis con publicidad",
-      "raw_type": "ads",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-09-27T15:37:36Z",
-      "fingerprint": "7db21b4eb76c1e9f9892624ec50f4598f65ee082",
-      "identity_fingerprint": "e3a403692abc09d333dbb21a509b2c7e31be28fb"
-    },
-    {
-      "slug": "jennifers-shadow",
-      "work_title": "Jennifer’s Shadow",
-      "name": "Plex",
-      "provider_id": 538,
-      "region": "CA",
-      "region_code": "CA",
-      "country": "CA",
-      "type": "gratis con publicidad",
-      "raw_type": "ads",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CA",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-09-27T15:37:36Z",
-      "fingerprint": "31e51a366425e4fbf883dfee6dcf06cba019b271",
-      "identity_fingerprint": "01b2c0a828848d63cc2a366583deec62f213b454"
-    }
-  ],
+  "generated_at": "2026-09-28T18:34:12Z",
+  "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
