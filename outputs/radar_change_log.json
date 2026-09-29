@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-09-28T18:34:12Z",
-  "platforms": [],
+  "generated_at": "2026-09-29T16:51:55Z",
+  "platforms": [
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "Cindie Amazon Channel",
+      "provider_id": 2167,
+      "region": "AR",
+      "region_code": "AR",
+      "country": "AR",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-09-29T16:52:00Z",
+      "fingerprint": "48e8cbce737d5c7599e5fba9e9a90b30c041001a",
+      "identity_fingerprint": "00c6c2510c4f3601b59f65b11a4280d242323183"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {

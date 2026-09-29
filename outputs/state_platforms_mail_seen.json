@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-09-28T18:34:49.602109+00:00",
+  "updated_at_utc": "2026-09-29T16:52:26.174494+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -55,6 +55,15 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/642397-la-ultima-cena/watch?locale=AR",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=la-ultima-cena"
+    },
+    "00c6c2510c4f3601b59f65b11a4280d242323183": {
+      "title": "Soy Tóxico",
+      "provider": "Cindie Amazon Channel",
+      "region": "AR",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "64f4b2799b17e4968f84ccbd313e8e0a037de3c6": {
       "title": "Soy Tóxico",
@@ -2487,5 +2496,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 276
+  "count": 277
 }
