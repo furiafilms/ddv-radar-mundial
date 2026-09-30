@@ -1,12 +1,12 @@
 {
   "version": "DDV_TV_ALERTAS_DIARIAS_V9_REVIEW_BLOCKS",
-  "ran_at": "2026-09-30T13:49:32.024696-03:00",
+  "ran_at": "2026-09-30T20:00:04.070613-03:00",
   "timezone": "America/Argentina/Buenos_Aires",
   "lookahead_hours": 168,
   "past_grace_minutes": 30,
   "include_review": true,
-  "window_start": "2026-09-30T13:19:32.024696-03:00",
-  "window_end": "2026-10-07T13:49:32.024696-03:00",
+  "window_start": "2026-09-30T19:30:04.070613-03:00",
+  "window_end": "2026-10-07T20:00:04.070613-03:00",
   "input_files_loaded": [
     "outputs/site_tv_cable_global.json",
     "outputs/site_tv_cable_global_filtered.json",
@@ -16,12 +16,16 @@
   "events_due": 2,
   "confirmed_due": 0,
   "review_due": 2,
-  "mail_sent": false,
+  "mail_sent": true,
   "mode": "normal",
-  "endpoint_response": "HTTP Error 403: Forbidden",
+  "endpoint_response": {
+    "ok": true,
+    "mail_sent": true,
+    "mode": "daily_tv_alert_or_review",
+    "alerts": 2,
+    "to": "furiafilms@gmail.com",
+    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
+  },
   "no_events_is_success": true,
-  "unsent": [
-    "- REVISAR: Ficcionarte — Canal á — 01/10/2026 01:00\n Motivo: La grilla informa Ficcionarte pero no identifica la película. Puede corresponder a una emisión DDV anunciada por DAC/Canal á; requiere revisar fuente editorial.\n Fuente: AmericaTVGuide / Canal á — https://americatvguide.com/es/ar/channel/canal_a",
-    "- REVISAR: Ficcionarte — Canal á — 01/10/2026 04:00\n Motivo: La grilla informa Ficcionarte pero no identifica la película. Puede corresponder a una emisión DDV anunciada por DAC/Canal á; requiere revisar fuente editorial.\n Fuente: AmericaTVGuide / Canal á — https://americatvguide.com/es/ar/channel/canal_a"
-  ]
+  "unsent": []
 }
