@@ -1,23 +1,6 @@
 {
-  "generated_at": "2026-10-04T15:46:21Z",
-  "platforms": [
-    {
-      "slug": "jennifers-shadow",
-      "work_title": "Jennifer’s Shadow",
-      "name": "Fawesome",
-      "provider_id": 2409,
-      "region": "US",
-      "region_code": "US",
-      "country": "US",
-      "type": "gratis",
-      "raw_type": "free",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-10-04T15:46:29Z",
-      "fingerprint": "53cd780779037621a40f1b0f2a3a3dae2bb0c23d",
-      "identity_fingerprint": "20d3cebe6513d60d4d9b5b227cfb2c78b63ec248"
-    }
-  ],
+  "generated_at": "2026-10-06T17:08:59Z",
+  "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
