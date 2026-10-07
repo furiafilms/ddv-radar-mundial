@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-10-06T17:09:38.506423+00:00",
+  "updated_at_utc": "2026-10-07T17:47:32.101287+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -208,6 +208,42 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+    },
+    "4ab26a578b305a524f915fcd84e417c0510426d3": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Amazon MX Player",
+      "region": "US",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "515bb4c8e6f7469a340546980fbe57240099260a": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Amazon Prime Video Free with Ads",
+      "region": "US",
+      "type": "gratis con publicidad",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "c4041d987ecd097c7819eb313e617bee334a3514": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Amazon Video",
+      "region": "US",
+      "type": "alquiler",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "6a3484732d11b925372617ee0f3204faa2fe0bda": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Amazon Video",
+      "region": "US",
+      "type": "compra",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     },
     "20d3cebe6513d60d4d9b5b227cfb2c78b63ec248": {
       "title": "Jennifer’s Shadow",
@@ -2505,5 +2541,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 278
+  "count": 282
 }
