@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-10-14T15:48:13.984379+00:00",
+  "updated_at_utc": "2026-10-15T15:34:35.909341+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -2360,78 +2360,6 @@
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
-    "89e8a8c4d06f7cb9652fbc28f4cb44d70c5863ad": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "DK",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "7bd1c3e4a55b0bfdaf9f3b4e2bcaf1187cc476e4": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "FI",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "d69211d77276badde1ced8e7aee829ca7d01c32d": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "NO",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "cde41ce008fd58cab1551a1e6e6cb4812c819cd6": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "SE",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "4fb50a01a73db75fbed159bd077df06ee0b7f906": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "DK",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "0f03e5bfb0b14b3561a27e2fcf74a98dd28b26bf": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "FI",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "7e72324bc2c6f46eb8a4c7e188fcab0b72b75276": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "NO",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "675b3edbb79fdd8d7ae7cbf9c5048a3a67584018": {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "SE",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
     "769d048d397f5243d5eaace5637c77848739976d": {
       "title": "Soy Tóxico",
       "provider": "meJane",
@@ -2550,5 +2478,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 283
+  "count": 275
 }
