@@ -1,104 +1,31 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-10-15T15:34:35.904087+00:00",
+  "ran_at": "2026-10-16T15:21:33.420409+00:00",
   "changes_detected": true,
   "mail_sent": true,
-  "future_count": 0,
+  "future_count": 1,
   "historic_count": 4,
   "platform_added_count": 0,
-  "platform_removed_count": 8,
-  "platform_change_count": 8,
+  "platform_removed_count": 0,
+  "platform_change_count": 0,
   "platform_added_sample": [],
-  "platform_removed_sample": [
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "SE",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "FI",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "NO",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "DK",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "DK",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=DK",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "FI",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=FI",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "SE",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=SE",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    {
-      "title": "Soy Tóxico",
-      "provider": "Google Play Movies",
-      "region": "NO",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=NO",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    }
-  ],
+  "platform_removed_sample": [],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-10-15T15:34:10Z",
+    "generated_at": "2026-10-16T15:21:04Z",
     "items_count": 275,
     "titles_with_current": 9,
     "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
-    "platform_mail_state_previous_count": 283,
+    "platform_mail_state_previous_count": 275,
     "platform_mail_state_current_count": 275
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-10-15T15:34:35.909341+00:00",
+    "updated_at_utc": "2026-10-16T15:21:33.425446+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -2584,26 +2511,26 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-10-15T15:34:35Z",
-    "hits_total": 4,
+    "generated_at_utc": "2026-10-16T15:21:33Z",
+    "hits_total": 5,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
   "endpoint_configured": true,
-  "subject": "DDV Radar — Plataformas: +0 / -8 cambios",
-  "body_length": 2620,
+  "subject": "DDV Radar — 1 emisión(es) futura(s) TV/Cable",
+  "body_length": 2350,
   "endpoint_http_status": 200,
   "endpoint_content_type": "application/json; charset=UTF-8",
-  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 12,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
+  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 5,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
   "endpoint_error": "",
   "mail_blocked_by_security_challenge": false,
-  "payload_bytes": 2985,
+  "payload_bytes": 2683,
   "endpoint_json": {
     "ok": true,
     "mail_sent": true,
     "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
-    "alerts": 12,
+    "alerts": 5,
     "to": "furiafilms@gmail.com",
     "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
   },
