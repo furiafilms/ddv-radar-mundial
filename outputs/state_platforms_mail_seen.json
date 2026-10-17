@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-10-16T15:21:33.425446+00:00",
+  "updated_at_utc": "2026-10-17T14:11:06.653342+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -612,15 +612,6 @@
       "type": "gratis",
       "source": "Watchmode",
       "url": "https://play.xumo.com/free-movies/i-am-toxic/XM0NH3WCMFMFBJ",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "7974d9c98c2219e6bd45db0a641633e956818a2f": {
-      "title": "Soy Tóxico",
-      "provider": "Xumo Play",
-      "region": "US",
-      "type": "gratis con publicidad",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "209488a2d1ad7eae5f0ff4c9d546c9f15a7f8392": {
@@ -2478,5 +2469,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 275
+  "count": 274
 }
