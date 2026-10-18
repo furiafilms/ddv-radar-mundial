@@ -1,38 +1,7 @@
 {
-  "generated_at": "2026-10-17T14:10:23Z",
+  "generated_at": "2026-10-18T14:31:38Z",
   "platforms": [],
-  "tv_cable": [
-    {
-      "fingerprint": "15865b87fa560efff087dab049e3e551f1d473fa",
-      "item": {
-        "slug": "hermanos-de-sangre",
-        "title": "Hermanos de Sangre",
-        "programme_title": "Hermanos de sangre",
-        "raw_programme_title": "Hermanos de sangre, 2012",
-        "matched_term": "Hermanos de Sangre",
-        "match_reason": "título exacto en grilla",
-        "channel": "CINE.AR",
-        "channel_number": "CINE.AR · TDA/operadores argentinos",
-        "country": "AR",
-        "country_code": "AR",
-        "country_name": "Argentina",
-        "date_iso": "2026-10-17",
-        "start_time": "02:00",
-        "end_time": "",
-        "source": "AmericaTVGuide / CINE.AR",
-        "source_url": "https://americatvguide.com/es/ar/channel/cine_ar",
-        "detection_type": "grilla argentina viva / AmericaTVGuide",
-        "confidence": "high",
-        "source_labels": [
-          "AmericaTVGuide / CINE.AR"
-        ],
-        "work_slug": "hermanos-de-sangre",
-        "work_title": "Hermanos de Sangre",
-        "detected_at": "2026-10-17T01:16:53Z",
-        "fingerprint": "15865b87fa560efff087dab049e3e551f1d473fa"
-      }
-    }
-  ],
+  "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
     "platforms": false,
