@@ -1,11 +1,11 @@
 {
   "ok": true,
   "version": "v217-tv-argentina-bloques-opacos",
-  "generated_at_utc": "2026-10-24T21:35:00Z",
+  "generated_at_utc": "2026-10-25T01:06:06Z",
   "source": "DDV TV Argentina Grillas v217 + outputs previos",
   "hits_total": 6,
-  "review_total": 5,
-  "opaque_blocks_total": 5,
+  "review_total": 4,
+  "opaque_blocks_total": 4,
   "hits": [
     {
       "slug": "hermanos-de-sangre",
@@ -173,7 +173,7 @@
       "source_url": "https://americatvguide.com/es/ar/channel/canal_a",
       "channel": "Canal á",
       "date_iso": "2026-10-24",
-      "start_time": "21:00",
+      "start_time": "22:00",
       "programme_title": "Ciclo Cine Canal (á), 2017",
       "matched_term": "Ciclo Cine Canal (á)",
       "work_slug": "",
@@ -182,30 +182,14 @@
       "alert_type": "opaque_program_block",
       "needs_manual_confirmation": true,
       "confidence": "unknown",
-      "detected_at": "2026-10-24T21:35:00Z"
-    },
-    {
-      "source": "AmericaTVGuide / Canal á",
-      "source_url": "https://americatvguide.com/es/ar/channel/canal_a",
-      "channel": "Canal á",
-      "date_iso": "2026-10-24",
-      "start_time": "00:00",
-      "programme_title": "Ciclo Cine Canal (á), 2017",
-      "matched_term": "Ciclo Cine Canal (á)",
-      "work_slug": "",
-      "work_title": "Ciclo Cine Canal á",
-      "reason": "La grilla informa Ciclo Cine Canal (á) pero no identifica la película. Requiere revisar fuente editorial.",
-      "alert_type": "opaque_program_block",
-      "needs_manual_confirmation": true,
-      "confidence": "unknown",
-      "detected_at": "2026-10-24T21:35:00Z"
+      "detected_at": "2026-10-25T01:06:06Z"
     },
     {
       "source": "AmericaTVGuide / Canal á",
       "source_url": "https://americatvguide.com/es/ar/channel/canal_a",
       "channel": "Canal á",
       "date_iso": "2026-10-25",
-      "start_time": "00:00",
+      "start_time": "01:00",
       "programme_title": "Ciclo Cine Canal (á), 2017",
       "matched_term": "Ciclo Cine Canal (á)",
       "work_slug": "",
@@ -214,14 +198,14 @@
       "alert_type": "opaque_program_block",
       "needs_manual_confirmation": true,
       "confidence": "unknown",
-      "detected_at": "2026-10-24T21:35:00Z"
+      "detected_at": "2026-10-25T01:06:06Z"
     },
     {
       "source": "AmericaTVGuide / Canal á",
       "source_url": "https://americatvguide.com/es/ar/channel/canal_a",
       "channel": "Canal á",
       "date_iso": "2026-10-25",
-      "start_time": "03:00",
+      "start_time": "04:00",
       "programme_title": "Ciclo Cine Canal (á), 2017",
       "matched_term": "Ciclo Cine Canal (á)",
       "work_slug": "",
@@ -230,14 +214,14 @@
       "alert_type": "opaque_program_block",
       "needs_manual_confirmation": true,
       "confidence": "unknown",
-      "detected_at": "2026-10-24T21:35:00Z"
+      "detected_at": "2026-10-25T01:06:06Z"
     },
     {
       "source": "AmericaTVGuide / Canal á",
       "source_url": "https://americatvguide.com/es/ar/channel/canal_a",
       "channel": "Canal á",
       "date_iso": "2026-10-25",
-      "start_time": "21:00",
+      "start_time": "22:00",
       "programme_title": "Ficcionarte",
       "matched_term": "Ficcionarte",
       "work_slug": "",
@@ -246,7 +230,7 @@
       "alert_type": "opaque_program_block",
       "needs_manual_confirmation": true,
       "confidence": "unknown",
-      "detected_at": "2026-10-24T21:35:00Z"
+      "detected_at": "2026-10-25T01:06:06Z"
     }
   ],
   "source_reports": [
@@ -256,12 +240,12 @@
       "provider": "TeleRed / grilla de programación",
       "url": "https://www.telered.com.ar/buscador-grilla",
       "channel": "",
-      "bytes": 811398,
+      "bytes": 822553,
       "programmes_parsed": 0,
       "hits": 0,
       "review": 0,
       "error": "fuente descargada pero parser extrajo 0 programas; revisar parser o fuente",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -272,12 +256,12 @@
       "provider": "AmericaTVGuide / CINE.AR",
       "url": "https://americatvguide.com/es/ar/channel/cine_ar",
       "channel": "CINE.AR",
-      "bytes": 36829,
+      "bytes": 36827,
       "programmes_parsed": 26,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
@@ -288,12 +272,12 @@
       "provider": "AmericaTVGuide / Canal á",
       "url": "https://americatvguide.com/es/ar/channel/canal_a",
       "channel": "Canal á",
-      "bytes": 55677,
-      "programmes_parsed": 77,
+      "bytes": 55248,
+      "programmes_parsed": 76,
       "hits": 0,
-      "review": 5,
+      "review": 4,
       "error": "",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
@@ -304,12 +288,12 @@
       "provider": "AmericaTVGuide / Canal Volver",
       "url": "https://americatvguide.com/es/ar/channel/canal_volver",
       "channel": "VOLVER",
-      "bytes": 41777,
+      "bytes": 41775,
       "programmes_parsed": 34,
       "hits": 0,
       "review": 0,
       "error": "",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": true,
       "critical": false,
       "block_workflow_on_fail": false
@@ -325,7 +309,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -341,7 +325,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -357,7 +341,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -373,7 +357,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -389,7 +373,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -405,7 +389,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -421,7 +405,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -437,7 +421,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -453,7 +437,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -469,7 +453,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -485,7 +469,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -501,7 +485,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -517,7 +501,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -533,7 +517,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -549,7 +533,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -565,7 +549,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -581,7 +565,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -597,7 +581,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -613,7 +597,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -629,7 +613,7 @@
       "hits": 0,
       "review": 0,
       "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-      "scanned_at": "2026-10-24T21:35:00Z",
+      "scanned_at": "2026-10-25T01:06:06Z",
       "primary": false,
       "critical": false,
       "block_workflow_on_fail": false
@@ -638,6 +622,6 @@
   "argentina_sources_ok": true,
   "argentina_primary_sources_ok": true,
   "note": "El radar diferencia ausencia real de registros de fuentes no escaneadas. V217 usa fuentes principales vivas, registra fuentes secundarias caídas y además alerta bloques opacos de cine como Ficcionarte cuando la grilla no informa el título de la película.",
-  "filtered_at": "2026-10-24T21:35:00Z",
+  "filtered_at": "2026-10-25T01:06:06Z",
   "version_filter": "v217-tv-argentina-bloques-opacos"
 }
