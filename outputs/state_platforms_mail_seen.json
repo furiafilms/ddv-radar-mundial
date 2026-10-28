@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-10-27T16:30:36.768975+00:00",
+  "updated_at_utc": "2026-10-28T17:08:41.389686+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -239,6 +239,24 @@
     "6a3484732d11b925372617ee0f3204faa2fe0bda": {
       "title": "Jennifer’s Shadow",
       "provider": "Amazon Video",
+      "region": "US",
+      "type": "compra",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "1b32a561775b6a4bb46f90cb9836149955b563eb": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Fandango At Home",
+      "region": "US",
+      "type": "alquiler",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "f20c4139b4b69e5208adb3d865e95d8a234874dc": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Fandango At Home",
       "region": "US",
       "type": "compra",
       "source": "TMDb Watch Providers",
@@ -2469,5 +2487,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 274
+  "count": 276
 }
