@@ -1,39 +1,6 @@
 {
-  "generated_at": "2026-10-28T17:07:55Z",
-  "platforms": [
-    {
-      "slug": "jennifers-shadow",
-      "work_title": "Jennifer’s Shadow",
-      "name": "Fandango At Home",
-      "provider_id": 7,
-      "region": "US",
-      "region_code": "US",
-      "country": "US",
-      "type": "alquiler",
-      "raw_type": "rent",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-10-28T17:08:03Z",
-      "fingerprint": "acc1eba7fbd1a1a82485fd624b555313efaca694",
-      "identity_fingerprint": "1b32a561775b6a4bb46f90cb9836149955b563eb"
-    },
-    {
-      "slug": "jennifers-shadow",
-      "work_title": "Jennifer’s Shadow",
-      "name": "Fandango At Home",
-      "provider_id": 7,
-      "region": "US",
-      "region_code": "US",
-      "country": "US",
-      "type": "compra",
-      "raw_type": "buy",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-10-28T17:08:03Z",
-      "fingerprint": "452a7eb764206db1eeaaf62639d6d71681c6f9f4",
-      "identity_fingerprint": "f20c4139b4b69e5208adb3d865e95d8a234874dc"
-    }
-  ],
+  "generated_at": "2026-10-29T17:23:25Z",
+  "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
