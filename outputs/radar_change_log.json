@@ -1,39 +1,6 @@
 {
-  "generated_at": "2026-10-30T16:59:20Z",
-  "platforms": [
-    {
-      "slug": "soy-toxico",
-      "work_title": "Soy Tóxico",
-      "name": "Amazon Prime Video",
-      "provider_id": 9,
-      "region": "JP",
-      "region_code": "JP",
-      "country": "JP",
-      "type": "suscripción",
-      "raw_type": "flatrate",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-10-30T16:59:25Z",
-      "fingerprint": "200d38edcd76748ad4336b49f328cf5df417352a",
-      "identity_fingerprint": "2ae2ef8d61922e0be660a82a4bb8a7e70f382e2a"
-    },
-    {
-      "slug": "soy-toxico",
-      "work_title": "Soy Tóxico",
-      "name": "Amazon Prime Video with Ads",
-      "provider_id": 2100,
-      "region": "JP",
-      "region_code": "JP",
-      "country": "JP",
-      "type": "suscripción",
-      "raw_type": "flatrate",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
-      "source": "TMDb Watch Providers",
-      "detected_at": "2026-10-30T16:59:25Z",
-      "fingerprint": "0b69c286ac95123ea13a6059bbb0d0dbbc91188f",
-      "identity_fingerprint": "f5173a4106b39f7ddeb1c6e910f69ec6fd4d088c"
-    }
-  ],
+  "generated_at": "2026-10-31T16:01:45Z",
+  "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
