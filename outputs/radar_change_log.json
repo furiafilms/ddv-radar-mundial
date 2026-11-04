@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-11-03T18:22:52Z",
-  "platforms": [],
+  "generated_at": "2026-11-04T18:35:15Z",
+  "platforms": [
+    {
+      "slug": "el-ultimo-hereje",
+      "work_title": "El Último Hereje",
+      "name": "Apple TV Store",
+      "provider_id": 2,
+      "region": "VE",
+      "region_code": "VE",
+      "country": "VE",
+      "type": "alquiler",
+      "raw_type": "rent",
+      "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=VE",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-04T18:35:21Z",
+      "fingerprint": "e7371713b63a59aaf03a0507c55453b5d904cec9",
+      "identity_fingerprint": "d6f327a28a166b663a7fe2769c2142f564a5ab94"
+    },
+    {
+      "slug": "el-ultimo-hereje",
+      "work_title": "El Último Hereje",
+      "name": "Apple TV Store",
+      "provider_id": 2,
+      "region": "VE",
+      "region_code": "VE",
+      "country": "VE",
+      "type": "compra",
+      "raw_type": "buy",
+      "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=VE",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-04T18:35:21Z",
+      "fingerprint": "48fd86538e97dd6508ced8b5b535ce881ebb7bab",
+      "identity_fingerprint": "d4848453b1474e43b0b6ddce4cf2d7e92f95ba54"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {

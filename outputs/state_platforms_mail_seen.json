@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-11-03T18:23:19.508322+00:00",
+  "updated_at_utc": "2026-11-04T18:35:49.814231+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -281,15 +281,6 @@
       "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     },
-    "e3a403692abc09d333dbb21a509b2c7e31be28fb": {
-      "title": "Jennifer’s Shadow",
-      "provider": "Plex Channel",
-      "region": "US",
-      "type": "gratis con publicidad",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
-    },
     "455e39426cb1e0cb6ec483e3604b2364f8e12c27": {
       "title": "Los Ojos del Abismo",
       "provider": "Amazon Video",
@@ -563,15 +554,6 @@
     "4ce98ebf92ecc2a88cd4014fc06c9793517876aa": {
       "title": "Soy Tóxico",
       "provider": "Plex",
-      "region": "US",
-      "type": "gratis con publicidad",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=US",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "6ac7d9fb46e64cdfa65613c7ba27aa5b4f7e940d": {
-      "title": "Soy Tóxico",
-      "provider": "Plex Channel",
       "region": "US",
       "type": "gratis con publicidad",
       "source": "TMDb Watch Providers",
@@ -1343,6 +1325,15 @@
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PY",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
     },
+    "d6f327a28a166b663a7fe2769c2142f564a5ab94": {
+      "title": "El Último Hereje",
+      "provider": "Apple TV Store",
+      "region": "VE",
+      "type": "alquiler",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=VE",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
     "197e7d39711c52ec023a08725ff87db549294ade": {
       "title": "El Último Hereje",
       "provider": "Apple TV Store",
@@ -1395,6 +1386,15 @@
       "type": "compra",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=PY",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
+    },
+    "d4848453b1474e43b0b6ddce4cf2d7e92f95ba54": {
+      "title": "El Último Hereje",
+      "provider": "Apple TV Store",
+      "region": "VE",
+      "type": "compra",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/790409-el-ultimo-hereje/watch?locale=VE",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=el-ultimo-hereje"
     },
     "07256df3c140769467968444f9cfb94d56f68edf": {
