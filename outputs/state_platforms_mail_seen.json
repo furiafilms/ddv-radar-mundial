@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-11-05T18:41:17.345780+00:00",
+  "updated_at_utc": "2026-11-06T17:55:14.417279+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -259,6 +259,15 @@
       "provider": "Fandango At Home",
       "region": "US",
       "type": "compra",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "d1cea63012ac8fee3c6e46f8a6e66de7032bc55f": {
+      "title": "Jennifer’s Shadow",
+      "provider": "Fandango at Home Free",
+      "region": "US",
+      "type": "gratis con publicidad",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
@@ -2505,5 +2514,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 278
+  "count": 279
 }
