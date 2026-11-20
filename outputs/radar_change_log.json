@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-11-19T19:27:23Z",
-  "platforms": [],
+  "generated_at": "2026-11-20T19:03:20Z",
+  "platforms": [
+    {
+      "slug": "soy-toxico",
+      "work_title": "Soy Tóxico",
+      "name": "MovistarTV",
+      "provider_id": 339,
+      "region": "AR",
+      "region_code": "AR",
+      "country": "AR",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-20T19:03:25Z",
+      "fingerprint": "cde8771a67b17c1caf47bd9c25cc982f45aee0f5",
+      "identity_fingerprint": "8bd3ebc78f33ddeadee78286004dc34d4d7af063"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {

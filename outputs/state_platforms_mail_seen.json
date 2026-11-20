@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-11-19T19:27:55.698072+00:00",
+  "updated_at_utc": "2026-11-20T19:03:49.672175+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -70,6 +70,15 @@
       "provider": "CINE",
       "region": "AR",
       "type": "gratis",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    },
+    "8bd3ebc78f33ddeadee78286004dc34d4d7af063": {
+      "title": "Soy Tóxico",
+      "provider": "MovistarTV",
+      "region": "AR",
+      "type": "suscripción",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=AR",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
@@ -2514,5 +2523,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 279
+  "count": 280
 }
