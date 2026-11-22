@@ -1,31 +1,78 @@
 {
   "version": "DDV_TV_CAMBIOS_MAIL_SITE_V8_NO_REPETIR",
-  "ran_at": "2026-11-21T17:56:57.749563+00:00",
+  "ran_at": "2026-11-22T18:27:32.338621+00:00",
   "changes_detected": true,
-  "mail_sent": false,
+  "mail_sent": true,
   "future_count": 0,
   "historic_count": 6,
-  "platform_added_count": 0,
-  "platform_removed_count": 0,
-  "platform_change_count": 0,
-  "platform_added_sample": [],
-  "platform_removed_sample": [],
+  "platform_added_count": 3,
+  "platform_removed_count": 2,
+  "platform_change_count": 5,
+  "platform_added_sample": [
+    {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon Prime Video",
+      "region": "CA",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
+    {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon Prime Video with Ads",
+      "region": "CA",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
+    {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon Prime Video",
+      "region": "NZ",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NZ",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    }
+  ],
+  "platform_removed_sample": [
+    {
+      "title": "Soy Tóxico",
+      "provider": "Apple TV Store",
+      "region": "JP",
+      "type": "alquiler",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    },
+    {
+      "title": "Soy Tóxico",
+      "provider": "Apple TV Store",
+      "region": "JP",
+      "type": "compra",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
+    }
+  ],
   "platform_meta": {
     "source": "TMDb Watch Providers + Watchmode",
     "version": "v212-radar-platforms-tmdb-watchmode-failsafe-baseline",
-    "generated_at": "2026-11-21T17:56:35Z",
-    "items_count": 280,
+    "generated_at": "2026-11-22T18:27:14Z",
+    "items_count": 281,
     "titles_with_current": 9,
     "titles_without_current": 4,
     "platform_mail_state_loaded": true,
     "platform_mail_state_bootstrap": false,
     "platform_mail_state_previous_count": 280,
-    "platform_mail_state_current_count": 280
+    "platform_mail_state_current_count": 281
   },
   "platform_mail_state_bootstrap": false,
   "platform_mail_state": {
     "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-    "updated_at_utc": "2026-11-21T17:56:57.753511+00:00",
+    "updated_at_utc": "2026-11-22T18:27:32.341787+00:00",
     "items": {
       "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
         "title": "El Martillo",
@@ -1125,6 +1172,24 @@
         "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CA",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
       },
+      "834918bf59da4190001919bc6b08c7aa9f21ac89": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Prime Video",
+        "region": "CA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
+      "72e0046152c6bc0e0f7e151c8cd9fc98f1012b73": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Prime Video with Ads",
+        "region": "CA",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
       "a8c145bcb42b3448d4de3ac7508065eef0871319": {
         "title": "Los Ojos del Abismo",
         "provider": "Apple TV Store",
@@ -1638,6 +1703,15 @@
         "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SK",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
       },
+      "136ed0ecfc2e603c692f8b82c6329ab3d443aa8b": {
+        "title": "Los Ojos del Abismo",
+        "provider": "Amazon Prime Video",
+        "region": "NZ",
+        "type": "suscripción",
+        "source": "TMDb Watch Providers",
+        "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NZ",
+        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+      },
       "afb62bf5806d2cf4dbe0c6629d599e0667e9e5f9": {
         "title": "Los Ojos del Abismo",
         "provider": "Amazon Video",
@@ -2070,15 +2144,6 @@
         "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       },
-      "f71f10a655fc6ae2f727685e392b16723347d83b": {
-        "title": "Soy Tóxico",
-        "provider": "Apple TV Store",
-        "region": "JP",
-        "type": "alquiler",
-        "source": "TMDb Watch Providers",
-        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-      },
       "ee8df50bc3dbc11d3016fd04b0c1b5e0f20147c9": {
         "title": "Soy Tóxico",
         "provider": "Apple TV Store",
@@ -2239,15 +2304,6 @@
         "type": "compra",
         "source": "TMDb Watch Providers",
         "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
-        "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-      },
-      "df43b5800a90b8b6065898b8cd267c5999b49144": {
-        "title": "Soy Tóxico",
-        "provider": "Apple TV Store",
-        "region": "JP",
-        "type": "compra",
-        "source": "TMDb Watch Providers",
-        "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       },
       "16f1aab9b245ef2f3c0407673c5c343c2b539765": {
@@ -2548,7 +2604,7 @@
         "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
       }
     },
-    "count": 280
+    "count": 281
   },
   "changed_files": [
     "outputs/state_platforms_seen.json",
@@ -2556,12 +2612,28 @@
   ],
   "mail_format": "platforms_pro_v8_no_repetir",
   "tv_meta": {
-    "generated_at_utc": "2026-11-21T17:56:57Z",
+    "generated_at_utc": "2026-11-22T18:27:32Z",
     "hits_total": 6,
     "review_total": 0,
     "source": "DDV Radar Cambios v205 + fuentes XMLTV/EPG.PW + registros oficiales verificados",
     "version": "v212-tv-cable-epgpw-official-sources"
   },
-  "reason": "Sin cambios accionables: no hay altas/bajas reales de plataformas ni emisiones futuras.",
-  "no_actionable_changes_is_success": true
+  "endpoint_configured": true,
+  "subject": "DDV Radar — Plataformas: +3 / -2 cambios",
+  "body_length": 2958,
+  "endpoint_http_status": 200,
+  "endpoint_content_type": "application/json; charset=UTF-8",
+  "endpoint_raw_prefix": "{\n    \"ok\": true,\n    \"mail_sent\": true,\n    \"mode\": \"tv_platform_changes_platforms_pro_v8_no_repetir\",\n    \"alerts\": 11,\n    \"to\": \"furiafilms@gmail.com\",\n    \"marker\": \"DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION\"\n}",
+  "endpoint_error": "",
+  "mail_blocked_by_security_challenge": false,
+  "payload_bytes": 3328,
+  "endpoint_json": {
+    "ok": true,
+    "mail_sent": true,
+    "mode": "tv_platform_changes_platforms_pro_v8_no_repetir",
+    "alerts": 11,
+    "to": "furiafilms@gmail.com",
+    "marker": "DDV_TV_ALERTAS_MAIL_SITE_V1_MAIL_FUNCTION"
+  },
+  "platform_mail_state_written": true
 }

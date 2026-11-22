@@ -1,6 +1,55 @@
 {
-  "generated_at": "2026-11-21T17:56:22Z",
-  "platforms": [],
+  "generated_at": "2026-11-22T18:27:02Z",
+  "platforms": [
+    {
+      "slug": "los-ojos-del-abismo",
+      "work_title": "Los Ojos del Abismo",
+      "name": "Amazon Prime Video",
+      "provider_id": 119,
+      "region": "CA",
+      "region_code": "CA",
+      "country": "CA",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-22T18:27:12Z",
+      "fingerprint": "cf1f536b4172cca84960f29cb34abcaad375a593",
+      "identity_fingerprint": "834918bf59da4190001919bc6b08c7aa9f21ac89"
+    },
+    {
+      "slug": "los-ojos-del-abismo",
+      "work_title": "Los Ojos del Abismo",
+      "name": "Amazon Prime Video with Ads",
+      "provider_id": 2100,
+      "region": "CA",
+      "region_code": "CA",
+      "country": "CA",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-22T18:27:12Z",
+      "fingerprint": "5b6ca6159ac1be57fb3acff8f049d76b346f980f",
+      "identity_fingerprint": "72e0046152c6bc0e0f7e151c8cd9fc98f1012b73"
+    },
+    {
+      "slug": "los-ojos-del-abismo",
+      "work_title": "Los Ojos del Abismo",
+      "name": "Amazon Prime Video",
+      "provider_id": 119,
+      "region": "NZ",
+      "region_code": "NZ",
+      "country": "NZ",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NZ",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-22T18:27:12Z",
+      "fingerprint": "9248ba8c5b0f69e4834e821888d69d4b3e9ec535",
+      "identity_fingerprint": "136ed0ecfc2e603c692f8b82c6329ab3d443aa8b"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {

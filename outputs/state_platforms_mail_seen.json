@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-11-21T17:56:57.753511+00:00",
+  "updated_at_utc": "2026-11-22T18:27:32.341787+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -1100,6 +1100,24 @@
       "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=CA",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     },
+    "834918bf59da4190001919bc6b08c7aa9f21ac89": {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon Prime Video",
+      "region": "CA",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
+    "72e0046152c6bc0e0f7e151c8cd9fc98f1012b73": {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon Prime Video with Ads",
+      "region": "CA",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=CA",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
     "a8c145bcb42b3448d4de3ac7508065eef0871319": {
       "title": "Los Ojos del Abismo",
       "provider": "Apple TV Store",
@@ -1613,6 +1631,15 @@
       "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=SK",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
     },
+    "136ed0ecfc2e603c692f8b82c6329ab3d443aa8b": {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon Prime Video",
+      "region": "NZ",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/1288316-los-ojos-del-abismo/watch?locale=NZ",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
+    },
     "afb62bf5806d2cf4dbe0c6629d599e0667e9e5f9": {
       "title": "Los Ojos del Abismo",
       "provider": "Amazon Video",
@@ -2045,15 +2072,6 @@
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
-    "f71f10a655fc6ae2f727685e392b16723347d83b": {
-      "title": "Soy Tóxico",
-      "provider": "Apple TV Store",
-      "region": "JP",
-      "type": "alquiler",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
     "ee8df50bc3dbc11d3016fd04b0c1b5e0f20147c9": {
       "title": "Soy Tóxico",
       "provider": "Apple TV Store",
@@ -2214,15 +2232,6 @@
       "type": "compra",
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=IL",
-      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
-    },
-    "df43b5800a90b8b6065898b8cd267c5999b49144": {
-      "title": "Soy Tóxico",
-      "provider": "Apple TV Store",
-      "region": "JP",
-      "type": "compra",
-      "source": "TMDb Watch Providers",
-      "url": "https://www.themoviedb.org/movie/567691-soy-toxico/watch?locale=JP",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     },
     "16f1aab9b245ef2f3c0407673c5c343c2b539765": {
@@ -2523,5 +2532,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 280
+  "count": 281
 }
