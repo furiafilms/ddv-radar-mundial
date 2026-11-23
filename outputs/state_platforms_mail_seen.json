@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-11-22T18:27:32.341787+00:00",
+  "updated_at_utc": "2026-11-23T22:35:00.195830+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -298,6 +298,15 @@
       "source": "TMDb Watch Providers",
       "url": "https://www.themoviedb.org/movie/35949-jennifer-s-shadow/watch?locale=US",
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=jennifers-shadow"
+    },
+    "0fa110989f3ca096617079476c6e5cb597663e25": {
+      "title": "Los Ojos del Abismo",
+      "provider": "Amazon",
+      "region": "US",
+      "type": "compra",
+      "source": "Watchmode",
+      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.efca5180-c790-4b3f-8d07-bbdfb610f3a8",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=los-ojos-del-abismo"
     },
     "455e39426cb1e0cb6ec483e3604b2364f8e12c27": {
       "title": "Los Ojos del Abismo",
@@ -2532,5 +2541,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 281
+  "count": 282
 }
