@@ -1,24 +1,6 @@
 {
-  "generated_at": "2026-11-23T22:34:32Z",
-  "platforms": [
-    {
-      "slug": "los-ojos-del-abismo",
-      "work_title": "Los Ojos del Abismo",
-      "name": "Amazon",
-      "provider_id": 24,
-      "watchmode_id": 11013401,
-      "region": "US",
-      "region_code": "US",
-      "country": "US",
-      "type": "compra",
-      "raw_type": "buy",
-      "url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.efca5180-c790-4b3f-8d07-bbdfb610f3a8",
-      "source": "Watchmode",
-      "detected_at": "2026-11-23T22:34:40Z",
-      "fingerprint": "9ecdb7b9a03783ee939d950c417cbdc6d632ce7c",
-      "identity_fingerprint": "0fa110989f3ca096617079476c6e5cb597663e25"
-    }
-  ],
+  "generated_at": "2026-11-24T21:06:15Z",
+  "platforms": [],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {
