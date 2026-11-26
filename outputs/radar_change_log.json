@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-11-25T20:26:31Z",
-  "platforms": [],
+  "generated_at": "2026-11-26T20:06:06Z",
+  "platforms": [
+    {
+      "slug": "ataud-blanco",
+      "work_title": "Ataúd Blanco",
+      "name": "Timvision",
+      "provider_id": 109,
+      "region": "IT",
+      "region_code": "IT",
+      "country": "IT",
+      "type": "suscripción",
+      "raw_type": "flatrate",
+      "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+      "source": "TMDb Watch Providers",
+      "detected_at": "2026-11-26T20:06:09Z",
+      "fingerprint": "172df35bd285899567e733f68b3edceffbd5e30e",
+      "identity_fingerprint": "804c7fe29393900b0b1e3c00ac824240b2ca020c"
+    }
+  ],
   "tv_cable": [],
   "tv_rejected": [],
   "bootstrap": {

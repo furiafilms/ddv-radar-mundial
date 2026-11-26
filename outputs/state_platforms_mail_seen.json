@@ -1,6 +1,6 @@
 {
   "version": "DDV_PLATFORM_MAIL_SEEN_V1",
-  "updated_at_utc": "2026-11-25T20:27:12.095622+00:00",
+  "updated_at_utc": "2026-11-26T20:06:44.413320+00:00",
   "items": {
     "b5371326f2ab1d974d97bfacf8a72cf00e6e0500": {
       "title": "El Martillo",
@@ -1040,6 +1040,15 @@
     "ddb2c906ae35f246d9b463271c8f125f9dbfd0a8": {
       "title": "Ataúd Blanco",
       "provider": "MIDNIGHT FACTORY Amazon Channel",
+      "region": "IT",
+      "type": "suscripción",
+      "source": "TMDb Watch Providers",
+      "url": "https://www.themoviedb.org/movie/399615-ataud-blanco-el-juego-diabolico/watch?locale=IT",
+      "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=ataud-blanco"
+    },
+    "804c7fe29393900b0b1e3c00ac824240b2ca020c": {
+      "title": "Ataúd Blanco",
+      "provider": "Timvision",
       "region": "IT",
       "type": "suscripción",
       "source": "TMDb Watch Providers",
@@ -2541,5 +2550,5 @@
       "vip_url": "https://danieldelavega.com.ar/vip/pelicula.php?id=soy-toxico"
     }
   },
-  "count": 282
+  "count": 283
 }
